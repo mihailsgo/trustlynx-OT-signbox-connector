@@ -1,0 +1,196 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-nodepicker {
+  height: auto;
+}
+
+.binf-widgets .metadata-tab .shortcut_section .cs-nodepicker {
+  height: auto;
+}
+
+.cs-nodepicker .cs-search-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.3em;
+  height: 1.35em;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.binf-widgets .cs-nodepicker  .cs-field-write-inner {
+  position: relative;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-icon-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  right: 1px;
+  top: 1px;
+  width:25px;
+  height: 23px;
+  border-radius: 0px 4px 4px 0px;
+  overflow: hidden;
+}
+
+.binf-widgets .cs-form-multi-action-container .cs-nodepicker .csui-nodepicker-icon-container {
+  right: 8px;
+  border-radius: 0;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-icon-container .csui-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 18px;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue .csui-nodepicker-icon-container .csui-icon.cs-browse-icon {
+  display:none;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-icon-container .csui-icon.formfield_clear {
+  border-radius: 50%;
+  display:none;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.formfield_clear {
+  display: block;
+  opacity: 0;
+}
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.cs-browse-icon {
+  display: block;
+  opacity: 0;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input:hover+.csui-nodepicker-icon-container .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner .csui-nodepicker-icon-container:hover .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.formfield_clear:hover,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.formfield_clear:focus {
+  opacity: 1;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input:hover+.csui-nodepicker-icon-container .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner .csui-nodepicker-icon-container:hover .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.cs-browse-icon:hover,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner .csui-nodepicker-icon-container .csui-icon.cs-browse-icon:focus {
+  opacity: 1;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .csui-nodepicker-icon-container:hover .csui-icon.formfield_clear {
+  display: block;
+}
+
+.binf-widgets .cs-nodepicker .cs-field-write-inner input {
+  padding-right: 25px;
+  outline: none;
+  width: 100%;
+}
+
+.binf-widgets .cs-form-multi-action-container .cs-nodepicker .csui-nodepicker-hasvalue .cs-field-write-inner input:hover,
+.binf-widgets .cs-form-multi-action-container .cs-nodepicker .csui-nodepicker-hasvalue .cs-field-write-inner input:focus {
+  padding-right: 30px;
+}
+
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input:hover+.csui-nodepicker-icon-container .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input:focus+.csui-nodepicker-icon-container .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input:hover+.csui-nodepicker-icon-container:hover .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input:focus+.csui-nodepicker-icon-container:focus .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input+.csui-nodepicker-icon-container:hover .csui-icon.formfield_clear,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue:not(.csui-nodepicker-required) .cs-field-write-inner input+.csui-nodepicker-icon-container:focus .csui-icon.formfield_clear  
+{
+  display: block;
+  cursor:pointer;
+}
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input:hover+.csui-nodepicker-icon-container .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input:focus+.csui-nodepicker-icon-container .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input:hover+.csui-nodepicker-icon-container:hover .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input:focus+.csui-nodepicker-icon-container:focus .csui-icon.cs-browse-icon ,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input+.csui-nodepicker-icon-container:hover .csui-icon.cs-browse-icon,
+.binf-widgets .cs-nodepicker .csui-nodepicker-hasvalue.csui-nodepicker-required .cs-field-write-inner input+.csui-nodepicker-icon-container:focus .csui-icon.cs-browse-icon 
+{
+  display: block;
+  cursor:pointer;
+}
+
+.cs-nodepicker input {
+  -webkit-box-flex: 1 1 0; 
+  -moz-box-flex: 1 1 0; 
+  -webkit-flex: 1 1 0; 
+  -ms-flex: 1 1 0; 
+  flex: 1 1 0; 
+
+  line-height: 1.25em;
+  padding: 3px;
+  padding-left: 4.5px;
+  padding-right: 25px;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  border: 1px solid #a7a9ac;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+}
+.cs-nodepicker .cs-field-write-inner input{
+  width : 100% ;
+}
+
+
+.cs-nodepicker input:focus {
+  outline-color: #666666;
+  outline-width: 2px;
+  
+}
+
+.cs-nodepicker input:-moz-focusring {
+  outline: 2px solid #666666;
+}
+
+
+
+.cs-formfield.cs-nodepicker .cs-field-read a {
+  text-align: left;
+  height: auto;
+  max-height: 100%;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a:focus {
+  box-shadow: none;
+  border-radius: 3px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2px;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a > span {
+  text-align: left;
+  white-space: nowrap;
+  word-wrap: break-word;
+  padding: 0;
+  width: calc(100%);
+  cursor: pointer;
+  color: #337ab7;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a[disabled] > span {
+  pointer-events: none;
+}
+
+
+
+.binf-widgets a.csui-nodepicker-readonly:hover, .binf-widgets a.csui-nodepicker-readonly:focus {
+  text-decoration: none;
+}
+
+.cs-formfield.cs-nodepicker .cs-field-read a.csui-nodepicker-readonly > span {
+  cursor: default;
+  color: #000000;
+}

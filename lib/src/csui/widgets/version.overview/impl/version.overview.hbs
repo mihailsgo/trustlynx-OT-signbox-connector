@@ -1,0 +1,120 @@
+<div class="cs-content-wrapper cs-content-overlay-wrapper">
+
+  <div class="cs-content-header">
+    {{#if back_button}}
+      <div class="overview-page-backbutton icon arrow_back cs-go-back csui-acc-focusable-active"
+           aria-label="{{goBackAria}}" title="{{goBackTitle}}" role="link" tabindex="0"></div>
+    {{/if}}
+    <div class="title-container"></div>
+    <div class="overview-page-version-label">
+      <span class="csui-overview-version-label" aria-label="{{versionAria}}">
+        {{versionText}}
+      </span>
+    </div>
+  </div>
+  <div class="cs-content-container">
+    <div class="description-container cs-content">
+
+      <div class="created_by_section version-overview-general-information">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" title="{{lang.createdBy}}">
+            {{lang.createdBy}}
+          </label>
+          <div class="binf-col-sm-9">
+            <div class="csui-version-overview-created-by-pic"></div>
+            <div class="csui-version-overview-created-by-user"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modified_section version-overview-general-information">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" for="modi{{unique}}" title="{{modify_label}}">
+            {{modify_label}}
+          </label>
+          <div class="binf-col-sm-9">
+            <button disabled id="modi{{unique}}" aria-label="{{modify_label}}: {{modify_date}}">
+              <span title="{{modify_date}}">{{modify_date}}</span>
+            </button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+      <div class="type_section version-overview-general-information">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" for="type{{unique}}" title="{{type_label}}">
+            {{type_label}}
+          </label>
+          <div class="binf-col-sm-9">
+            <button title="{{mime_type}}" id="type{{unique}}" disabled
+                    aria-label="{{type_label}}: {{mime_type}}">
+              <span>{{mime_type}}</span>
+            </button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+      <div class="size_section version-overview-general-information">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" for="size{{unique}}" title="{{size_label}}">
+            {{size_label}}
+          </label>
+          <div class="binf-col-sm-9">
+            <button title="{{size_full_value}}" id="size{{unique}}" disabled
+                    aria-label="{{size_label}}: {{size_value}}">
+              <span>{{size_value}}</span>
+            </button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+      <div class="location-container version-overview-general-information">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" title="{{lang.location}}">
+            {{lang.location}}
+          </label>
+          <div class="binf-col-sm-9 location-view"></div>
+        </div>
+      </div>
+
+      <div class="description_section version-overview-general-information {{#unless has_description}}binf-hidden{{/unless}}">
+        <div class="version-overview-form-group">
+          <label class="version-overview-control-label" for="desc{{unique}}" title="{{desc_label}}">
+            {{desc_label}}
+          </label>
+          <div class="binf-col-sm-9">
+            <button disabled id="desc{{unique}}" aria-label="{{desc_label}}:
+            {{desc_value}}"><span class="csui-ellipsis-area no-ellipsis"><span><span
+                class="cs-field-textarea-data">{{desc_value}}</span></span>
+              </span>
+            </button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="binf-col-md-4 thumbnail-container binf-hidden binf-text-left cs-content">
+      <div class="metadata-tab">
+        <div class="thumbnail_section metadata-preview preview-section"
+             title="{{lang.ToolbarItemOpen}}">
+          <img role="link" src="{{imgSrc}}" class="img-doc-preview binf-hidden" alt="{{imgAlt}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-fadeout-container"></div>
+  <div class="cs-content-footer">
+    <button class="binf-btn primary-btn command-btn open-btn" type="button"
+            data-signature="VersionOpen">{{lang.ToolbarItemOpen}}</button>
+    <button class="binf-btn default-btn command-btn csui-version-overview-download-btn" type="button"
+            data-signature="VersionDownload">{{lang.ToolbarItemDownload}}</button>
+    <button class="binf-btn default-btn command-btn" type="button"
+            data-signature="VersionProperties">{{lang.ToolbarItemProperties}}</button>
+  </div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

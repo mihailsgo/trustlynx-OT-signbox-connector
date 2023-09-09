@@ -1,0 +1,54 @@
+<div class="tile-header">
+
+    {{#if icon}}
+        <div class="tile-type-icon">
+            <span class="icon title-icon {{icon}}" aria-hidden="true"></span>
+        </div>
+    {{else}}
+        {{#if imageUrl}}
+            <div class="tile-type-image {{imageClass}}">
+                <img src="{{imageUrl}}" aria-hidden="true">
+            </div>
+        {{/if}}
+    {{/if}}
+
+    <div class="tile-title" title="{{title}}">
+        <h2 class="csui-heading">{{title}}</h2>
+    </div>
+
+    <div class="tile-controls" title="{{title}}">
+        {{#if showParameterEditBtn}}
+            <div class="csui-favorite csui-acc-tab-region webreports-tile-toolbar-btn webreports-visual-count-btn-parameters">
+                <span class="csui-icon-edit inline-edit-icon icon-edit wr-icon-edit" role="button" tabindex="0" aria-label="{{parameters}}" title="{{parameters}}"></span>
+            </div>
+        {{/if}}
+        {{#if filterable}}
+            
+            <div class="csui-favorite csui-acc-tab-region webreports-tile-toolbar-btn webreports-visual-count-btn-options">
+                <span class="csui-icon-more inline-edit-icon icon-more" role="button" tabindex="0" aria-label="{{chartOptions}}" title="{{chartOptions}}"></span>
+            </div>
+        {{/if}}
+    </div>
+
+</div>
+
+<div class="tile-content"></div>
+
+<div class="tile-footer binf-hidden"></div>
+
+<div class="webreports-visual-count-overlay-clip">
+    <div class="webreports-visual-count-overlay">
+        <div class="webreports-visual-count-overlay-content binf-modal-dialog">
+        <form class="csui-inlineform-group webreports-visual-count-settings-form">
+            <div class="binf-modal-content">
+                <div class="binf-modal-body">
+                    <div class="webreports-visual-count-controls-parent"></div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

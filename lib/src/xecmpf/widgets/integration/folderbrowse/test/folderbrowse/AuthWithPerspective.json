@@ -1,0 +1,76 @@
+{
+  "data": {
+    "birth_date": null,
+    "business_email": null,
+    "business_fax": null,
+    "business_phone": null,
+    "cell_phone": null,
+    "deleted": false,
+    "display_language": "_en_US",
+    "display_name": "Admin",
+    "first_name": null,
+    "gender": null,
+    "group_id": 999,
+    "home_address_1": null,
+    "home_address_2": null,
+    "home_fax": null,
+    "home_phone": null,
+    "id": 1000,
+    "initials": "A",
+    "last_name": null,
+    "middle_name": null,
+    "name": "Admin",
+    "office_location": null,
+    "pager": null,
+    "personal_email": null,
+    "personal_interests": null,
+    "personal_url_1": null,
+    "personal_url_2": null,
+    "personal_url_3": null,
+    "personal_website": null,
+    "photo_id": null,
+    "photo_url": null,
+    "privilege_grant_discovery": true,
+    "privilege_login": true,
+    "privilege_modify_groups": true,
+    "privilege_modify_users": true,
+    "privilege_public_access": true,
+    "privilege_system_admin_rights": true,
+    "privilege_user_admin_rights": true,
+    "time_zone": null,
+    "title": null,
+    "type": 0,
+    "type_name": "User"
+  },
+  "perspective": {
+    "canEditPerspective": false,
+    "options": {
+      "widgets": [{
+        "type": "csui\/widgets\/welcome.placeholder"
+      }, {
+        "type": "csui\/widgets\/myassignments"
+      }, {
+        "type": "csui\/widgets\/favorites"
+      }, {
+        "options": {
+          "shortcutItems": [{
+            "type": 141
+          }],
+          "shortcutTheme": "csui-shortcut-theme-teal2"
+        },
+        "type": "csui\/widgets\/shortcuts"
+      }, {
+        "options": {
+          "shortcutItems": [{
+            "type": 142
+          }],
+          "shortcutTheme": "csui-shortcut-theme-pink1"
+        },
+        "type": "csui\/widgets\/shortcuts"
+      }, {
+        "type": "csui\/widgets\/recentlyaccessed"
+      }]
+    },
+    "type": "flow"
+  }
+}

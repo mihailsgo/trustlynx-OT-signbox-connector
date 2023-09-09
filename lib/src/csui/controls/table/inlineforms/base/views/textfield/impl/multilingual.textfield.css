@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-inlineform-field-container .csui-inlineform-text-field.csui-multilingual-input{
+    position: relative;
+}
+.binf-widgets .csui-inlineform-field-container .csui-inlineform-text-field.csui-multilingual-input .csui-multilingual-icon-label{
+    position: absolute;
+    right:3px;
+    top:2px;
+    margin-right: 0;
+}
+.binf-widgets .csui-inlineform-field-container .csui-inlineform-text-field.csui-multilingual-input > input,
+.binf-widgets .csui-inlineform-field-container .csui-inlineform-text-field.csui-multilingual-input > input.binf-form-control.csui-inlineform-error {
+    padding-right: 27px;
+}
+
+.binf-widgets .csui-inlineform-field-container .csui-inlineform-text-field.csui-multilingual-input .csui-multilingual-icon{
+    margin-right: 0;
+}

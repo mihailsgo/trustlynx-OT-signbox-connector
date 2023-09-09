@@ -1,0 +1,128 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/actions",
+        "method": "POST",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "12066": {
+      "data": {
+        "addcategory": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066\/categories",
+          "method": "POST",
+          "name": "Add Category"
+        },
+        "AddRMClassifications": {
+          "body": "{\u0022displayPrompt\u0022:false,\u0022enabled\u0022:false,\u0022inheritfrom\u0022:false,\u0022managed\u0022:true}",
+          "content_type": "application\/x-www-form-urlencoded",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066\/rmclassifications",
+          "method": "POST",
+          "name": "Add RM Classification"
+        },
+        "Classify": {
+          "body": "{\u0022displayPrompt\u0022:false,\u0022enabled\u0022:false,\u0022inheritfrom\u0022:false,\u0022managed\u0022:false}",
+          "content_type": "application\/x-www-form-urlencoded",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066\/rmclassifications",
+          "method": "POST",
+          "name": "Add RM Classification"
+        },
+        "collect": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066",
+          "method": "PUT",
+          "name": "Collect"
+        },
+        "comment": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "POST",
+          "name": "Comments"
+        },
+        "copy": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes",
+          "method": "POST",
+          "name": "Copy"
+        },
+        "delete": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066",
+          "method": "DELETE",
+          "name": "Delete"
+        },
+        "editpermissions": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "",
+          "name": "Edit Permissions"
+        },
+        "initiatedocumentworkflow": {
+          "body": "initiate_in_smartview",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "",
+          "name": "",
+          "wfList": []
+        },
+        "move": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066",
+          "method": "PUT",
+          "name": "Move"
+        },
+        "permissions": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "",
+          "method": "",
+          "name": "Permissions"
+        },
+        "RemoveClassification": {
+          "body": "",
+          "content_type": "application\/x-www-form-urlencoded",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066\/rmclassifications",
+          "method": "POST",
+          "name": "Remove Classification"
+        },
+        "rename": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066",
+          "method": "PUT",
+          "name": "Rename"
+        }
+      },
+      "map": {
+        "default_action": ""
+      },
+      "order": ["initiatedocumentworkflow", "addcategory", "rename", "copy", "collect", "move", "editpermissions", "permissions", "AddRMClassifications", "Classify", "delete", "RemoveClassification", "comment"]
+    }
+  }
+}

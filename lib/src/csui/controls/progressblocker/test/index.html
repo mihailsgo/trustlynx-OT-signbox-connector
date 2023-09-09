@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ProgressBlocker</title>
+    <link rel="stylesheet" href="../../../themes/carbonfiber/init.css">
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <script src="../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../lib/src/nuc/config.js"
+            data-csui-path="../../../../lib/src/nuc"></script>
+    <script src="../../../../lib/src/smart/config.js"
+            data-csui-path="../../../../lib/src/smart"></script>
+
+    <script>
+      require.config({
+        paths: {
+          csui: "../../..",
+          nuc: "../../../../lib/src/nuc",
+          smart: "../../../../lib/src/smart",
+          "css": "../../../../lib/src/nuc/lib/css",
+          "csui-ext": "../../../../lib/src/nuc/utils/load-extensions/load-extensions"
+        },
+        deps: [
+          'nuc/lib/require.config!nuc/nuc-extensions.json',
+          'nuc/lib/require.config!smart/smart-extensions.json',
+          'csui/lib/require.config!csui/csui-extensions.json'
+        ]
+      });
+
+      require(['nuc/lib/jquery', 'nuc/lib/underscore', 'nuc/lib/marionette',
+        'csui/controls/progressblocker/blocker'
+      ], function ($, _, Marionette, BlockingView) {
+
+        var ParentView = Marionette.ItemView.extend({
+          render: function () {
+            this._ensureViewIsIntact();
+            this.triggerMethod('before:render', this);
+            this.bindUIElements();
+            this.triggerMethod('render', this);
+          }
+        });
+        var wholePageRegion = new Marionette.Region({el: '#wholePage'}),
+            tileViewRegion = new Marionette.Region({el: '#tileViewRegion'}),
+            wholePageView = new ParentView(),
+            tileView = new ParentView();
+        BlockingView.imbue(wholePageView);
+        BlockingView.imbue(tileView);
+        wholePageView.render();
+        tileView.render();
+        wholePageView.loadingText = "Loading whole page...";
+        tileView.loadingText = "Loading tile view...";
+        wholePageRegion.show(wholePageView.blockActions());
+
+        $('input').on('change', function () {
+          var id = this.id;
+          switch (id) {
+          case 'pageBlock':
+            if (this.checked) {
+              wholePageView.blockingView.showloadingWheel = true;
+              wholePageView.blockActions();
+            } else {
+              if ($("#threeDots").is(':checked')) {
+                wholePageView.blockingView.showloadingWheel = false;
+                wholePageView.blockActions();
+              } else {
+                wholePageView.unblockActions();
+              }
+            }
+            break;
+          case 'threeDots':
+            wholePageView.unblockActions();
+            wholePageView.blockingView.showloadingWheel = false;
+            if (this.checked) {
+              document.body.classList.add('initialLoading');
+              wholePageView.blockActions();
+            } else {
+              $('#pageBlock').prop('checked', true);
+              document.body.classList.remove('initialLoading');
+              wholePageView.blockActions();
+            }
+            // wholePageView.render();
+
+            break;
+          case 'showTileView':
+            if (this.checked) {
+              $('#tileView').removeClass('binf-hidden');
+              tileViewRegion.show(tileView.blockActions());
+              $('#tileViewBlock').prop('checked', true);
+            } else {
+              $('#tileView').addClass('binf-hidden');
+
+            }
+            break;
+          case 'tileViewBlock':
+            tileView.unblockActions();
+            if (this.checked) {
+              document.body.classList.add('initialLoading');
+              tileView.blockingView.showloadingWheel = true;
+              tileView.blockActions();
+            } else {
+              if ($("#tileViewThreeDots").is(':checked')) {
+                tileView.blockingView.showloadingWheel = false;
+                tileView.blockActions();
+              } else {
+                document.body.classList.remove('initialLoading');
+                tileView.blockingView.showloadingWheel = false;
+                tileView.unblockActions();
+              }
+
+            }
+
+            break;
+          case 'tileViewThreeDots':
+            tileView.unblockActions();
+            if (this.checked) {
+              //  tileViewRegion.show(tileView.blockActions());
+              document.body.classList.add('initialLoading');
+              tileView.blockingView.showloadingWheel = false;
+              tileView.blockActions();
+            } else {
+              document.body.classList.remove('initialLoading');
+              // tileView.blockingView.showloadingWheel = true;
+              tileView.blockActions();
+              $('#tileViewBlock').prop('checked', true);
+            }
+            break;
+          default:
+            break;
+          }
+        });
+
+      });
+
+
+    </script>
+    <style>
+        .binf-widgets .control-options {
+            position: relative;
+            float: right;
+            max-width: 20%;
+            min-width: 200px;
+            z-index: 9999;
+            color: #ffffff;
+            border: 1px solid #feffff;
+            padding: 10px;
+            margin: 10px;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 3px 3px #bfb5b5;
+            opacity: 0.5;
+        }
+
+        .binf-widgets .control-options:hover,
+        .binf-widgets .control-options:focus {
+            opacity: 1;
+        }
+
+        .binf-widgets .control-options h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        /* .binf-widgets div.load-container {
+          z-index: -1;
+        } */
+
+        .binf-widgets .view-options {
+            width: 100%;
+        }
+
+        .binf-widgets .tile-view.test {
+            position: relative;
+        }
+
+        .binf-widgets .tile-view {
+            position: relative;
+            background-color: #fbf8f8;
+            min-height: 400px;
+            max-width: 50%;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .binf-widgets .binf-divider {
+            height: 1px;
+            border: 1px solid #bdaaaa;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body class="binf-widgets">
+
+<div id="wholePage"></div>
+
+<div class="control-options">
+    <div>
+        <h1>Whole page</h1>
+        <div class="view-options">
+            <label>Block:</label>
+            <input type="checkbox" checked id="pageBlock"/>
+        </div>
+        <div class="view-options">
+            <label>3 dots:</label>
+            <input type="checkbox" id="threeDots"/>
+        </div>
+        <div class="binf-divider"></div>
+        <h1>Tile View</h1>
+        <div class="view-options">
+            <label>Show:</label>
+            <input type="checkbox" id="showTileView"/>
+        </div>
+        <div class="view-options">
+            <label>Block:</label>
+            <input type="checkbox" id="tileViewBlock"/>
+        </div>
+        <div class="view-options">
+            <label>3 dots:</label>
+            <input type="checkbox" id="tileViewThreeDots"/>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4">
+        <div id="tileView" class="tile-view binf-hidden">
+            <div id="tileViewRegion"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

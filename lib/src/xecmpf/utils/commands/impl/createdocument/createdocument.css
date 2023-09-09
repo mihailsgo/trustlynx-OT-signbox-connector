@@ -1,0 +1,18 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+ 
+  .binf-widgets .csui-sidepanel.xecmpf-create-document-side-panel .csui-sidepanel-body {
+  padding: 0;
+  }
+  
+  .binf-widgets.csui-sidepanel-open.binf-search-box-open .csui-sidepanel.xecmpf-create-document-side-panel {
+  z-index: 1046;
+  }
+
+  .binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-create-document-slide.csui-sidepanel-container {
+  width: 75%;
+  }
+
+  .binf-widgets .csui-sidepanel.xecmpf-create-document-side-panel {
+  z-index: 1046;
+  }

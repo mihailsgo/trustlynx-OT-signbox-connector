@@ -1,0 +1,263 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 100%;
+    height: 42px;
+    min-height: 42px;
+    font-size: 14px;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-selection-marker {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: 0;
+    right: auto;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list .xecmpf-eac-action-plan-list-item a:visited, .binf-widgets .xecmpf-eac-action-plan-list .xecmpf-eac-action-plan-list-item a:hover {
+    text-decoration: none;
+    color: #333333;
+    outline: 0;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-name-link {
+    color: #333333;
+    flex: 1 1 auto;
+    display: flex;
+    white-space: nowrap;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 22px;
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-delete-btn {
+    position: absolute;
+    top: 13px;
+    right: 4%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-delete-btn .icon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-rename-btn {
+    position: absolute;
+    top: 13px;
+    right: 15%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-cancelrename-btn {
+    position: absolute;
+    top: 13px;
+    right: 20%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-delete3-btn {
+    position: absolute;
+    top: 13px;
+    right: 20%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-cancelrename-btn.cancelrename-write-mode {
+    position: absolute;
+    top: 13px;
+    right: 3%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-rename-btn .icon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item:hover .xecmpf-eac-action-plan-list-item-rename-btn.binf-btn {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 15%;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item.binf-edit-active~li:hover .xecmpf-eac-action-plan-list-item-rename-btn.binf-btn {
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item~li:hover .xecmpf-eac-action-plan-list-item-rename-btn.binf-btn {
+    display: block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-cancelrename-btn .icon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-delete3-btn .icon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item:hover .xecmpf-eac-action-plan-list-item-delete3-btn.binf-btn {
+    display: block;
+}
+
+
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item:hover {
+    background-color: #DFE7EA;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item:hover .xecmpf-eac-action-plan-list-item-delete-btn.binf-btn {
+    display: block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item:hover .xecmpf-eac-action-plan-list-item-cancelrename-btn.binf-btn {
+    display: block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item.binf-active {
+    background-color: #dfe7ea;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item.cs-form-error {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item.binf-active .xecmpf-eac-action-plan-list-item-selection-marker {
+    background-color: #7b9ab0;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list-item-text {
+    position: relative;
+    margin-left: 5px;
+}
+
+.binf-widgets .xecmpf-more-actions {
+    background-image: url('../images/action_more.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.binf-widgets .xecmpf-more-actions:hover {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .xecmpf-more-actions-inline {
+    background-image: url('../images/action_more.svg');
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list .csui-state-full {
+    height: 100%;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list .binf-nav-pills {
+    height: 100%;
+}
+
+.binf-widgets .xecmpf-more-actions-container:hover {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #F3FBFF;
+}
+
+.binf-widgets .xecmpf-action-plan-list-rows li.xecmpf-eac-action-plan-list-item {
+    padding: 0 12px 0 15px;
+    border-left: 4px solid transparent;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list-item a.binf-flex-row.xecmpf-eac-action-plan-name-link {
+    text-decoration: none;
+}
+
+.binf-widgets .xecmpf-eac-check-box-list{
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-check-box-list .csui-icon-v2-view {
+    width: 14px;
+    height: 14px;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-actions {
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-actions .csui-inline-menu .icon-toolbar-more {
+    display: inline-block;
+}
+
+.binf-widgets .actionplan-object-title-cancel, .binf-widgets .actionplan-object-name-cancel {
+    margin-left: 10px;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .actionplan-create-error,
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item .actionplan-error {
+    left: 15px;
+}
+
+.binf-widgets .actionplan-edit-cancel {
+    background-image: url('../../../../../image/icons/cancel.svg'); 
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 13px;
+    margin-left: 10px;
+    margin-top: 0;
+    top: 10px;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list-item .actionplan-object-name-input,
+.binf-widgets .xecmpf-eac-action-plan-list-item .xecmpf-eac-action-plan-list-item-input {
+    margin-top: 7px;
+    width: calc(100% - 34px);
+    height: 28px;
+}
+
+.binf-widgets .xecmpf-eac-action-plan-list li.xecmpf-eac-action-plan-list-item.action-plan-list-item-focus {
+    background-color: #DFE7EA;
+}

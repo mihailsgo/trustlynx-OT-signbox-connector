@@ -1,0 +1,11 @@
+{
+  "config": {
+    "csui/utils/commands": {
+      "extensions": {
+        "greet": [
+          "greet/commands/hello/hello.command"
+        ]
+      }
+    }
+  }
+}

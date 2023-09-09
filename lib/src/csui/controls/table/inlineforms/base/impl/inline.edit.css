@@ -1,0 +1,59 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-text-field:first-child .binf-form-control.csui-inlineform-error {
+  border: 1px solid #df3324;
+  width: 100%;
+  padding: 0px 8px;
+}
+
+
+.binf-widgets .csui-field-size-1 .csui-inlineform-group .csui-inlineform-field-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.binf-widgets .csui-field-size-1 .csui-inlineform-group .csui-inlineform-field-container > div {
+  display: inline-block;
+  width: 100%;
+  margin-right: 0;
+}
+
+.binf-widgets .csui-field-size-2 .csui-inlineform-group .csui-inlineform-field-container {
+  width: 100%;
+  max-width: 854px;
+}
+
+.binf-widgets .csui-field-size-2 .csui-inlineform-group .csui-inlineform-field-container > div {
+  display: inline-block;
+  width: calc(50% - 7px);
+  margin-right: 14px;
+}
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-field-container > div:last-child {
+  padding-right: 0;
+}
+
+.binf-widgets .target-browse .csui-inlineform-group .csui-inlineform-field-container > div {
+  display: inline-block;
+  width: 100%;
+}
+
+.binf-widgets .csui-inline-editform .csui-inlineform-group-error {
+  padding-bottom: 8px;
+}
+
+
+.binf-widgets .csui-inlineform-group .csui-inline-action-container {
+  display: flex;
+  align-items: center;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-inlineform-group.csui-inlineform-group-error .binf-text-danger {
+  margin: 0;
+}
+
+.binf-widgets .csui-inlineform-group .csui-inline-action-button-wrapper {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+{{#if searchForms.recent_search_forms}}
+  <nav aria-labelledby='recent_search_forms_header'>
+    <h2 id='recent_search_forms_header'
+        class='csui-search-label {{#if skipHeading}} binf-hidden {{/if}}'>
+      {{labels.recentSearchFormsLabel}}
+    </h2>
+    <div id='recent_search_forms' class="csui-recent-search-form-container"></div>
+  </nav>
+{{/if}}
+
+{{#if showMore}}
+  <div class="csui-more-forms">
+    <a href="javascript:void(0)" role="button" class="csui-searchforms-show-more"
+       data-searchformid="loadAllForms" aria-label="{{showMoreAria}}">
+      {{showMorelabel}}</a>
+  </div>
+{{/if}}
+
+{{#if searchForms.personal_search_forms}}
+  <nav aria-labelledby='personal_search_forms_header'>
+    <h2 id='personal_search_forms_header'
+        class='csui-search-label'>{{labels.personalSearchFormsLabel}}</h2>
+    <div id='personal_search_forms' class="csui-personal-search-form-container"></div>
+  </nav>
+{{/if}}
+
+{{#if searchForms.system_search_forms}}
+  <nav aria-labelledby='system_search_forms_header'>
+    <h2 id='system_search_forms_header'
+        class='csui-search-label'>{{labels.systemSearchFormsLabel}}</h2>
+    <div id='system_search_forms' class="csui-system-search-form-container"></div>
+  </nav>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

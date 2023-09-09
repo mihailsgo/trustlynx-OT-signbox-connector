@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SocialCellView Demo</title>
+
+  
+  <link rel="stylesheet" href="../../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+  
+  <script src="../../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../../lib/src/nuc/config.js" data-csui-path="../../../../../lib/src/nuc"></script>
+  <script src="../../../../../lib/src/smart/config.js" data-csui-path="../../../../../lib/src/smart"></script>
+  
+  <script>
+    require.config({
+      deps: [
+        'csui/lib/require.config!nuc/nuc-extensions.json',
+        'csui/lib/require.config!smart/smart-extensions.json',
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ]
+    });
+
+    require.config({
+      paths: {
+        csui: '../../../../../lib/src/csui',
+        greet: '../../../..'
+      },
+      config: {
+        'csui/controls/table/cells/cell.factory': {
+          extensions: {
+            'greet': [
+              'greet/controls/cells/hello/hello.view'
+            ]
+          }
+        },
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: 'http://murdock.opentext.com/alpha/llisapi.dll/api/v1',
+            supportPath: '/alphasupport'
+          }
+        },
+        'csui/utils/contexts/factories/node': {
+          attributes: {id: 2000}
+        }
+      }
+    });
+  </script>
+
+  <script>
+    require([
+      // NodesTableView widget - shows a table browsing a container
+      'csui/widgets/nodestable/nodestable.view',
+      // PageContext - manages the data for the widgets on a simple HTML page
+      'csui/utils/contexts/page/page.context',
+      // Marionette - places a widget on the HTML page
+      'csui/lib/marionette',
+      // Collection with the displayed table columns
+      "csui/controls/table/table.columns"
+    ], function (NodesTableView, PageContext, Marionette, tableColumns) {
+
+      // Make the column always appear behind the system columns, which have
+      // sequence number < 100; custom columns have sequence number > 1000
+      tableColumns.add({
+        key: 'mime_type',
+        sequence: 500
+      });
+
+      // Create manager for data to be loaded from the server
+      var context = new PageContext(),
+
+          // Create a wrapper for the DOM placeholder, which will contain the table
+          contentRegion = new Marionette.Region({
+            el: '#content'
+          }),
+
+          // Create the view of the node table widget
+          nodesTableView = new NodesTableView({
+            context: context
+          });
+
+      // Show the node table
+      contentRegion.show(nodesTableView);
+      // Fetch the data from the server; the view will be refreshed when the data are loaded
+      context.fetch();
+
+    });
+  </script>
+
+  <style>
+
+    #content {
+      height: 100vh;
+    }
+
+  </style>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+  <div class="binf-row">
+    <div id="content" class="binf-col-md-12"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

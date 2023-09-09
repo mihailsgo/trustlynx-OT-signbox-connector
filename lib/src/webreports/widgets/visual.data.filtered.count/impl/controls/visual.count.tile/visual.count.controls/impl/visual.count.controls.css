@@ -1,0 +1,56 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-visual-count-overlay-clip {
+    position: absolute;
+    pointer-events: none;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.binf-widgets .webreports-visual-count-overlay {
+    position: absolute;
+    pointer-events: auto; 
+    top: 50px;
+    right: 0;
+    min-height: 178px;
+    opacity: 0.9;
+    transform-origin: 100% 0%;
+    transition: transform 0.3s ease-in-out;
+    transform: translate3d(100%,0,0);
+}
+
+.binf-widgets .webreports-visual-count-overlay.visible {
+    transform: translate3d(0,0,0);
+}
+
+.binf-widgets .webreports-visual-count-overlay ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.binf-widgets .webreports-visual-count-overlay ul:last-of-type {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.binf-widgets .webreports-visual-count-overlay li {
+    padding-bottom: 10px;
+    opacity: 1; 
+}
+
+.binf-widgets .webreports-visual-count-overlay li>label {
+    display: block;
+    padding-bottom: 2px;
+    font-size: 12px;
+}
+
+.binf-widgets .webreports-visual-count-overlay .binf-modal-content {
+    border-radius: 0;
+}

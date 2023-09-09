@@ -1,0 +1,24 @@
+{{#if backdrop}}
+  <div class="csui-sidepanel-backdrop"></div>
+{{/if}}
+<div class="csui-sidepanel-container" aria-modal="true" tabindex="0" role="dialog" aria-label="{{title}}">
+  {{#if enableResize}}
+    <div class="csui-side-panel-resizer csui-resize-cursor-icon"  aria-label="resizer" role="seperator" aria-valuemin="432px" aria-valuemax="100%" tabindex="0" role="button">
+    </div>
+  {{/if}}
+  <div class="csui-side-panel-main">
+    {{#if hasHeader}}
+      <div class="csui-sidepanel-header"></div>
+    {{/if}}
+
+    <div class="csui-sidepanel-body csui-normal-scrolling {{#unless hasHeader}} csui-sidepanel-no-header {{/unless}}
+      {{#unless hasFooter}} csui-sidepanel-no-footer {{/unless}}"></div>
+
+    {{#if hasFooter}}
+      <div class="csui-sidepanel-footer"></div>
+    {{/if}}
+
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

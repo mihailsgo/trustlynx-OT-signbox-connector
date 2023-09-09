@@ -1,0 +1,396 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container .alpaca-message {
+    display: none;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item-first .cs-pull-right {
+    margin-top: inherit;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item .cs-pull-right {
+    position: relative;
+    height: initial;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item .cs-pull-right .alpaca-array-actionbar {
+    position: relative;
+    height: 100%;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item .cs-pull-right button {
+    position: absolute;
+}
+
+.xecmpf-eac-rules .cs-formfield .cs-field-read {
+    display: flex;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container {
+    background: #FDFDFD;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container {
+    justify-content: space-between;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-field-array, .xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container.alpaca-container-has-items {
+    width: 100%;
+    outline: none;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container.alpaca-container-has-items:focus {
+    outline-color: -webkit-focus-ring-color;
+    outline-style: dotted;
+    outline-width: 1px;
+}
+
+.binf-widgets .xecmpf-eac-rules.xecmpf-eac-rules-read .alpaca-field.alpaca-field-array .cs-form-set-container>.cs-array.alpaca-container-item>.cs-pull-left {
+    max-width: 820px;
+    width: 100%;
+}
+
+.xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button[data-alpaca-array-actionbar-action="remove"], .xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button[data-alpaca-array-actionbar-action="add"] {
+    width: 18px;
+    height: 18px;
+}
+
+.xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item>.cs-pull-right button[data-alpaca-array-actionbar-action="add"], .xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item>.cs-pull-right.csui-set-action-bar button[data-alpaca-array-actionbar-action="add"] {
+    left: 3px;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container .binf-col-sm-9 .cs-formfield {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(2) {
+    flex: 0 0 35%;
+    min-width: 35%;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(3) {
+    flex: 0 0 16%;
+    min-width: 16%;
+}
+
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .cs-form-set .alpaca-container .alpaca-container-item>.binf-form-group.binf-has-error.alpaca-field>div:first-child {
+    margin: 8px 0;
+}
+
+.xecmpf-eac-rules-container-wrapper>.binf-row, .xecmpf-eac-rules-container-wrapper>.binf-row .xecmpf-eac-rules-container, .xecmpf-eac-rules-container-wrapper>.binf-row .xecmpf-eac-rules-container .cs-form-set-container {
+    margin: 0;
+    outline: none;
+}
+
+
+
+.xecmpf-eac-rules.xecmpf-eac-rules-hide-validation-errors .alpaca-field.binf-has-error .cs-field-write input, .xecmpf-eac-rules.xecmpf-eac-rules-hide-validation-errors .alpaca-field.binf-has-error .cs-field-write button {
+    background-color: inherit;
+    color: #333;
+}
+
+.binf-widgets .xecmpf-eac-rules-container .csui-array-bulk-edit-set .csui-icon-edit {
+    position: absolute;
+    height: 30px;
+    margin: -12px 0px 0px 0px;
+}
+
+.xecmpf-eac-rules-container .icon-container.csui-array-bulk-edit.csui-array-bulk-edit-set.alpaca-container-has-items {
+    right: 0;
+}
+
+.binf-widgets .xecmpf-eac-rules-container span.csui-bulk-edit-cancel-rulesSet.csui-icon-edit.inline-edit-icon.edit-cancel.csui-bulk-edit-cancel {
+    width: 36px;
+    height: 30px;
+    margin: -12px 0px 0px 0px;
+    background-image: url('../../../../../image/icons/cancel.svg');
+}
+
+.binf-widgets .xecmpf-eac-rules-container .alpaca-array-actionbar.alpaca-array-actionbar-top.binf-btn-group {
+    display: flex;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item>.binf-form-group>div.binf-col-sm-9 {
+    margin: 10px 0;
+}
+
+.binf-widgets .xecmpf-eac-rules .alpaca-field.alpaca-field-array .cs-form-set-container>.cs-array.alpaca-container-item.alpaca-container-item>.cs-pull-right {
+    min-width: 60px;
+    max-width: 60px;
+}
+
+
+.xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right button .csui-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.binf-widgets .xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item>.cs-pull-right button[data-alpaca-array-actionbar-action="remove"] {
+    left: 28px;
+    margin-bottom: 0;
+}
+
+.binf-widgets .xecmpf-eac-rules.cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right .alpaca-array-actionbar {
+    align-items: center;
+    justify-content: center;
+}
+
+.xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .alpaca-field .alpaca-container-has-items .cs-array-item-field-wrapper {
+    background-color: #fff;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container {
+    border: 1px solid #C4CEE1;
+    border-top: none;
+}
+
+.binf-widgets .xecmpf-eac-rules .alpaca-field.alpaca-field-array .cs-form-set-container>.cs-array.alpaca-container-item>.cs-pull-left {
+    border: none;
+    min-width: 100%;
+    overflow: unset;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item[data-alpaca-container-item-index="4"] .alpaca-field {
+    margin-top: 0;
+}
+
+.xecmpf-eac-rules-container .cs-pull-left {
+    width: auto;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-pull-left .alpaca-field .alpaca-container-has-items .alpaca-container-item-first .binf-col-sm-9 .binf-dropdown-menu {
+    min-width: auto;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-pull-left .alpaca-field .alpaca-container-has-items .alpaca-container-item[data-alpaca-container-item-index='2'] .binf-col-sm-9 .binf-dropdown-menu {
+    min-width: auto;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(n+5) .alpaca-field {
+    margin-top: 0;
+}
+
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(n+5) .alpaca-field .alpaca-container-has-items {
+    padding: 1px;
+    border: none;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(n+5) .alpaca-field input {
+    padding: 3px 12px 5px 12px;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(1) {
+    flex: 0 0 13%;
+    min-width: 13%;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-container-item .binf-dropdown-toggle {
+    padding: 6px 8px;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item-first .cs-array-item-field-wrapper div.alpaca-container-item-first .alpaca-control {
+    visibility: hidden;
+}
+
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item-first .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(n+5) .csui-field-select {
+    visibility: visible;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .cs-form-set .alpaca-container .alpaca-container-item .binf-help-block {
+    display: block;
+    padding-bottom: 1px;
+    margin-top: 8px;
+    margin-bottom: 12.5px;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(n+5) .csui-field-select.alpaca-container-item.alpaca-container-item-last {
+    flex: 0 0 57%;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .csui-field-text.alpaca-container-item[data-alpaca-container-item-name*='to']{
+    position: relative;
+    padding-right: 8px;
+    right: 0%
+}
+
+
+.binf-widgets .xecmpf-eac-rules .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right .alpaca-array-actionbar .alpaca-array-actionbar-action .circle_add_grey {
+    background-image: url('../../../../../image/icons/add_active.svg');
+}
+
+.binf-widgets .xecmpf-eac-rules .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right .alpaca-array-actionbar .alpaca-array-actionbar-action .circle_delete_grey {
+    background-image: url('../../../../../image/icons/rule_delete.svg');
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item:hover .cs-array-item-field-wrapper div.alpaca-container {
+    background-color: #CBD3D9;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item-first .cs-array-item-field-wrapper div.alpaca-container-item-first .alpaca-control-label {
+    visibility: visible;
+    padding-left: 12px;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field .alpaca-control-label {
+    border-bottom: 1px solid #C4CEE1;
+    background-color: #F5F6F6;
+    padding-left: 4px;
+}
+
+.binf-widgets .xecmpf-eac-rules .alpaca-field.alpaca-field-array .cs-form-set-container>.cs-array.alpaca-container-item.alpaca-container-item-first>.cs-pull-right {
+    margin-top: 32px;
+    padding: 0;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(1) .binf-col-sm-9 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container>.cs-array.alpaca-container-item.alpaca-container-item-first>.cs-pull-left {
+    border-top: 1px solid #C4CEE1;
+}
+
+.xecmpf-eac-rules .alpaca-container-item .alpaca-container-item-first.csui-field-select .cs-field-write button, .xecmpf-eac-rules .alpaca-container-item .alpaca-container-item-first.csui-field-select .cs-field-write button:focus {
+    opacity: 0.65;
+}
+
+.xecmpf-eac-rules .cs-array.alpaca-container-item:nth-child(2) .alpaca-container-item-first.csui-field-select .cs-field-write button {
+    opacity: 1;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(2) {
+    flex: 0 0 26%;
+    min-width: 26%;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item .cs-array-item-field-wrapper div.alpaca-container>div:nth-child(1) {
+    flex: 0 0 18%;
+    min-width: 18%;
+}
+
+.xecmpf-eac-rules .cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'] .alpaca-control-label {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.binf-widgets .xecmpf-eac-rules-container .alpaca-invalid span.csui-bulk-edit-cancel-rulesSet.csui-icon-edit.inline-edit-icon.edit-cancel.csui-bulk-edit-cancel {
+    left: 68px;
+}
+
+.binf-widgets .xecmpf-eac-rules-container .cs-form-set.cs-form-set-container .alpaca-container-item .cs-pull-right .alpaca-array-actionbar button {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item {
+    position: relative;
+    min-width: 34%;
+    padding-right: 8px;
+    margin-top: 34px;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item {
+    right: 34%;
+}
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item {
+    right: 34%;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'] .alpaca-field, .xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'] .alpaca-field {
+    margin-top: 66px;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .csui-field-text.alpaca-container-item[data-alpaca-container-item-name*='to'].csui-field-text {
+    min-width: auto;
+}
+
+.binf-widgets .xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='operator'].csui-field-select {
+    flex: 0 0 22%;
+    min-width: 22%;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='operator'].csui-field-select .binf-col-sm-9,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='operator'].csui-field-select .binf-col-sm-9 {
+    padding-right: 0;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='operator'] {
+    flex: 0 0 16%;
+    min-width: 16%;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='from'] {
+    flex: 0 0 35%;
+    min-width: 35%;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to].csui-field-text .binf-col-sm-9, .xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to].csui-field-text .binf-col-sm-9 {
+    padding-right: 8px
+}
+
+
+.xecmpf-search-text-box .xecmpf-clearer:focus, .xecmpf-search-text-box .xecmpf-icon-close:focus {
+    outline-color: #fff
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'],
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'] {
+    flex: 0 0 34%;
+    min-width: 34%;
+}
+
+.binf-widgets .xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .csui-field-select.alpaca-container-item[data-alpaca-container-item-name*=operator].csui-field-select {
+    min-width: 18%;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'] .binf-col-sm-9,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'] .binf-col-sm-9 {
+    padding-right: 8px;
+}
+
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'].alpaca-container-item,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*='value'].alpaca-container-item {
+    min-width: auto;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*=value].csui-field-otcs_node_picker {
+    right: 0%;
+}
+
+.xecmpf-eac-rules .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container .cs-form-set .cs-array.alpaca-container-item-first .cs-array-item-field-wrapper div.alpaca-container-item:not(.alpaca-container-item-first) .alpaca-control-label{
+    padding-left: 4px;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container-item-first.cs-array .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container-item-first.cs-array .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*='to2'].alpaca-container-item {
+    margin-top: 70px;
+}
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-text.alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .csui-field-text.alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-text {
+    min-width: 35%;
+}
+
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-otcs_user.alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-otcs_user.alpaca-container-item,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-date.alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .alpaca-container-item[data-alpaca-container-item-name*=to2].csui-field-date.alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*=value].csui-field-otcs_node_picker.csui-field-otcs_csuipicker.alpaca-container-item,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*=value].csui-field-otcs_node_picker.csui-field-otcs_csuipicker.alpaca-container-item,
+.xecmpf-eac-rules-write .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*=value].csui-field-select.alpaca-container-item,
+.xecmpf-eac-rules-read .xecmpf-eac-rules-container-wrapper .xecmpf-eac-rules-container.cs-form-set .alpaca-container .cs-array-item-field-wrapper .alpaca-container-item[data-alpaca-container-item-name*=value].csui-field-select.alpaca-container-item {
+    min-width: 34%;
+}

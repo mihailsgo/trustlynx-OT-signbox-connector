@@ -1,0 +1,13 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-inlineform-group > .greet-inlineform-input-hello {
+  margin-left: 1em;
+}
+
+.csui-inlineform-group > .greet-inlineform-input-hello:first-child {
+  margin-left: 0;
+}
+
+.greet-inlineform-group-hello-wrapped .binf-btn {
+  visibility: hidden;
+}

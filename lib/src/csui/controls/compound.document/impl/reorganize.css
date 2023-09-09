@@ -1,0 +1,242 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list {
+    padding: 15px 0;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item {
+    display: flex;
+    width: 100%;
+    line-height: 36px;
+    font-size: 14px;
+    color: #333333;
+    align-items: center;
+}
+
+.binf-widgets .csui-reorder-item .csui-mime-no-drop {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item .csui-icon-group,
+.binf-widgets .csui-reorder-item.ghostElem .csui-icon-group {
+    margin-right: 16px;
+    width: 26px;
+    height: 26px;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item .csui-icon-group .csui-icon-v2.csui-icon-v2-size-normal,
+.binf-widgets .csui-reorder-item.ghostElem .csui-icon-group .csui-icon-v2.csui-icon-v2-size-normal {
+    width: 100%;
+    height: 100%;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item-name {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    width: calc(100% - 40px);
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item-name .csui-label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(100% - 50px);
+}
+
+.binf-widgets .csui-reorder-item .icon.icon-draggable-handle6 {
+    height: 100%;
+    width: 20px;
+    background-position: center;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-dragline.csui-restricted-location {
+    background-color: #A7261B;
+}
+
+.binf-widgets .csui-compound-document-form {
+    padding: 32px 0;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item-order {
+    min-width:24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-cd-list-item-order span {
+    text-align: center;
+    background-color: #F0F2FF;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #111B58;
+    display: inline-block;
+    max-height: 24px;
+    min-width: 24px;
+    padding-left: 7px;
+    padding-right: 7px;
+   }
+
+.binf-widgets .csui-reorder-list .csui-reorder-item:first-child .csui-cd-list-item-order span.csui-order,
+.binf-widgets .csui-reorder-list .csui-reorder-item:nth-child(2) .csui-cd-list-item-order span.csui-order {
+    font-size: 0;
+    max-width: 24px;
+}
+
+.binf-widgets .csui-reorder-list .csui-reorder-item:first-child div.csui-cd-list-item-order span.csui-order::first-letter,
+.binf-widgets .csui-reorder-list .csui-reorder-item:nth-child(2) div.csui-cd-list-item-order span.csui-order::first-letter {
+    font-size: 13px;
+}
+
+.binf-widgets .csui-reorder-list {
+  width: 100%;
+  text-align: left;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-dragline {
+    background: #758994;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+    width: 100%;
+    height: 2px;
+}
+
+.binf-widgets .csui-compound-document-reorder-section .csui-dragline.csui-drag-error {
+    background: #bf291c;
+}
+
+.binf-widgets .csui-reorder-item {
+    margin: 0px -20px;
+    padding: 0 20px;
+    position: relative;
+    list-style: none;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem {
+    display: flex;
+    align-items: center;
+    z-index: 1075;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem:hover,
+.binf-widgets .csui-reorder-item.ghostElem:focus {
+    background-color: transparent;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem .csui-cd-list-item {
+    width: 300px;
+    height: 36px;
+    cursor: pointer;
+    background: #DFE7EA;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 30%);
+    border-radius: 3px;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333333;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem .csui-cd-list-item-order {
+    display: none;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem .csui-cd-list-item-name {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem .csui-cd-list-item-name .icon {
+    visibility: visible;
+}
+
+.binf-widgets .csui-reorder-item.ghostElem .csui-label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(230px - 36px);
+    line-height: 26px;
+}
+
+.binf-widgets .csui-reorder-item .csui-cd-list-item-name .icon,
+.binf-widgets .binf-widgets .csui-reorder-item.dragStartClass .csui-cd-list-item-name .icon {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.binf-widgets .csui-reorder-item:hover,
+.binf-widgets .csui-reorder-item:focus {
+  cursor: pointer;
+  background: #B2BEC5;
+  border-radius: 3px;
+}
+
+.binf-widgets .csui-reorder-item.active {
+   outline: none;
+}
+
+
+.binf-widgets .csui-reorder-item:hover .csui-cd-list-item-name .icon,
+.binf-widgets .csui-reorder-item:focus .csui-cd-list-item-name .icon {
+    visibility: visible;
+}
+
+.binf-widgets .binf-widgets .csui-reorder-item.dragStartClass {
+    background: #F4F4F4;
+}
+
+.binf-widgets .csui-compound-document-form .csui-master-button-section {
+    padding-bottom: 24px;
+    min-height: 85px;
+}
+
+.binf-widgets .csui-compound-document-form .csui-master-fields-label {
+    display: flex;
+}
+
+.binf-widgets .csui-compound-document-form .csui-master-fields-label .csui-label {
+    font-size: 14px;
+    line-height: 24px;
+    width: calc(100% - 50px);
+    display: inline-block;
+}
+   
+.binf-widgets .csui-compound-document-form .csui-masterbtn-info {
+    font-size: 11px;
+    line-height: 13px;
+    color: #333333;
+}
+
+.binf-widgets .csui-compound-document-form .required-fields-switch {
+    display: inline;
+    width: 50px;    
+}
+
+.binf-widgets .csui-reorder-list .csui-reorder-item.csui-unsupported-type {
+    background-color: #FAE9EA;
+}
+
+.binf-widgets .csui-master-button-section .csui-inlineform-group-error .binf-text-danger {
+    margin-top: 0;
+}
+
+.binf-widgets .csui-master-button-section .csui-inlineform-group-error {
+    padding-bottom: 0;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn[disabled] {
+    color: #999999;
+    background-color: transparent;
+}

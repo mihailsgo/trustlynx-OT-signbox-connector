@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hello Perspective Demo</title>
+
+  
+  <link rel="stylesheet" href="../../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+  
+  <script src="../../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../../lib/src/nuc/config.js" data-csui-path="../../../../../lib/src/nuc"></script>
+  <script src="../../../../../lib/src/smart/config.js" data-csui-path="../../../../../lib/src/smart"></script>
+  <script src="../../../../../lib/src/csui/helpers.js"></script>
+
+  
+  <script>
+    // Set up config-demo without URL parameters
+    window.csuiProjectRoot = '../../../..';
+    window.csuiServer = 'mock';
+    window.csuiCredentials = {
+      username: 'Kristen',
+      password: 'livelink'
+    };
+  </script>
+
+  
+  <script src="../../../../../pages/debug/config-demo.js"></script>
+  <script src="../../../../../pages/debug/config-integration.js"></script>
+
+  <script>
+    require.config({
+      paths: {
+        csui: '../../../../../lib/src/csui',
+        greet: '../../../..'
+      },
+      deps: [
+        'csui/lib/require.config!nuc/nuc-extensions.json',
+        'csui/lib/require.config!smat/smart-extensions.json',
+        'csui/lib/require.config!csui/csui-extensions.json',
+        'csui/lib/require.config!greet/greet-extensions.json'
+      ]
+    });
+
+    // Show the entrance page
+    require(['csui/pages/start/start.page.view', 'csui/lib/domReady!'
+    ], function (StartPageView) {
+      var startPageView = new StartPageView();
+      startPageView.render();
+	  });
+  </script>
+</head>
+
+<body class="binf-widgets"></body>
+
+</html>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

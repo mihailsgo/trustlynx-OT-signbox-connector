@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Derived List View sample</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <style>
+        .binf-widgets .csui-icon {
+            display: inline-block;
+        }
+    </style>
+
+    <script src="../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+    <script src="../../../../lib/src/smart/config.js" data-csui-path="../../../../lib/src/smart"></script>
+
+    <script>
+        require.config({
+            paths: {
+                csui: "../../..",
+                nuc: "../../../../lib/src/nuc",
+                smart: "../../../../lib/src/smart",
+                "css": "../../../../lib/src/nuc/lib/css",
+                "csui-ext": "../../../../lib/src/nuc/utils/load-extensions/load-extensions"
+            },
+            deps: [
+                'nuc/lib/require.config!nuc/nuc-extensions.json',
+                'nuc/lib/require.config!smart/smart-extensions.json',
+                'csui/lib/require.config!csui/csui-extensions.json'
+            ]
+        });
+    </script>
+    <script>
+        require(["csui/lib/marionette", "csui/lib/backbone", "csui/controls/list/list.view",
+            "csui/controls/listitem/listitemstandard.view", "csui/controls/list/simpletreelist.view"
+        ], function (Marionette, Backbone, ListView, StandardListItem) {
+            'use strict';
+
+            var contentRegion = new Marionette.Region({
+                el: "#content"
+            });
+
+            var DerivedListView = ListView.extend({
+
+                constructor: function DerivedListView(options) {
+                    if (!options) {
+                        options = {};
+                    }
+                    options.titleBarIcon = options.showTitleIcon === false ? undefined : 'title-icon title-favourites';
+                    ListView.prototype.constructor.apply(this, arguments);
+                },
+
+                childEvents: {
+                    'click:item': 'onClickItem'
+                },
+
+                templateHelpers: function () {
+                    return {
+                        title: this.options.title || 'Default',
+                        icon: this.options.titleBarIcon,
+                        searchPlaceholder: "Proposed search term",
+                        hideSearch: options.hideSearch
+                    };
+                },
+
+                childView: StandardListItem,
+
+                onClickItem: function (target) {
+                    // this.trigger('click:item');
+                    // this.triggerMethod('execute:defaultAction', target.model);
+                    alert("Clicked on item '" + target.model.attributes.name + "'");
+                },
+
+                onClickHeader: function( target) {
+                    // this.triggerMethod('expand');
+                    alert("Clicked on header, should trigger expand");
+                }
+            });
+
+            var options = {
+                title: 'Sample thingies',
+                showTitleIcon: true,
+                hideSearch: true,
+                collection: new Backbone.Collection([
+                    {name: 'Predefined data1', enableIcon: true, icon: 'csui-icon mime_pdf'},
+                    {name: 'Predefined data2', enableIcon: true, icon: 'csui-icon mime_folder'}])
+            };
+            var derived = new DerivedListView(options);
+            derived.render();
+
+            contentRegion.show(derived);
+
+            derived.collection.add({name: 'New element', enableIcon: true, icon: 'csui-icon mime_excel'});
+        });
+    </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Derived list view</h1>
+<div class="binf-container">
+    <div class="binf-row">
+        <div class="binf-col-sm-6 binf-col-md-5 binf-col-lg-4" id="content"></div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

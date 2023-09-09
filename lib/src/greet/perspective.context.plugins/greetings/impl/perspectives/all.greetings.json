@@ -1,0 +1,21 @@
+{
+  "type": "grid",
+  "options": {
+    "rows": [
+      {
+        "columns": [
+          {
+            "sizes": {
+              "md": 12
+            },
+            "widget": {
+              "type": "greet/widgets/hello",
+              "options": {
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "kind": "fullpage",
+  "supportedKinds": [
+    "fullpage"
+  ],
+  "schema": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "title": "{{tileTitle}}",
+        "description": "{{tileDescription}}",
+        "type": "object"
+      },
+      "id": {
+        "title": "{{sourceTitle}}",
+        "description": "{{sourceDescription}}",
+        "type": "integer",
+        "required": true
+      },
+      "titleBarIcon": {
+        "title": "{{headerIconTitle}}",
+        "description": "{{headerIconDescription}}",
+        "type": "string"
+      },
+      "columnsWithSearch": {
+        "title": "{{columnFilterTitle}}",
+        "description": "{{columnFilterDescription}}",
+        "type": "array",
+        "items": {
+          "title": "{{columnFilterTitle}}",
+          "description": "{{columnFilterDescription}}",
+          "type": "object",
+          "properties": {
+            "columnName": {
+              "title": "{{columnFilterItemTitle}}",
+              "description": "{{columnFilterItemDescription}}",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "sortBy": {
+        "title": "{{sortTitle}}",
+        "description": "{{sortDescription}}",
+        "type": "string",
+        "required": true
+      },
+      "sortOrder": {
+        "title": "{{directionTitle}}",
+        "description": "{{directionDescription}}",
+        "type": "string",
+        "enum": [
+          "desc",
+          "asc"
+        ],
+        "default": "desc",
+        "required": true
+      },
+      "pageSize": {
+        "title": "{{pageSizeTitle}}",
+        "description": "{{pageSizeDescription}}",
+        "type": "integer",
+        "enum": [
+          30,
+          50,
+          100
+        ],
+        "default": 30
+      },
+      "swrLaunchCell": {
+        "type": "object",
+        "title": "{{swrLaunchCellTitle}}",
+        "description": "{{swrLaunchCellDescription}}",
+        "properties": {
+          "id": {
+            "title": "{{swrLaunchCellIDTitle}}",
+            "description": "{{swrLaunchCellIDDescription}}",
+            "type": "integer"
+          },
+          "iconClass": {
+            "title": "{{swrLaunchCellIconClassTitle}}",
+            "description": "{{swrLaunchCellIconClassDescription}}",
+            "type": "string",
+            "default": "icon-subwebreport"
+          },
+          "hoverText": {
+            "title": "{{swrLaunchCellHoverTextTitle}}",
+            "description": "{{swrLaunchCellHoverTextDescription}}",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "sortBy",
+    "sortOrder"
+  ],
+  "options": {
+    "fields": {
+      "id": {
+        "type": "otcs_node_picker",
+        "type_control": {
+          "parameters": {
+            "select_types": [
+              30303
+            ]
+          }
+        }
+      },
+      "title": {
+        "type": "otcs_multilingual_string"
+      },
+      "sortOrder": {
+        "type": "select",
+        "optionLabels": [
+          "{{optionsSortOrderDsc}}",
+          "{{optionsSortOrderAsc}}"
+        ]
+      },
+      "pageSize": {
+        "type": "select",
+        "optionLabels": [
+          "30",
+          "50",
+          "100"
+        ]
+      },
+      "swrLaunchCell": {
+        "fields": {
+          "id": {
+            "type": "otcs_node_picker",
+            "type_control": {
+              "parameters": {
+                "select_types": [
+                  30303
+                ]
+              }
+            }
+          },
+          "hoverText": {
+            "type": "otcs_multilingual_string"
+          }
+        }
+      }
+    }
+  }
+}

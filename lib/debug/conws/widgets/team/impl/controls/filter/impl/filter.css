@@ -1,0 +1,41 @@
+.binf-widgets .conws-filter-header {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+.conws-filter-header .header-caption {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 48px);
+}
+.conws-filter-header .search {
+  position: absolute;
+  left: 8px;
+  top: -7px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  height: 28px;
+  width: 85%;
+  outline: 0;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 32px;
+  margin: 0;
+}
+.binf-widgets .conws-filter-header .sbclearer {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -15%);
+  cursor: pointer;
+}
+.conws-filter-header .icon-search {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+}

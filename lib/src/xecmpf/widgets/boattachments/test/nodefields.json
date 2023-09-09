@@ -1,0 +1,150 @@
+{
+    "collection": {
+      "filtering": {
+        "filter": [
+          {
+            "key": "where_type",
+            "value": 258
+          }
+        ]
+      },
+      "paging": {
+        "limit": 30,
+        "page": 1,
+        "page_total": 1,
+        "range_max": 1,
+        "range_min": 1,
+        "total_count": 1
+      },
+      "sorting": {
+        "sort": [
+          {
+            "key": "sort",
+            "value": "asc_name"
+          }
+        ]
+      }
+    },
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/nodes/12408/nodes?actions=addclassifications&actions=open&actions=sharewithotcore&actions=stopsharing&actions=getsharedetails&actions=resyncshareitems&actions=releaseshare&actions=share&actions=move&actions=delete&actions=editpermissions&actions=addcategory&actions=addversion&actions=copy&actions=download&actions=zipanddownload&actions=edit&actions=editactivex&actions=rename&actions=permissions&actions=properties&actions=reserve&actions=unreserve&actions=collectioncancollect&actions=removefromcollection&actions=versionscontrol&actions=comment&actions=ecsendmailattachment&actions=physobjmetadata&actions=physobjrequest&actions=physobjborrow&actions=physobjacknowledge&actions=physobjpickup&actions=physobjcancelrequested&actions=physobjreturn&actions=physobjcirculate&actions=assignlocator&actions=removelocator&actions=assigntransfer&actions=removetransfer&actions=rmmetadata&actions=finalizerecord&actions=applyhold&actions=removehold&actions=assignxref&actions=addrmclassifications&actions=classify&actions=removeclassification&actions=dispositionmove&actions=updatesecurityclearance&actions=updatesecurityclearancelevel&actions=assignsupplementalmarkings&actions=removesupplementalmarkings&actions=followup&actions=addreminder&actions=myworkingdocuments&actions=setasdefaultpage&actions=unsetasdefaultpage&actions=initiateworkflow&actions=editworkflowmap&actions=initiatedocumentworkflow&actions=openform&actions=addtowarehouse&expand=properties{original_id}&fields=properties&limit=30&page=1&state=true&sort=asc_name",
+          "method": "GET",
+          "name": ""
+        }
+      }
+    },
+    "results": [
+      {
+        "actions": {
+          "data": {
+            "addcategory": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/12409/categories",
+              "method": "POST",
+              "name": "Add Category"
+            },
+            "AddRMClassifications": {
+              "body": "{\"displayPrompt\":false,\"enabled\":false,\"inheritfrom\":false,\"managed\":false}",
+              "content_type": "application/x-www-form-urlencoded",
+              "form_href": "",
+              "href": "/api/v2/nodes/12409/rmclassifications",
+              "method": "POST",
+              "name": "Add RM Classification"
+            },
+            "delete": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/12409",
+              "method": "DELETE",
+              "name": "Delete"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/12409",
+              "method": "GET",
+              "name": "Properties"
+            },
+            "rename": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/12409",
+              "method": "PUT",
+              "name": "Rename"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "addcategory",
+            "rename",
+            "AddRMClassifications",
+            "delete"
+          ]
+        },
+        "data": {
+          "properties": {
+            "advanced_versioning": null,
+            "container": false,
+            "container_size": 0,
+            "create_date": "2020-07-06T10:19:50",
+            "create_user_id": 1000,
+            "custom_view_search": true,
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 12409,
+            "mime_type": null,
+            "modify_date": "2020-07-06T10:19:51",
+            "modify_user_id": 1000,
+            "name": "Full Text Business Workspaces Search",
+            "name_multilingual": {
+              "en": "Full Text Business Workspaces Search"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "parent_id": 12408,
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "size": 1297,
+            "size_formatted": "1 Source",
+            "status": null,
+            "type": 258,
+            "type_name": "Search Query",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -12408
+          }
+        },
+        "state": {
+          "properties": {
+            "metadata_token": ""
+          }
+        }
+      }
+    ]
+}

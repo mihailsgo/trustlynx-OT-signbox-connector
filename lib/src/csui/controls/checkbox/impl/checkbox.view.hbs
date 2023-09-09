@@ -1,0 +1,11 @@
+<button type="button" role="checkbox" class="csui-control csui-checkbox"
+  {{#if ariaLabelledBy}}
+        aria-labelledBy="{{ariaLabelledBy}}"
+  {{else}}
+        aria-label="{{ariaLabel}}"
+  {{/if}}
+  {{disabled}} title="{{title}}" aria-checked="{{ariaChecked}}">
+  <span class="csui-checkbox-icon-container"></span>
+  {{#if label}}{{label}}{{/if}}
+</button>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

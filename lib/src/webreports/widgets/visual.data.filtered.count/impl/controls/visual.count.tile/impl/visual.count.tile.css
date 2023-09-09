@@ -1,0 +1,73 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-visual-count-autoupdate-wrapper {
+    float: left;
+    padding-top: 3px;
+}
+
+.binf-widgets .webreports-visual-count-autoupdate-wrapper label {
+    margin-left: 5px;
+}
+
+.binf-widgets .webreports-visual-count-overlay-content.binf-modal-dialog {
+    width: auto;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.binf-widgets .webreports-visual-count-wrapper div.outer-border{
+    margin: 0 !important;
+    position: absolute;
+}
+
+.binf-widgets .tile-content .webreports-visual-count-wrapper div.outer-border{
+    left: calc(50% - 34px);
+    top: calc(50% - 80px);
+}
+
+
+.binf-widgets .binf-modal-body .csui-visual-count-container {
+    padding: 50px 30px 40px;
+    transition: padding 0.2s ease-out;
+}
+
+.binf-widgets .binf-modal-body .webreports-visual-count-chart.facet-bar-visible .csui-visual-count-container {
+    padding: 28px 30px 18px; 
+    transition: padding 0.3s ease-in; 
+}
+
+.binf-widgets .webreports-tile-toolbar-btn {
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.binf-widgets .webreports-tile-toolbar-btn > span {
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+}
+
+.binf-widgets .webreports-tile-toolbar-btn > span:active {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.binf-widgets .webreports-tile-toolbar-btn > span:hover {
+    background-color: #f3fbff;
+    border-color: #f3fbff;
+}
+
+.binf-widgets .webreports-tile-toolbar-btn.overlaid {
+    position: absolute;
+    top: 21px;
+    right: 16px;
+    z-index: 9999;
+    margin: 0;
+}
+
+

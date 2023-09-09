@@ -1,0 +1,23 @@
+<form class="csui-inlineform-group csui-inlineform-group-folder-name {{#if
+    haveErrorMessage}}csui-form-error{{/if}}">
+  <input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+         class="binf-form-control csui-inlineform-input-name {{#if
+             haveErrorMessage}}csui-inlineform-error{{/if}}"
+         aria-label="{{#if name}}{{name}}{{else}}{{namePlaceholder}}{{/if}}"
+    {{#if haveErrorMessage}} aria-describedby="{{errorMsgId}}"{{/if}}>
+    <button type="submit" class="csui-btn-save" disabled title="{{SaveEditTooltip}}" aria-label="{{SaveEditTooltip}}">
+      {{{icon-v2 iconName="csui_action_confirm32" size='normal' states='true'}}}
+    </button>
+    <button type="reset" class="csui-btn-cancel csui-inline" title="{{EditCancelTooltip}}"
+            aria-label="{{EditCancelTooltip}}">
+      {{{icon-v2 iconName="csui_action_cancel32" size='normal' states='true'}}}
+    </button>
+</form>
+{{#if haveErrorMessage}}
+  <div class="csui-inlineform-group csui-inlineform-group-error" role="alert" id="{{errorMsgId}}">
+    <div class="binf-text-danger" title="{{errorMessage}}"><span
+        class="csui-text-danger">{{errorMessage}}</span></div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

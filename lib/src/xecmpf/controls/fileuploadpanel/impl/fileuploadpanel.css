@@ -1,0 +1,20 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-one.csui-sidepanel-container {
+  width: 40vw;
+}
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-two.csui-sidepanel-container {
+  width: 95vw;
+}
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-one.csui-sidepanel-container .csui-sidepanel-body {
+  padding: 0 38px 0 32px;
+}
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-two.csui-sidepanel-container .csui-sidepanel-body {
+  padding: 0;
+}
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-one.csui-sidepanel-container .load-container .outer-border {
+  animation: none;
+}
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .xecmpf-file-upload-panel-slide-two.csui-sidepanel-container .load-container .outer-border {
+  animation: none;
+}

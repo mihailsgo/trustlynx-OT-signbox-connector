@@ -1,0 +1,43 @@
+{{#if extraTabs}}
+  <div class="binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12 esoc-profile-tabs
+  esoc-nopadding-right tab-links">
+
+     <div class="tab-links-header">
+       <div class="left-toolbar"></div>
+       <div class="tab-links-bar">
+        <ul class='binf-nav binf-nav-tabs binf-nav-pills esoc-user-profile-tabcontainer' role="tablist">
+
+        {{#each extraTabs}}
+          {{#this}}
+            {{#if show}}
+              <li role="presentation" class="esoc-user-profile-tab"
+                  id="esoc-user-profile-{{tabName}}-tab">
+                <a href="#{{tabName}}" data-binf-toggle="tab" role="tab"
+                        class="esoc-user-profile-{{tabName}}-tab-label cs-tablink"  tabindex="-1" title= {{tabDisplayName}}>
+              <span class="esoc-user-{{tabName}}-tab-label esoc-user-profile-tab-label"
+                    title="{{tabDisplayName}}">{{tabDisplayName}}</span>
+                </a>
+                 {{#if tabCount}}
+                    <span class="esoc-user-{{tabName}}-count
+              esoc-user-profile-tab-count esoc-user-profile-tab-label"
+                          title="{{tabCount.count}}">{{tabCount.count}}</span>
+                  {{/if}}
+              </li>
+            {{/if}}
+          {{/this}}
+        {{/each}}
+      </ul>
+       </div>
+      <div class="right-toolbar"></div>
+      </div>
+     
+
+    
+  </div>
+   <div id="esoc-simple-user-widget-form-body-{{uniqueId}}"
+      class="esoc-simple-user-widget-form-body" role="tabpanel"></div>
+{{else}}
+  <div id="esoc-simple-user-widget-form-body-{{uniqueId}}" class="esoc-simple-user-widget-form-body" role="tabpanel"></div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

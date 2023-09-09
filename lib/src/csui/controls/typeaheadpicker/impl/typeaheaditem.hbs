@@ -1,0 +1,17 @@
+{{#if lightWeight}}
+  <div class="item-info lightweight{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="csui-item-name {{cssItemName}} binf-pull-left" title="{{name}}">{{name}}</span>
+  </div>
+{{else}}
+  <span class="item-picture csui-icon-group{{#if disabled}} binf-disabled{{/if}} binf-pull-left"></span>
+  <div class="item-info fullweight{{#if disabled}} binf-disabled{{/if}} binf-pull-left">
+    <span class="csui-item-name {{cssItemName}} binf-pull-left" title="{{name}}">{{name}}</span>
+    {{#if moreHtml}}{{{moreHtml}}}{{/if}}
+    {{#if disabled}}
+      <span class="message binf-pull-left">{{disabled-message}}</span>
+    {{/if}}
+  </div>
+{{/if}}
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

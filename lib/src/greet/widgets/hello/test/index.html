@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HelloView</title>
+
+  <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+  <style>
+    body {
+      /* Make some space at the top; there is no top navigation bar
+         on this page */
+      padding-top: 1em;
+    }
+  </style>
+
+  <script src="../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+  <script src="../../../../lib/src/smart/config.js" data-csui-path="../../../../lib/src/smart"></script>
+
+  <script>
+    require.config({
+      paths: {
+        csui: '../../../../lib/src/csui',
+        greet: '../../..'
+      },
+      deps: [
+        'csui/lib/require.config!nuc/nuc-extensions.json',
+        'csui/lib/require.config!smart/smart-extensions.json',
+        'csui/lib/require.config!csui/csui-extensions.json',
+        'csui/lib/require.config!greet/greet-extensions.json'
+      ],
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/marionette', 'csui/utils/contexts/page/page.context',
+      '../hello.view', './hello.mock.js'
+    ], function (Marionette, PageContext, HelloView, HelloMock) {
+      'use strict';
+
+      // Wrap the widget placeholder
+      var contentRegion = new Marionette.Region({
+            el: '#content'
+          }),
+      // Create the data managing context
+          context = new PageContext(),
+      // Create the widget instance
+          helloView = new HelloView({
+            context: context
+          });
+
+      // Show the widget on the page
+      contentRegion.show(helloView);
+      // Mock the REST API responses
+      HelloMock.enable();
+      // Load data from the server
+      context.fetch();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid">
+  <div class="binf-row">
+    <div id="content" class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

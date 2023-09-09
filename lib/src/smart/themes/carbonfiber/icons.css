@@ -1,0 +1,179 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-svg-icon {
+  
+  
+  pointer-events: none;
+}
+
+.binf-widgets .csui-icon-group .csui-icon-v2 {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.binf-widgets .csui-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.binf-widgets .csui-icon-group {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.binf-widgets .csui-parent-location .csui-icon-group,
+.binf-widgets .csui-parent-location .csui-icon-group .csui-icon,
+.binf-widgets .binf-search-location-group .csui-icon-group .csui-icon,
+.binf-widgets .csui-table-cell-location-div .csui-icon-group .csui-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.binf-widgets .csui-icon-group .csui-icon {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.icon-menu-location {
+  background-image: url('image/icons/menu_location.svg');
+}
+
+.notification_warning_orange {
+  background-image: url('image/icons/notification_warning_orange.svg')
+}
+
+.icon-forward_arrow {
+  background-image: url("image/icons/breadcrumb_arrow.svg");
+}
+
+.icon-listview-checkmark {
+  background-image: url('image/icons/checkmark.svg');
+}
+
+.binf-widgets .icon-expandArrowDown,
+.binf-widgets .icon-expandArrowDown:focus,
+.binf-widgets .icon-expandArrowDown:active {
+  background-image: url('image/icons/caret_down.svg');
+}
+
+.binf-widgets .icon-expandArrowUp,
+.binf-widgets .icon-expandArrowUp:focus,
+.binf-widgets .icon-expandArrowUp:active {
+  background-image: url('image/icons/caret_up.svg');
+}
+
+.arrow_back {
+  background-image: url('image/icons/arrow_back.svg');
+}
+
+.caret_right16_md, .goto_next_page:active {
+  background-image: url('image/icons/csui_caret_right16_md.svg');
+}
+
+.caret_right16_mo, .goto_next_page:hover {
+  background-image: url('image/icons/csui_caret_right16_mo.svg');
+}
+
+.caret_right16, .goto_next_page {
+  background-image: url('image/icons/csui_caret_right16.svg');
+}
+
+.caret_left16_md, .goto_previous_page:active {
+  background-image: url('image/icons/csui_caret_left16_md.svg');
+}
+
+.caret_left16_mo, .goto_previous_page:hover {
+  background-image: url('image/icons/csui_caret_left16_mo.svg');
+}
+
+.caret_left16, .goto_previous_page {
+  background-image: url('image/icons/csui_caret_left16.svg');
+}
+
+.binf-widgets .icon-progresspanel-minimize {
+  background-image: url('image/icons/progresspanel-minimize.svg');
+}
+
+.binf-widgets .icon-progresspanel-success,
+.binf-widgets .icon-progresspanel-success:active {
+  background-image: url('image/icons/processing-complete.svg');
+}
+
+.binf-widgets .icon-progresspanel-error,
+.binf-widgets .icon-progresspanel-error:active {
+  background-image: url('image/icons/processing-error.svg');
+}
+
+.formfield_clear,
+.binf-widgets .csui-action .csui-icon-dismiss-white,
+.csui-progressrow .csui-action-close {
+  background-image: url('image/icons/formfield_clear24.svg');
+}
+
+.image_user_placeholder,
+.csui-disabled .image_user_placeholder,
+.binf-open .image_user_placeholder {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: #808080;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: bold;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+
+[dir="rtl"] .tab-links .goto_next_page:active {
+  background-image: url('image/icons/csui_caret_left16_md.svg');
+}
+[dir="rtl"] .tab-links .goto_next_page:hover {
+  background-image: url('image/icons/csui_caret_left16_mo.svg');
+}
+[dir="rtl"] .tab-links .goto_next_page {
+  background-image: url('image/icons/csui_caret_left16.svg');
+}
+[dir="rtl"] .tab-links .goto_previous_page:active {
+  background-image: url('image/icons/csui_caret_right16_md.svg');
+}
+[dir="rtl"] .tab-links .goto_previous_page:hover {
+  background-image: url('image/icons/csui_caret_right16_mo.svg');
+}
+[dir="rtl"] .tab-links .goto_previous_page {
+  background-image: url('image/icons/csui_caret_right16.svg');
+}
+
+
+
+.mime_document {
+  background-image: url('image/icons/mime_document.svg');
+}
+
+.mime_pdf {
+  background-image: url('image/icons/mime_pdf.svg');
+}
+
+.mime_image {
+  background-image: url('image/icons/mime_image.svg');
+}
+
+.mime_folder {
+  background-image: url('image/icons/mime_folder.svg');
+}
+
+html[dir="rtl"].binf-widgets .smart-handle-rtl,
+html[dir="rtl"] .binf-widgets .smart-handle-rtl {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

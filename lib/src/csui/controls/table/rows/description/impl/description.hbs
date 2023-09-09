@@ -1,0 +1,41 @@
+{{#if descriptionAvailable}}
+    <div class="csui-description-colunm">
+        {{#if current_description}}
+            <span class="description {{truncate_fade_class}}" aria-label="{{complete_description}}" title="{{complete_description}}">
+                {{current_description}}
+            </span>
+        {{/if}}
+    </div>
+{{/if}}
+
+{{#if summary_Available}}
+    <div class="csui-summary-colunm">
+        {{#if current_summary}}
+            <span class="summary {{truncate_fade_class}}" aria-label="{{complete_summary}}" title="{{complete_summary}}">
+                {{complete_summary}}
+            </span>
+        {{/if}}
+    </div>
+{{/if}}
+
+{{#if summary_description_available}}
+    <div class="csui-summary-colunm">
+        {{#if current_summary}}
+        <span class="summary {{truncate_fade_class}}" title="{{complete_summary}}">
+            {{#if search_summary}}
+            {{#each current_summary}}
+            {{#if this.type}}
+            <span class="csui-summary-hh">{{this.text}}</span>
+            {{else}}
+            <span>{{this}}</span>
+            {{/if}}
+            {{/each}}
+            {{else}}
+            {{current_summary}}
+            {{/if}}
+        </span>
+        {{/if}}
+    </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

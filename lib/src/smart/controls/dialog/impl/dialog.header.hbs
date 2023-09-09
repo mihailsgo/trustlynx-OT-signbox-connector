@@ -1,0 +1,55 @@
+{{#if expandedHeader}}
+  {{#if actionIconNameLeft}}
+    <span class="tile-type-action-icon cs-icon-left" tabindex="0">
+      {{{icon-v2 iconName=actionIconNameLeft states='true'}}}
+    </span>
+  {{else}}
+    {{#if actionIconLeft}}
+      <span class="tile-type-action-icon cs-icon-left {{actionIconLeft}}" tabindex="0"></span>
+    {{/if}}
+  {{/if}}
+
+  {{#if iconNameLeft}}
+    <span class="tile-type-icon">
+      {{{icon-v2 iconName=iconNameLeft states='true'}}}
+    </span>
+    <div class="tile-title">
+  {{else}}
+    {{#if iconLeft}}
+        <span class="tile-type-icon cs-icon-left {{iconLeft}}"></span>
+      <div class="tile-title">
+    {{else}}
+      {{#if imageLeftUrl}}
+          <div class="tile-type-image {{imageLeftClass}}">
+            <span class="tile-type-icon tile-type-icon-img">
+              <img src="{{imageLeftUrl}}" alt="" aria-hidden="true">
+            </span>
+          </div>
+        <div class="tile-title">
+      {{else}}
+        <div class="tile-title cs-text-only">
+      {{/if}}
+    {{/if}}
+  {{/if}}
+
+
+    <h2 class="tile-title binf-modal-title csui-heading">{{title}}</h2>
+  </div>
+
+    <div class="cs-header-control"></div>
+
+  {{#if showCloseIcon}}
+      <div class="cs-close smart-v2-icon-parent" title="{{dialogCloseButtonTooltip}}"
+          tabindex="0" aria-label="{{dialogCloseAria}}" role="button">
+        {{#if iconNameRight}}
+          {{{icon-v2 iconName=iconNameRight states='true'}}}
+        {{else}}
+          {{#if iconRight}}
+          <div class="icon circular {{iconRight}}"></div>
+          {{/if}}
+        {{/if}}
+      </div>
+  {{/if}}
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

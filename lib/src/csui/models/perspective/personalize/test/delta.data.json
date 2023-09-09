@@ -1,0 +1,46 @@
+{
+  "type": "flow",
+  "perspective_id": 38423888,
+  "perspective_version": 8,
+  "perspectiveWidgets": [
+    "pman-15821861538950",
+    "pman-1581470019476",
+    "pman-1581470019852"
+  ],
+  "personalWidgets": [
+    {
+      "kind": "tile",
+      "options": {
+      },
+      "type": "csui/widgets/myassignments",
+      "w_id": "personal-1581470019351"
+    },
+    {
+      "kind": "tile",
+      "options": {
+        "isValid": true,
+        "shortcutItems": [
+          {
+            "id": 2000,
+            "type": "141"
+          },
+          {
+            "type": "142"
+          }
+        ],
+        "shortcutTheme": "csui-shortcut-theme-teal1"
+      },
+      "type": "csui/widgets/shortcuts",
+      "w_id": "personal-1581470019249"
+    }
+  ],
+  "order": [
+    "pman-15821861538950",
+    "pman-1581470019476",
+    "personal-1581470019351",
+    "personal-1581470019249"
+  ],
+  "hidden": [
+    "pman-1581470019852"
+  ]
+}

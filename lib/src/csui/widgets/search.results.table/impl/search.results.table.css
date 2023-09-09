@@ -1,0 +1,77 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-search-results-table-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-search-settings {
+    margin-right: 15px;
+  }
+  
+  .binf-widgets .cs-perspective-panel .csui-search-results-table-view .csui-perspective-toolbar-container {
+    align-items: center;
+    display: flex;
+  }
+
+  .binf-widgets .cs-perspective-panel .csui-search-results-table-view .csui-perspective-toolbar-container .cs-title-inner-container {
+    width: auto;
+    overflow: hidden;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-perspective-toolbar-container .cs-back-button-container {
+    width: 58px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .binf-widgets .cs-perspective-panel .csui-search-results-table-view .csui-perspective-toolbar-container .title {
+    width: calc(100% - 26px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 35px;
+  }
+
+  .binf-widgets .cs-perspective-panel .csui-search-results-table-view .cs-title-container {
+    display: inline-flex;
+    width: calc(100% - 320px);
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-search-version-label {
+    background-color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px 4px;
+    font-size: 11px;
+    color: #627783;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-search-version-label {
+    border: 1px solid #627783;
+  }
+  
+  .binf-widgets .csui-search-results-table-view .csui-search-version-label:hover,
+  .binf-widgets .csui-search-results-table-view .csui-search-version-label:focus {
+    background-color: #627783;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-search-header-action {
+    margin-right: 12px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .binf-widgets .cs-perspective-panel .csui-search-sorting {
+    display: inline-block;
+    text-align: right;
+    max-width: calc(100% - 138px);
+    margin-right: 14px;
+    height: 32px;
+    cursor: pointer;
+  }

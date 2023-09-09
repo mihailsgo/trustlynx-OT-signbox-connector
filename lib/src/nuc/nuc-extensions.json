@@ -1,0 +1,16 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "nuc": {
+        "version": "1.0"
+      }
+    }
+  },
+  "nuc/utils/authenticators/authenticators": {
+    "extensions": {
+      "nuc": [
+        "nuc/utils/authenticators/nuc.authenticators"
+      ]
+    }
+  }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tree Browse with NodesTableView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets {
+      /* Make some space at the top; there is no top navigation bar on this page */
+      padding-top: 1em;
+    }
+
+    #content {
+      margin-top: 50px;
+    }
+
+    #hint {
+      color: white;
+      margin: 1em;
+      font-style: italic;
+    }
+  </style>
+
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+  <script data-csui-path="../../../../smart" src="../../../../smart/config.js"></script>
+  <script src="../../../helpers.js"></script>
+  <script src="../../../helpers.js"></script>
+  <script src="../../../test/sdk-demo-config-parameters.js"></script>
+  <script>
+    // Help the test page waiting on all "deps" config sections.
+    var csuiCallbacks = [],
+        csuiBlocks = 0;
+
+    window.blockCsui = function () {
+      ++csuiBlocks;
+    };
+
+    window.unBlockCsui = function () {
+      if (--csuiBlocks === 0) {
+        while (csuiCallbacks.length) {
+          csuiCallbacks.shift()();
+          if (csuiBlocks > 0) {
+            break;
+          }
+        }
+      }
+    };
+
+    window.csuiDemo = function (callback) {
+      if (csuiBlocks === 0) {
+        callback();
+      } else {
+        csuiCallbacks.push(callback);
+      }
+    };
+
+    window.blockCsui();
+    require.config({
+      paths: {
+        nuc: "../../../../nuc",
+        smart: "../../../../smart",
+        csui: "../../../../csui"
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json',
+        'csui/lib/require.config!csui/csui-extensions.json'
+      ],
+      callback: window.unBlockCsui
+    });
+
+    csui.require.config({
+      config: {
+        'csui/widgets/nodestable/nodestable.view': {
+          useV2RestApi: true
+        },
+        'csui/utils/commands/thumbnail.toggle': {
+          enableGridView: true
+        },
+        'csui/models/node/node.model': {
+          separateCommands: true
+        },
+        "csui/controls/treebrowse/navigation.tree": {
+          "extensions": {
+            "csui": ["ExpandNodestableViewCommand"]
+          }
+        },
+        'csui/utils/contexts/factories/connector': {
+          connection: csui.connection
+        },
+        // Start in the Enterprise Volume
+        'csui/utils/contexts/factories/node': {
+          attributes: {id: csui.testContainerId || 2000}
+        },
+      }
+    });
+
+    csui.define('ExpandNodestableViewCommand',
+        function () {
+          'use strict';
+          return {
+            sequence: 50,
+            enabled: function (status, options) {
+              var parent_id = status && status.container && status.container.get('parent_id');
+              return !!parent_id;
+            }
+          };
+        });
+    window.csuiDemo(function () {
+      csui.onReady2([
+        'csui/lib/underscore',
+        'csui/lib/jquery',
+        'csui/controls/breadcrumbspanel/breadcrumbspanel.view',
+        'csui/widgets/nodestable/nodestable.view',
+        'csui/utils/contexts/page/page.context',
+        'csui/utils/contexts/factories/next.node',
+        'csui/utils/contexts/factories/node',
+        // Marionette - places a widget on the HTML page
+        'csui/lib/marionette',
+        'csui/dialogs/modal.alert/modal.alert'
+      ], function (_, $, BreadcrumbsPanelView, NodesTableView, PageContext,
+          NextNodeModelFactory, NodeModelFactory, Marionette, ModalAlert) {
+        // Create the manager for data to be loaded from the server
+        var context = new PageContext(),
+            nextNode = context.getModel(NextNodeModelFactory),
+            node = context.getModel(NodeModelFactory),
+            contentRegion = new Marionette.Region({
+              el: '#content'
+            }),
+
+            // Create the children browsing table including its DOM placeholder
+            breadcrumbsPanel = new BreadcrumbsPanelView({
+              context: context
+            }),
+            nodesTableView = new NodesTableView({
+              context: context
+            });
+
+        nextNode.set('id', csui.testContainerId || 2000);
+
+        // If the contextual container is changing, drill down
+        nextNode.on('change:id', function () {
+          node.set('id', nextNode.get('id'), {silent: true});
+          context.fetch();
+        });
+        // Fetch the initial data from the server; the view will be
+        // refreshed when the data are loaded
+        context.fetch().done(function () {
+          contentRegion.show(nodesTableView);
+          //By default tree view is not expanded in app server
+          // tree view gets expanded along with nodestable view in demo pages to enhance user experience
+          csui.expandTreeViewByDefault && expandTreeView();
+        }).fail(function (error) {
+          //If connection url is wrong, configure server details in "lib/src/csui/test/sdk-demo-config-parameters.js"
+          ModalAlert
+          .showError(error.message);
+        });
+
+        /* It is applicable to demo page, Not Recommended way*/
+        function expandTreeView() {
+          var navigationItems = nodesTableView.tableToolbarView &&
+                                nodesTableView.tableToolbarView.navigationToolbarView,
+              treeViewToolItem = navigationItems && navigationItems.children &&
+                                 _.filter(navigationItems.children.toArray(), function (view) {
+                                   return view.model.get('signature') === 'TreeBrowse';
+                                 }),
+              //Finding treebrowse  dom element
+              link = treeViewToolItem && treeViewToolItem[0].$el &&
+                     treeViewToolItem[0].$el.find('a');
+
+          //trigger treebrowse command click event
+          link.length && $(link).click();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div id="content" class="binf-col-md-12 row-xs-full"></div>
+  </div>
+</div>
+
+</body>
+</html>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

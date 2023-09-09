@@ -1,0 +1,157 @@
+{
+  "id": {
+    "data": {
+      "deleted": false,
+      "display_name": "Admin",
+      "group_id": 1001,
+      "id": 1000,
+      "name": "Admin",
+      "privilege_login": true,
+      "privilege_modify_groups": true,
+      "privilege_modify_users": true,
+      "privilege_public_access": true,
+      "privilege_system_admin_rights": true,
+      "privilege_user_admin_rights": true,
+      "type": 0,
+      "type_name": "User"
+    }
+  },
+  "actions": {
+    "data": {
+      "delete": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v2\/nodes\/1112222",
+        "method": "DELETE",
+        "name": "Delete"
+      },
+      "properties": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v2\/nodes\/1112222",
+        "method": "GET",
+        "name": "Properties"
+      }
+    },
+    "map": {"default_action": "open", "more": ["properties"]},
+    "order": ["delete"]
+  },
+  "properties": {
+    "BWS": {
+      "container": true,
+      "create_date": "2017-08-16T12:26:56",
+      "create_user_id": 1000,
+      "description": "test",
+      "description_multilingual": {
+        "en_US": "test"
+      },
+      "id": 1112222,
+      "modify_date": "2017-08-31T12:30:38",
+      "modify_user_id": 1000,
+      "name": "Business Workspace",
+      "name_multilingual": {
+        "en_US": "Business Workspace"
+      },
+      "owner_group_id": 1000,
+      "owner_user_id": 1000,
+      "parent_id": 2740,
+      "size": 1,
+      "size_formatted": "1 Items",
+      "type": 848,
+      "type_name": "Business Workspace",
+      "volume_id": -2740
+    }
+  },
+  "serverInfo":{
+    "mobile": {
+      "offline_use": true
+    },
+    "server": {
+      "advanced_versioning": true,
+      "character_encoding": 1,
+      "current_date": "2020-01-28T10:52:05",
+      "current_locale_suffix": "_en_US",
+      "domain_access_enabled": false,
+      "enhanced_advanced_versioning": false,
+      "force_download_for_mime_types": [
+        "application\/x-msdownload",
+        "application\/octet-stream"
+      ],
+      "language_code": "USA",
+      "languages": [
+        {
+          "default": true,
+          "display_name": "English ( United States )",
+          "language_code": "_en_US"
+        }
+      ],
+      "metadata_languages": [
+        {
+          "default": true,
+          "display_name": "English ( India )",
+          "language_code": "en_IN"
+        }
+      ],
+      "time_zone_offset_enabled": false,
+      "url": "http:\/\/mn0mulapf1pw8nq:8080\/OTCS1\/cs.exe",
+      "version": "16.2.999"
+    },
+    "viewer": {
+      "content_suite": {
+        "enabled": false,
+        "supported_mime_types": [
+          "application\/ms-excel",
+          "application\/msexcel",
+          "application\/msword",
+          "application\/msword-template",
+          "application\/pdf",
+          "application\/postscript",
+          "application\/powerpoint",
+          "application\/ppt",
+          "application\/vnd.ms-bitmap",
+          "application\/vnd.ms-excel",
+          "application\/vnd.ms-excel",
+          "application\/vnd.ms-excel-template",
+          "application\/vnd.ms-excel.sheet.binary.macroEnabled.12",
+          "application\/vnd.ms-excel.sheet.macroEnabled.12",
+          "application\/vnd.ms-outlook",
+          "application\/vnd.ms-outlook-message",
+          "application\/vnd.ms-outlook-template",
+          "application\/vnd.ms-powerpoint",
+          "application\/vnd.ms-powerpoint.presentation.macroEnabled.12",
+          "application\/vnd.ms-pps",
+          "application\/vnd.ms-word",
+          "application\/vnd.ms-word.document.macroEnabled.12",
+          "application\/vnd.openxmlformats-officedocument.presentationml.presentation",
+          "application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "application\/x-bravadtx",
+          "application\/x-bravax",
+          "application\/x-emf",
+          "application\/x-msexcel",
+          "application\/x-mspowerpoint",
+          "application\/x-pdf",
+          "application\/x-outlook-msg",
+          "image\/bmp",
+          "image\/gif",
+          "image\/jpeg",
+          "image\/pjpeg",
+          "image\/png",
+          "image\/tif",
+          "image\/tiff",
+          "image\/x-MS-bmp",
+          "image\/x-png",
+          "image\/x-rgb",
+          "image\/x-tiff",
+          "image\/x-windows-bmp",
+          "image\/x-xbitmap",
+          "image\/x-xbm",
+          "image\/x-xpixmap",
+          "message\/rfc822"
+        ]
+      }
+    }
+  }
+}

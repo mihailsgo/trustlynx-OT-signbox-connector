@@ -1,0 +1,16 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.xecmpf-file-upload-capture {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#xecmpf-file-upload-capture-list {
+  flex: 15% 0 0;
+  height: 100%;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+#xecmpf-file-upload-capture-category-data {
+  flex: 85% 0 0;
+  position: relative;
+}

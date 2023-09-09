@@ -1,0 +1,1344 @@
+{
+    "complexSearchForm" : {
+        "data": {
+            "BrowseLivelink": {
+                "BrowseLivelink_value1_ID": 2000
+            },
+            "Category": {
+                "Category_1361773": {
+                    "Category_1361773_18_value1": "",
+                    "Category_1361773_18_value2": "",
+                    "Category_1361773_18_value3": "anyvalue",
+                    "Category_1361773_18_value4": "anydate",
+                    "Category_1361773_18_value5_ID": null,
+                    "Category_1361773_24_value1": "",
+                    "Category_1361773_24_value2": "anydate",
+                    "Category_1361773_24_value3": "",
+                    "Category_1361773_24_value4_ID": null,
+                    "Category_1361773_29_value1": "",
+                    "Category_1361773_29_value3": "",
+                    "Category_1361773_33_value1": "anydate",
+                    "Category_1361773_33_value2": "",
+                    "Category_1361773__value1": "anydate",
+                    "Category_1361773__value10": "",
+                    "Category_1361773__value11": "",
+                    "Category_1361773__value12_ID": null,
+                    "Category_1361773__value13": "anydate",
+                    "Category_1361773__value14": "",
+                    "Category_1361773__value15": "",
+                    "Category_1361773__value16_ID": null,
+                    "Category_1361773__value2": "",
+                    "Category_1361773__value21": "",
+                    "Category_1361773__value3": "",
+                    "Category_1361773__value4_ID": null,
+                    "Category_1361773__value5": "anydate",
+                    "Category_1361773__value6": "",
+                    "Category_1361773__value7": "",
+                    "Category_1361773__value8_ID": null,
+                    "Category_1361773__value9": "anydate"
+                }
+            },
+            "Collections": {
+                "collections_search_selected": []
+            },
+            "FullText": {
+                "FullText_value1": "pdf"
+            },
+            "templateId": 38989362
+        },
+        "options": {
+            "fields": {
+                "BrowseLivelink": {
+                    "fields": {
+                        "BrowseLivelink_value1_ID": {
+                            "label": "Location",
+                            "name": "BrowseLivelink_value1_ID",
+                            "order": 1,
+                            "type": "otcs_node_picker",
+                            "type_control": {
+                                "action": "api/v1/volumes",
+                                "method": "GET",
+                                "name": "Enterprise",
+                                "parameters": {
+                                    "filter_types": [
+                                        -2
+                                    ],
+                                    "select_types": []
+                                }
+                            }
+                        }
+                    },
+                    "order": 650
+                },
+                "Category": {
+                    "fields": {
+                        "Category_1361773": {
+                            "fields": {
+                                "Category_1361773_18_value1": {
+                                    "label": "Text: Popup",
+                                    "name": "Category_1361773_18_value1",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "q",
+                                        "w",
+                                        "e",
+                                        "r",
+                                        "t"
+                                    ],
+                                    "order": 30,
+                                    "OTRegionName": "Attr_1361773_19",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773_18_value2": {
+                                    "label": "Integer: Field",
+                                    "name": "Category_1361773_18_value2",
+                                    "order": 31,
+                                    "OTRegionName": "Attr_1361773_20"
+                                },
+                                "Category_1361773_18_value3": {
+                                    "label": "Flag: Checkbox",
+                                    "name": "Category_1361773_18_value3",
+                                    "optionLabels": [
+                                        "",
+                                        "True",
+                                        "False",
+                                        "Defined",
+                                        "Undefined",
+                                        "Not True",
+                                        "Not False"
+                                    ],
+                                    "order": 32,
+                                    "OTRegionName": "Attr_1361773_21",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773_18_value4": {
+                                    "label": "Date: Field",
+                                    "name": "Category_1361773_18_value4",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 33,
+                                    "OTRegionName": "Attr_1361773_22",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773_18_value4_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_18_value4": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773_18_value4_DFor",
+                                    "order": 34
+                                },
+                                "Category_1361773_18_value4_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_18_value4": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773_18_value4_DFrom",
+                                    "order": 35
+                                },
+                                "Category_1361773_18_value4_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_18_value4": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773_18_value4_DTo",
+                                    "order": 36
+                                },
+                                "Category_1361773_18_value5_ID": {
+                                    "label": "User: Field",
+                                    "name": "Category_1361773_18_value5_ID",
+                                    "order": 37,
+                                    "OTRegionName": "Attr_1361773_23",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773_24_value1": {
+                                    "label": "Text: Field req",
+                                    "name": "Category_1361773_24_value1",
+                                    "order": 38,
+                                    "OTRegionName": "Attr_1361773_26"
+                                },
+                                "Category_1361773_24_value2": {
+                                    "label": "Date: Field req",
+                                    "name": "Category_1361773_24_value2",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 39,
+                                    "OTRegionName": "Attr_1361773_25",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773_24_value2_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_24_value2": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773_24_value2_DFor",
+                                    "order": 40
+                                },
+                                "Category_1361773_24_value2_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_24_value2": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773_24_value2_DFrom",
+                                    "order": 41
+                                },
+                                "Category_1361773_24_value2_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_24_value2": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773_24_value2_DTo",
+                                    "order": 42
+                                },
+                                "Category_1361773_24_value3": {
+                                    "label": "Integer: Popup req",
+                                    "name": "Category_1361773_24_value3",
+                                    "optionLabels": [
+                                        "<None>",
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5
+                                    ],
+                                    "order": 43,
+                                    "OTRegionName": "Attr_1361773_27",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773_24_value4_ID": {
+                                    "label": "User: Field req",
+                                    "name": "Category_1361773_24_value4_ID",
+                                    "order": 44,
+                                    "OTRegionName": "Attr_1361773_28",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773_29_value1": {
+                                    "label": "Int",
+                                    "name": "Category_1361773_29_value1",
+                                    "order": 45,
+                                    "OTRegionName": "Attr_1361773_30"
+                                },
+                                "Category_1361773_29_value3": {
+                                    "label": "Date-popup",
+                                    "name": "Category_1361773_29_value3",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "2017-07-19",
+                                        "2017-07-15",
+                                        "2017-07-28",
+                                        "2017-08-22",
+                                        "2017-08-24"
+                                    ],
+                                    "order": 46,
+                                    "OTRegionName": "Attr_1361773_32",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773_33_value1": {
+                                    "label": "Date&Time",
+                                    "name": "Category_1361773_33_value1",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 47,
+                                    "OTRegionName": "Attr_1361773_34",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773_33_value1_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_33_value1": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773_33_value1_DFor",
+                                    "order": 48
+                                },
+                                "Category_1361773_33_value1_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_33_value1": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773_33_value1_DFrom",
+                                    "order": 49
+                                },
+                                "Category_1361773_33_value1_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773_33_value1": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773_33_value1_DTo",
+                                    "order": 50
+                                },
+                                "Category_1361773_33_value2": {
+                                    "label": "Text-multi-line",
+                                    "name": "Category_1361773_33_value2",
+                                    "order": 51,
+                                    "OTRegionName": "Attr_1361773_35"
+                                },
+                                "Category_1361773__value1": {
+                                    "label": "Date: Field",
+                                    "name": "Category_1361773__value1",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 2,
+                                    "OTRegionName": "Attr_1361773_2",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773__value10": {
+                                    "label": "Integer: Field plainnnn",
+                                    "name": "Category_1361773__value10",
+                                    "order": 20,
+                                    "OTRegionName": "Attr_1361773_11"
+                                },
+                                "Category_1361773__value11": {
+                                    "label": "Text: Popup MV",
+                                    "name": "Category_1361773__value11",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "order": 21,
+                                    "OTRegionName": "Attr_1361773_12",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773__value12_ID": {
+                                    "label": "User: Field MV",
+                                    "name": "Category_1361773__value12_ID",
+                                    "order": 22,
+                                    "OTRegionName": "Attr_1361773_13",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773__value13": {
+                                    "label": "Date: Field  MV req",
+                                    "name": "Category_1361773__value13",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 23,
+                                    "OTRegionName": "Attr_1361773_14",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773__value13_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value13": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773__value13_DFor",
+                                    "order": 24
+                                },
+                                "Category_1361773__value13_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value13": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773__value13_DFrom",
+                                    "order": 25
+                                },
+                                "Category_1361773__value13_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value13": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773__value13_DTo",
+                                    "order": 26
+                                },
+                                "Category_1361773__value14": {
+                                    "label": "Integer: Field MV req",
+                                    "name": "Category_1361773__value14",
+                                    "order": 27,
+                                    "OTRegionName": "Attr_1361773_15"
+                                },
+                                "Category_1361773__value15": {
+                                    "label": "Text: Popup MV req",
+                                    "name": "Category_1361773__value15",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "order": 28,
+                                    "OTRegionName": "Attr_1361773_16",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773__value16_ID": {
+                                    "label": "User: Field MV req",
+                                    "name": "Category_1361773__value16_ID",
+                                    "order": 29,
+                                    "OTRegionName": "Attr_1361773_17",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773__value1_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value1": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773__value1_DFor",
+                                    "order": 3
+                                },
+                                "Category_1361773__value1_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value1": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773__value1_DFrom",
+                                    "order": 4
+                                },
+                                "Category_1361773__value1_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value1": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773__value1_DTo",
+                                    "order": 5
+                                },
+                                "Category_1361773__value2": {
+                                    "label": "Integer: Field",
+                                    "name": "Category_1361773__value2",
+                                    "order": 6,
+                                    "OTRegionName": "Attr_1361773_3"
+                                },
+                                "Category_1361773__value21": {
+                                    "label": "END",
+                                    "name": "Category_1361773__value21",
+                                    "order": 52,
+                                    "OTRegionName": "Attr_1361773_36"
+                                },
+                                "Category_1361773__value3": {
+                                    "label": "Text: Popup",
+                                    "name": "Category_1361773__value3",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d",
+                                        "e"
+                                    ],
+                                    "order": 7,
+                                    "OTRegionName": "Attr_1361773_4",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773__value4_ID": {
+                                    "label": "User: Field",
+                                    "name": "Category_1361773__value4_ID",
+                                    "order": 8,
+                                    "OTRegionName": "Attr_1361773_5",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773__value5": {
+                                    "label": "Date: Field -req",
+                                    "name": "Category_1361773__value5",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 9,
+                                    "OTRegionName": "Attr_1361773_6",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773__value5_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value5": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773__value5_DFor",
+                                    "order": 10
+                                },
+                                "Category_1361773__value5_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value5": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773__value5_DFrom",
+                                    "order": 11
+                                },
+                                "Category_1361773__value5_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value5": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773__value5_DTo",
+                                    "order": 12
+                                },
+                                "Category_1361773__value6": {
+                                    "label": "Integer: Field  req",
+                                    "name": "Category_1361773__value6",
+                                    "order": 13,
+                                    "OTRegionName": "Attr_1361773_7"
+                                },
+                                "Category_1361773__value7": {
+                                    "label": "Text: Popup req",
+                                    "name": "Category_1361773__value7",
+                                    "optionLabels": [
+                                        "<None>",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "order": 14,
+                                    "OTRegionName": "Attr_1361773_8",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                },
+                                "Category_1361773__value8_ID": {
+                                    "label": "User: Field req",
+                                    "name": "Category_1361773__value8_ID",
+                                    "order": 15,
+                                    "OTRegionName": "Attr_1361773_9",
+                                    "type": "otcs_user_picker",
+                                    "type_control": {
+                                        "action": "api/v1/members",
+                                        "method": "GET",
+                                        "name": "",
+                                        "parameters": {
+                                            "filter_types": [
+                                                0
+                                            ],
+                                            "select_types": [
+                                                0
+                                            ]
+                                        }
+                                    }
+                                },
+                                "Category_1361773__value9": {
+                                    "label": "Date: Field  MV",
+                                    "name": "Category_1361773__value9",
+                                    "optionLabels": [
+                                        "",
+                                        "Any Date",
+                                        "Past Day",
+                                        "Past Week",
+                                        "Past 2 Weeks",
+                                        "Past Month",
+                                        "Past 3 Months",
+                                        "Past 6 Months",
+                                        "Past Year",
+                                        "Specific Date",
+                                        "Date Range"
+                                    ],
+                                    "order": 16,
+                                    "OTRegionName": "Attr_1361773_10",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_1361773__value9_DFor": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value9": "specific"
+                                    },
+                                    "label": "For",
+                                    "name": "Category_1361773__value9_DFor",
+                                    "order": 17
+                                },
+                                "Category_1361773__value9_DFrom": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value9": "range"
+                                    },
+                                    "label": "From",
+                                    "name": "Category_1361773__value9_DFrom",
+                                    "order": 18
+                                },
+                                "Category_1361773__value9_DTo": {
+                                    "dateFormat": "yyyy-mm-dd",
+                                    "dependencies": {
+                                        "Category_1361773__value9": "range"
+                                    },
+                                    "label": "To",
+                                    "name": "Category_1361773__value9_DTo",
+                                    "order": 19
+                                }
+                            },
+                            "order": 53
+                        }
+                    },
+                    "order": 500
+                },
+                "Collections": {
+                    "fields": {
+                        "collections_search_selected": {
+                            "dataSource": {
+                                "5133299": "Only documents",
+                                "20485538": "Admin_folders",
+                                "33962352": "TestSlice",
+                                "39532053": "Enterprise",
+                                "39532056": "Enterprise [All Versions]",
+                                "45686242": "TestDocSlice",
+                                "45686352": "TestPDFSlice",
+                                "45686354": "TestJPGSlice",
+                                "45686356": "TestPNGSlice"
+                            },
+                            "label": "Slices",
+                            "multiple": true,
+                            "name": "collections_search_selected",
+                            "removeDefaultNone": true,
+                            "size": 6,
+                            "type": "select"
+                        }
+                    },
+                    "order": 200
+                },
+                "FullText": {
+                    "fields": {
+                        "FullText_value1": {
+                            "label": "Search Terms",
+                            "name": "FullText_value1",
+                            "order": 54,
+                            "type": "text"
+                        }
+                    },
+                    "order": 100
+                },
+                "templateId": {
+                    "type": "hidden"
+                }
+            }
+        },
+        "schema": {
+            "properties": {
+                "BrowseLivelink": {
+                    "properties": {
+                        "BrowseLivelink_value1_ID": {
+                            "type": "integer"
+                        }
+                    },
+                    "title": "Location"
+                },
+                "Category": {
+                    "properties": {
+                        "Category_1361773": {
+                            "OTCatVerNum": 11,
+                            "properties": {
+                                "Category_1361773_18_value1": {
+                                    "enum": [
+                                        "",
+                                        "q",
+                                        "w",
+                                        "e",
+                                        "r",
+                                        "t"
+                                    ],
+                                    "fieldID": "1361773_18_1_1361773_18_1_19_1"
+                                },
+                                "Category_1361773_18_value2": {
+                                    "fieldID": "1361773_18_1_1361773_18_1_20_1"
+                                },
+                                "Category_1361773_18_value3": {
+                                    "enum": [
+                                        "anyvalue",
+                                        "1",
+                                        "0",
+                                        "defined",
+                                        "undefined",
+                                        "!1",
+                                        "!0"
+                                    ],
+                                    "fieldID": "1361773_18_1_1361773_18_1_21_1"
+                                },
+                                "Category_1361773_18_value4": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_18_1_1361773_18_1_22_1"
+                                },
+                                "Category_1361773_18_value4_DFor": {
+                                    "dependencies": "Category_1361773_18_value4",
+                                    "format": "date"
+                                },
+                                "Category_1361773_18_value4_DFrom": {
+                                    "dependencies": "Category_1361773_18_value4",
+                                    "format": "date"
+                                },
+                                "Category_1361773_18_value4_DTo": {
+                                    "dependencies": "Category_1361773_18_value4",
+                                    "format": "date"
+                                },
+                                "Category_1361773_18_value5_ID": {
+                                    "fieldID": "1361773_18_1_1361773_18_1_23_1"
+                                },
+                                "Category_1361773_24_value1": {
+                                    "fieldID": "1361773_24_1_1361773_24_1_26_1"
+                                },
+                                "Category_1361773_24_value2": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_24_1_1361773_24_1_25_1"
+                                },
+                                "Category_1361773_24_value2_DFor": {
+                                    "dependencies": "Category_1361773_24_value2",
+                                    "format": "date"
+                                },
+                                "Category_1361773_24_value2_DFrom": {
+                                    "dependencies": "Category_1361773_24_value2",
+                                    "format": "date"
+                                },
+                                "Category_1361773_24_value2_DTo": {
+                                    "dependencies": "Category_1361773_24_value2",
+                                    "format": "date"
+                                },
+                                "Category_1361773_24_value3": {
+                                    "enum": [
+                                        "",
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5"
+                                    ],
+                                    "fieldID": "1361773_24_1_1361773_24_1_27_1"
+                                },
+                                "Category_1361773_24_value4_ID": {
+                                    "fieldID": "1361773_24_1_1361773_24_1_28_1"
+                                },
+                                "Category_1361773_29_value1": {
+                                    "fieldID": "1361773_29_1_1361773_29_1_30_1"
+                                },
+                                "Category_1361773_29_value3": {
+                                    "enum": [
+                                        "",
+                                        "D/2017/7/19:0:0:0",
+                                        "D/2017/7/15:0:0:0",
+                                        "D/2017/7/28:0:0:0",
+                                        "D/2017/8/22:0:0:0",
+                                        "D/2017/8/24:0:0:0"
+                                    ],
+                                    "fieldID": "1361773_29_1_1361773_29_1_32_1"
+                                },
+                                "Category_1361773_33_value1": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_33_1_1361773_33_1_34_1"
+                                },
+                                "Category_1361773_33_value1_DFor": {
+                                    "dependencies": "Category_1361773_33_value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773_33_value1_DFrom": {
+                                    "dependencies": "Category_1361773_33_value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773_33_value1_DTo": {
+                                    "dependencies": "Category_1361773_33_value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773_33_value2": {
+                                    "fieldID": "1361773_33_1_1361773_33_1_35_1"
+                                },
+                                "Category_1361773__value1": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_2_1"
+                                },
+                                "Category_1361773__value10": {
+                                    "fieldID": "1361773_11_1"
+                                },
+                                "Category_1361773__value11": {
+                                    "enum": [
+                                        "",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "fieldID": "1361773_12_1"
+                                },
+                                "Category_1361773__value12_ID": {
+                                    "fieldID": "1361773_13_1"
+                                },
+                                "Category_1361773__value13": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_14_1"
+                                },
+                                "Category_1361773__value13_DFor": {
+                                    "dependencies": "Category_1361773__value13",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value13_DFrom": {
+                                    "dependencies": "Category_1361773__value13",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value13_DTo": {
+                                    "dependencies": "Category_1361773__value13",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value14": {
+                                    "fieldID": "1361773_15_1"
+                                },
+                                "Category_1361773__value15": {
+                                    "enum": [
+                                        "",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "fieldID": "1361773_16_1"
+                                },
+                                "Category_1361773__value16_ID": {
+                                    "fieldID": "1361773_17_1"
+                                },
+                                "Category_1361773__value1_DFor": {
+                                    "dependencies": "Category_1361773__value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value1_DFrom": {
+                                    "dependencies": "Category_1361773__value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value1_DTo": {
+                                    "dependencies": "Category_1361773__value1",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value2": {
+                                    "fieldID": "1361773_3_1"
+                                },
+                                "Category_1361773__value21": {
+                                    "fieldID": "1361773_36_1"
+                                },
+                                "Category_1361773__value3": {
+                                    "enum": [
+                                        "",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d",
+                                        "e"
+                                    ],
+                                    "fieldID": "1361773_4_1"
+                                },
+                                "Category_1361773__value4_ID": {
+                                    "fieldID": "1361773_5_1"
+                                },
+                                "Category_1361773__value5": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_6_1"
+                                },
+                                "Category_1361773__value5_DFor": {
+                                    "dependencies": "Category_1361773__value5",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value5_DFrom": {
+                                    "dependencies": "Category_1361773__value5",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value5_DTo": {
+                                    "dependencies": "Category_1361773__value5",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value6": {
+                                    "fieldID": "1361773_7_1"
+                                },
+                                "Category_1361773__value7": {
+                                    "enum": [
+                                        "",
+                                        "a",
+                                        "b",
+                                        "c",
+                                        "d"
+                                    ],
+                                    "fieldID": "1361773_8_1"
+                                },
+                                "Category_1361773__value8_ID": {
+                                    "fieldID": "1361773_9_1"
+                                },
+                                "Category_1361773__value9": {
+                                    "enum": [
+                                        "anydate",
+                                        "definedDate",
+                                        "pastDay",
+                                        "pastWeek",
+                                        "past2Weeks",
+                                        "pastMonth",
+                                        "past3Months",
+                                        "past6Months",
+                                        "pastYear",
+                                        "specific",
+                                        "range"
+                                    ],
+                                    "fieldID": "1361773_10_1"
+                                },
+                                "Category_1361773__value9_DFor": {
+                                    "dependencies": "Category_1361773__value9",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value9_DFrom": {
+                                    "dependencies": "Category_1361773__value9",
+                                    "format": "date"
+                                },
+                                "Category_1361773__value9_DTo": {
+                                    "dependencies": "Category_1361773__value9",
+                                    "format": "date"
+                                }
+                            },
+                            "title": "00All- attribute types"
+                        }
+                    },
+                    "title": "Categories..."
+                },
+                "Collections": {
+                    "properties": {
+                        "collections_search_selected": {
+                            "required": true
+                        }
+                    },
+                    "title": "Slices"
+                },
+                "FullText": {
+                    "properties": {
+                        "FullText_value1": {}
+                    },
+                    "title": "Full Text"
+                },
+                "templateId": {}
+            },
+            "title": "complex search form",
+            "type": "object"
+        }
+    },
+    "testSearchForm" : {
+        "data": {
+            "Category": {
+                "Category_33962130": {
+                    "Category_33962130__value1": "1",
+                    "Category_33962130__value2": "undefined",
+                    "Category_33962130__value4": "2"
+                },
+                "Category_5990280": {
+                    "Category_5990280__value1": "10",
+                    "Category_5990280__value2": "Raju"
+                }
+            },
+            "FullText": {
+                "FullText_value1": ""
+            },
+            "templateId": 33962023
+        },
+        "options": {
+            "fields": {
+                "Category": {
+                    "fields": {
+                        "Category_33962130": {
+                            "fields": {
+                                "Category_33962130__value1": {
+                                    "label": "One",
+                                    "name": "Category_33962130__value1",
+                                    "optionLabels": [
+                                        "",
+                                        "True",
+                                        "False",
+                                        "Defined",
+                                        "Undefined",
+                                        "Not True",
+                                        "Not False"
+                                    ],
+                                    "order": 4,
+                                    "OTRegionName": "Attr_33962130_2",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_33962130__value2": {
+                                    "label": "Two",
+                                    "name": "Category_33962130__value2",
+                                    "optionLabels": [
+                                        "",
+                                        "True",
+                                        "False",
+                                        "Defined",
+                                        "Undefined",
+                                        "Not True",
+                                        "Not False"
+                                    ],
+                                    "order": 5,
+                                    "OTRegionName": "Attr_33962130_3",
+                                    "removeDefaultNone": true
+                                },
+                                "Category_33962130__value4": {
+                                    "label": "TwoValue",
+                                    "name": "Category_33962130__value4",
+                                    "optionLabels": [
+                                        "<None>",
+                                        1,
+                                        2
+                                    ],
+                                    "order": 6,
+                                    "OTRegionName": "Attr_33962130_5",
+                                    "removeDefaultNone": true,
+                                    "type": "select"
+                                }
+                            },
+                            "order": 7
+                        },
+                        "Category_5990280": {
+                            "fields": {
+                                "Category_5990280__value1": {
+                                    "label": "int:field",
+                                    "name": "Category_5990280__value1",
+                                    "order": 1,
+                                    "OTRegionName": "Attr_5990280_2"
+                                },
+                                "Category_5990280__value2": {
+                                    "label": "text:filed",
+                                    "name": "Category_5990280__value2",
+                                    "order": 2,
+                                    "OTRegionName": "Attr_5990280_3"
+                                }
+                            },
+                            "order": 3
+                        }
+                    },
+                    "order": 500
+                },
+                "FullText": {
+                    "fields": {
+                        "FullText_value1": {
+                            "label": "Search Terms",
+                            "name": "FullText_value1",
+                            "order": 8,
+                            "type": "text"
+                        }
+                    },
+                    "order": 100
+                },
+                "templateId": {
+                    "type": "hidden"
+                }
+            }
+        },
+        "schema": {
+            "properties": {
+                "Category": {
+                    "properties": {
+                        "Category_33962130": {
+                            "OTCatVerNum": 1,
+                            "properties": {
+                                "Category_33962130__value1": {
+                                    "enum": [
+                                        "anyvalue",
+                                        "1",
+                                        "0",
+                                        "defined",
+                                        "undefined",
+                                        "!1",
+                                        "!0"
+                                    ],
+                                    "fieldID": "33962130_2_1"
+                                },
+                                "Category_33962130__value2": {
+                                    "enum": [
+                                        "anyvalue",
+                                        "1",
+                                        "0",
+                                        "defined",
+                                        "undefined",
+                                        "!1",
+                                        "!0"
+                                    ],
+                                    "fieldID": "33962130_3_1"
+                                },
+                                "Category_33962130__value4": {
+                                    "enum": [
+                                        "",
+                                        "1",
+                                        "2"
+                                    ],
+                                    "fieldID": "33962130_5_1"
+                                }
+                            },
+                            "title": "TwoValuePopup"
+                        },
+                        "Category_5990280": {
+                            "OTCatVerNum": 1,
+                            "properties": {
+                                "Category_5990280__value1": {
+                                    "fieldID": "5990280_2_1"
+                                },
+                                "Category_5990280__value2": {
+                                    "fieldID": "5990280_3_1"
+                                }
+                            },
+                            "title": "Non required"
+                        }
+                    },
+                    "title": "Categories..."
+                },
+                "FullText": {
+                    "properties": {
+                        "FullText_value1": {}
+                    },
+                    "title": "Full Text"
+                },
+                "templateId": {}
+            },
+            "title": "TestForm",
+            "type": "object"
+        }
+    },
+    "allSearchForms" : {
+        "data": {
+            "FullText": {
+                "FullText_value1": "test",
+                "FullText_value2": "Test"
+            },
+            "templateId": 33953110
+        },
+        "options": {
+            "fields": {
+                "FullText": {
+                    "fields": {
+                        "FullText_value1": {
+                            "label": "Search Terms",
+                            "name": "FullText_value1",
+                            "order": 1,
+                            "type": "text"
+                        },
+                        "FullText_value2": {
+                            "fieldClass": "csui-boolean-operator",
+                            "label": "And",
+                            "name": "FullText_value2",
+                            "order": 2,
+                            "type": "text"
+                        }
+                    },
+                    "order": 100
+                },
+                "templateId": {
+                    "type": "hidden"
+                }
+            }
+        },
+        "schema": {
+            "properties": {
+                "FullText": {
+                    "properties": {
+                        "FullText_value1": {},
+                        "FullText_value2": {}
+                    },
+                    "title": "Full Text"
+                },
+                "templateId": {}
+            },
+            "title": "Test",
+            "type": "object"
+        }
+    }
+}

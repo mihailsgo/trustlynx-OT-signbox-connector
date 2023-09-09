@@ -1,0 +1,773 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .conws-header {
+  height: 100%;
+  width: 100%;
+}
+
+.conws-header .binf-popover {
+  max-width: 400px;
+  top: 2px !important; 
+}
+
+.conws-header .binf-popover .binf-arrow {
+  top: calc(50% - 30px) !important;
+}
+
+.cs-collapse .conws-header .binf-popover .binf-arrow {
+  top: calc(50% - 54px) !important;
+}
+
+.binf-widgets .cs-header.conws-header-with-link {
+  margin-top: 32px;
+}
+
+.binf-widgets .cs-header:not(.conws-header-with-link) .conws-header-navbar {
+  display: none;
+}
+
+.binf-widgets .cs-header.conws-header-with-link .conws-header-navbar {
+  top: -32px;
+  left: 0px;
+}
+
+.binf-widgets .conws-header-navwrap  {
+  position: relative;
+}
+
+.binf-widgets .conws-header-navbar {
+  position: absolute;
+  height: 32px;
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.binf-widgets .conws-header-navitem .conws-header-navlink {
+  display: flex;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.binf-widgets .conws-header-navitem .conws-header-navlink:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
+html[dir="rtl"] .conws-header-navitem .conws-header-navicon {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: 'FlipH';
+  -ms-filter: 'FlipH';
+}
+
+.binf-widgets .conws-header-navitem .conws-header-navtext {
+  margin-left: 7px;
+  margin-right: 4px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.binf-widgets .conws-header-navitem .conws-header-navlink:hover .conws-header-navtext {
+  text-decoration: underline;
+}
+
+.binf-widgets .conws-header-wrapper {
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+}
+
+
+.binf-widgets .csui-toolbar.binf-nav.binf-nav-pills > li:last-child > .binf-dropdown-menu {  
+  margin: 0;
+}
+
+
+.binf-widgets .conws-header .conws-header-metadata,
+.binf-widgets .conws-header .conws-header-metadata-childview {
+  position: relative;
+  float: left;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100%;
+}
+
+.binf-widgets .conws-header .conws-header-wrapper .conws-header-metadata-container {
+  height: calc(100% - 37px);
+  float: left;
+  padding-left: 24px;
+  width: calc(100% - 88px);
+}
+
+.binf-widgets .conws-header .conws-header-metadata {
+  width: 100%;
+}
+
+.binf-widgets .conws-header .conws-header-metadata-childview {
+  width: calc(60% - 10px);
+  padding-top: 11px;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-wrapper .conws-header-metadata,
+.binf-widgets .cs-collapse .conws-header .conws-header-wrapper .conws-header-metadata-childview {
+  padding-left: 24px;
+  padding-right: 10px;
+}
+
+.binf-widgets .conws-header-edit {
+  width: 64px;
+  height: 64px;
+}
+
+.conws-header-edit:focus {
+  outline: 1px dotted #cccccc;
+  outline-offset: 0;
+}
+
+.cs-collapse .conws-header-edit {
+  pointer-events: none;
+}
+
+.conws-header-edit:hover .header-image {
+  position: absolute;
+}
+
+.conws-header-edit:hover .header-editor {
+  display: flex;
+  cursor: pointer;
+  opacity: .9;
+}
+
+.conws-header-edit:focus .header-image {
+  position: absolute;
+}
+
+.conws-header-edit:focus .header-editor {
+  display: flex;
+  cursor: pointer;
+  opacity: .9;
+}
+
+.cs-collapse .conws-header-edit:hover .header-editor {
+  display: none;
+}
+
+.cs-collapse .conws-header-edit:focus .header-editor {
+  display: none;
+}
+
+.binf-widgets .conws-header-image {
+  float: left;
+  width: 64px;
+  height: 100%;
+}
+
+.binf-widgets .conws-header-image img {
+  width: 64px;
+  height: 64px;
+  transition: height .3s, width .3s;
+  border-radius: 5%;
+}
+
+.cs-collapse .conws-header-image img {
+  height: 48px;
+  width: 48px;
+  border-radius: 5%;
+}
+
+.binf-widgets .header-image {
+  width: 64px;
+  height: 64px;
+  transition: height .3s, width .3s;
+}
+
+.cs-collapse .conws-header .header-image {
+  width: 32px;
+  height: 32px;
+}
+
+.binf-widgets .header-editor {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-collapse .header-editor {
+  display: none;
+  width: 48px;
+  height: 48px;
+}
+
+.binf-widgets .conws-header-title {
+  overflow: hidden;
+}
+
+.cs-collapse .conws-header-title {
+  height: 32px;
+}
+
+.conws-header-title > h1 {
+  color: #ffffff;
+  line-height: 33px; 
+  font-weight: 300;
+  font-size: 28px;
+  transition: font-size .3s;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cs-collapse .conws-header-title > p {
+  font-size: 28px;
+}
+
+.binf-widgets .conws-header-type {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.binf-widgets .conws-header-desc {
+  left: 112px;
+  top: 122px;
+  overflow: hidden;
+  display: flex;
+  max-width: 100%;
+  padding-bottom: 16px;
+  min-height: 32px;
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+.cs-collapse .conws-header-desc {
+  opacity: 0;
+}
+
+.binf-widgets .conws-header-metadata-extension {
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header .conws-header-metadata-container {
+  display: none;
+}
+
+.conws-header-type > p {
+  color: #cccccc;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 21px; 
+}
+
+#conws-header-childview .object-group-item {
+  background-color: transparent;
+}
+
+.binf-widgets .conws-header-comment {
+  float: left;
+  height: 24px;
+  width: 48px;
+}
+
+.cs-collapse #conws-header-childview {
+  display: none;
+}
+
+.binf-widgets .conws-header-favorite {
+  padding-top: 2px; 
+  float: right;
+}
+
+.binf-widgets .conws-header-addon {
+  float: left;
+  padding-top: 28px;
+}
+
+.conws-header-addon:after {
+  clear: both;
+}
+
+.cs-collapse .conws-header-addon {
+  display: none;
+}
+
+
+@media (max-width: 1008px) {
+
+  #conws-header-childview {
+    display: none;
+  }
+
+  .binf-widgets .conws-header .conws-header-metadata-childview {
+    width: 100%;
+  }
+
+  .binf-widgets .conws-header .conws-header-childView-container {
+    display: none;
+  }
+}
+
+.binf-widgets .conws-header-edit:focus {
+  outline: 1px dotted #cccccc;
+  outline-offset: -1px;
+}
+
+.binf-widgets .conws-header-wrapper #conws-header-childview .esoc-empty-activityfeed-message {
+  color: #ffffff;
+  margin-top: 1.0em
+}
+
+.binf-widgets .conws-header #conws-header-childview {
+  opacity: 1;
+  transition: opacity .2s;
+  height: 100%;
+  overflow: hidden;
+}
+
+.binf-widgets .conws-header .conws-header-toolcontainer,
+.binf-widgets .conws-header .conws-header-childView-container {
+  float: left;
+  height: 100%;
+  width: 40%;
+  opacity: 1;
+  transition: opacity .2s;
+  padding: 0px;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-childView-container {
+  display: none;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-metadata,
+.binf-widgets .cs-collapse .conws-header .conws-header-metadata-childview {
+  width: 100%;
+
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse > .cs-header {
+  height: 96px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective > .cs-header.conws-header-widget {
+  min-height: 96px;
+  max-height: 160px;
+  height: auto;
+  display: flex;
+}
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective > .cs-header.conws-header-widget.conws-header-with-link {
+  min-height: 0px;
+  max-height: 0px;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective > .cs-header.conws-header-widget.conws-header-with-link .conws-header-navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective > .cs-header.conws-header-widget.conws-header-with-link .conws-header-wrapper {
+  display: none;
+}
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective > .cs-header.conws-header-widget:not(.conws-header-with-link) {
+  display: none;
+}
+
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured .conws-header .conws-header-metadata-childview,
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured-nodata .conws-header .conws-header-metadata-childview {
+  width: calc(100% - 384px);
+  padding-right: 33px;
+
+}
+
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured .conws-header .conws-header-childView-container,
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured-nodata .conws-header .conws-header-childView-container {
+  width: 384px;
+}
+
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured .conws-header .esoc-activityfeed-list-item .esoc-commentinfo-block-wrapper,
+.binf-widgets .cs-tabbed-perspective:not(.cs-collapse) .conws-description-available.conws-activityfeed-configured-nodata .conws-header .esoc-activityfeed-list-item .esoc-commentinfo-block-wrapper {
+  width: calc(100% - 36px) !important;
+}
+
+
+
+.binf-widgets .conws-header .conws-header-title-section {
+  width: calc(100% - 88px);
+  display: flex;
+  margin-bottom: 4px;
+  padding-left: 24px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse .conws-header .conws-header-title-section {
+  width: calc(100% - 32px);
+  padding-left: 16px;
+}
+
+.binf-widgets .conws-header .conws-header-title {
+  height: auto;
+  display: flex;
+  flex: 1 1 100%;
+  margin-right: 64px;
+}
+
+.binf-widgets .conws-header .conws-header-metadata .conws-header-title h1 {
+  margin-right: 0;
+}
+
+.binf-widgets .conws-header-type > p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.binf-widgets .conws-header .conws-header-wrapper .conws-header-title h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-title h1 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.binf-widgets .conws-header #conws-header-childview .cs-userfield .cs-name a {
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 14px;
+}
+
+.conws-header .conws-header-addon {
+  float: right;
+  padding: 0 28px;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-title {
+  padding-bottom: 0;
+}
+
+.binf-widgets .conws-header #conws-header-childview .cs-userfield .user-default-image {
+  margin-right: 6px;
+  margin-top: 2px;
+}
+
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse .conws-header .conws-header-image,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse .conws-header .conws-header-image .conws-header-edit,
+.binf-widgets .cs-perspective-panel .cs-tabbed-perspective.cs-collapse .conws-header .conws-header-image img {
+  width: 32px;
+  height: 32px;
+}
+
+.binf-widgets .conws-header .esoc-user-profile-link:focus,
+.binf-widgets .conws-header .esoc-activityfeed-list-item .esoc-social-mime-icon.csui-icon:focus,
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-object-name:focus,
+.binf-widgets .conws-header .conws-tabletoolbar .csui-toolbar.binf-nav > li > a:focus,
+.binf-widgets .conws-header .conws-tabletoolbar .csui-toolbar.binf-nav > li > .custom-view-region > div > div > button:focus,
+.binf-widgets .conws-header .conws-description .description-showless:focus,
+.binf-widgets .conws-header .conws-description .description-readmore:focus {
+  outline-color: white;
+}
+
+.conws-header .esoc-activityfeed-list-item .esoc-commentinfo-block-wrapper {
+  margin-left: 8px;
+  width: calc(100% - 48px) !important;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.conws-header .esoc-activityfeed-list-item.binf-row.object-group-item:last-child .esoc-commentinfo-block-wrapper {
+  border: none;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-commentinfo-block .esoc-social-comment-details .esoc-comment-user-details .esoc-user-display-name,
+.conws-header .esoc-activityfeed-header .esoc-comment-msg .esoc-reply-user-widget .esoc-user-display-name {
+  color: #9de4f9;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.binf-widgets .esoc-activityfeed-list-item .esoc-user-container .image_user_placeholder {
+  font-size: 9px;
+  width: 20px;
+  height: 20px;
+}
+
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-activityfeed-actiontype,
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-social-version,
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-version-number,
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-social-comment-timestamp {
+  color: #fcfcfc;
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.binf-widgets .conws-header .esoc-activityfeed-header .esoc-activityfeed-actiontype {
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-social-attachment,
+.conws-header .esoc-activityfeed-header .esoc-comment-msg {
+  margin-top: 0;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-object-name {
+  margin-left: 7px;
+  color: #9de4f9;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-object-name:hover {
+  color: #9de4f9;
+}
+
+.binf-widgets .conws-header .esoc-activityfeed-list-item .esoc-social-comment-data img {
+  width: 12px;
+  height: 12px;
+  vertical-align: text-top;
+}
+
+.conws-header .esoc-activityfeed-list-item.binf-row.object-group-item {
+  margin-top: 4px;
+}
+
+.conws-header .esoc-activityfeed-list-item.binf-row.object-group-item:first-child {
+  margin-top: 0;
+}
+
+.conws-header .esoc-activityfeed-list-item .esoc-commentinfo-block {
+  margin-top: 0;
+}
+
+.conws-header .esoc-activityfeed-list-item .esoc-acitivity-feed-fft > div {
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffff;
+  padding-top: 2px;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-social-comment-data .esoc-description,
+.conws-header .esoc-activityfeed-header .esoc-social-comment-data {
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-see-more,
+.conws-header .esoc-activityfeed-header .esoc-see-less {
+  background: transparent;
+}
+
+.conws-header .esoc-activityfeed-header .esoc-extended-view-mode {
+  margin-top: 0;
+}
+
+.binf-widgets #conws-header-childview .esoc-afw-object-view {
+  max-height: 144px;
+}
+
+
+.binf-widgets .cs-tabbed-perspective.conws-backlink-visible:not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured,
+.binf-widgets .cs-tabbed-perspective:not(.conws-backlink-visible):not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured,
+.binf-widgets .cs-tabbed-perspective.conws-backlink-visible:not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available,
+.binf-widgets .cs-tabbed-perspective:not(.conws-backlink-visible):not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available,
+.binf-widgets .cs-tabbed-perspective.csui-breadcrumbs-visible:not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured,
+.binf-widgets .cs-tabbed-perspective:not(.csui-breadcrumbs-visible):not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured,
+.binf-widgets .cs-tabbed-perspective.csui-breadcrumbs-visible:not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available,
+.binf-widgets .cs-tabbed-perspective:not(.csui-breadcrumbs-visible):not(.cs-collapse) > .cs-header.conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available {
+  height: 160px;
+}
+
+.binf-widgets .cs-tabbed-perspective.conws-backlink-visible > .conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available #conws-header-childview .esoc-empty-activityfeed-wrapper,
+.binf-widgets .cs-tabbed-perspective.csui-breadcrumbs-visible > .conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available #conws-header-childview .esoc-empty-activityfeed-wrapper {
+  background-image: url('../../../image/icons/conws_no_activities.svg');
+  background-size: 96px 96px;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 120px;
+}
+
+.binf-widgets .cs-tabbed-perspective.conws-backlink-visible > .conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available #conws-header-childview .esoc-empty-activityfeed-message,
+.binf-widgets .cs-tabbed-perspective.csui-breadcrumbs-visible > .conws-header-widget.conws-activityfeed-configured-nodata.conws-description-available #conws-header-childview .esoc-empty-activityfeed-message {
+  position: absolute;
+  bottom: 0px;
+  right: calc(50% - 94px);
+}
+
+.binf-widgets .cs-header.conws-header-widget #conws-header-childview .esoc-empty-activityfeed-message .esoc-empty-activityfeed-text {
+  font-size: 16px;
+  font-style: normal;
+  color: #EFEFEF;
+  font-weight: 200;
+}
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.binf-widgets .cs-collapse .tab-panel .conws-header-toolbar-extension,
+.binf-widgets .cs-collapse .conws-header .conws-header-childView-container{
+  display: none;
+}
+
+.binf-widgets .tab-panel .conws-header-toolbar-extension {
+  display: inline-flex;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+.binf-widgets .conws-header .conws-header-childView-container {
+  display: block;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+.binf-widgets .cs-collapse .conws-header .conws-header-toolbar .conws-tabletoolbar {
+  display: block;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+.binf-widgets .conws-delayedActionsToolbar .binf-widgets .tile-nav .binf-dropdown-menu{
+  right: 0px;
+  left: auto;
+}
+
+
+.binf-widgets .cs-perspective-with-breadcrumb-view .csui-perspective-view .cs-tabbed-perspective.conws-header-active,
+.binf-widgets .cs-tabbed-perspective.conws-header-active {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-header {
+  flex: 0 0 auto;
+}
+
+
+
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content {
+  flex: 1 1 auto;
+  height: calc(100% - 160px);
+  min-height: calc(160px + 48px);
+}
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel {
+  height: 100%;
+}
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel > .binf-tab-content {
+  height: calc(100% - 48px);
+  padding-bottom: 20.5px;
+}
+.binf-widgets .cs-tabbed-perspective.cs-collapse.conws-header-active > .cs-content > .tab-panel > .binf-tab-content {
+  height: 100%;
+}
+.binf-widgets.csui-maximized-widget-mode .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel > .binf-tab-content {
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane {
+  height: 100%;
+}
+
+
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row,
+.binf-widgets .cs-tabbed-perspective.conws-header-active > .cs-content > .tab-panel > .binf-tab-content > .binf-tab-pane > .binf-row > * {
+  height: 100%;
+}
+
+
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective.conws-header-active .cs-content .binf-row.csui-maximized-row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.binf-widgets.csui-maximized-widget-mode .cs-perspective-panel .cs-tabbed-perspective.conws-header-active .cs-content .binf-row.csui-maximized-row > .csui-maximized-column {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+.tile .conws-header-error.content-tile {
+  background-color: #F7F7F7;
+  flex-direction: column;
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.binf-widgets .conws-header-error {
+  margin: auto 0 auto 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.conws-header-error .conws-header-error-icon-div {
+  display: inline-block;
+  width: 100%;
+  margin-top: 2%
+}
+
+.conws-header-error .conws-header-error-icon-div .conws-header-error-icon-parent {
+  border-radius: 50%;
+  border: 1px solid #F7F7F7;
+  background-color: #F7F7F7;
+  display: inline-flex;
+}
+
+.conws-header-error .conws-header-error-icon-div .conws-header-error-icon {
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.conws-header-error .conws-header-message {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 200;
+  font-style:normal;
+  display: inline-block;
+  align-self: center;
+}
+
+

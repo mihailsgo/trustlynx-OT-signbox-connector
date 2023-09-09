@@ -1,0 +1,337 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog .cs-icon-left {
+  font-size: 2.5em;
+  float: left;
+  height: 100%;
+  margin-right: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: table-cell;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.cs-dialog .cs-close {  
+  margin: 0 0 0 auto;
+  float: right;
+  
+  cursor: pointer;
+}
+
+.cs-dialog .binf-modal-dialog .cs-close {  
+  vertical-align: middle;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+}
+
+.cs-dialog .cs-close:hover {
+  opacity: 1;
+}
+
+.cs-dialog .binf-modal-header .cs-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.cs-dialog .binf-modal-header .cs-icon-cross {
+  background-image: url('../../globalmessage/impl/images/close.svg');
+}
+.binf-widgets .binf-modal-header .csui-icon-dismiss {
+  background-image:  url('../../globalmessage/impl/images/dismiss.svg'); 
+  display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+
+.cs-dialog .binf-modal-body {
+  padding: 0;
+  overflow-y: auto;
+  }
+  
+.cs-dialog .binf-modal-body > .cs-perspective-panel {
+  
+  max-height: calc(100vh - 216px); 
+  overflow-y: auto;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .cs-dialog .binf-modal-body,
+  .cs-dialog .binf-modal-body > .cs-perspective-panel {
+  overflow-y: overlay;
+  }
+}
+
+.cs-dialog .binf-modal-dialog.binf-modal-full .binf-modal-body{
+  max-height: 100vh;
+}
+
+
+.binf-widgets .binf-modal-dialog.binf-modal-full .binf-modal-body iframe {
+  display: block;
+}
+
+html[dir="rtl"] .cs-dialog .modal-separator {
+  margin-right: 25px;
+  margin-left: 12px;
+}
+
+.cs-dialog .binf-modal-body.cs-dialog-bodymessage {
+  padding: 16px 24px;
+  background: #FFFFFF;
+  min-height:56px;
+  border-radius: 0 0 3px 3px;
+}
+
+
+
+.cs-dialog.binf-modal:not(.csui-alert) .binf-modal-dialog {
+  top: 65px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+}
+
+.cs-dialog.binf-modal:not(.csui-alert) .binf-modal-dialog:not(.binf-modal-full)  {
+  min-width: 480px;
+  max-height: 672px;
+}
+
+
+.cs-dialog .binf-modal-lg {
+  width: 92%;
+}
+
+.cs-dialog .binf-modal-lg .binf-modal-body {
+  
+      
+  margin: 0;
+}
+
+.cs-dialog .binf-modal-lg div.tile-title {
+  width:100%;
+}
+
+.cs-dialog .binf-modal-lg div.tile-action-icon-tittle {
+  width: calc(100% - 140px);
+}
+
+.cs-dialog .binf-modal-lg .tile-title .csui-heading {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 63px;
+  max-width: 100%;
+}
+
+.cs-dialog .binf-modal-lg .cs-close {
+  padding: 0;
+  margin: 0 0 0 auto;
+  font-size: 1.1em;
+  color: #000000;
+  
+  float: right;
+}
+
+.cs-dialog .binf-modal-lg .cs-close .cs-icon-cross {
+  padding: 18px;
+  vertical-align: middle;
+}
+
+.cs-dialog .binf-modal-lg .cs-close:hover {
+  opacity: 1;
+}
+
+.binf-widgets .cs-dialog .tile-title {
+  width: auto;
+}
+
+.binf-widgets .cs-dialog .cs-header-control {
+  margin: 15px 15px 0 15px;
+  float: left;
+}
+
+.binf-widgets .cs-dialog .csui-acc-tab-region .cs-header-control {
+  margin: 0;
+  float: left;
+}
+
+.binf-widgets .cs-dialog .binf-modal-footer .cs-separate {
+  float: left
+}
+
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn,
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn + .binf-btn,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn {
+  height: 32px;
+  padding: 0 24px;
+  margin-left: 16px;
+  vertical-align: middle;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn-default,
+.esoc-user-text-edit-buttons .binf-btn-default {
+  background-color: #ffffff;
+  border: 1px solid #232E72;
+  color: #232E72;
+}
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn-default:focus,
+.esoc-user-text-edit-buttons .binf-btn-default:focus {
+  background-color: #ffffff;
+  border: 1px solid #2E3D98;
+  box-shadow: 0;
+  color: #232E72;
+  outline: 1px solid #2E3D98;
+  outline-offset: 4px;
+}
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn-default:hover,
+.esoc-user-text-edit-buttons .binf-btn-default:hover {
+  background-color: #ffffff;
+  border: 1px solid #171f4c;
+  color: #171f4c;
+  box-shadow: inset 0 0 0 1px rgba(23,31,76,1);
+}
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn-default:active,
+.esoc-user-text-edit-buttons .binf-btn-default:active {
+  border: 1px solid #2E3D98;
+  color: #2E3D98;
+  box-shadow: 0 0 0 0;
+}
+
+.binf-widgets .cs-dialog .binf-modal-footer .binf-btn-default:disabled,
+.esoc-user-text-edit-buttons .binf-btn-default:disabled {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #a9a9a9;
+}
+
+.cs-dialog .binf-modal-footer .binf-btn-primary,
+.esoc-user-text-edit-buttons .binf-btn-primary{
+  background-color: #232E72;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.cs-dialog .binf-modal-footer .binf-btn-primary:focus,
+.esoc-user-text-edit-buttons .binf-btn-primary:focus {
+  box-shadow: none;
+  outline: 1px solid #2e3d98;
+  outline-offset: 4px;
+  background-color: #232E72;
+}
+
+.cs-dialog .binf-modal-footer .binf-btn-primary:hover,
+.esoc-user-text-edit-buttons .binf-btn-primary:hover {
+  background-color: #171f4c;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.cs-dialog .binf-modal-footer .binf-btn-primary:active,
+.esoc-user-text-edit-buttons .binf-btn-primary:active {
+  background-color: #2e3d98;
+}
+
+.cs-dialog .binf-modal-footer .binf-btn-primary:disabled,
+.esoc-user-text-edit-buttons .binf-btn-primary:disabled {
+  background-color: #999999;
+  color: #ffffff;
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+.cs-dialog.binf-modal .binf-modal-dialog.binf-modal-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cs-dialog .binf-modal-full,
+.cs-dialog .binf-modal-full .binf-modal-content,
+.cs-dialog .binf-modal-full .binf-modal-content .binf-modal-body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.cs-dialog .binf-modal-full .binf-modal-content .binf-modal-header {
+  display: none;
+  visibility: hidden;
+}
+
+.binf-widgets .binf-modal-header {
+ min-height: 48px;
+ padding: 0 24px;
+}
+
+.binf-widgets .binf-modal-header.smart-dialog-header{
+  overflow-y: auto;
+  height: auto;
+}
+
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .binf-widgets .binf-modal-header.smart-dialog-header {
+      overflow-y: overlay;
+    }
+  }
+
+.binf-widgets .binf-modal-header .tile-title.cs-text-only{
+  max-height: 108px;   
+}
+
+.binf-widgets .binf-modal:not(.csui-alert) .binf-modal-header h2{
+font-size: 1.5em;
+line-height: 2.5em;
+font-weight: 300;
+}
+
+.binf-widgets .binf-modal:not(.csui-alert) .binf-modal-dialog .binf-modal-footer {
+  height: 48px;
+  padding: 8px 24px;
+  background-color: #F4F4F4;
+  border-radius: 0 0 3px 3px;
+}
+
+.binf-widgets .binf-modal:not(.csui-alert) .binf-modal-dialog  .tile-header.binf-modal-header{
+  background-color: #DCE4E8;
+  border-radius: 3px 3px 0 0;
+}
+
+.cs-dialog .binf-modal-content{
+  border-radius: 3px;
+}
+
+.binf-widgets .cs-dialog .tile-header.binf-modal-header{
+  padding: 0 24px;
+}
+
+.binf-widgets .binf-modal-dialog  .tile-header.binf-modal-header .csui-heading{
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 14px 0;
+  color: #333333 ;
+  min-height: 48px;
+  white-space: break-spaces;
+}

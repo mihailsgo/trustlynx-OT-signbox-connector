@@ -1,0 +1,122 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .binf-breadcrumb {
+  background-color: transparent;
+  padding: 8px 24px;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+}
+
+.binf-widgets .binf-breadcrumb a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.binf-widgets .binf-breadcrumb a:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 4px;
+  text-decoration: none;
+}
+
+.binf-widgets .binf-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.binf-widgets .binf-breadcrumb .binf-open > .binf-dropdown-menu {
+  max-height: 50vh;
+}
+
+.binf-widgets .binf-breadcrumb .binf-dropdown-menu > li > a:hover,
+.binf-widgets .binf-breadcrumb .binf-dropdown-menu > li > a:focus {
+  outline: none;
+}
+
+.binf-widgets .binf-breadcrumb,
+.binf-widgets .binf-breadcrumb > li.tail,
+.binf-widgets .binf-breadcrumb > li.binf-active {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.binf-widgets .binf-breadcrumb:not(.smart-loading-breadcrumbs) > li.binf-active {
+  display: block;
+  overflow: hidden;
+  color: #c3e5f6;
+  font-weight: bold;
+}
+
+.binf-widgets .binf-breadcrumb > li:not(.binf-hidden) + li::before,
+.binf-widgets .csui-search-results .csui-search-item-breadcrumb .binf-breadcrumb > li+li::before {
+  content: "\00a0";
+  padding: 0 8px;
+  background-image: url("../../../themes/carbonfiber/image/icons/breadcrumb_arrow.svg");
+  background-size: 5px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-table;
+}
+
+.binf-widgets .binf-breadcrumb > li + li::before {
+  padding: 0 8px;
+  background-image: url("../../../themes/carbonfiber/image/icons/breadcrumb_arrow.svg");
+  background-size: 5px 10px;
+}
+
+.binf-widgets .binf-breadcrumb > li.csui-custom-breadcrumb + li::before {
+  background-image: none;
+  content: '|';
+}
+
+
+html[dir="rtl"] .binf-widgets .binf-breadcrumb > li:not(.binf-hidden) + li::before,
+html[dir="rtl"] .binf-widgets .binf-breadcrumb > li.binf-search-breadcrumb-ddmenu.binf-dropdown:not(.binf-hidden)::after {
+  transform: scaleX(-1);
+  filter: 'FlipH';
+  -ms-filter: 'FlipH';
+}
+
+
+.binf-widgets .binf-breadcrumb {
+  height: 32px;
+  font-size: 14px;
+  min-width: 360px;
+  align-items: center;
+}
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-dark{
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.binf-widgets .binf-breadcrumb > li.tail {
+  flex-shrink: 0;
+}
+
+.binf-widgets .binf-breadcrumb .binf-dropdown-menu > li > a {
+  color: #333333;
+}
+
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-light {
+  background: #ffffff;
+}
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-light a {
+  color: #337ab7;
+}
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-light a:hover {
+  color: #23527c;
+}
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-light > li.binf-active {
+  color: #757575;
+}
+
+.binf-widgets .binf-breadcrumb.binf-breadcrumb-light a:focus {
+  outline: 1px solid #2e3d98;
+  outline-offset: 4px;
+  text-decoration: none;
+}

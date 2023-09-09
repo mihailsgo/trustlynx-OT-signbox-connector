@@ -1,0 +1,141 @@
+{
+  "collection": {
+    "paging": {
+      "limit": 30,
+      "page": 1,
+      "page_total": 1,
+      "range_max": 1,
+      "range_min": 1,
+      "total_count": 1
+    },
+    "sorting": {
+      "sort": [{
+        "key": "sort",
+        "value": "asc_name"
+      }]
+    }
+  },
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/app\/container\/75702?fields=bwsinfo{up}&fields=document_external_identity&fields=external_source&fields=followups&fields=properties{wksp_type_name,rm_enabled}&fields=rmiconsdata&fields=signature_info&limit=30&page=1&sort=asc_name",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "addable_node_types": {
+      "data": {},
+      "definitions": {},
+      "definitions_map": {},
+      "definitions_order": []
+    },
+    "ancestors": [{
+      "id": 2000,
+      "name": "Enterprise",
+      "parent_id": -1,
+      "type": 141,
+      "type_name": "Enterprise Workspace"
+    }, {
+      "id": 12500,
+      "name": "C4C (my336500)",
+      "parent_id": 2000,
+      "type": 0,
+      "type_name": "Folder"
+    }, {
+      "id": 12282,
+      "name": "Account (C4C)",
+      "parent_id": 12500,
+      "type": 0,
+      "type_name": "Folder"
+    }, {
+      "id": 12066,
+      "name": "Account 1001",
+      "parent_id": 12282,
+      "type": 848,
+      "type_name": "Business Workspace"
+    }, {
+      "id": 75702,
+      "name": "Rel BWS",
+      "parent_id": -12066,
+      "type": 854,
+      "type_name": "Related Business Workspaces"
+    }],
+    "contents": [{
+      "actions": {
+        "data": {},
+        "map": {},
+        "order": []
+      },
+      "comments": 0,
+      "container": true,
+      "create_date": "2021-08-24T13:12:23",
+      "create_user_id": 1000,
+      "create_user_id_expand": {
+        "name": "Admin"
+      },
+      "data": {
+        "bwsinfo": {
+          "up": null
+        },
+        "rmiconsdata": {
+          "class_id": 0,
+          "official": 0,
+          "show_classify": false,
+          "show_hold": false,
+          "show_hold_tab": false,
+          "show_label_tab": true,
+          "show_official": false,
+          "show_xref": false,
+          "show_xref_tab": false
+        }
+      },
+      "description": "",
+      "favorite": false,
+      "hidden": false,
+      "id": 27686,
+      "mime_type": null,
+      "modify_date": "2021-08-24T13:12:41",
+      "modify_images": [],
+      "modify_user_id": 1000,
+      "modify_user_id_expand": {
+        "name": "Admin"
+      },
+      "name": "Account 10330",
+      "openable": true,
+      "original_id": null,
+      "original_id_expand": null,
+      "owner_user_id": 1000,
+      "owner_user_id_expand": {
+        "name": "Admin"
+      },
+      "parent_id": 12282,
+      "parent_id_expand": {
+        "name": "Account (C4C)",
+        "openable": true,
+        "type": 0
+      },
+      "permissions_model": "advanced",
+      "reserved_date": null,
+      "reserved_shared_collaboration": false,
+      "reserved_user_id": null,
+      "reserved_user_id_expand": null,
+      "rm_enabled": false,
+      "size": 3,
+      "size_formatted": "3 Items",
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      },
+      "status": null,
+      "type": 848,
+      "type_name": "Business Workspace",
+      "wksp_type_name": "Account (C4C)"
+    }],
+    "drag_and_drop": false
+  }
+}

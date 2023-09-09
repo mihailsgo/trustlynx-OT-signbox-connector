@@ -1,0 +1,42 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-fileupload-info-list {
+  height: 100%;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info:first-child {
+  padding-top: 0;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info:last-child {
+  padding-bottom: 32px;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info .xecmpf-fileupload-doc-info-icon {
+  flex-basis: 24px;
+  background-repeat: no-repeat;
+  flex-grow: 0;
+  height: 24px;
+  margin-right: 14px;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info .xecmpf-fileupload-doc-info-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-doc-info .xecmpf-item-count {
+  font-weight: bold;
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-missing-icon {
+  background-image: url('../../../../../image/icons/missing_documents_color_32.svg');
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-outdated-icon {
+  background-image: url('../../../../../image/icons/outdated_documents_color_32.svg');
+}
+.binf-widgets .xecmpf-fileupload-info-list .xecmpf-fileupload-inprocess-icon {
+  background-image: url('../../../../../image/icons/inprocess_documents_color_32.svg');
+}

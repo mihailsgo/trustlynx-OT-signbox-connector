@@ -1,0 +1,65 @@
+{
+  "canEditPerspective": true,
+  "id": 38423888,
+  "options": {
+    "widgets": [
+      {
+        "kind": "header",
+        "options": {
+          "includeMessage": true,
+          "includeVideo": true,
+          "message": "As a foundational technology in the Digital Workplace, OpenText Content Suite will pave the way to personal productivity, seamless collaboration, and integration with business processes."
+        },
+        "type": "csui/widgets/welcome.placeholder",
+        "w_id": "pman-15821861538950"
+      },
+      {
+        "kind": "tile",
+        "options": {
+          "isValid": true,
+          "shortcutItems": [
+            {
+              "displayName": "Development Hyderabad",
+              "id": 24788535,
+              "type": "141"
+            },
+            {
+              "displayName": "Development Munich",
+              "id": 16958113,
+              "type": "141"
+            },
+            {
+              "id": 24787987,
+              "type": "141"
+            },
+            {
+              "id": 24788645,
+              "type": "141"
+            }
+          ],
+          "shortcutTheme": "csui-shortcut-theme-indigo2"
+        },
+        "type": "csui/widgets/shortcuts",
+        "w_id": "pman-1581470019476"
+      },
+      {
+        "kind": "tile",
+        "options": {},
+        "type": "csui/widgets/favorites",
+        "w_id": "pman-1581470019852"
+      }
+    ]
+  },
+  "override": {
+    "applies_to_id": 0,
+    "asset_container_id": null,
+    "cascade": 0,
+    "ordering": 3,
+    "perspective_id": 38423888,
+    "perspective_info": {},
+    "perspective_type": "LandingPage",
+    "perspective_version": 8,
+    "rule_id": null
+  },
+  "type": "flow"
+}

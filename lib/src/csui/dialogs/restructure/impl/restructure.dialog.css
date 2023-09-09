@@ -1,0 +1,154 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog.csui-restructure-dialog {
+    overflow: auto;
+  }
+  
+  .csui-restructure-dialog .binf-modal-dialog {
+    width: calc(100% - 16px);
+    height: calc(100vh - 170px);
+    margin-top: 2rem;
+    max-width: 68rem;
+    max-height: 42rem;
+    min-width: 40rem;
+    min-height: 27rem;
+    top: 62px;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content {
+    border-radius: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-header {
+    height: 3.5em;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-bottom: 0.063em solid #a9a9a9;
+    background-color: #fff;
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-header > div.tile-title {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0 1.5em;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-header > div.tile-title h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 2.5em;
+    margin-left: 46.5%;
+    font-weight:300;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-header .cs-close {
+    display: none;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-body {
+    height: calc(100% - 3.5em - 56px); 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 0.063em solid #a9a9a9;
+  }
+  
+  .csui-restructure-dialog .binf-modal-content .binf-modal-footer {
+    background-color: #f5f5f5;
+    padding: 0.75em 1.5em;
+    border: 0;
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+  }
+  
+  .csui-restructure-dialog .csui-restructure-wrapper {
+    height: 100%;
+    display: flex;
+  }
+  
+  .csui-restructure-wrapper .formview-wrapper {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form {
+    height: 0;
+  }
+  
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_user,
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_node_picker,
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-datetime,
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-text,
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-textarea,
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-select
+  {
+    width: 320px;
+    margin-bottom: 8px;
+  }
+
+  .csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_user .alpaca-field-otcs_user {
+    display: flex;
+    flex-direction: column;
+}
+
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_user .alpaca-field-otcs_user .binf-col-sm-9,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_node_picker .alpaca-field-otcs_node_picker .binf-col-sm-9,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-datetime .alpaca-field-datetime .binf-col-sm-9,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-text .alpaca-field-text .binf-col-sm-9,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-textarea .alpaca-field-textarea .binf-col-sm-9,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-select .alpaca-field-select .binf-col-sm-9
+{
+    width: 100%;
+}
+
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-datetime .alpaca-field-datetime .binf-control-label,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_node_picker .alpaca-field-otcs_node_picker .binf-control-label,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-otcs_user .alpaca-field-otcs_user .binf-control-label,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-text .alpaca-field-text .binf-control-label,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-textarea .alpaca-field-textarea .binf-control-label,
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-field-select .alpaca-field-select .binf-control-label
+ {
+  padding: 0 0 8px 0;
+  line-height: 24px;
+  width: 100%;
+  text-align: left;  
+  font-size: 13px;
+  color: #666666;
+}
+
+.csui-restructure-wrapper .formview-wrapper .csui-restructure-form .csui-required-field-info{
+  text-align: right;
+  font-size: 12px;
+  margin-top: 16px;
+  width: 100%;
+  color: #707070;
+}
+
+#csui-restructure-Slide-Panel .csui-sidepanel-container{
+  width: 419px;
+  max-width: 419px;
+}
+
+
+

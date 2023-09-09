@@ -1,0 +1,252 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-visual-count-container {
+    height: 100%;
+}
+
+.binf-widgets .webreports-tilereport .tile-header .tile-controls
+{
+    flex-grow: unset;
+}
+
+.binf-widgets .webreports-visual-count-fp-content-view .tile-header .tile-controls {
+    flex-grow: 0;
+}
+
+.binf-widgets .webreports-visual-count-chart {
+    background-color: #f7f7f7;
+}
+
+.binf-widgets .webreports-visual-count-container div.outer-border{
+    left: calc(50% + 90px);
+    top: calc(50% - 50px);
+}
+
+.binf-widgets .webreports-visual-count {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.binf-widgets .webreports-visual-count-main-area .facetbarview .csui-facet {
+    width: 100%;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls {
+    display: table;
+    width: 100%;
+    background-color: #efefef;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 3px;
+    overflow: hidden;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls ul {
+    list-style: none;
+    margin: 0;
+    padding: 4px 10px;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-control-group {
+    display: table-cell;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls .webreports-controls-rhs {
+    margin-right: 10px;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls .webreports-controls-rhs ul {
+    text-align: right;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls ul li>span {
+    width: 28px;
+    height: 28px;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls label {
+    display: block;
+    text-align: left;
+    min-width: 80px;
+    max-width: 160px;
+    font-size: 0.8em;
+    padding-bottom: 2px;
+}
+
+.binf-widgets .webreports-visual-count .webreports-visual-count-controls select {
+    display: inline-block;
+    text-align: left;
+    min-width: 80px;
+    max-width: 160px;
+    font-size: 10pt;
+}
+
+.binf-widgets .webreports-visual-count-outertablecontainer {
+    width: calc(100% - 248px); 
+    height: 100%;
+    flex-grow: 1;
+}
+
+.binf-widgets .binf-modal-content .csui-visual-count-chart-container {
+    height: calc(100vh - 390px);
+}
+
+.binf-widgets .webreports-visual-count .cs-simplelist.csui-facet-panel .csui-right-shadow {
+    left: 232px;
+    z-index: 5;
+}
+
+.binf-widgets .webreports-visual-count .csui-facet-list-area {
+    width: 100%;
+}
+
+.webreports-visual-count .csui-facet-bar {
+    font-size: .875em;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #fff;
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 3em;
+    transition: height .3s ease-in;
+}
+
+.binf-widgets .webreports-visual-count .binf-dropdown .dropdown-facet-list {
+    margin-top: 3px;
+}
+
+.binf-widgets .webreports-visual-count-facetpanelview {
+    position: relative;
+    width: 248px;
+    min-width: 248px;
+    max-width: 248px;
+}
+
+.binf-widgets .webreports-visual-count-facetpanelview {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+}
+
+.binf-widgets .webreports-visual-count-facet-table-container {
+    display: flex;
+}
+
+.binf-widgets .webreports-visual-count-footer .cs-separate {
+    float: left
+}
+
+
+.binf-widgets .webreports-visual-count-footer .binf-btn,
+.binf-widgets .webreports-visual-count-footer .binf-btn + .binf-btn,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn {
+    height: 32px;
+    padding: 0 24px;
+    margin-left: 16px;
+    vertical-align: middle;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 12px;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-default:active,
+.binf-widgets .webreports-visual-count-footer .binf-btn-default,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-default:active,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-default {
+    background-color: #ffffff;
+    border: 1px solid #0072aa;
+    color: #0072aa;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-default:focus,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-default:focus {
+    background-color: #ffffff;
+    border: 1px solid #004b71;
+    box-shadow: 0;
+    color: #0072aa;
+    outline: 1px dotted #333333;
+    outline-offset: 2px;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-default:hover,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-default:hover {
+    background-color: #ffffff;
+    border: 1px solid #004b71;
+    color: #004b71;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+    box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-default:disabled,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-default:disabled {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #a9a9a9;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-primary,
+.binf-widgets .webreports-visual-count-footer .binf-btn-primary:active,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-primary,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-primary:active {
+    background-color: #0072aa;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-primary:hover,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-primary:hover {
+    background-color: #004b71;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-primary:focus,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-primary:focus {
+    box-shadow: none;
+    outline: 1px dotted #333333;
+    outline-offset: 2px;
+    background-color: #0072aa;
+}
+
+.binf-widgets .webreports-visual-count-footer .binf-btn-primary:disabled,
+.binf-widgets .esoc-user-text-edit-buttons .binf-btn-primary:disabled {
+    background-color: #a9a9a9;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.binf-widgets .webreports-visual-count-footer.has-footer {
+    flex-basis: 63px;
+}
+
+.binf-widgets .webreports-visual-data .tile-header .tile-title {
+    flex-grow: 1;
+}
+
+.binf-widgets .webreports-visual-data .tile-header .cs-header-control {
+    flex-grow: 0;
+    float: unset;
+}
+
+.binf-widgets .webreports-visual-data .tile-header .cs-close {
+    
+    flex-grow: 0;
+    float: unset;
+    position: unset;
+    top: unset;
+    transform: unset;
+    webkit-transform: unset;
+}

@@ -1,0 +1,44 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.conws-create-workspace-view .conws-create-workspace-icon-container {
+  height: 42px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.conws-create-workspace-view .conws-create-workspace-icon-container .conws-icon-create-workspace {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.conws-create-workspace-view .conws-create-workspace-view-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  z-index: 1040;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  display: block;
+}
+.conws-create-workspace-view .cs-metadata-properties .ps-container>div {
+  padding: 0px 7px 5px;
+}
+.create-workspace_header_icon{
+  background-image: url('../../../../../image/icons/li_header_add_widget42.svg');
+}
+
+.conws-create-workspace-icon-container:focus .create-workspace_header_icon,
+.create-workspace_header_icon:hover,
+.li_header_add_widget42_mo {
+  background-image: url('../../../../../image/icons/li_header_add_widget42_mo.svg');
+}
+
+.conws-create-workspace-icon-container:active .create-workspace_header_icon {
+  background-image: url('../../../../../image/icons/li_header_add_widget42_md.svg')!important
+}

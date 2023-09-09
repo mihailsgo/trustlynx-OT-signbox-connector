@@ -1,0 +1,18 @@
+{{#each columns}}
+  {{#if this.noTitleInHeader}}
+    <div class="csui-table-header-cell" role="columnheader"></div>
+  {{else}}
+    <div class="csui-table-header-cell {{this.className}}" title="{{this.title}}" tabindex="-1"
+         data-cstabindex="-1" role="columnheader">
+      <div class="csui-table-header-cell-container csui-fadeout">
+        <span>
+          {{this.title}}
+        </span>
+      </div>
+    </div>
+  {{/if}}
+{{/each}}
+
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

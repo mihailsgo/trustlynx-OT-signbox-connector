@@ -1,0 +1,123 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+
+.binf-widgets {
+  background: linear-gradient(61deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 59%, rgb(7, 141, 179) 100%);
+  background-color: #111b58;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#090E2C', endColorstr='#078DB3', GradientType=1);
+  background-attachment: fixed;
+}
+
+
+
+
+.binf-widgets div.load-container {
+  border: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  z-index: 1040;
+}
+
+
+.binf-widgets div.load-container .outer-border {
+  -webkit-animation: delayWheel 2525ms forwards;
+  animation: delayWheel 2525ms forwards;
+}
+
+@keyframes delayWheel {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.binf-widgets div.load-container.csui-global {
+  z-index: 1101; 
+}
+
+.binf-widgets .cs-perspective-panel > div.load-container.csui-global {
+  position: fixed;
+}
+
+.binf-widgets div.outer-border {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border: 5px solid white;
+  box-shadow: 0px 0px 0 17px white inset;
+  border-radius: 100%;
+  z-index: 999;
+}
+
+.binf-widgets div.load-container.csui-global > div.outer-border {
+  z-index: 1102; 
+}
+
+.binf-widgets div.inner-border {
+  border: 8px solid rgba(255, 255, 255, 1);
+  border-radius: 100%;
+  width: 43px;
+  height: 43px;
+}
+
+.binf-widgets div.loader {
+  margin: auto;
+  position: relative;
+  border: 12px solid #d6d5e8;
+  border-left: 12px solid #2e3d98;
+  transform: translateZ(0);
+  -webkit-animation: load8 1s infinite linear;
+  animation: load8 1s infinite linear;
+  border-radius: 100%;
+  width: 72px;
+  height: 72px;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.binf-widgets .load-container.csui-no-blocking {
+  display: none;
+}
+
+.binf-widgets .csui-pre-load-container-wrapper,
+.binf-widgets .cs-perspective-panel {
+  position: relative;
+  
+  height: calc(100vh - 62px);
+}
+
+.binf-widgets .csui-pre-load-container-wrapper {
+  
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+.binf-widgets.csui-pre-loading nav.csui-navbar,
+.binf-widgets.csui-pre-loading .cs-perspective-panel {
+  opacity: 0;
+}

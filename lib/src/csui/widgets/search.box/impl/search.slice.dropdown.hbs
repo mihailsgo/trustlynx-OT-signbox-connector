@@ -1,0 +1,35 @@
+{{#if this.nodeId}}
+  <div class="csui-selected-checkbox csui-slice-checkbox csui-checkbox-primary csui-searchbox-dd-panel" >
+  <label class="csui-search-slice-name csui-selectlabel" for="{{this.nodeIdSO}}"
+          title="{{this.fromHere}} {{this.nodeName}}">
+    <input type="checkbox" {{checked}} aria-checked="true"  class="csui-searchbox-option" name="{{this.nodeId}}" id="{{this.nodeIdSO}}"
+           tabindex="-1" value="{{this.nodeId}}">
+      <span class="csui-icon"></span>
+      <span class="csui-ellipsis" aria-hidden="true" >{{this.fromHere}} {{this.nodeName}}</span>
+  </label>
+  </div>
+{{/if}}
+
+{{#if slices}}
+  <div class="csui-searchbox-slices-wrapper csui-searchbox-dd-panel">
+    <fieldset>
+      <legend class="csui-search-label">{{slices.searchWithinLabel}}</legend>
+      <div class="csui-search-slice-region" ></div>
+    </fieldset>
+    {{#if slices.more}}
+    <button class="csui-slices-more" aria-label="{{slices.showMoreAria}}" tabindex="-1" >
+        <span  class="csui-more-text">{{slices.showMore}}</span>
+       <span class="csui-button-icon icon-caret-down"></span>
+    </button>
+    {{/if}}
+  </div>
+{{/if}}
+{{#if search_forms}}
+  <div class="csui-searchbox-searchform-wrapper csui-searchbox-dd-panel">
+    <div class="csui-recent-searchforms-container" >
+    </div>
+  </div>
+{{/if}}
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

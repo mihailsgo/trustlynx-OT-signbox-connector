@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>index_expdlg.html</title>
+
+  <link rel="icon" type="image/vnd.microsoft.icon"
+        href="../../src/themes/carbonfiber/image/favicon.ico">  
+  <link rel="stylesheet" type="text/css" href="../../src/themes/carbonfiber/theme.css">
+  <style>
+    body {
+      margin: 1em;
+    }
+    #content {
+      height: calc(100vh - 2em);
+    }
+  </style>
+
+  <script src="../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../lib/src/nuc/config.js" data-csui-path="../../lib/src/nuc"></script>
+  <script src="../../lib/src/smart/config.js" data-csui-path="../../lib/src/smart"></script>
+  <script src="../../src/helpers.js" ></script>
+
+
+  <script>
+    // specify path for 'csui' prefix
+    require.config({
+      paths: {
+        csui: '../../src'
+      }
+    });
+
+    csui.require.config({
+      waitSeconds: 5,
+      deps: [
+      'csui/lib/require.config!nuc/nuc-extensions.json',
+      'csui/lib/require.config!smart/smart-extensions.json',
+      'csui/lib/require.config!csui/csui-extensions.json'
+      ],
+      callback: initialize
+    });
+    function initialize () {
+      var today = new Date();
+      
+      csui.require.config({
+            config: {
+              'i18n': {
+                locale: 'en-us',
+                loadableLocales: {root: true}
+              },
+              'nuc/utils/authenticators/core.authenticators': {
+                enableInteractiveAuthenticator: false,
+                enableRedirectingFormAuthenticator: true
+              },
+              'csui/utils/authenticators/redirecting.form.authenticator': {                
+                showCloseButtonOnError: true
+              },
+              'csui/integration/folderbrowser/commands/go.to.node.history': {
+                enabled: true
+              },
+              'csui/integration/folderbrowser/commands/open.full.page.container': {
+                enabled: true
+              },
+              'csui/utils/user.session/user.session': {
+                enableExpirationHandling: true,	
+                cookieExpirationMode: 1,
+				        sessionInactivity: 60000,
+                sessionReactionTime: 60000,
+                kindnessPeriod: 50000,
+                notTimerResettingCallList: [
+                  'api/v1/auth/logouttoken',
+                  'api/v2/messages/status' 
+                ]
+              }
+            }
+          });
+
+          // perform authentication before onReady3, in our case to get a
+          // ticket. BasicAuthentication is not a TicketAuthenticator.
+          var otcsticket = '';
+          require(["csui/lib/jquery"
+          ], function ($ ) {
+            'use strict';
+
+            var aoptions = {
+              method: 'POST',
+              contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+              crossDomain: true,
+              data: { username: 'Admin', password: 'livelink' }
+            };          
+            var authUrl = 'http://localhost/OTCS/cs.exe/api/v1/auth';
+            var jqxhr = $.ajax(authUrl, aoptions)
+              .done(function( data, textStatus, request ) {
+                if (request.status === 200) {
+                  console.log("test: user/pwd authentication result: " + JSON.stringify(data) );
+                  if ( data.ticket ) {
+                    otcsticket = data.ticket;
+                    var expiresStr = request.getResponseHeader('OTCSTicketExpires');
+                    var dateStr = request.getResponseHeader('Date');
+                    console.log("test: POST auth: expires: " + expiresStr + ", date: " + dateStr );
+                    console.log("test: user/pwd: Successfully got initial ticket before onReady3()" );
+                  }
+                  console.log("test: user/pwd: Proceeding with onReady3 and ticket...");
+                  
+                  performOnReady();
+
+                } else {
+                  console.warn("test: user/pwd unexpected result different from 200. Status: " + textStatus + ", data: " + JSON.stringify(data) );
+                }
+              })
+              .fail(function (request, message, statusText) {
+                console.error("test: user/pwd authentication failed. Status: " + message + ", Error: " + statusText );
+              });
+          });
+      
+          function performOnReady() {
+
+          csui.onReady3({
+                connection: {
+                  url: 'http://localhost/OTCS/cs.exe/api/v1',
+                  supportPath: '/img',
+                  session: {
+                    ticket: otcsticket
+                  }
+                },
+                onBeforeLoadModules: function (options, modules) {
+                  csui.require.config({
+                    'csui/utils/authenticators/core.authenticators': {
+                      enableInteractiveAuthenticator: false,
+                      enableRedirectingFormAuthenticator: true
+                    },
+                    'csui/utils/authenticators/redirecting.form.authenticator': {
+                      showCloseButtonOnError: true
+                    },
+                    'csui/integration/folderbrowser/commands/go.to.node.history': {
+                      enabled: true
+                    },
+                    'csui/integration/folderbrowser/commands/open.full.page.container': {
+                      enabled: true
+                    },
+                    'csui/utils/user.session/user.session': {
+                      enableExpirationHandling: true,
+                      cookieExpirationMode: 1,
+                      sessionInactivity: 70000,
+                      sessionReactionTime: 70000,
+                      kindnessPeriod: 50000,
+                      notTimerResettingCallList: [ 
+                        'api/v1/auth/logouttoken',
+                        'api/v2/messages/status' 
+                      ]
+                    }
+                  });
+                }
+            }, [
+                'csui-options', 
+                'csui/lib/marionette',
+                'csui/utils/user.session/user.session',
+                'csui/utils/contexts/page/page.context',
+                'csui/utils/contexts/browsing/browsing.context',
+                'csui/widgets/nodestable/nodestable.view',
+                'i18n!csui/utils/user.session/impl/nls/lang'
+            ], function (options, Marionette, UserSession, PageContext, 
+                         BrowsingContext, NodesTableView, lang) {
+
+
+                var browsingContext = new BrowsingContext({
+                 factories: {
+                 connector: { connection: options.connection },
+                 node: {
+                   attributes: { id: 2000 }
+                 }
+                 }
+                 });
+
+                var nodesTableView = new NodesTableView({ context: browsingContext });
+                var contentRegion = new Marionette.Region({ el: '#content' });
+                var connector = browsingContext.getObject('connector');
+                                
+
+                contentRegion.show(nodesTableView);
+                browsingContext
+                .fetch()
+                .fail(alert)
+                .done(function() {
+                  console.warn("test: expdlg: Fetch is done...");
+                  console.log("test: expdlg: session: " + JSON.stringify(connector.authenticator.connection.session) );
+
+                  UserSession.startExpirationTimer(connector.authenticator);
+
+                });
+                
+                
+            });
+          }
+
+        }
+  </script>
+</head>
+
+<body>
+  <div id="content" class="binf-widgets"></div>
+</body>
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,58 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog.csui-conflict-dialog.csui-batch{
+  overflow: auto;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-content{
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  border: 1px solid #a9a9a9;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-header > div.csui-numUploads
+{
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-header > div{
+  float: left;
+  padding-right: 32px;
+}
+
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-header  > div.csui-numConflicts
+{
+  padding-top: 3px;
+  color: #df3626;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-body{
+   font-style: oblique;
+   padding:16px;
+   word-wrap: break-word;
+   line-height: 1.1em;
+  background-color: #FFFFFF;
+ }
+
+.cs-dialog.csui-conflict-dialog.csui-batch  div.csui-dialog-message{
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-batch .binf-modal-footer{
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.cs-dialog.csui-conflict-dialog.csui-batch button{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 15em;
+  margin-left: 16px;
+  margin-top: 5px;
+}

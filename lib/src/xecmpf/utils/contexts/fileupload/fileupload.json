@@ -1,0 +1,8 @@
+{
+  "type": "left-center-right",
+  "options": {
+    "center": {
+      "type": "xecmpf/widgets/fileupload/impl/fileupload.expand"
+    }
+  }
+}

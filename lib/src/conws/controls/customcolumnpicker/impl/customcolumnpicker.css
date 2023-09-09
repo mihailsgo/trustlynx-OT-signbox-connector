@@ -1,0 +1,12 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.perspective-editing .csui-pman-form-wrapper .cs-form [data-alpaca-container-item-name="expandedView_orderBy"].alpaca-container-item > .alpaca-field.alpaca-field-object > label
+{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.perspective-editing .csui-pman-form-wrapper .cs-form [data-alpaca-container-item-name="expandedView_orderBy_sortOrder"] .binf-form-group
+{
+  margin-top: 0;
+}

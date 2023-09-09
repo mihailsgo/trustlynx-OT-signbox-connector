@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Parameter Prompt Control</title>
+
+    <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+    <link rel="stylesheet" href="../../../../lib/src/csui/controls/dialog/impl/dialog.css">
+
+    <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/binf/css/tiles.css">
+
+    <script src="../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+    <style type="text/css">
+        /* hack override required for test pages */
+        .cs-tile {
+            height: calc(50vh - 80px) !important;
+        }
+
+    </style>
+    <script>
+        require.config({
+            deps: [
+                'csui/lib/require.config!nuc/nuc-extensions.json',
+                'csui/lib/require.config!csui/csui-extensions.json'
+            ]
+        });
+
+        require.config({
+            paths: {
+                csui: '../../../../lib/src/csui',
+                webreports: '../../..'
+            },
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        url: '//server/cgi/cs.exe/api/v1',
+                        supportPath: '/support',
+                        credentials: {
+                            username: 'Admin',
+                            password: 'livelink'
+                        }
+                    }
+                }
+            }
+        });
+
+        require(['csui/lib/underscore', 'csui/lib/jquery','csui/lib/marionette','csui/utils/contexts/page/page.context', 'csui/models/node/node.model', 'webreports/controls/run.webreport.pre/run.webreport.pre.controller',
+            '../parameter.prompt.view', './parameter.prompt.mock'
+        ], function (_, $, Marionette, PageContext, NodeModel, RunWebReportPreController, ParameterPromptView, Mock) {
+
+            var RunWRController = new RunWebReportPreController(),
+                promptView,
+                promptRegion,
+                context = new PageContext(),
+                node = new NodeModel({
+                    id: 22550,
+                    type: 30303
+                }),
+                options = {
+                    context: context,
+                    node: node,
+                    suppressPromptView: true // default behavior of the checkForPromptParameters control is to invoke a complete prompt view. We want to create our own view
+                };
+
+            Mock.enable();
+
+            // before invoking a prompt form, check for prompt params
+            var promptParameters = RunWRController.checkForPromptParameters(options);
+
+            $.when(promptParameters).then(function(promptRoute) {
+
+                if (promptRoute === 'showSmartPrompts') {
+                    options.promptRoute = promptRoute;
+                    options.model = RunWRController.runWRPreModel;
+
+                    promptView = new ParameterPromptView(options);
+                    promptRegion = new Marionette.Region({
+                        el: "#promptView"
+                    });
+
+                    promptRegion.show(promptView);
+
+                    context.fetch();
+                }
+
+
+            });
+
+        });
+    </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+    <div class="binf-row">
+        <div class="binf-col-md-8 binf-col-xl-6">
+            <div id="promptView" class="cs-tile tile"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,88 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "groupBy": {
+        "type": "string",
+        "enum": [
+          "{{classification}}",
+          "{{create_date}}"
+        ],
+        "default": "{{create_date}}",
+        "title": "{{groupBy_title}}",
+        "description": "{{groupBy_Description}}"
+      },
+      "hideGroupByCriterionDropdown": {
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": false,
+        "title": "{{hideGroupByCriterionDropdown_title}}",
+        "description": "{{hideGroupByCriterionDropdown_description}}"
+      },
+      "hideMetadata": {
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": false,
+        "title": "{{hideMetadata_title}}",
+        "description": "{{hideMetadata_description}}"
+      },
+      "metadata": {
+        "type": "array",
+        "title": "{{metadata_title}}",
+        "description": "{{metadata_description}}",
+        "items": {
+          "type": "object",
+          "title": "{{metadata_items_title}}",
+          "description": "{{metadata_items_description}}"
+        }
+      },
+      "hideEmptyFields": {
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": false,
+        "title": "{{hideEmptyFields_title}}",
+        "description": "{{hideEmptyFields_description}}"
+      },
+      "hideFavorite": {
+        "type": "boolean",
+        "enum": [
+          true,
+          false
+        ],
+        "default": false,
+        "title": "{{hideFavorite_title}}",
+        "description": "{{hideFavorite_description}}"
+      }
+    }
+  },
+  "options": {
+    "fields": {
+      "groupBy": {
+        "type": "select",
+        "optionLabels": [
+          "Classification",
+          "Create Date"
+        ]
+      },
+      "metadata": {
+        "fields": {
+          "item": {
+            "type": "otconws_metadata"
+          }
+        }
+      }
+    }
+  }
+}

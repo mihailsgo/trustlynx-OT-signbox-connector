@@ -1,0 +1,93 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .conws-description {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.binf-widgets .conws-description .description {
+  flex: 1 auto;
+  -webkit-flex: 1 auto;
+  -ms-flex: 1 auto;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-wrap: break-word;
+  max-height: 100%;
+  padding-right: 16px;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: pre-wrap;
+  height:100%;
+}
+
+.binf-widgets .conws-description .description-caret-div {
+  padding-left: 0px;
+  height: 16px;
+  width: 32px;
+  position: relative;
+}
+
+.binf-widgets .conws-description .description-readmore {
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.binf-widgets .conws-description .description-showless {
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.binf-widgets .conws-description .caret-hide {
+  display: none;
+}
+
+.binf-widgets .conws-details-row-description .description {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  max-width: none;
+  max-height: none;
+  font-size: 12px;
+}
+
+.binf-widgets .conws-description .description-height-oneline,
+.binf-widgets .conws-description.description-height-oneline {
+  height: 16px;
+}
+
+.binf-widgets .conws-description .description-height-twoline,
+.binf-widgets .conws-description.description-height-twoline {
+  height: 32px;
+}
+
+.binf-widgets .conws-description .description-height-threeline,
+.binf-widgets .conws-description.description-height-threeline {
+  height: 48px;
+}
+
+.binf-widgets .conws-description .description {
+  font-size: 11px;
+  line-height: 16px;
+  max-height: 48px;
+  width: calc(100% - 32px);
+}

@@ -1,0 +1,21 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-compound-document-releases .csui-releases-table .csui-unlock-cellview {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.binf-widgets ul.csui-node-states > li.csui-node-state-locked .icon {
+  background-size: 22px;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-locked > button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-locked > button:focus {
+  outline: 1px dotted #333333;
+}

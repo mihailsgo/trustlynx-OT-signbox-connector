@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FolderBrowserWidget Demo</title>
+
+  <link rel="stylesheet"
+        href="http://murdock.opentext.com/alphasupport/csui/themes/carbonfiber/theme.css">
+  <script src="http://murdock.opentext.com/alpha/llisapi.dll/widgets?crossOrigin=true"></script>
+
+  <style>
+    body {
+      margin: 0
+    }
+    #browser {
+      height: 100vh
+    }
+  </style>
+
+  <style>
+    #perspective {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+  </style>
+
+  <script>
+    
+	csui.require.config({
+		config: {
+		  'csui/utils/commands/back.to.last.fragment':  {
+			enabled: true
+		  }
+		}
+	});
+
+	csui.require.config({
+      config: {
+        'csui/integration/folderbrowser2/container.enforcer': {
+          enabled: true
+        }
+      }
+    });
+
+	csui.require.config({
+      config: {
+        'csui/models/navigation.history': {
+          urlCanChange: false
+        }
+      }
+    });
+	
+    csui.require.config({
+      config: {
+        'csui/utils/contexts/perspective/node.perspectives': {
+          'extensions': {
+            'csui': ['csui/integration/folderbrowser2/container.enforcer']
+          }
+        }
+      }
+    });
+
+    csui.require.config({
+      config: {
+        'csui/widgets/nodestable/nodestable.view': {
+          useAppContainer: false
+        },
+        'csui/models/node/node.model': {
+          separateCommands: true
+        },
+        'csui/widgets/nodestable/toolbaritems': {
+          "extensions": {
+            "folderbrowser2": [
+              "csui/integration/folderbrowser2/impl/nodestable.toolitems"
+            ]
+          }
+        }
+      }
+    });
+
+    csui.require.config({
+      config: {
+        'csui/utils/commands': {
+          extensions: {
+            myext: [ 'RecentlyAccessed', 'Favorites', 'MyAssignments' ]
+          }
+        },
+        'csui/widgets/nodestable/toolbaritems': {
+          extensions: {
+            myext: [ 'widgets-toolbar' ]
+          }
+        }
+      }
+    });
+
+    csui.define('widgets-toolbar', function () {
+      'use strict';
+
+      return {
+        leftToolbar: [
+          {
+            signature: 'RecentlyAccessed',
+            name: 'Recently Accessed'
+          },
+          {
+            signature: 'Favorites',
+            name: 'Favorites'
+          },
+          {
+            signature: 'MyAssignments',
+            name: 'My Assignments'
+          }
+        ]
+      };
+    });
+
+    csui.define('RecentlyAccessed', [
+      'csui/lib/jquery', 'csui/models/command', 'csui/utils/contexts/factories/application.scope.factory'
+    ], function ($, CommandModel, ApplicationScopeModelFactory) {
+      'use strict';
+
+      var RecentlyAccessed = CommandModel.extend({
+        defaults: { signature: 'RecentlyAccessed' },
+
+        enabled: function () {
+          return true;
+        },
+
+        execute: function (status, options) {
+          var context = status.context || options && options.context;
+          context && context.getModel(ApplicationScopeModelFactory).set('id','recentlyaccessed');
+          return $.Deferred().resolve().promise();
+        }
+      });
+
+      return RecentlyAccessed;
+    });
+
+    csui.define('Favorites', [
+      'csui/lib/jquery', 'csui/models/command', 'csui/utils/contexts/factories/application.scope.factory'
+    ], function ($, CommandModel, ApplicationScopeModelFactory) {
+      'use strict';
+
+      var Favorites = CommandModel.extend({
+        defaults: { signature: 'Favorites' },
+
+        enabled: function () {
+          return true;
+        },
+
+        execute: function (status, options) {
+          var context = status.context || options && options.context;
+          context && context.getModel(ApplicationScopeModelFactory).set('id','favorites');
+          return $.Deferred().resolve().promise();
+        }
+      });
+
+      return Favorites;
+    });
+
+    csui.define('MyAssignments', [
+      'csui/lib/jquery', 'csui/models/command', 'csui/utils/contexts/factories/application.scope.factory'
+    ], function ($, CommandModel, ApplicationScopeModelFactory) {
+      'use strict';
+
+      var MyAssignments = CommandModel.extend({
+        defaults: { signature: 'MyAssignments' },
+
+        enabled: function () {
+          return true;
+        },
+
+        execute: function (status, options) {
+          var context = status.context || options && options.context;
+          context && context.getModel(ApplicationScopeModelFactory).set('id','myassignments');
+          return $.Deferred().resolve().promise();
+        }
+      });
+
+      return MyAssignments;
+    });
+
+	csui.onReady3({
+      connection: {
+        url: 'http://murdock.opentext.com/alpha/llisapi.dll/api/v1',
+        supportPath: '/alphasupport',
+        credentials: {
+          username: 'Admin',
+          password: 'october1'
+        }
+      }
+    },
+    [ 'csui-options', 'csui/integration/folderbrowser2/folderbrowser2.widget' ],
+    function (csuiOptions, FolderBrowserWidget2) {
+      
+	  var browser = new FolderBrowserWidget2({
+        connection: csuiOptions.connection,
+        start: {id: 2000}
+      });
+
+      browser.show({placeholder: '#perspective'});
+	  
+    },
+    function (error) {
+      alert(error.message);
+    });
+	
+  </script>
+</head>
+
+<body>
+<div id="perspective"></div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

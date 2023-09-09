@@ -1,0 +1,42 @@
+{{#if isSeparator}}
+{{else}}
+  {{#if iconName}}
+    {{#if renderIconAndText}}
+      <a href="#" class="needsclick csui-acc-focusable csui-toolitem csui-toolitem-iconandtext"
+         tabindex="-1" data-cstabindex="-1" title= "{{commentTooltip}}" aria-label="{{wnd_comments_title}}">
+        {{{icon-v2 iconName=iconName states='true'}}}
+        <span>{{name}}</span>
+        <span title="{{wnd_comments_title}}"
+              class="cs-text wnd-comment-count wnd_comments_validated"
+              data-csid="{{id}}">{{wnd_comments_validated}}</span>
+      </a>
+    {{else}}
+      {{#if renderTextOnly}}
+        <a href="#" class="needsclick csui-toolitem csui-toolitem-textonly csui-acc-focusable"
+           tabindex="-1" data-cstabindex="-1" title= "{{commentTooltip}}" aria-label="{{wnd_comments_title}}">
+          <span>{{name}}</span>
+          <span title="{{wnd_comments_title}}"
+                class="cs-text wnd-comment-count wnd_comments_validated"
+                data-csid="{{id}}">{{wnd_comments_validated}}</span>
+        </a>
+      {{else}}
+        <a href="#" class="needsclick csui-toolitem csui-toolitem-icononly csui-acc-focusable"
+           tabindex="-1" data-cstabindex="-1" title= "{{commentTooltip}}" aria-label="{{wnd_comments_title}}">
+          {{{icon-v2 iconName=iconName theme=iconTheme states='true'}}}
+          <span title="{{wnd_comments_title}}"
+                class="cs-text wnd-comment-count wnd_comments_validated"
+                data-csid="{{id}}">{{wnd_comments_validated}}</span>
+        </a>
+      {{/if}}
+    {{/if}}
+  {{else}}
+    <a href="#" class="needsclick csui-toolitem csui-toolitem-textonly csui-acc-focusable"
+       tabindex="-1" data-cstabindex="-1" title= "{{commentTooltip}}"
+       aria-label="{{wnd_comments_title}}">
+      <span>{{name}}</span>
+      <span title="{{wnd_comments_title}}"
+            class="cs-text wnd-comment-count wnd_comments_validated"
+            data-csid="{{id}}">{{wnd_comments_validated}}</span>
+    </a>
+  {{/if}}
+{{/if}}

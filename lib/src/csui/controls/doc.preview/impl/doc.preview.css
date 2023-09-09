@@ -1,0 +1,29 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-doc-preview .csui-sidepanel-body {
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-doc-preview-wrapper {
+  height: 100%;
+}
+
+
+.binf-widgets .binf-table.dataTable > tbody > tr.csui-doc-preview-state {
+  background-color: #dfe7ea;
+}
+
+.binf-widgets .cs-list  .binf-list-group > div.csui-doc-preview-state,
+.binf-widgets .cs-list  .binf-list-group .cs-list-group > a.csui-doc-preview-state,
+.binf-widgets .cs-list  .binf-list-group .cs-simpletreelistitem .cs-list-group > a.binf-active.csui-doc-preview-state {
+  background-color: #cbd3d9;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-doc-preview .csui-side-panel-main {
+  border-bottom: none;
+}
+
+.binf-widgets.csui-sidepanel-open.csui-doc-preview {
+  overflow-y: auto;
+}

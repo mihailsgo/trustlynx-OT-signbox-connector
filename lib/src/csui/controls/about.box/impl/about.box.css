@@ -1,0 +1,99 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .binf-modal.csui-about-box .binf-modal-dialog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.binf-widgets .binf-modal.csui-about-box .binf-modal-dialog .binf-modal-body {
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 32px 32px;
+}
+
+.binf-widgets .binf-modal.csui-about-box .binf-modal-dialog .binf-modal-body .about-box {
+  font-size: 12px;
+  line-height: 15px;
+  color: #333;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tile-header {
+  border: 0;
+  height: 80px;
+  padding: 32px;
+  background: transparent;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tile-header .cs-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tile-header h2.csui-heading {
+  display: none;
+}
+
+
+.binf-widgets .csui-about-box.cs-dialog .tab {
+    display: inline-block;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tab button:hover {
+  background-color: #ddd;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tab button.selected {
+  border-bottom: 4px solid #111b58;
+}
+
+
+.binf-widgets .csui-about-box.cs-dialog .tabcontent span {
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+}
+
+.binf-widgets .binf-modal.csui-about-box .binf-modal-dialog .binf-modal-body .about-box a {
+  color: #232e72;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: underline;
+}
+
+.binf-widgets .binf-modal.csui-about-box .binf-modal-dialog .binf-modal-body .about-box a:hover {
+  color: #0084ce;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .tabcontent .csui-small-header {
+  font-weight: bold;
+  margin: 0;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .csui-warningtext h6,
+.binf-widgets .csui-about-box.cs-dialog .csui-warningtext span {
+  display: inline;
+}
+
+.binf-widgets .csui-about-box.cs-dialog .csui-logo-image {
+  width: 100%;
+  display: inline-flex;
+  padding: 0;
+  height: 32px;
+}
+

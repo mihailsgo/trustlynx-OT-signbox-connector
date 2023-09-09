@@ -1,0 +1,70 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/54321?fields=properties",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "data": {
+      "properties": {
+        "advanced_versioning": false,
+        "container": false,
+        "container_size": 0,
+        "create_date": "2020-06-23T16:32:13",
+        "create_user_id": 1000,
+        "description": "",
+        "description_multilingual": {
+          "de": "",
+          "en_CA": "",
+          "en_GB": "",
+          "es": "",
+          "fr_CA": "",
+          "no": ""
+        },
+        "external_create_date": null,
+        "external_identity": "",
+        "external_identity_type": "",
+        "external_modify_date": null,
+        "external_source": "",
+        "favorite": false,
+        "hidden": false,
+        "id": 54321,
+        "mime_type": "text\/html",
+        "modify_date": "2020-06-23T16:33:37",
+        "modify_user_id": 1000,
+        "name": "wr export to csv",
+        "name_multilingual": {
+          "de": "",
+          "en_CA": "",
+          "en_GB": "wr export to csv",
+          "es": "",
+          "fr_CA": "",
+          "no": ""
+        },
+        "owner": "User, Admin",
+        "owner_group_id": 1001,
+        "owner_user_id": 1000,
+        "parent_id": 2000,
+        "permissions_model": "advanced",
+        "reserved": false,
+        "reserved_date": null,
+        "reserved_shared_collaboration": false,
+        "reserved_user_id": 0,
+        "size": 87,
+        "size_formatted": "1 KB",
+        "status": null,
+        "type": 30303,
+        "type_name": "WebReport",
+        "versionable": true,
+        "versions_control_advanced": false,
+        "volume_id": -2000
+      }
+    }
+  }
+}

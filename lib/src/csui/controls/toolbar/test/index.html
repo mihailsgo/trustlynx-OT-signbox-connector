@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Toolbar showcase</title>
+
+    <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <style>
+        .binf-widgets .toolcontainer {
+            background-color: #dce4e8;
+            margin: 50px;
+        }
+    </style>
+
+    <script src="../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+    <script src="../../../../lib/src/smart/config.js" data-csui-path="../../../../lib/src/smart"></script>
+
+    <script type="text/x-template" id="cs-view">
+      <div class="custom-search"></div>
+      <div class="results"></div>
+    </script>
+
+    <script>
+        require.config({
+            paths: {
+                csui: "../../..",
+                nuc: "../../../../lib/src/nuc",
+                smart: "../../../../lib/src/smart",
+                "css": "../../../../lib/src/nuc/lib/css",
+                "csui-ext": "../../../../lib/src/nuc/utils/load-extensions/load-extensions"
+            },
+            deps: [
+                'nuc/lib/require.config!nuc/nuc-extensions.json',
+                'nuc/lib/require.config!smart/smart-extensions.json',
+                'csui/lib/require.config!csui/csui-extensions.json'
+            ]
+        });
+
+        require(['csui/lib/jquery', 'csui/lib/underscore', 'csui/lib/backbone', 'csui/lib/marionette',
+            'csui/lib/handlebars', 'csui/controls/toolbar/toolbar.view',
+            'csui/controls/toolbar/toolitems.factory',
+            'csui/controls/toolbar/toolitem.model',
+        ],
+
+            function ($, _, Backbone, Marionette, Handlebars, ToolbarView, ToolItemsFactory, ToolItemModel) {
+                var collection = new ToolItemsFactory({
+                    main: [
+                        {
+                            "signature": "Properties",
+                            "name": "Props",
+                            "icon": "icon icon-toolbar-metadata"
+                        },
+                        {
+                            "signature": "CopyLink",
+                            "name": "Copy Link"
+                        },
+                        {
+                            "signature": "EmailLink2",
+                            "name": "EmailLink",
+                            // "icon": "icon icon-toolbar-settings",
+                            "flyout": "EmailLink2"
+                        },
+                        {
+                            "signature": "Sub1",
+                            "name": "Sub1",
+                            "flyout": "EmailLink2"
+                        },
+                        {
+                            "signature": "Sub2",
+                            "name": "Sub2",
+                            "flyout": "EmailLink2"
+                        },
+                        {
+                            "signature": "Sub21",
+                            "name": "Sub21",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "Sub2"
+                        },
+                        {
+                            "signature": "Sub22",
+                            "name": "Sub22",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "Sub2"
+                        },
+                        {
+                            "signature": "EmailLink",
+                            "name": "Actions",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "Sub2"
+                        },
+                        {
+                            "signature": "Item 1",
+                            "name": "Item 1",
+                            "flyout": "EmailLink2",
+                            "subItemOf":'EmailLink'
+                        },
+                        {
+                            "signature": "Item 2",
+                            "name": "Item 2",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        },
+                        {
+                            "signature": "Item 3",
+                            "name": "Item 3",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        },
+                        {
+                            "signature": "Item 4",
+                            "name": "Item 4",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        },
+                        {
+                            "signature": "Item 5",
+                            "name": "Item 5",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        },
+                        {
+                            "signature": "Item 6",
+                            "name": "Item 6",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        },
+                        {
+                            "signature": "EmailLink3",
+                            "name": "Email Link22",
+                            "flyout": "EmailLink2",
+                            "subItemOf": "EmailLink"
+                        }
+                    ]
+                });
+
+                var toolbarView = new ToolbarView({
+                    collection: _makeSubItems(collection),
+                    toolbarName: 'Test tools',
+                    maxItemsShown: 15,
+                    dropDownIcon: "icon icon-toolbar-more",
+                    dropDownText: 'DP',
+                    addGroupSeparators: false,
+                    lazyActions: false
+                    // , noMenuRoles: true
+                });
+
+                var region = new Marionette.Region({ el: "#toolbar" });
+                region.show(toolbarView);
+
+                toolbarView.listenTo(toolbarView, 'toolitem:action', function(e) {
+                    console.log('CLICKED' + e);
+                });
+
+               // Below anonymous function produced mock action tool item to demonstrate submenus functionality
+               // However developer need to follow instruction provided in ../flyout.toolitem.md
+                function _makeSubItems(collection) {
+                    var toolItemCollection = collection.getCollection(),
+                        subitems = [],
+                        flyoutCollection = new Backbone.Collection;
+                    _.each(toolItemCollection.models, function (model) {
+                        if (model.get('flyout')) {
+                            subitems.push(model);
+                            var flyoutItem = flyoutCollection.findWhere({ flyout: model.get('flyout') });
+                            model.toolItems = new Backbone.Collection(undefined,
+                                { model: ToolItemModel });
+                            if (flyoutItem) {
+                                flyoutItem.toolItems.add(model);
+                            } else {
+                                flyoutCollection.add(model);
+                            }
+                        }
+                    });
+
+                    toolItemCollection.remove(subitems);
+		            subitems = [];
+                    toolItemCollection.add(flyoutCollection.models);
+
+                    _.each(toolItemCollection.models, function (model) {
+                        if (model.toolItems) {
+                            _.each(model.toolItems.models, function (subItems) {
+                                if (subItems.get('subItemOf')) {
+                                    var flyoutitem = model.toolItems.find({ signature: subItems.get('subItemOf') });
+                                    if (flyoutitem !== undefined) {
+                                        flyoutitem.toolItems.push(subItems);
+                                        subitems.push(subItems);
+                                    }
+                                }
+                            });
+                            model.toolItems.remove(subitems);
+                            subitems = [];
+                        }
+                    });
+                    return toolItemCollection;
+                }
+
+	});
+    </script>
+</head>
+
+<body class="binf-widgets">
+    <div class="toolcontainer">
+        <div class="binf-container-fluid ">
+            <div class="binf-row">
+                <div class=" binf-col-md-12 ">
+                    <div id="toolbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

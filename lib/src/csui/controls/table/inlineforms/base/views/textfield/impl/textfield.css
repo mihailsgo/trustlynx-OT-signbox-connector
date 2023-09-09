@@ -1,0 +1,40 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-field-container input {
+  height: 28px;
+  border: 1px solid #757575;
+  border-radius: 3px;
+  width: 100%;
+  padding: 0px 8px;
+}
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-field-container input.binf-form-control[disabled] {
+  cursor: default;
+}
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-field-container input:focus {
+  border: 2px solid #757575;
+  outline: none;
+}
+
+.binf-widgets .csui-inlineform-group .csui-inlineform-field-container input.csui-inlineform-error:focus {
+  border: 1px solid #df3324;
+}
+
+.binf-widgets .csui-thumbnail-name .csui-inline-editform .csui-inlineform-group .csui-inlineform-field-container > div {
+  width: 100%;
+  margin: 0;
+}
+
+.binf-widgets .csui-thumbnail-name .csui-inlineform-group .csui-inlineform-field-container > div:not(:first-child) {
+  padding-top: 16px;
+  margin-left: 0px;
+}
+
+.binf-widgets .csui-thumbnail-name .csui-inlineform-group .csui-inlineform-field-container {
+  width: 100%;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-item .csui-thumbnail-name .csui-thumbnail-name-container button.csui-btn-save:hover {
+  background: transparent;
+}

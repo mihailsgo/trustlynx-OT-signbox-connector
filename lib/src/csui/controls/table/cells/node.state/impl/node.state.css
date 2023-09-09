@@ -1,0 +1,20 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-table-cell-node-state {
+  min-width: 56px;
+  max-width: 152px;
+}
+
+.binf-widgets .csui-nodetable .binf-table .csui-table-cell-node-state .csui-node-states-entry {
+    display: block;
+    border: 0;
+    outline: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+.binf-widgets .csui-nodetable .binf-table .csui-table-cell-node-state.csui-node-states-entry-focused {
+    outline: 1px dotted #333333;
+    outline-offset: -2px;
+}

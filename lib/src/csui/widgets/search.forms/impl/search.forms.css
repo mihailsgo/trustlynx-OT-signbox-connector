@@ -1,0 +1,66 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection a{
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  color: #333333;
+  text-decoration: none;
+  padding: 1px 0 1px 10px;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection.csui-slide-visible {
+  padding: 12px 0;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection span.csui-searchform-list-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 32px;
+  background-size: 16px;
+  background-position: center left;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection .csui-search-form-list {
+  padding: 8px 0 0 0;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection .csui-search-form-list .csui-search-form-item:last-child {
+  margin-bottom: 24px;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection.csui-slide-visible nav:last-child .csui-search-form-list .csui-search-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection a:hover,
+.binf-widgets .csui-sidepanel .csui-search-form-collection a:focus {
+  background-color: #b2bec5;
+  outline-style: none;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection .cs-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection .csui-search-label {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  width: 100%;
+  line-height: 32px;
+}
+
+.binf-widgets .csui-sidepanel .csui-search-form-collection .csui-icon-query-form-search {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+
+.binf-widgets .csui-custom-search-form-submit.cs-search{
+  position: inherit;
+}

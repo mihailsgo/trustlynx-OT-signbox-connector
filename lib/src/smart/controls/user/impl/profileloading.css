@@ -1,0 +1,94 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+#user_icon{
+  width:64px;
+  height:64px;
+  background:rgba(0, 0, 0, 0.5);
+  margin:auto;
+  border-radius:32px;
+}
+
+#loading_dots{
+	position:relative;
+	width:28px;
+	height:8px;
+	left:calc(50% - 18px);
+  top:calc(50% - 4px);
+}
+
+.loading_dots{
+	position:absolute;
+	background-color:rgb(123,154,176);
+	width:8px;
+	height:8px;
+	animation-name:bounce_loading_dot;
+		-o-animation-name:bounce_loading_dot;
+		-ms-animation-name:bounce_loading_dot;
+		-webkit-animation-name:bounce_loading_dot;
+		-moz-animation-name:bounce_loading_dot;
+	animation-duration:2s;
+		-o-animation-duration:2s;
+		-ms-animation-duration:2s;
+		-webkit-animation-duration:2s;
+		-moz-animation-duration:2s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	transform:scale(.3);
+		-o-transform:scale(.3);
+		-ms-transform:scale(.3);
+		-webkit-transform:scale(.3);
+		-moz-transform:scale(.3);
+	border-radius:6px;
+		-o-border-radius:6px;
+		-ms-border-radius:6px;
+		-webkit-border-radius:6px;
+		-moz-border-radius:6px;
+}
+
+#dot_1{
+	left:6px;
+	animation-delay:1.07s;
+		-o-animation-delay:1.07s;
+		-ms-animation-delay:1.07s;
+		-webkit-animation-delay:1.07s;
+		-moz-animation-delay:1.07s;
+}
+
+#dot_2{
+	left:14px;
+	animation-delay:1.33s;
+		-o-animation-delay:1.33s;
+		-ms-animation-delay:1.33s;
+		-webkit-animation-delay:1.33s;
+		-moz-animation-delay:1.33s;
+}
+
+#dot_3{
+	left:22px;
+	animation-delay:1.6s;
+		-o-animation-delay:1.6s;
+		-ms-animation-delay:1.6s;
+		-webkit-animation-delay:1.6s;
+		-moz-animation-delay:1.6s;
+}
+
+
+@keyframes bounce_loading_dot{
+	0%{
+	transform:scale(1);
+		background-color:rgba(255, 255, 255, 0.8);
+	}
+
+	100%{
+	transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}

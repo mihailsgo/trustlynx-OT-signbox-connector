@@ -1,0 +1,111 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-table-empty-default.csui-table-empty:not(.csui-state-loading) {
+    background-image: url('../../../image/icons/empty.svg');
+    margin-top: 38px;
+    background-repeat: no-repeat;
+    background-position: center 16px;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-table-empty.csui-table-empty-default .csui-no-result-message {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #666666;
+    top: 218px;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="name"] {
+    width: 41%;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="system_name"] {
+    width: 24%;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="action_plan_text"] {
+    width: 35%;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="name"],
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="system_name"],
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table [data-csui-attribute="action_plan_text"] {
+    min-width: inherit !important;
+    max-width: inherit !important;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-table-column-search {
+    display: none;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-nodetable .binf-table > tbody > tr {
+    height: 42px;
+}
+
+li[data-csui-command="addactionplan"] .icon-toolbarAdd {
+    background-image: url('../../../image/icons/add_action.svg');
+}
+
+li[data-csui-command="addactionplan"]:hover .icon-toolbarAdd {
+    background-image: url('../../../image/icons/add_action_hover.svg');
+}
+
+li[data-csui-command="addactionplan"]:active .icon-toolbarAdd {
+    background-image: url('../../../image/icons/add_action_active.svg');
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-table-actionbar-bubble {
+    border-radius: 15px;
+    padding: 2px 6px;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-table-cell-name-appendix {
+    right: auto;
+    left: 112px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] tbody tr td:nth-child(4) p{
+    color: #333;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-item-title-icon{
+    display: none;
+    visibility: hidden;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-leftToolbar .csui-toolbar.binf-nav li{
+    align-content: center;
+    align-items: stretch;
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .csui-toolbar.binf-nav > li > a[title='Add event'] span:hover {
+    background-color: #F3FBFF;
+    border-radius: 50%;
+}
+
+.binf-widgets .xecmpf-eac-inlineform-eac select::-ms-expand{
+    display: none;
+}
+
+.binf-widgets .xecmpf-eac-inlineform-eac select{
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 99% center;
+    padding-right: 14px;
+    -webkit-appearance: none;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    .binf-widgets div[data-csui-widget_type="eac"] .csui-table-empty-default.csui-table-empty:not(.csui-state-loading){
+        margin-top: 80px;
+        outline: none;
+    }
+}
+
+.binf-widgets div[data-csui-widget_type="eac"] .binf-table td[class='dataTables_empty csui-table-cell-last-visible']{
+    display: none;
+}

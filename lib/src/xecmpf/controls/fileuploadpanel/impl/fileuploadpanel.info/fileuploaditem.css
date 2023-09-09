@@ -1,0 +1,54 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-file-upload-item {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 10px 8px 20px;
+  align-items: center;
+}
+.binf-widgets .xecmpf-file-upload-item:hover {
+  background: rgba(203, 211, 217, 0.5);
+}
+.binf-widgets .xecmpf-file-upload-item-icon {
+  width: 26px;
+  height: 32px;
+  margin-right: 19px;
+}
+.binf-widgets .xecmpf-file-upload-item-info {
+  display: flex;
+  flex-direction: column;
+}
+.binf-widgets .xecmpf-file-upload-item-info .xecmpf-file-upload-item-info-name {
+  font-size: 14px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.binf-widgets .xecmpf-file-upload-item-info .xecmpf-file-upload-item-info-size {
+  font-size: 10px;
+  line-height: 14px;
+  max-width: 80%;
+}
+.binf-widgets .xecmpf-file-upload-item-delete {
+  width: 26px;
+  height: 18px;
+  flex: 10% 1 1;
+  cursor: pointer;  
+  display: flex;
+  flex-direction: row-reverse;
+}
+.binf-widgets .xecmpf-file-upload-item-delete .xecmpf-file-upload-item-delete-icon {
+  background-image: url('../../../../image/icons/trash.svg');
+  display: inline-block;
+  width: 26px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+.binf-widgets .xecmpf-file-upload-item:hover .xecmpf-file-upload-item-delete .xecmpf-file-upload-item-delete-icon, .binf-widgets .xecmpf-file-upload-item .xecmpf-file-upload-item-delete-icon:hover {
+  visibility: visible;
+}
+.binf-widgets .xecmpf-file-upload-item-delete .xecmpf-file-upload-item-delete-icon.show {
+  visibility: visible;
+}

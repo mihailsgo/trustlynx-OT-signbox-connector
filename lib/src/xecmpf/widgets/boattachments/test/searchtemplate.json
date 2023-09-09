@@ -1,0 +1,138 @@
+{
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/search/template/12409/settings/display",
+          "method": "GET",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "data": {
+        "display": {
+          "display_regions": {
+            "available": [
+              {
+                "key": "OTDCategory",
+                "name": "Category"
+              },
+              {
+                "key": "OTExternalCreateDate",
+                "name": "Source Create Date"
+              },
+              {
+                "key": "OTExternalIdentity",
+                "name": "Source Account"
+              },
+              {
+                "key": "OTExternalModifyDate",
+                "name": "Source Modify Date"
+              },
+              {
+                "key": "OTFileType",
+                "name": "File Type"
+              },
+              {
+                "key": "OTLocation",
+                "name": "Location"
+              },
+              {
+                "key": "OTObject",
+                "name": "OTObject"
+              }
+            ],
+            "selected": [
+              {
+                "key": "OTMIMEType",
+                "name": "MIME Type"
+              },
+              {
+                "key": "OTName",
+                "name": "Name"
+              },
+              {
+                "key": "OTObjectDate",
+                "name": "Date"
+              },
+              {
+                "key": "OTObjectSize",
+                "name": "Size"
+              }
+            ]
+          },
+          "page_size": 10,
+          "show_keywords": false,
+          "show_location_path": false,
+          "sort_regions": {
+            "available": [
+              {
+                "key": "asc_OTObjectDate",
+                "name": "Date (Ascending)"
+              },
+              {
+                "key": "desc_OTObjectDate",
+                "name": "Date (Descending)"
+              },
+              {
+                "key": "asc_OTObjectSize",
+                "name": "Size (Ascending)"
+              },
+              {
+                "key": "desc_OTObjectSize",
+                "name": "Size (Descending)"
+              },
+              {
+                "key": "relevance",
+                "name": "Relevance"
+              }
+            ],
+            "selected": [
+              {
+                "key": "relevance",
+                "name": "Relevance"
+              }
+            ]
+          },
+          "style_id": null,
+          "summary_description": {
+            "available": [
+              {
+                "key": "NONE",
+                "name": "None"
+              },
+              {
+                "key": "SO",
+                "name": "Summaries Only"
+              },
+              {
+                "key": "SP",
+                "name": "Summaries Preferred"
+              },
+              {
+                "key": "DO",
+                "name": "Descriptions Only"
+              },
+              {
+                "key": "DP",
+                "name": "Descriptions Preferred"
+              },
+              {
+                "key": "SD",
+                "name": "Summaries & Descriptions"
+              }
+            ],
+            "selected": "NONE"
+          }
+        },
+        "properties": {
+          "id": 12409,
+          "name": "Full Text Business Workspaces Search",
+          "type": 258,
+          "type_name": "Search Query"
+        }
+      }
+    }
+}

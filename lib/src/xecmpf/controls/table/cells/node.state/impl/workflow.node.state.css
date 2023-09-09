@@ -1,0 +1,130 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets ul.csui-node-states > li.csui-node-state-workflow .icon {
+  background-size: 22px;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow > button {
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow > button:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .csui-node-state-workflow .csui-workflow-popover .binf-popover-content {
+  min-width: 262px;
+  height: auto;
+  padding: 10px 0px 12px 0px;
+}
+
+.binf-widgets .csui-node-state-workflow .csui-workflow-popover .binf-popover-content ul {
+  padding: 0px 22px;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow .binf-popover {
+  width: auto;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow .binf-popover.binf-right {
+  border-left: 4px solid #0084ce;
+  border-right-width: 0;
+}
+
+.binf-widgets .csui-node-state-workflow .binf-popover.csui-workflow-popover .binf-popover-title {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px 22px 0px 22px;
+  color: #333333;
+  border-radius: 0;
+}
+
+.binf-widgets .csui-node-state-workflow .binf-popover.csui-workflow-popover .workflow-collection .workflow-list li.workflow-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.binf-widgets .csui-node-state-workflow .binf-popover.csui-workflow-popover .workflow-collection .workflow-list{
+  min-height: 133px;
+}
+
+.binf-widgets .csui-node-state-workflow .binf-popover.csui-workflow-popover .workflow-collection .workflow-list li.workflow-item {
+  border-top: 1px solid #E6E6E6;
+  padding: 18px 0;
+  width:100%;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow .binf-popover.binf-left {
+  border-right: 4px solid #0084ce;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow .binf-popover.binf-right > .binf-arrow:after {
+  border-right-color: #0084ce;
+}
+
+.binf-widgets ul.csui-node-states .csui-node-state-workflow .binf-popover.binf-left > .binf-arrow:after {
+  border-left-color: #0084ce;
+}
+
+.binf-popover .workflow-item span{
+  display: block;
+}
+.binf-popover .workflow-item .workflow-title .csui-title-link .cs-label{
+  color: #232E72;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.binf-popover .workflow-item .csui-label,
+.binf-popover .workflow-item .csui-value {
+  font-size: 10px;
+  color: #757575;
+  line-height: 14px;
+}
+
+.binf-popover .workflow-item .csui-value {
+  color: #000000;
+}
+
+.binf-popover .workflow-item .workflow-status {
+  font-size: smaller;
+}
+
+.binf-popover .workflow-item > div{
+  margin-bottom: 15px;
+}
+
+.binf-popover .workflow-item > div:last-child {
+  margin-bottom: 0;
+}
+
+.binf-widgets .cs-thumbnail-wrapper .csui-thumbnail-reserved .csui-thumbnail-nodestate-container .csui-thumbnail-nodestate svg.csui-icon-v2.csui-icon-v2-size-small.csui-icon-v2__csui_mime_workflow_egov {
+  width: 13px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-nodestate ul li:empty {
+  display: none;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-nodestate button.csui-workflow-button {
+  width: 30px;
+  height: 30px;
+}
+
+.binf-widgets .csui-thumbnail-overview .binf-popover .csui-overview-container .csui-thumbnail-nodestate button.csui-workflow-button span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

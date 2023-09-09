@@ -1,0 +1,96 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "greet": {
+        "version": "22.2.0.2475"
+      }
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "greet": [
+        "greet/widgets/hello"
+      ]
+    }
+  },
+  "csui/controls/table/cells/cell.factory": {
+    "extensions": {
+      "greet": [
+        "greet/controls/cells/hello/hello.view"
+      ]
+    }
+  },
+  "csui/controls/table/inlineforms/inlineform.factory": {
+    "extensions": {
+      "greet": [
+        "greet/commands/add.hello/custom.inlineform/hello.inlineform.view"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "greet": [
+        "greet/commands/hello/hello.command",
+        "greet/commands/add.hello/add.hello.command"
+      ]
+    }
+  },
+
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "greet": [
+        "greet/commands/hello/hello.nodestable.toolitems"
+      ]
+    }
+  },
+
+  "csui/controls/tabletoolbar/tabletoolbar.view": {
+    "extensions": {
+      "greet": [
+        "greet/commands/add.hello/add.hello.tabletoolbar.extension"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.panels": {
+    "extensions": {
+      "greet": [
+        "greet/widgets/metadata/metadata.panels"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.property.panels": {
+    "extensions": {
+      "greet": [
+        "greet/widgets/metadata/metadata.property.panels"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.general.form.fields": {
+    "extensions": {
+      "greet": [
+        "greet/widgets/metadata/metadata.general.form.fields"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/search.perspectives": {
+    "extensions": {
+      "greet": [
+       "greet/perspective.overrides/hello.search/search.perspectives"
+     ]
+    }
+  },
+  "csui/utils/contexts/perspective/perspective.context": {
+    "extensions": {
+      "greet": [
+        "greet/perspective.context.plugins/greetings/hello.perspective.context.plugin"
+      ]
+    }
+  },
+  "csui/pages/start/perspective.routing": {
+    "extensions": {
+      "greet": [
+        "greet/perspective.routers/greetings/hello.perspective.router"
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.conws-addparticipants .conws-participant.has-role {
+  background-color: #ffffff;
+  border: 2px solid #627783;
+}
+
+.conws-addparticipants .conws-participant.no-role {
+  background-color: #fff6da;
+  border: 1px dashed #c95427;
+}
+
+.conws-addparticipants .conws-participant {
+  margin: 1px;
+  padding: 12px 24px;
+  min-height: 136px;
+  display: flex;
+  border-radius: 0 !important;
+}
+
+.conws-addparticipants .participant-content {
+  width: 50%;
+}
+
+.conws-addparticipants .participant-picture {
+  width: 24px;
+}
+
+.conws-addparticipants .participant-info {
+  padding-left: 16px;
+  width: calc(100% - 48px);
+}
+
+.conws-addparticipants .participant-info > span {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conws-addparticipants .participant-info .name {
+  font-size: 16px;
+  color: #414042;
+  line-height: 19px; 
+}
+
+.conws-addparticipants .participant-info .email,
+.conws-addparticipants .participant-info .title,
+.conws-addparticipants .participant-info .department,
+.conws-addparticipants .participant-info .office {
+  font-size: 12px;
+  color: #414042;
+  line-height: 14px;
+  clear: both;
+}
+
+.conws-addparticipants .participant-info .email,
+.conws-addparticipants .participant-info .department {
+  margin-bottom: 12px;
+}
+
+.conws-addparticipants .participant-roles {
+  width: 224px;
+}
+
+.conws-addparticipants .participant-delete {
+  padding-left: 24px;
+}
+
+.conws-addparticipants .participant-delete .cs-icon-delete {
+  background-image: url('../../../image/icons/delete.svg');
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: calc(50% - 12px);
+  cursor: pointer;
+}
+
+.conws-addparticipants .conws-participants-rolepicker {
+  padding: 0 0 36px;
+}
+
+.conws-addparticipants .conws-participants-rolepicker .cs-search {
+  width: 100%;
+  outline: 0;
+  color: #333333;
+  box-sizing: border-box;
+  border: 1px solid #a7a9ac;
+  border-radius: 3px;
+  padding: 0 8px;
+  height: 28px !important;
+  font-size: 12px !important;
+}

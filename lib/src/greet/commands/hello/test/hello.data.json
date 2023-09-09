@@ -1,0 +1,20 @@
+{
+  "nodes": {
+    "2000": {
+      "id": 2000,
+      "name": "Innovate",
+      "type": 141,
+      "modify_date": "2014-10-15T14:54:06",
+      "modify_user_id": 1000,
+      "parent_id": -1,
+      "perm_create": true,
+      "perm_delete": true,
+      "perm_modify": true,
+      "perm_modify_attributes": true,
+      "perm_modify_permissions": false,
+      "perm_see": true,
+      "perm_see_contents": true,
+      "volume_id": 2000
+    }
+  }
+}

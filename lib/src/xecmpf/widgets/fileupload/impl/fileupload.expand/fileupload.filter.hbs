@@ -1,0 +1,66 @@
+<div class="filerupload-panel-heading" title="{{headerFilterTitle}}">
+    {{headerFilterTitle}}
+</div>
+
+<div class="fileupload-filter-body">
+
+    <div class="csui-facet-header fileupload-header-filter">
+        <div class="fileupload-status-filter header-label">{{status}}</div>
+        <div class="cs-icon csui-button-icon icon-expandArrowUp fileupload-status-toggle fileupload-status-show" role="button" title="Hide facet" aria-label="Hide facet" tabindex="-1"></div>
+    </div>
+    <div class="fileupload-status-content">
+        <div class="status-filter fileupload-status-header csui-selected-checkbox csui-checkbox-primary">
+            <input id="selectAll" type="checkbox" class="All" tabindex="-1" {{checkedAll}}></input>
+                <label for="selectAll">{{allFilterLabel}}</label>
+            <span class="fileupload-allcount">{{totcalCount}}</span>
+        </div>
+
+        <div class="fileupload-status-body">
+           
+            <div class="status-filter csui-selected-checkbox csui-checkbox-primary">
+                <input id="xecmpf-fileupload-status-missing" type="checkbox" class="fileupload-status" tabindex="-1" {{checkedMissing}}></input>
+                <label for="xecmpf-fileupload-status-missing">{{missing}}</label>
+                {{#if checkedMissing }}
+                <span class="xecmpf-fileupload-status-missingcount">{{missingCount}}</span>
+                {{/if}}
+            </div>
+            
+
+            
+            <div class="status-filter csui-selected-checkbox csui-checkbox-primary">
+                <input id="xecmpf-fileupload-status-outDated" type="checkbox" class="fileupload-status" tabindex="-1" {{checkedOutdated}}></input>
+                <label for="xecmpf-fileupload-status-outDated">{{outDated}}</label>
+                {{#if checkedOutdated}}
+                <span class="xecmpf-fileupload-status-outdatedcount">{{outDatedCount}}</span>
+                {{/if}}
+            </div>
+            
+
+            
+            <div class="status-filter csui-selected-checkbox csui-checkbox-primary">
+                <input id="xecmpf-fileupload-status-inprocess" type="checkbox" class="fileupload-status" tabindex="-1" {{checkedInProcess}}></input>
+                <label for="xecmpf-fileupload-status-inprocess">{{inProcess}}</label>
+                {{#if checkedInProcess }}
+                <span class="xecmpf-fileupload-status-inprocesscount">{{inProcessCount}}</span>
+                {{/if}}
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="csui-facet-header fileupload-header-filter">
+        <div class="fileupload-locations-filter header-label">{{locations}}</div>
+        <div class="cs-icon csui-button-icon icon-expandArrowUp fileupload-locations-toggle fileupload-locations-show" role="button" title="Hide facet" aria-label="Hide facet" tabindex="-1"></div>
+    </div>
+    <div class="fileupload-location-body">
+        {{#each locArray}}
+        <div class="location-filter csui-selected-checkbox csui-checkbox-primary">
+            <input id = "{{this.name}}" name = "{{this.id}}" type="checkbox" class="xecmpf-fileupload-location-name" tabindex="-1" ></input>
+            <label for="{{this.id}}">{{this.name}}</label>
+            <span class="fileupload-location-count">{{this.count}}</span>
+        </div>
+        {{/each}}
+    </div>
+
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

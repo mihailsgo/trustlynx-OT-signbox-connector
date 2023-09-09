@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Visual Count Tile View</title>
+
+    <link rel="stylesheet" href="../../../../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+    <script src="../../../../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../../../../lib/src/nuc/config.js" data-csui-path="../../../../../../../lib/src/nuc"></script>
+    <style type="text/css">
+        .csui-visual-count-container {
+            height: calc(50vh - 80px) !important;
+        }
+        .binf-modal-dialog .csui-visual-count-container {
+            height: calc(100vh - 360px) !important;
+        }
+
+        .binf-widgets .tile-controls {
+            width: auto;
+            visibility: visible;
+        }
+    </style>
+    <script>
+        // From a page in /pages/debug in the package root,
+        // where /lib and /src are located as usual.
+        require.config({
+            paths: {
+                webreports: '../../../../../..'
+            },
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        url: '//server/cgi/cs.exe/api/v1',
+                        supportPath: '/the_main_img',
+                        credentials: {
+                            username: 'Admin',
+                            password: 'livelink'
+                        }
+                    }
+                },
+                'i18n': {
+                    loadableLocales: {root: true}
+                },
+                'csui/lib/moment': {
+                    suppressSeconds: true
+                },
+                'csui/utils/base': {
+                    formatIsoDateTimeInUtc: true
+                },
+                'csui/widgets/nodestable/nodestable.view': {
+                    useV2RestApi: true
+                },
+                'csui/controls/tile/behaviors/perfect.scrolling.behavior': {
+                    usePerfectScrollbar: false
+                },
+                'csui/pages/start/impl/perspective.router': {
+                    developmentPage: true
+                },
+                'csui/utils/authenticator': {
+                    rememberTicket: true
+                },
+                'csui/utils/interactiveauthenticator': {
+                    enabled: true
+                }
+            },
+            deps: [
+                'require',
+                'csui/lib/require.config!nuc/nuc-extensions.json',
+                'csui/lib/require.config!csui/csui-extensions.json',
+                'csui/lib/require.config!webreports/webreports-extensions.json'
+            ],
+            callback: initializePage
+        });
+
+        function initializePage(require) {
+            require(['csui/lib/marionette',
+                'csui/lib/underscore',
+                'csui/lib/jquery',
+                'csui/utils/contexts/page/page.context',
+                'csui/utils/contexts/factories/connector',
+                'csui/controls/toolbar/toolitems.factory',
+                'csui/models/node/node.model',
+                'csui/models/nodes',
+                'webreports/widgets/visual.data.filtered.count/impl/utils/contexts/factories/visual.count.collection.factory',
+                'webreports/widgets/visual.data.filtered.count/impl/models/visual.count/column.collection/column.collection',
+                '../visual.count.tile.view.js',
+                './visual.count.tile.mock.js'
+            ], function (Marionette,
+                         _,
+                         $,
+                         PageContext,
+                         ConnectorFactory,
+                         ToolItemsFactory,
+                         NodeModel,
+                         NodeCollection,
+                         VisualCountCollectionFactory,
+                         VisualCountColumnCollection,
+                         VisualCountTileView,
+                         VisualCountTileMock) {
+
+                var context = new PageContext(),
+                    connector = context.getObject(ConnectorFactory),
+                    modelOptions = {
+                        context: context,
+                        id: 218890,
+                        activeColumn: 'Habitat',
+                        viewValueAsPercentage: false,
+                        groupAfter: 8,
+                        sortBy: 'ordinal',
+                        sortOrder: 'asc'
+                    },
+                    collection = context.getCollection(VisualCountCollectionFactory, {attributes: modelOptions}),
+                    buttonNode1 = new NodeModel({
+                        id: 10930024
+                    }, {connector: connector}),
+                    buttonNode2 = new NodeModel({
+                        id: 10930027
+                    }, {connector: connector}),
+                    buttonNode3 = new NodeModel({
+                        id: 10930030
+                    }, {connector: connector}),
+                    toolbarItems = {
+                        footer: new ToolItemsFactory({
+                                right: [
+                                    {
+                                        signature: "OpenWebReport",
+                                        name: "Send as Email",
+                                        toolTip: "Email filtered results",
+                                        status: {
+                                            nodes: new NodeCollection([buttonNode1])
+                                        },
+                                        commandData: {
+                                            someOptionForCommand: "some option value for command"
+                                        }
+                                    },
+                                    {
+                                        signature: "OpenWebReport",
+                                        name: "Export to CSV",
+                                        toolTip: "Export filtered results to CSV",
+                                        status: {
+                                            nodes: new NodeCollection([buttonNode2])
+                                        },
+                                        commandData: {
+                                            someOptionForCommand: "some option value for command "
+                                        }
+                                    },
+                                    {
+                                        signature: "OpenWebReport",
+                                        name: "Save a Snapshot",
+                                        toolTip: "Save a snapshot of the filtered results",
+                                        status: {
+                                            nodes: new NodeCollection([buttonNode3])
+                                        },
+                                        commandData: {
+                                            someOptionForCommand: "some option value for command "
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                rowLimit: 100
+                            }
+                        )
+
+                    };
+
+                var barChartView = new VisualCountTileView(_.extend({
+                        chartCollection: collection,
+                        columnCollection: collection.columnCollection,
+                        facetCollection: collection.facetCollection,
+                        type: 'bar',
+                        theme: 'otPrimary',
+                        toolbarItems: toolbarItems,
+                        filterable: true,
+                        expandable: true
+                    }, modelOptions)),
+                    barRegion = new Marionette.Region({
+                        el: "#bar"
+                    });
+
+                barRegion.show(barChartView);
+
+                VisualCountTileMock.enable();
+
+                $.when(buttonNode1.fetch(), buttonNode2.fetch(), buttonNode3.fetch())
+                    .then(function(){
+                        context.fetch();
+                    });
+
+            });
+        }
+    </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+    <div class="binf-row">
+        <div class="binf-col-md-8 binf-col-xl-6" id="bar"></div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

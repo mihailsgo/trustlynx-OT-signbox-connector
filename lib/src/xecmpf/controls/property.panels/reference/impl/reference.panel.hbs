@@ -1,0 +1,19 @@
+<div class="conws-reference-panel binf-row alpaca-field" id="xecmpf-reference-panel">
+  <div class="alpaca-container-label">
+    <h3>{{title}}</h3>
+  </div>
+  <div class="conws-reference-initial">
+  </div>
+  <div class="conws-reference-replace">
+  </div>
+  {{#if change_reference}}
+    {{#if bo_id}}
+      <div class="conws-reference-override-note">{{change_note}}
+        <span>{{remove_note}}</span>
+      </div>
+    {{else}}
+      <div class="conws-reference-override-note">{{add_note}}</div>
+    {{/if}}
+  {{/if}}
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,16 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "smart": {
+        "version": "1.0"
+      }
+    }
+  },
+
+
+  "smart/controls/globalmessage/impl/progresspanel/progresspanel.view": {
+    "smart": {
+      "enableRetry": false
+    }
+  }
+}

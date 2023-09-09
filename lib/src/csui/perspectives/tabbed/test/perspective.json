@@ -1,0 +1,129 @@
+{
+  "type": "tabbed",
+  "options": {
+    "header": {
+      "widget": {
+        "type": "csui/widgets/placeholder",
+        "options": {
+          "label": "Header",
+          "color": "#fff",
+          "bgcolor": "#444"
+        }
+      }
+    },
+    "tabs": [
+      {
+        "title": "Overview",
+        "columns": [
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Approved Documents",
+                "color": "#fff",
+                "bgcolor": "#88cc88"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Rejected Documents",
+                "color": "#fff",
+                "bgcolor": "#cc8888"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "sm": 6,
+              "md": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Document Updates",
+                "color": "#fff",
+                "bgcolor": "#8888cc"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "Documents",
+        "columns": [
+          {
+            "sizes": {
+              "xs": 12
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "All Documents",
+                "color": "#fff",
+                "bgcolor": "#888"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "Related",
+        "columns": [
+          {
+            "sizes": {
+              "md": 6,
+              "xl": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Vendors",
+                "color": "#fff",
+                "bgcolor": "#44cc44"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "md": 6,
+              "xl": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Orders",
+                "color": "#fff",
+                "bgcolor": "#cc4444"
+              }
+            }
+          },
+          {
+            "sizes": {
+              "md": 6,
+              "xl": 4
+            },
+            "widget": {
+              "type": "csui/widgets/placeholder",
+              "options": {
+                "label": "Products",
+                "color": "#fff",
+                "bgcolor": "#4444cc"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

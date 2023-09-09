@@ -1,0 +1,35 @@
+<div class="csui-pman-popover-right csui-pman-popover-holder"></div>
+<div class="csui-pman-popover-left csui-pman-popover-holder"></div>
+<button class="binf-btn wrapper-button" aria-label="{{widgetName}}"></button>
+<div class="csui-pman-widget-masking">
+  {{#if isEditMode}}
+    <div class="csui-pman-widget-error">
+      <div class="csui-pman-widget-error-heading"> {{widgetTitle}}</div>
+      <div class="csui-pman-widget-error-body">
+        <div class="csui-pman-widget-error-icon"></div>
+        <div class="csui-pman-widget-error-message"> {{configNeeded}}</div>
+      </div>
+    </div>
+    <div class="csui-pman-perspective-actions">
+      <button class="csui-pman-perspective-btn csui-pman-widget-edit icon-edit"
+              title="{{editWidget}}"></button>
+      <button class="csui-pman-perspective-btn csui-pman-widget-close clear-icon"
+              title="{{removeWidget}}"></button>
+    </div>
+  {{else}}
+    <div class="csui-pman-widget-personalize-mask text-center">
+      <button class="binf-btn csui-pman-personalize-btn csui-pman-hide-show-toggle"
+              title="{{hideShowToggle}}"
+        {{#if isWidgetHidden}}
+              aria-label="{{showWidgetriaLabel}}"
+        {{else}}
+              aria-label="{{hideWidgetAriaLabel}}"
+        {{/if}}
+      >{{hideShowToggle}}
+      </button>
+    </div>
+  {{/if}}
+</div>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

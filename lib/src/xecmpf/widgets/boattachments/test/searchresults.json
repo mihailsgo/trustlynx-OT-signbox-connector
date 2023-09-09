@@ -1,0 +1,1352 @@
+{
+    "collection": {
+      "paging": {
+        "limit": 10,
+        "page": 1,
+        "page_total": 1,
+        "range_max": 5,
+        "range_min": 1,
+        "result_header_string": "Results 1 to 5 of 7 sorted by Relevance",
+        "total_count": 5
+      },
+      "searching": {
+        "cache_id": 2102042294,
+        "regions_metadata": {
+          "OTMIMEType": {
+            "name": "MIME Type",
+            "type": -1
+          },
+          "OTName": {
+            "name": "Name",
+            "type": -1
+          },
+          "OTObjectDate": {
+            "include_time": false,
+            "name": "Date",
+            "type": -7
+          },
+          "OTObjectSize": {
+            "name": "Size",
+            "type": 2
+          }
+        },
+        "regions_order": [
+          "OTMIMEType",
+          "OTName",
+          "OTObjectDate",
+          "OTObjectSize"
+        ],
+        "result_title": "Search Result"
+      },
+      "sorting": {
+        "links": {
+          "asc_OTObjectDate": {
+            "body": "",
+            "content_type": "",
+            "href": "/api/v2/search?cache_id=2102042294&sort=asc_OTObjectDate",
+            "method": "POST",
+            "name": "Date (Ascending)"
+          },
+          "asc_OTObjectSize": {
+            "body": "",
+            "content_type": "",
+            "href": "/api/v2/search?cache_id=2102042294&sort=asc_OTObjectSize",
+            "method": "POST",
+            "name": "Size (Ascending)"
+          },
+          "desc_OTObjectDate": {
+            "body": "",
+            "content_type": "",
+            "href": "/api/v2/search?cache_id=2102042294&sort=desc_OTObjectDate",
+            "method": "POST",
+            "name": "Date (Descending)"
+          },
+          "desc_OTObjectSize": {
+            "body": "",
+            "content_type": "",
+            "href": "/api/v2/search?cache_id=2102042294&sort=desc_OTObjectSize",
+            "method": "POST",
+            "name": "Size (Descending)"
+          },
+          "relevance": {
+            "body": "",
+            "content_type": "",
+            "href": "/api/v2/search?cache_id=2102042294",
+            "method": "POST",
+            "name": "Relevance"
+          }
+        },
+        "sort": [
+          "relevance"
+        ]
+      }
+    },
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/search?cache_id=2102042294",
+          "method": "POST",
+          "name": ""
+        }
+      }
+    },
+    "results": [
+      {
+        "actions": {
+          "data": {
+            "open": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/20757/nodes",
+              "method": "GET",
+              "name": "Open"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/20757",
+              "method": "GET",
+              "name": "Properties"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "open"
+          ]
+        },
+        "data": {
+          "followups": [],
+          "properties": {
+            "advanced_versioning": null,
+            "container": true,
+            "container_size": 2,
+            "create_date": "2020-07-08T11:51:22",
+            "create_user_id": 1000,
+            "create_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 20757,
+            "mime_type": null,
+            "modify_date": "2020-07-08T11:51:24",
+            "modify_user_id": 1000,
+            "name": "KNA1 0000000099",
+            "name_multilingual": {
+              "en": "KNA1 0000000099"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "owner_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "parent_id": 16687,
+            "parent_id_expand": {
+              "advanced_versioning": null,
+              "container": true,
+              "container_size": 4,
+              "create_date": "2020-07-06T10:54:14",
+              "create_user_id": 1000,
+              "description": "",
+              "description_multilingual": {
+                "en": ""
+              },
+              "external_create_date": null,
+              "external_identity": "",
+              "external_identity_type": "",
+              "external_modify_date": null,
+              "external_source": "",
+              "favorite": false,
+              "hidden": false,
+              "id": 16687,
+              "mime_type": null,
+              "modify_date": "2020-07-08T11:51:23",
+              "modify_user_id": 1000,
+              "name": "Customer (KNA1)",
+              "name_multilingual": {
+                "en": "Customer (KNA1)"
+              },
+              "owner": "Admin",
+              "owner_group_id": 999,
+              "owner_user_id": 1000,
+              "parent_id": 17019,
+              "permissions_model": "advanced",
+              "reserved": false,
+              "reserved_date": null,
+              "reserved_shared_collaboration": false,
+              "reserved_user_id": 0,
+              "size": 4,
+              "size_formatted": "4 Items",
+              "status": null,
+              "type": 0,
+              "type_name": "Folder",
+              "versionable": false,
+              "versions_control_advanced": false,
+              "volume_id": -2000
+            },
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "rm_enabled": false,
+            "short_summary": [
+              ""
+            ],
+            "size": 2,
+            "size_formatted": "2 Items",
+            "status": null,
+            "summary": [
+              ""
+            ],
+            "type": 848,
+            "type_name": "Business Workspace",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -2000,
+            "wksp_type_name": "Customer (KNA1)"
+          },
+          "regions": {
+            "OTMIMEType": null,
+            "OTMIMEType_formatted": "Business Workspace",
+            "OTName": "KNA1 0000000099",
+            "OTName_expand": {
+              "value_index": 0,
+              "values": [
+                {
+                  "attribute_map": {
+                    "lang": "en"
+                  },
+                  "value": "KNA1 0000000099"
+                }
+              ]
+            },
+            "OTObjectDate": "20200708",
+            "OTObjectDate_formatted": "2020-07-08",
+            "OTObjectSize": 2,
+            "OTObjectSize_formatted": "2 Items"
+          },
+          "rmiconsdata": {
+            "class_id": 0,
+            "official": 0,
+            "show_classify": false,
+            "show_hold": false,
+            "show_hold_tab": false,
+            "show_official": false,
+            "show_xref_tab": false
+          }
+        },
+        "search_result_metadata": {
+          "current_version": null,
+          "object_href": null,
+          "object_id": "DataId=20757&Version=0",
+          "result_type": "264",
+          "source_id": "3540",
+          "version_type": null
+        }
+      },
+      {
+        "actions": {
+          "data": {
+            "open": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/16249/nodes",
+              "method": "GET",
+              "name": "Open"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/16249",
+              "method": "GET",
+              "name": "Properties"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "open"
+          ]
+        },
+        "data": {
+          "followups": [],
+          "properties": {
+            "advanced_versioning": null,
+            "container": true,
+            "container_size": 2,
+            "create_date": "2020-07-06T10:59:31",
+            "create_user_id": 1000,
+            "create_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 16249,
+            "mime_type": null,
+            "modify_date": "2020-07-06T10:59:32",
+            "modify_user_id": 1000,
+            "name": "KNA1 0000000001",
+            "name_multilingual": {
+              "en": "KNA1 0000000001"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "owner_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "parent_id": 16687,
+            "parent_id_expand": {
+              "advanced_versioning": null,
+              "container": true,
+              "container_size": 4,
+              "create_date": "2020-07-06T10:54:14",
+              "create_user_id": 1000,
+              "description": "",
+              "description_multilingual": {
+                "en": ""
+              },
+              "external_create_date": null,
+              "external_identity": "",
+              "external_identity_type": "",
+              "external_modify_date": null,
+              "external_source": "",
+              "favorite": false,
+              "hidden": false,
+              "id": 16687,
+              "mime_type": null,
+              "modify_date": "2020-07-08T11:51:23",
+              "modify_user_id": 1000,
+              "name": "Customer (KNA1)",
+              "name_multilingual": {
+                "en": "Customer (KNA1)"
+              },
+              "owner": "Admin",
+              "owner_group_id": 999,
+              "owner_user_id": 1000,
+              "parent_id": 17019,
+              "permissions_model": "advanced",
+              "reserved": false,
+              "reserved_date": null,
+              "reserved_shared_collaboration": false,
+              "reserved_user_id": 0,
+              "size": 4,
+              "size_formatted": "4 Items",
+              "status": null,
+              "type": 0,
+              "type_name": "Folder",
+              "versionable": false,
+              "versions_control_advanced": false,
+              "volume_id": -2000
+            },
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "rm_enabled": false,
+            "short_summary": [
+              ""
+            ],
+            "size": 2,
+            "size_formatted": "2 Items",
+            "status": null,
+            "summary": [
+              ""
+            ],
+            "type": 848,
+            "type_name": "Business Workspace",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -2000,
+            "wksp_type_name": "Customer (KNA1)"
+          },
+          "regions": {
+            "OTMIMEType": null,
+            "OTMIMEType_formatted": "Business Workspace",
+            "OTName": "KNA1 0000000001",
+            "OTName_expand": {
+              "value_index": 0,
+              "values": [
+                {
+                  "attribute_map": {
+                    "lang": "en"
+                  },
+                  "value": "KNA1 0000000001"
+                }
+              ]
+            },
+            "OTObjectDate": "20200706",
+            "OTObjectDate_formatted": "2020-07-06",
+            "OTObjectSize": 2,
+            "OTObjectSize_formatted": "2 Items"
+          },
+          "rmiconsdata": {
+            "class_id": 0,
+            "official": 0,
+            "show_classify": false,
+            "show_hold": false,
+            "show_hold_tab": false,
+            "show_official": false,
+            "show_xref_tab": false
+          }
+        },
+        "search_result_metadata": {
+          "current_version": null,
+          "object_href": null,
+          "object_id": "DataId=16249&Version=0",
+          "result_type": "264",
+          "source_id": "3540",
+          "version_type": null
+        }
+      },
+      {
+        "actions": {
+          "data": {
+            "open": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/16688/nodes",
+              "method": "GET",
+              "name": "Open"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/16688",
+              "method": "GET",
+              "name": "Properties"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "open"
+          ]
+        },
+        "data": {
+          "followups": [],
+          "properties": {
+            "advanced_versioning": null,
+            "container": true,
+            "container_size": 2,
+            "create_date": "2020-07-06T10:55:26",
+            "create_user_id": 1000,
+            "create_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 16688,
+            "mime_type": null,
+            "modify_date": "2020-07-06T10:55:47",
+            "modify_user_id": 1000,
+            "name": "Customer (KNA1)",
+            "name_multilingual": {
+              "en": "Customer (KNA1)"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "owner_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "parent_id": 12406,
+            "parent_id_expand": {
+              "advanced_versioning": null,
+              "container": true,
+              "container_size": 1,
+              "create_date": "2020-07-06T10:19:49",
+              "create_user_id": 1000,
+              "description": "",
+              "description_multilingual": {
+                "en": ""
+              },
+              "external_create_date": null,
+              "external_identity": "",
+              "external_identity_type": "",
+              "external_modify_date": null,
+              "external_source": "",
+              "favorite": false,
+              "hidden": false,
+              "id": 12406,
+              "mime_type": null,
+              "modify_date": "2020-07-06T10:55:26",
+              "modify_user_id": 1000,
+              "name": "Content Server Document Templates",
+              "name_multilingual": {
+                "en": "Content Server Document Templates"
+              },
+              "owner": "Admin",
+              "owner_group_id": 999,
+              "owner_user_id": 1000,
+              "parent_id": -1,
+              "permissions_model": "advanced",
+              "reserved": false,
+              "reserved_date": null,
+              "reserved_shared_collaboration": false,
+              "reserved_user_id": 0,
+              "size": 1,
+              "size_formatted": "1 Item",
+              "status": null,
+              "type": 20541,
+              "type_name": "Content Server Document Templates",
+              "versionable": false,
+              "versions_control_advanced": false,
+              "volume_id": -12406
+            },
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "rm_enabled": false,
+            "short_summary": [
+              ""
+            ],
+            "size": 2,
+            "size_formatted": "2 Items",
+            "status": null,
+            "summary": [
+              ""
+            ],
+            "type": 848,
+            "type_name": "Business Workspace",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -12406,
+            "wksp_type_name": "Customer (KNA1)"
+          },
+          "regions": {
+            "OTMIMEType": null,
+            "OTMIMEType_formatted": "Business Workspace",
+            "OTName": "Customer (KNA1)",
+            "OTName_expand": {
+              "value_index": 0,
+              "values": [
+                {
+                  "attribute_map": {
+                    "lang": "en"
+                  },
+                  "value": "Customer (KNA1)"
+                }
+              ]
+            },
+            "OTObjectDate": "20200706",
+            "OTObjectDate_formatted": "2020-07-06",
+            "OTObjectSize": 2,
+            "OTObjectSize_formatted": "2 Items"
+          },
+          "rmiconsdata": {
+            "class_id": 0,
+            "official": 0,
+            "show_classify": false,
+            "show_hold": false,
+            "show_hold_tab": false,
+            "show_official": false,
+            "show_xref_tab": false
+          }
+        },
+        "search_result_metadata": {
+          "current_version": null,
+          "object_href": null,
+          "object_id": "DataId=16688&Version=0",
+          "result_type": "264",
+          "source_id": "3540",
+          "version_type": null
+        }
+      },
+      {
+        "actions": {
+          "data": {
+            "open": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/17680/nodes",
+              "method": "GET",
+              "name": "Open"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/17680",
+              "method": "GET",
+              "name": "Properties"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "open"
+          ]
+        },
+        "data": {
+          "followups": [],
+          "properties": {
+            "advanced_versioning": null,
+            "container": true,
+            "container_size": 2,
+            "create_date": "2020-07-06T15:46:00",
+            "create_user_id": 1000,
+            "create_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 17680,
+            "mime_type": null,
+            "modify_date": "2020-07-06T15:46:00",
+            "modify_user_id": 1000,
+            "name": "KNA1 0000000002",
+            "name_multilingual": {
+              "en": "KNA1 0000000002"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "owner_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "parent_id": 16687,
+            "parent_id_expand": {
+              "advanced_versioning": null,
+              "container": true,
+              "container_size": 4,
+              "create_date": "2020-07-06T10:54:14",
+              "create_user_id": 1000,
+              "description": "",
+              "description_multilingual": {
+                "en": ""
+              },
+              "external_create_date": null,
+              "external_identity": "",
+              "external_identity_type": "",
+              "external_modify_date": null,
+              "external_source": "",
+              "favorite": false,
+              "hidden": false,
+              "id": 16687,
+              "mime_type": null,
+              "modify_date": "2020-07-08T11:51:23",
+              "modify_user_id": 1000,
+              "name": "Customer (KNA1)",
+              "name_multilingual": {
+                "en": "Customer (KNA1)"
+              },
+              "owner": "Admin",
+              "owner_group_id": 999,
+              "owner_user_id": 1000,
+              "parent_id": 17019,
+              "permissions_model": "advanced",
+              "reserved": false,
+              "reserved_date": null,
+              "reserved_shared_collaboration": false,
+              "reserved_user_id": 0,
+              "size": 4,
+              "size_formatted": "4 Items",
+              "status": null,
+              "type": 0,
+              "type_name": "Folder",
+              "versionable": false,
+              "versions_control_advanced": false,
+              "volume_id": -2000
+            },
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "rm_enabled": false,
+            "short_summary": [
+              ""
+            ],
+            "size": 2,
+            "size_formatted": "2 Items",
+            "status": null,
+            "summary": [
+              ""
+            ],
+            "type": 848,
+            "type_name": "Business Workspace",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -2000,
+            "wksp_type_name": "Customer (KNA1)"
+          },
+          "regions": {
+            "OTMIMEType": null,
+            "OTMIMEType_formatted": "Business Workspace",
+            "OTName": "KNA1 0000000002",
+            "OTName_expand": {
+              "value_index": 0,
+              "values": [
+                {
+                  "attribute_map": {
+                    "lang": "en"
+                  },
+                  "value": "KNA1 0000000002"
+                }
+              ]
+            },
+            "OTObjectDate": "20200706",
+            "OTObjectDate_formatted": "2020-07-06",
+            "OTObjectSize": 2,
+            "OTObjectSize_formatted": "2 Items"
+          },
+          "rmiconsdata": {
+            "class_id": 0,
+            "official": 0,
+            "show_classify": false,
+            "show_hold": false,
+            "show_hold_tab": false,
+            "show_official": false,
+            "show_xref_tab": false
+          }
+        },
+        "search_result_metadata": {
+          "current_version": null,
+          "object_href": null,
+          "object_id": "DataId=17680&Version=0",
+          "result_type": "264",
+          "source_id": "3540",
+          "version_type": null
+        }
+      },
+      {
+        "actions": {
+          "data": {
+            "open": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/17897/nodes",
+              "method": "GET",
+              "name": "Open"
+            },
+            "properties": {
+              "body": "",
+              "content_type": "",
+              "form_href": "",
+              "href": "/api/v2/nodes/17897",
+              "method": "GET",
+              "name": "Properties"
+            }
+          },
+          "map": {
+            "default_action": "",
+            "more": [
+              "properties"
+            ]
+          },
+          "order": [
+            "open"
+          ]
+        },
+        "data": {
+          "followups": [],
+          "properties": {
+            "advanced_versioning": null,
+            "container": true,
+            "container_size": 2,
+            "create_date": "2020-07-06T15:45:43",
+            "create_user_id": 1000,
+            "create_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "description": "",
+            "description_multilingual": {
+              "en": ""
+            },
+            "external_create_date": null,
+            "external_identity": "",
+            "external_identity_type": "",
+            "external_modify_date": null,
+            "external_source": "",
+            "favorite": false,
+            "hidden": false,
+            "id": 17897,
+            "mime_type": null,
+            "modify_date": "2020-07-06T15:45:44",
+            "modify_user_id": 1000,
+            "name": "KNA1 0000000150",
+            "name_multilingual": {
+              "en": "KNA1 0000000150"
+            },
+            "owner": "Admin",
+            "owner_group_id": 999,
+            "owner_user_id": 1000,
+            "owner_user_id_expand": {
+              "birth_date": null,
+              "business_email": null,
+              "business_fax": null,
+              "business_phone": null,
+              "cell_phone": null,
+              "deleted": false,
+              "display_language": null,
+              "first_name": null,
+              "gender": null,
+              "group_id": 999,
+              "home_address_1": null,
+              "home_address_2": null,
+              "home_fax": null,
+              "home_phone": null,
+              "id": 1000,
+              "initials": "A",
+              "last_name": null,
+              "middle_name": null,
+              "name": "Admin",
+              "name_formatted": "Admin",
+              "office_location": null,
+              "pager": null,
+              "personal_email": null,
+              "personal_interests": null,
+              "personal_url_1": null,
+              "personal_url_2": null,
+              "personal_url_3": null,
+              "personal_website": null,
+              "photo_id": null,
+              "photo_url": null,
+              "privilege_grant_discovery": true,
+              "privilege_login": true,
+              "privilege_modify_groups": true,
+              "privilege_modify_users": true,
+              "privilege_public_access": true,
+              "privilege_system_admin_rights": true,
+              "privilege_user_admin_rights": true,
+              "time_zone": null,
+              "title": null,
+              "type": 0,
+              "type_name": "User"
+            },
+            "parent_id": 16687,
+            "parent_id_expand": {
+              "advanced_versioning": null,
+              "container": true,
+              "container_size": 4,
+              "create_date": "2020-07-06T10:54:14",
+              "create_user_id": 1000,
+              "description": "",
+              "description_multilingual": {
+                "en": ""
+              },
+              "external_create_date": null,
+              "external_identity": "",
+              "external_identity_type": "",
+              "external_modify_date": null,
+              "external_source": "",
+              "favorite": false,
+              "hidden": false,
+              "id": 16687,
+              "mime_type": null,
+              "modify_date": "2020-07-08T11:51:23",
+              "modify_user_id": 1000,
+              "name": "Customer (KNA1)",
+              "name_multilingual": {
+                "en": "Customer (KNA1)"
+              },
+              "owner": "Admin",
+              "owner_group_id": 999,
+              "owner_user_id": 1000,
+              "parent_id": 17019,
+              "permissions_model": "advanced",
+              "reserved": false,
+              "reserved_date": null,
+              "reserved_shared_collaboration": false,
+              "reserved_user_id": 0,
+              "size": 4,
+              "size_formatted": "4 Items",
+              "status": null,
+              "type": 0,
+              "type_name": "Folder",
+              "versionable": false,
+              "versions_control_advanced": false,
+              "volume_id": -2000
+            },
+            "permissions_model": "advanced",
+            "reserved": false,
+            "reserved_date": null,
+            "reserved_shared_collaboration": false,
+            "reserved_user_id": 0,
+            "rm_enabled": false,
+            "short_summary": [
+              ""
+            ],
+            "size": 2,
+            "size_formatted": "2 Items",
+            "status": null,
+            "summary": [
+              ""
+            ],
+            "type": 848,
+            "type_name": "Business Workspace",
+            "versionable": false,
+            "versions_control_advanced": false,
+            "volume_id": -2000,
+            "wksp_type_name": "Customer (KNA1)"
+          },
+          "regions": {
+            "OTMIMEType": null,
+            "OTMIMEType_formatted": "Business Workspace",
+            "OTName": "KNA1 0000000150",
+            "OTName_expand": {
+              "value_index": 0,
+              "values": [
+                {
+                  "attribute_map": {
+                    "lang": "en"
+                  },
+                  "value": "KNA1 0000000150"
+                }
+              ]
+            },
+            "OTObjectDate": "20200706",
+            "OTObjectDate_formatted": "2020-07-06",
+            "OTObjectSize": 2,
+            "OTObjectSize_formatted": "2 Items"
+          },
+          "rmiconsdata": {
+            "class_id": 0,
+            "official": 0,
+            "show_classify": false,
+            "show_hold": false,
+            "show_hold_tab": false,
+            "show_official": false,
+            "show_xref_tab": false
+          }
+        },
+        "search_result_metadata": {
+          "current_version": null,
+          "object_href": null,
+          "object_id": "DataId=17897&Version=0",
+          "result_type": "264",
+          "source_id": "3540",
+          "version_type": null
+        }
+      }
+    ]
+}

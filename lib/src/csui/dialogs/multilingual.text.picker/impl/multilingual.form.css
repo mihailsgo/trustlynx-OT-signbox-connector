@@ -1,0 +1,32 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-multilingual-form {
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+.binf-widgets .cs-multilingual-form .cs-header {
+  padding-bottom: 20px;
+}
+
+.binf-widgets .cs-multilingual-form .cs-ml-form-container {
+  padding-bottom: 12px;
+}
+
+.binf-widgets .cs-multilingual-form .binf-control-label {
+  text-align: right;
+}
+
+.binf-widgets .cs-multilingual-form input {
+  width: 100%;
+  border: 1px solid #757575;
+  border-radius: 3px;
+}
+
+.binf-widgets .cs-multilingual-form textarea {
+  border: 1px solid #757575;
+}
+
+.binf-widgets .cs-multilingual-form .input-container label {
+  width: 100%;
+}

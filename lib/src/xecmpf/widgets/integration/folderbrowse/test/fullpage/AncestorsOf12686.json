@@ -1,0 +1,36 @@
+{
+	"ancestors": [
+		{
+			"id": 2000,
+			"name": "Enterprise",
+			"parent_id": -1,
+			"type": 141,
+			"volume_id": -2000,
+			"type_name": "Enterprise Workspace"
+		},
+		{
+			"id": 12500,
+			"name": "C4C (my336500)",
+			"parent_id": 2000,
+			"type": 0,
+			"volume_id": -2000,
+			"type_name": "Folder"
+		},
+		{
+			"id": 12282,
+			"name": "Account (C4C)",
+			"parent_id": 12500,
+			"type": 0,
+			"volume_id": -2000,
+			"type_name": "Folder"
+		},
+		{
+			"id": 27686,
+			"name": "Account 10330",
+			"parent_id": 12282,
+			"type": 848,
+			"volume_id": -2000,
+			"type_name": "Business Workspace"
+		}
+	]
+}

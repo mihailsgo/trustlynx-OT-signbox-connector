@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HelloCommand Demo</title>
+
+  
+  <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+  <style>
+    .samples {
+      /* Make some space around the visible page body */
+      padding: 1em;
+      /* Make the text visible in the default visual there */
+      color: #ffffff;
+      background: #333333; /* just to show the affected region */
+    }
+
+    /* Style the button on the sample page */
+    #helloBtn {
+      margin-top: 1em;
+    }
+  </style>
+
+  
+  <script src="../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+  <script src="../../../../lib/src/smart/config.js" data-csui-path="../../../../lib/src/smart"></script>
+  
+  <script>
+   // Help the test page waiting on all "deps" config sections.
+ var csuiCallbacks = [],
+        csuiBlocks = 0;
+
+    window.blockCsui = function () {
+      ++csuiBlocks;
+    };
+
+    window.unBlockCsui = function () {
+      if (--csuiBlocks === 0) {
+        while (csuiCallbacks.length) {
+          csuiCallbacks.shift()();
+          if (csuiBlocks > 0) {
+            break;
+          }
+        }
+      }
+    };
+
+    window.csuiDemo = function (callback) {
+      if (csuiBlocks === 0) {
+        callback();
+      } else {
+        csuiCallbacks.push(callback);
+      }
+    };
+
+    window.blockCsui();
+
+    // If there were a module 'greet' installed on the server,
+    // this would be generated on the application page
+    require.config({
+      paths: {
+        csui: '../../../../lib/src/csui',
+        greet: '../../..'
+      },
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        'i18n': {
+          loadableLocales: {root: true}
+        }
+      },
+	   deps: ['csui/lib/require.config!./extension.json',
+		   'csui/lib/require.config!nuc/nuc-extensions.json',
+       'csui/lib/require.config!smart/smart-extensions.json',
+        'csui/lib/require.config!csui/csui-extensions.json'],
+		callback: window.unBlockCsui
+    });
+      
+   window.csuiDemo(function () {
+    require([
+      'csui/lib/jquery', 'csui/lib/backbone', 'csui/models/node/node.model',
+      'csui/dialogs/modal.alert/modal.alert', 'csui/utils/base',
+      'csui/utils/contexts/page/page.context',
+      'csui/utils/contexts/factories/connector',
+      'csui/utils/commands', 'hello.mock'
+    ], function ($, Backbone, NodeModel, ModalAlert, base, PageContext,
+        ConnectorFactory, commands, mock) {
+      'use strict';
+
+      var context = new PageContext(),
+          connector = context.getObject(ConnectorFactory),
+          node = new NodeModel({id: 2000}, {connector: connector}),
+          helloCommand = commands.get('greet-hello');
+
+      mock.enable();
+
+      node.
+          on('change:name', function () { // name changes when object.fetch() returns
+            $('#objName').text(node.get('name')); // show the loaded name
+          })
+          .fetch()
+          .done(function () {
+            $('#helloBtn').removeClass('binf-disabled');
+          })
+          .fail(function (request) {
+            var error = new base.Error(request);
+            ModalAlert.showError(error.message, 'Fetching failed');
+          });
+
+      $('#helloBtn').click(function () {
+        var helloInput = {
+          nodes: new Backbone.Collection([node])
+        };
+        if (helloCommand.enabled(helloInput)) { // is just a single node selected, always true here
+          $('#helloBtn')
+              .text('Showing the greeting...')  // set this label on the button while the greeting is displayed
+              .addClass('binf-disabled'); // disable the button while the greeting is displayed
+
+          helloCommand
+              .execute(helloInput) // shows the modal dialog with the greeting
+              .fail(function (error) {
+                if (error) {
+                  ModalAlert.showError(error.message, 'HelloCommand failed');
+                }
+              })
+              .always(function () {
+                $('#helloBtn')
+                    .text('Greet again') // use a new button label after greeting dialog was closed
+                    .removeClass('binf-disabled'); // enable the button again
+              });
+        } else {
+          ModalAlert.showWarning('Object is not enabled');
+        }
+      });
+
+    });
+	});
+  </script>
+</head>
+
+<body class="binf-widgets">
+<div class="samples">
+  <h1>Object: <span id="objName">Loading...</span></h1>
+  <button id="helloBtn" class="binf-btn binf-btn-default binf-disabled">Greet (initial label)</button>
+</div>
+</body>
+
+</html>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

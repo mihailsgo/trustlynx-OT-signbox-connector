@@ -1,0 +1,72 @@
+<div class="{{className}} esoc-mini-profile-widget binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+  <div class="esoc-mini-profile-user binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+    <div class="esoc-simple-mini-profile-user">
+      <div class="esoc-mini-profile-userinfo binf-col-lg-12 binf-col-md-12 binf-col-sm-12 binf-col-xs-12">
+        <div class="esoc-mini-profile-user-displayname">
+          <a href="javascript:void(0);" class="esoc-mini-profile-user-name"
+            title="{{contentparams.display_name}}">{{contentparams.display_name}}</a>
+        </div>
+        {{#if title}}
+        <div class="esoc-mini-profile-user-title" title="{{contentparams.title}}">{{contentparams.title}}</div>
+        {{/if}}
+        {{#if office_location}}
+        <div class="esoc-mini-profile-user-location" title="{{contentparams.office_location}}">
+          {{contentparams.office_location}}
+        </div>
+        {{/if}}
+        {{#if business_email}}
+        <div class="esoc-mini-profile-user-displayemail">
+          <a class="esoc-mini-profile-user-email" href="mailto:{{contentparams.business_email}}"
+            title="{{contentparams.business_email}}">{{contentparams.business_email}}</a>
+        </div>
+        {{/if}}
+        {{#if business_phone}}
+        <div class="esoc-mini-profile-user-phone-data">
+          <div class="esoc-mini-profile-user-phone-label">{{contentparams.business_phone_label}}</div>
+          <div class="esoc-mini-profile-user-phone" title="{{contentparams.business_phone}}">
+            {{contentparams.business_phone}}</div>
+        </div>
+        {{/if}}
+        {{#if cell_phone}}
+        <div class="esoc-mini-profile-user-mobile-data">
+          <div class="esoc-mini-profile-user-mobile-label">{{contentparams.cell_phone_label}}</div>
+          <div class="esoc-mini-profile-user-mobile" title="{{contentparams.cell_phone}}">{{contentparams.cell_phone}}
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+      {{#if otherUser}}
+      <div id="esoc-mini-profile-chat-comment" class="esoc-miniprofile-chat-action-{{contentparams.id}}
+        esoc-mini-profile-chat-comment binf-hidden">
+        <div class="esoc-social-chat-control smart-v2-icon-parent" title="Chat" tabindex="0" role="button">
+          {{{icon-v2 iconName='csui_action_chat24' states='true' size='large'}}}
+        </div>
+      </div>
+      {{/if}}
+    <div class="esoc-simple-mini-profile-user-img">
+
+      <div class="esoc-mini-profile-img">
+        <span class="esoc-mini-profile-avatar">
+          <a href="javascript:void(0);" class="esoc-mini-profile-pic" tabindex="0">
+            <span class="image_user_placeholder esoc-user-show-profilepic esoc-miniprofile-default-avatar
+                esoc-user-default-avatar-{{contentparams.id}}"
+              title="{{contentparams.display_name}}">{{contentparams.initials}}</span>
+            <img id="esoc-mini-profile-pic-{{contentparams.id}} binf-hidden" class="esoc-userprofile-img-{{contentparams.id}}
+                binf-img-circle" title="{{contentparams.display_name}}" alt="{{contentparams.display_name}}" src="#">
+          </a>
+        </span>
+      </div>
+    
+      <div id="esoc-mini-profile-presence-indicator" class="esoc-mini-profile-presence-indicator binf-hidden binf-col-lg-12 binf-col-md-12 binf-col-sm-12
+    binf-col-xs-12">
+        <div id="esoc-chat-presence-indicator-{{userid}}" class="esoc-chat-presence-indicator" title="" aria-label=""
+          tabindex="0"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

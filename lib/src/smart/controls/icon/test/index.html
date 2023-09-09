@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>Icon control examples</title>
+
+  <link href="../../../themes/carbonfiber/theme.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+
+  <style>
+    button {
+      border: none;
+    }
+
+    body.binf-widgets {
+      font-size: 16px;
+      padding-top: 1em;
+    }
+
+    .binf-widgets h1 {
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+
+    .binf-widgets h2 {
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .binf-widgets h3, p {
+      color: white;
+    }
+
+    .binf-widgets .cbRegion {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      height: 3em;
+      width: 3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .binf-widgets .test-row div span {
+      color: white;
+    }
+
+    #content1 {
+      background-color: greenyellow;
+    }
+
+    #content2, #content7 {
+      background-color: greenyellow;
+    }
+
+    .cbRegion.csui-icon-v2-state-el {
+      background: lightcyan;
+    }
+
+    .cbRegion.csui-icon-v2-state-el:focus {
+      outline: 1px dashed darkblue;
+      outline-offset: -1px;
+    }
+
+    #contentTr4 {
+      background: darkred;
+    }
+
+    #contentTr4:focus {
+      outline-color: white;
+    }
+
+    #content3 {
+      background-color: darkblue;
+    }
+
+    #content4 {
+      background-color: darkblue;
+    }
+
+    #all-tree-icons > div > span {
+      margin: 3px;
+    }
+
+    /* no outline if control is clicked - only by using keyboard should show the outline */
+    /* override from control.css with one more class because the outline style from above also has
+     one more class to override the style from control.css */
+    .binf-widgets .csui-control-view .csui-control:active,
+    .binf-widgets .csui-control-view .csui-control:active:focus,
+    .binf-widgets .csui-control-view .csui-control.csui-control-active,
+    .cbRegion {
+      outline: none;
+    }
+
+  </style>
+
+  <script src="../../../../../debug/nuc/bundles/nuc-loader.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+  <script data-csui-path="../../../../smart" src="../../../../smart/config.js"></script>
+
+  <script>
+    var require = csui.require;
+    var define = csui.define;
+
+    require.config({
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json'
+      ]
+    });
+
+    require(["nuc/lib/underscore", "nuc/lib/jquery", "nuc/lib/backbone", "nuc/lib/marionette",
+      "smart/controls/icon/icon.view",
+      "smart/controls/icons.v2/icons.v2"
+    ], function (_, $, Backbone, Marionette, IconView, iconRegistry) {
+
+      var contentRegionsForIconsWithTriggerEl =
+              document.body.querySelectorAll('.csui-icon-v2-state-el');
+      contentRegionsForIconsWithTriggerEl.forEach(function (el) {
+        var region = new Marionette.Region({el: el});
+        var options = {
+          iconName: 'csui_action_copy32', hoverStateByElement: true,
+          activeStateByElement: true, focusStateByElement: true, disabledStateByElement: true
+        };
+
+        switch (el.id) {
+        case 'contentTr4':
+          options.theme = 'dark';
+          break;
+        case 'contentTr5':
+          options.focusStateByElement = false;
+          break;
+        case 'contentTr6':
+          // test using the allStateByElement shortcut to set all flags at once
+          options = {
+            iconName: 'csui_action_copy32', allStateByElement: true
+          };
+          break;
+        }
+        region.show(new IconView(options));
+      });
+
+      var contentRegion1  = new Marionette.Region({
+            el: "#content1"
+          }),
+          contentRegion2  = new Marionette.Region({
+            el: "#content2"
+          }),
+          contentRegion3  = new Marionette.Region({
+            el: "#content3"
+          }),
+          contentRegion4  = new Marionette.Region({
+            el: "#content4"
+          }),
+          contentRegion5  = new Marionette.Region({
+            el: "#content5"
+          }),
+          contentRegion6  = new Marionette.Region({
+            el: "#content6"
+          }),
+          contentRegion7  = new Marionette.Region({
+            el: "#content7"
+          }),
+          contentRegion8  = new Marionette.Region({
+            el: "#content8"
+          }),
+          contentRegion9  = new Marionette.Region({
+            el: "#content9"
+          }),
+          contentRegion10 = new Marionette.Region({
+            el: "#content10"
+          });
+
+      var control1 = new IconView({iconName: 'csui_action_copy32', states: true});
+      var control2 = new IconView({iconName: 'csui_action_copy32', states: true});
+      var control3 = new IconView({iconName: 'csui_action_copy32', states: true, theme: 'dark'});
+      var control4 = new IconView({iconName: 'csui_action_copy32', states: true, theme: 'dark'});
+      var control5 = new IconView({iconName: 'csui_action_copy32', states: true, on: true});
+      var control6 = new IconView({iconName: 'csui_action_copy32', states: true, on: true});
+      var control7 = new IconView({iconName: 'csui_action_copy32', states: true});
+      var control8 = new IconView({iconName: 'csui_colorschema_mime_folder', colorTheme: 'tree'});
+      var control9 = new IconView(
+          {iconName: 'csui_colorschema_mime_folder', colorTheme: 'OT Indigo'});
+      var control10 = new IconView(
+          {iconName: 'csui_colorschema_mime_folder', colorTheme: 'tree', size: 'xsmall'});
+
+      contentRegion1.show(control1);
+      contentRegion2.show(control2);
+      contentRegion3.show(control3);
+      contentRegion4.show(control4);
+      contentRegion5.show(control5);
+      contentRegion6.show(control6);
+      contentRegion7.show(control7);
+      contentRegion8.show(control8);
+      contentRegion9.show(control9);
+      contentRegion10.show(control10);
+
+    });
+  </script>
+
+  <script id="title-template" type="text/html">
+    <h2 class="text">
+      <% if(title) { %>
+      <%= title %>
+      <% } else { %>
+      unkonwn
+      <% } %> </h2>
+  </script>
+
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container">
+  <h1>icons-v2 Test Page</h1>
+  <p>Note that the colored button background is here at the test page only for making the style
+    changes easier noticeable.</p>
+  <h2>With Trigger Element</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Button disabled</span>
+      <button disabled class="cbRegion csui-icon-v2-state-el" id="contentTr1"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Button not disabled</span>
+      <button class="cbRegion csui-icon-v2-state-el" id="contentTr2"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Non button</span>
+      <div class="cbRegion csui-icon-v2-state-el" id="contentTr3" tabindex="0"></div>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Non button - dark bg</span>
+      <div class="cbRegion csui-icon-v2-state-el" id="contentTr4" tabindex="0"></div>
+    </div>
+  </div>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Without focus state</span>
+      <button class="cbRegion csui-icon-v2-state-el" id="contentTr5"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>All states enabled at once</span>
+      <button class="cbRegion csui-icon-v2-state-el" id="contentTr6"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>div marked as disabled</span>
+      <div class="cbRegion csui-icon-v2-state-el csui-disabled" tabindex="0" id="contentTr7"></div>
+    </div>
+  </div>
+  <h2>Normal Background</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Disabled</span>
+      <button disabled class="cbRegion" id="content1"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Not disabled</span>
+      <button class="cbRegion" id="content2"></button>
+    </div>
+  </div>
+  <h2>Dark Background</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Disabled</span>
+      <button disabled class="cbRegion" id="content3"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Not disabled</span>
+      <button class="cbRegion" id="content4"></button>
+    </div>
+  </div>
+  <h2>On State</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Disabled</span>
+      <button disabled class="cbRegion" id="content5"></button>
+    </div>
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <span>Not disabled</span>
+      <button class="cbRegion" id="content6"></button>
+    </div>
+  </div>
+  <h2>Icon not inside button</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <a class="cbRegion" id="content7" tabindex="0"></a>
+    </div>
+  </div>
+  <h2>IconView with overridden colorTheme='tree'</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <a class="cbRegion" id="content8" tabindex="0"></a>
+    </div>
+  </div>
+  <h2>IconView with overridden colorTheme='OT Indigo'</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <a class="cbRegion" id="content9" tabindex="0"></a>
+    </div>
+  </div>
+  <h2>IconView with overridden colorTheme='tree' and xsmall</h2>
+  <div class="binf-row test-row">
+    <div class="binf-col-sm-3 binf-col-md-3 binf-col-lg-3">
+      <a class="cbRegion" id="content10" tabindex="0"></a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

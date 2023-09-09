@@ -1,0 +1,452 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-global-message.csui-messagepanel {
+  position: absolute;
+  
+  z-index: 1200;
+  transform: translateX(50vw) translateX(-50%); 
+  background-color: transparent;
+}
+
+.csui-global-message.csui-messagepanel.position-hidden {
+  position: absolute;
+  bottom: 100%;
+  top: initial;
+  top: auto; 
+}
+
+.csui-global-message.csui-messagepanel.position-show {
+  bottom: initial;
+  bottom: auto; 
+  height: initial;
+  height: auto; 
+}
+
+.binf-widgets .csui-messagepanel {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  min-width: 480px;
+  max-width: 752px;
+  border-radius: 3px;
+}
+
+.binf-widgets .csui-messagepanel.csui-error {
+  width: auto;
+}
+
+.csui-messagepanel .csui-details-wrapper {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
+.csui-messagepanel .csui-details-wrapper {
+  margin: 0 -5px -5px -5px;
+  padding: 0 5px 5px 5px;
+  overflow-y: hidden;
+  overflow-x: visible;
+}
+
+
+
+
+
+
+.csui-messagepanel .csui-header,
+.csui-messagepanel .csui-details,
+.csui-messagepanel.csui-success-with-link {  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header,
+.csui-messagepanel.csui-success-with-link .csui-message-link-div {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.csui-messagepanel .csui-header {
+  background-color: #f7f7f7;
+  position: relative;
+  padding: 20px 16px 16px 16px;  
+  border-radius: 3px 3px 0 0;
+}
+.csui-messagepanel.csui-collapsed .csui-header,
+.csui-messagepanel.smart-no-details .csui-header {
+  border-radius: 3px;
+}
+
+.csui-messagepanel .csui-details {
+  position: relative;
+  min-width: 480px;
+  background-color: #ffffff;
+  border-radius: 0 0px 3px 3px;  
+}
+
+.csui-messagepanel.csui-none .csui-header {
+  border-bottom: #dcdcdc 1px solid;
+}
+
+.csui-messagepanel.csui-none .csui-header .csui-state {
+  padding-left: 0;
+}
+
+.csui-messagepanel .csui-header .csui-state {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.csui-messagepanel .csui-header .csui-text {
+  overflow: hidden; 
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: #000000;
+  font-weight: normal;
+  text-overflow: ellipsis;
+}
+
+.csui-messagepanel.csui-no-icon .csui-header .csui-text {
+  padding-left: .75em;
+}
+
+.csui-messagepanel .csui-header .csui-action {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.csui-messagepanel .csui-details .csui-text {
+  padding-top: 4px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.csui-messagepanel .csui-details .csui-action {
+  width: 100%;
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: -0.125em; 
+}
+
+.csui-messagepanel .csui-details .csui-action button {
+  float: right;
+}
+
+
+
+.csui-messagepanel.csui-success .csui-header {
+  color: white;
+  background-color: #146634;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header {
+  color: white;
+  background-color: #146634;
+  height: 4em;
+}
+
+.csui-messagepanel.csui-processing .csui-header {
+  color: white;
+  background-color: #004b71;
+}
+
+.csui-messagepanel.csui-none .csui-header {
+  color: #333333;
+  background-color: white;
+}
+
+.csui-messagepanel.csui-info .csui-state-icon {
+  color: #0072aa;
+}
+
+.csui-messagepanel.csui-success .csui-state-icon,
+.csui-messagepanel.csui-success-with-link .csui-state-icon {
+  color: #146634;
+}
+
+.csui-messagepanel.csui-error .csui-state-icon {
+  color: #df3324;
+}
+
+.csui-messagepanel.csui-none .csui-state-icon {
+  width: 0;
+}
+
+.csui-messagepanel.csui-info .csui-action-close,
+.csui-messagepanel.csui-success .csui-action-close,
+.csui-messagepanel.csui-success-with-link .csui-action-close,
+.csui-messagepanel.csui-error .csui-action-close,
+.csui-messagepanel.csui-processing .csui-action-close,
+.csui-messagepanel.csui-warning .csui-action-close,
+.csui-messagepanel.csui-none .csui-action-close {
+  border: none;
+  background-color: transparent;
+}
+
+.csui-messagepanel .csui-action-moredetails,
+.csui-messagepanel .csui-action-fewerdetails {
+  border-color: #2e3d98;
+  color: #2e3d98;
+  float: right;
+  line-height: 32px;
+}
+
+.csui-messagepanel a.csui-action-moredetails:hover,
+.csui-messagepanel a.csui-action-fewerdetails:hover,
+.csui-messagepanel a.csui-action-moredetails:focus,
+.csui-messagepanel a.csui-action-fewerdetails:focus {
+  color: #0084ce;
+  text-decoration: underline;
+  cursor: pointer;
+  outline: none;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-message-link-div {
+  height: 48px;
+  position: relative;
+  color: #ffffff;
+  background-color: #ffffff;
+  border-bottom: 4px solid green;
+  border-radius: 0 0 3px 3px;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-message-link-div > a {
+  color: #0072aa;
+  font-size: 16px;
+  float: right;
+  padding-right: 1em;
+  padding-left: 1em;
+  top: calc((48px - 16px) / 2);
+  right: 0px;
+  position: absolute;
+}
+
+
+
+.binf-widgets .csui-icon-notification-success {
+  background-image: url(images/notification/status_completed.svg);
+}
+
+.binf-widgets .circle_delete, .binf-widgets .circle_delete:focus, .binf-widgets .circle_delete:active {
+  background-image: url(images/notification/formfield_clear24.svg);
+}
+
+.binf-widgets .csui-action-close.csui-icon,
+.binf-widgets .csui-icon.csui-icon-notification-information-white,
+.binf-widgets .csui-icon.csui-icon-notification-warning-white,
+.binf-widgets .csui-icon.csui-icon-notification-success-white,
+.binf-widgets .csui-icon.csui-icon-notification-error-white {
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets .csui-action-close.binf-btn {
+  padding: 0;
+}
+
+.binf-navbar .binf-navbar-nav > li:not(.csui-help) > .breadcrumbs-handle > a {
+  padding-top: 19px;
+  padding-left: 14px;
+}
+
+.csui-messagepanel.csui-error .csui-header {
+  color: #888;
+  background-color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.binf-widgets .binf-navbar-nav .nav-profile,
+.binf-widgets .binf-navbar-nav .csui-notification > .messagecenter {
+  padding: 7px 16px 6px;
+}
+
+.binf-navbar-nav .csui-search-box .csui-header-search-icon {
+  margin-right: 8px;
+}
+
+
+.binf-widgets .csui-messagepanel .csui-icon-dismiss-white {                       
+  background-image: url(images/notification/formfield_clear24.svg);
+}
+
+.binf-widgets .csui-messagepanel .csui-icon-dismiss-white:hover {
+  background-image: url(images/notification/formfield_clear24_mo.svg);
+}
+
+.binf-widgets .csui-messagepanel .csui-icon-dismiss-white:active,
+.binf-widgets .csui-messagepanel .csui-icon-dismiss-white:focus {
+  background-image: url(images/notification/formfield_clear24_md.svg);
+}
+
+.binf-widgets .csui-messagepanel .csui-icon-notification-error-white {
+  background-image: url(images/notification/notification_error_red.svg);
+}
+
+
+.binf-widgets .csui-messagepanel .binf-btn:focus-visible {
+  outline: 1px solid #2e3d98;
+  outline-offset: 2px;
+  border-radius: 0;
+}
+
+.binf-widgets .csui-messagepanel .binf-btn:focus:not(:focus-visible) {
+  outline: none;
+  outline-offset: 0;
+}
+
+.binf-widgets .csui-expand .binf-btn {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 3px;
+  margin: 0 13px 0 0;
+  float: right;
+}
+
+.binf-widgets .csui-expand .csui-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.binf-widgets .csui-messagepanel.csui-success .csui-header,
+.binf-widgets .csui-messagepanel.csui-warning .csui-header,
+.binf-widgets .csui-messagepanel.csui-info .csui-header {
+  border-top: 0 none; 
+  min-width: 480px;
+  display: block;
+  background-color: #ffffff;
+  min-height: auto;
+  height: auto;
+}
+
+.binf-widgets .csui-messagepanel.csui-success .csui-details {
+  border-bottom: 4px solid #006353;
+}
+
+.binf-widgets .csui-messagepanel.csui-success.csui-collapsed .csui-header,
+.binf-widgets .csui-messagepanel.csui-success.smart-no-details .csui-header {
+  border-bottom: 4px solid #006353;
+}
+
+.binf-widgets .csui-messagepanel.csui-success.csui-collapsing .csui-details {
+  border-bottom: 0;
+  box-shadow: 0 4px 0 0 #006353;
+}
+
+.binf-widgets .csui-messagepanel.csui-warning .csui-details {
+  border-bottom: 4px solid #F05822;
+}
+
+.binf-widgets .csui-messagepanel.csui-warning.csui-collapsed .csui-header,
+.binf-widgets .csui-messagepanel.csui-warning.smart-no-details .csui-header {
+  border-bottom: 4px solid #F05822;
+}
+
+.binf-widgets .csui-messagepanel.csui-warning.csui-collapsing .csui-details {
+  border-bottom: 0;
+  box-shadow: 0 4px 0 0 #F05822;
+}
+
+.binf-widgets .csui-messagepanel.csui-error .csui-details {
+  border-bottom: 4px solid #DF3324;
+}
+
+.binf-widgets .csui-messagepanel.csui-error.csui-collapsed .csui-header,
+.binf-widgets .csui-messagepanel.csui-error.smart-no-details .csui-header {
+  border-bottom: 4px solid #DF3324;
+}
+
+.binf-widgets .csui-messagepanel.csui-error.csui-collapsing .csui-details {
+  border-bottom: 0;
+  box-shadow: 0 4px 0 0 #DF3324;
+}
+
+
+.binf-widgets .csui-messagepanel.csui-info .csui-details {
+  border-bottom: 4px solid #2E3D98;
+}
+
+.binf-widgets .csui-messagepanel.csui-info.csui-collapsed .csui-header,
+.binf-widgets .csui-messagepanel.csui-info.smart-no-details .csui-header {
+  border-bottom: 4px solid #2E3D98;
+}
+
+.binf-widgets .csui-messagepanel.csui-info.csui-collapsing .csui-details {
+  border-bottom: 0;
+  box-shadow: 0 4px 0 0 #2E3D98;
+}
+
+.binf-widgets .csui-messagepanel.csui-collapsed .csui-details{
+  border-bottom: 0;
+}
+
+.binf-widgets .csui-icon-notification-success-white {
+  background-image: url(images/notification/notification_success24.svg);
+}
+
+.csui-messagepanel .csui-header-top .csui-text {
+  flex-grow: 1;
+}
+
+.csui-messagepanel.csui-success-with-link .csui-header {
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-messagepanel .csui-header .csui-gotolocation-url {
+  color: #2F4ED1;
+  float: right;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.binf-widgets .csui-messagepanel .csui-header .csui-header-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.binf-widgets .csui-messagepanel .csui-header .csui-state {
+  padding-left: 0;
+}
+
+.binf-widgets .csui-messagepanel .csui-header .csui-action {
+  padding-right: 0;
+  display: flex;
+}
+
+.binf-widgets .csui-messagepanel .csui-header .csui-gotolocation-label {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+  .binf-widgets .csui-messagepanel {
+    max-width: 704px;
+  }
+}

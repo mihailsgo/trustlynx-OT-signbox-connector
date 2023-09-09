@@ -1,0 +1,23 @@
+{{#if imageUrl}}
+  {{#xif "this.mainIconName||this.mainClassName"}}
+    <img src="{{dummySrc}}" class="csui-icon csui-node-type-image binf-hidden" alt="" aria-hidden="true">
+  {{else}}
+    <img src="{{imageUrl}}" class="csui-icon csui-node-type-image" alt="" aria-hidden="true">
+  {{/xif}}
+{{/if}}
+{{#xif "this.mainIconName"}}
+  {{{icon-v2 iconName=mainIconName size=size colorTheme=colorTheme }}}
+{{else xif "this.mainClassName"}}
+  <span class="csui-node-type-icon {{mainClassName}}"></span>
+{{/xif}}
+{{#if overlayIconNames}}
+  {{#each overlayIconNames}}
+    {{{icon-v2 iconName=this size=../size }}}
+  {{/each}}
+{{else}}
+  {{#each overlayClassNames}}
+    <span class="{{this}}"></span>
+  {{/each}}
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

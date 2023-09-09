@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Error Control</title>
+    <link type="text/css" rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+    <style>
+        body.binf-widgets {
+            margin-top: 15px;
+        }
+        
+    </style>
+
+    <script src="../../../../nuc/lib/require.js"></script>
+    <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+    <script>
+      require.config({
+        paths: {
+          smart: "../../..",
+          nuc: "../../../../nuc",
+          "css": "../../../../nuc/lib/css",
+          "csui-ext": "../../../../nuc/utils/load-extensions/load-extensions"
+        },
+        deps: [
+          'nuc/lib/require.config!nuc/nuc-extensions.json',
+          'nuc/lib/require.config!smart/smart-extensions.json'
+        ]
+      });
+
+      require([
+        'nuc/lib/backbone', 'nuc/lib/marionette', 
+        'smart/controls/error/error.view',
+        'smart/lib/binf/js/binf'
+      ], function (Backbone, Marionette, ErrorView) {
+        'use strict';
+
+        var error1, errorView1, errorRegion1,
+            error2, errorView2, errorRegion2,
+            error3, errorView3, errorRegion3,
+            errorWidgetViewLow, errorRegionLow, errorLow;
+
+        // with the new 'suggestion' data
+        error1 = new Backbone.Model({
+          message: 'The object cannot be accessed now.',
+          suggestion: 'Please try again later or contact the administrator.'
+        });
+        errorView1 = new ErrorView({
+          model: error1
+        });
+        errorRegion1 = new Marionette.Region({el: '#error1'});
+        errorRegion1.show(errorView1);
+
+        // backward compatible with the old data without 'suggestion'
+        error2 = new Backbone.Model({
+          message: 'Sorry, the item you requested could not be accessed. ' +
+                   'Either it does not exist, or you do not have permission to access it. ' +
+                   'If you were sent a link to this item, please contact the sender for assistance.'
+        });
+        errorView2 = new ErrorView({
+          model: error2
+        });
+        errorRegion2 = new Marionette.Region({el: '#error2'});
+        errorRegion2.show(errorView2);
+
+        // with popover message
+        /*
+        ....................................
+        enable me once binf lib is available
+        ....................................
+        */
+            error3 = new Backbone.Model({
+            title: 'Error view title',
+            message: 'The object cannot be accessed now.',
+            suggestion: 'Please try again later or contact the administrator.'
+          });
+        errorView3 = new ErrorView({
+            model: error3
+          });
+          errorRegion3 = new Marionette.Region({el: '#error3'});
+          errorRegion3.show(errorView3);
+
+        // with bottom message display
+        errorLow = new Backbone.Model({
+          message: 'The object cannot be accessed now.',
+          suggestion: 'Please try again later or contact the administrator.'
+        });
+        errorWidgetViewLow = new ErrorView({
+          model: errorLow,
+          low: true
+        });
+        errorRegionLow = new Marionette.Region({el: '#errorLow'});
+        errorRegionLow.show(errorWidgetViewLow);
+
+      });
+
+    </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Error Control Samples</h1>
+
+<div class="binf-container-fluid grid-rows">
+    <div class="binf-row">
+        <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="error1"></div>
+        <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="error2"></div>
+        <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="error3"></div>
+    </div>
+    <div class="binf-row">
+        <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3" id="errorLow"></div>
+    </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

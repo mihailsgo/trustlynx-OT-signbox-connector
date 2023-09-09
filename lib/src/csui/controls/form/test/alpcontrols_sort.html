@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alpaca Form Controls</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+      font-size: 14px;
+    }
+
+    .container {
+      padding: 1em;
+      background-color: #ffffff;
+    }
+
+    .fieldContainer {
+      /*margin: 1em;*/
+      width: 10em;
+    }
+
+    .binf-widgets .binf-container {
+      background-color: #ffffff;
+      margin-top: 20px;
+    }
+
+    #fields {
+      background-color: white;
+    }
+
+    .form-group > .row {
+      margin-left: 1em;
+      min-height: 3.5em;
+    }
+
+    .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+      padding-top: 5px;
+      margin-left: 0.5em;
+      line-height: 1.3em;
+    }
+
+    .cs-form .alpaca-container-item > .form-group.alpaca-field.alpaca-field-datetime > .col-sm-9 {
+      overflow: visible;
+    }
+
+    #form {
+      /*min-height: 15em;*/
+      max-width: 50em;
+    }
+  </style>
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+  
+
+  <script>
+
+    require.config({
+      paths: {
+        //csui: "../../../../src", //enable me in local
+        csui: "../../..",
+        smart:  '../../../../lib/src/smart'
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json',
+        'csui/lib/require.config!../../../../src/csui-extensions.json'
+      ],
+      callback: window.unBlockCsui
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          // Trick to get the default user image placeholder working;
+          // the usual mocked connection '//server/otcs/cs/api/v1'
+          // and '/support' would not produce a valid URL for the
+          // browser to load an <img> from, but if you create a
+          // symlink in your project root to CS_CORE_UI/src and call
+          // it 'csui', the following connection parameters will
+          // allow you to see the default user image on this page
+
+          connection: {
+            url: '/api/v1',
+            supportPath: '/',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        },
+        i18n: {
+          loadableLocales: {"ar": true, "en-US": true, "fr": true, 'zh': true},
+          locale: 'en-US',
+          defaultLanguage: "_en_US",
+          defaultMetadataLanguage: "en",
+          userMetadataLanguage: "en",
+          availableMetadataLanguages: [
+            {"languageCode": "en", "displayName": "English"},
+            {"languageCode": "de_DE", "displayName": "Deutsch (Deutschland)"},
+            {"languageCode": "en_IN", "displayName": "English ( India )"},
+            {"languageCode": "ja", "displayName": "í•œêµ­ì–´"},
+            {"languageCode": "ko_KR", "displayName": "æ—¥æœ¬èªž"},
+            {"languageCode": "nl_NL", "displayName": "Nederlands"}
+          ],
+          availableLanguages: [
+            {
+              "displayName": "English ( United States )",
+              "languageCode": "_en_US"
+            },
+            {
+              "displayName": "Arabic",
+              "languageCode": "_ar"
+            }
+          ]
+        }
+      },
+      deps: ['csui/lib/require.config!csui/csui-extensions.json']
+    });
+
+    require(["csui/lib/underscore", "csui/lib/jquery", "csui/lib/backbone", "csui/lib/marionette",
+      "csui/models/form", "csui/controls/form/form.view", 'csui/utils/contexts/page/page.context',
+      'csui/controls/form/test/alpcontrols.mock', "csui/controls/icons.v2"
+    ], function (_, $, Backbone, Marionette, FormModel, FormView, PageContext, mock) {
+
+      var pageContext = new PageContext({
+        factories: {
+          connector: {
+            connection: {
+              url: '//server/otcs/cs/api/v1',
+              supportPath: '/support',
+              session: {
+                ticket: 'dummy'
+              }
+            }
+          }
+        }
+      });
+
+      var form = {
+            "data": {},
+            "options": {
+              "fields": {},
+              "label": "CSUI Alpaca Controls"
+            },
+            "schema": {
+              "properties": {},
+              "type": "object"
+            }
+          },
+          useOrder = true;
+      updateForm(useOrder);
+
+      // ------ user field,  order: 8
+      function updateForm(useOrder) {
+        _.extend(form.data, {
+          "create_user_id": 1000
+        });
+        _.extend(form.options.fields, {
+          "create_user_id": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "order": useOrder ? 8 : undefined,
+            "label": "8)Created By (user)",
+            //          "readonly": true,
+            "type": "text",
+            "type_control": {
+              "name": "Admin",
+              "parameters": {
+                "select_types": [0]
+              }
+            }
+          }
+        });
+        _.extend(form.schema.properties, {
+          "create_user_id": {
+            //          "readonly": true,
+            "required": false,
+            "title": "Created By",
+            "type": "string"
+          }
+        });
+        // -------- boolean field, order: 1
+
+        _.extend(form.data, {
+          "187420_7": false
+        });
+        _.extend(form.options.fields, {
+          "187420_7": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "7)Rights (bool)",
+            "order": useOrder ? 7 : undefined,
+            "readonly": false,
+            "type": "checkbox"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_7": {
+            "readonly": false,
+            "required": false,
+            "title": "Rights Management",
+            "type": "boolean"
+          }
+        });
+
+        // -------- select field, order: 4
+
+        _.extend(form.data, {
+          //"187420_5": "Draft"
+        });
+        _.extend(form.options.fields, {
+          "187420_5": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "6)Status (select)",
+            "order": useOrder ? 6 : undefined,
+            "readonly": false,
+            "type": "select"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_5": {
+            "enum": [
+              "Draft",
+              "Review",
+              "Released",
+              "Public"
+            ],
+            "readonly": false,
+            "required": false,
+            "title": "Status",
+            "type": "string"
+          }
+        });
+
+        // -------- text field, order: 2
+
+        _.extend(form.data, {
+          "187420_4": "Tank Manual"
+        });
+
+        _.extend(form.options.fields, {
+          "187420_4": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "5)Subject (text)",
+            "order": useOrder ? 5 : undefined,
+            "readonly": false,
+            "type": "text"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_4": {
+            "maxLength": 32,
+            "readonly": false,
+            "required": false,
+            "title": "Subject",
+            "type": "string"
+          }
+        });
+
+        // -------- integer field
+
+        _.extend(form.data, {
+          "186529_3": 12341234
+        });
+        _.extend(form.options.fields, {
+          "186529_3": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "4)Manual Id (integer)",
+            "order": useOrder ? 4 : undefined,
+            "readonly": false,
+            "type": "integer"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "186529_3": {
+            "readonly": false,
+            "required": false,
+            "title": "Manual Id",
+            "type": "integer"
+          }
+        });
+
+        // -------- Multilingual text field
+
+        _.extend(form.data, {
+          "187420_6": {
+            "en": "Tank Manual"
+          }
+        });
+
+        _.extend(form.options.fields, {
+          "187420_6": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "9) Multilingual (text)",
+            "readonly": false,
+            "type": "otcs_multilingual_string",
+            order: useOrder ? 9 : undefined,
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_6": {
+            "maxLength": 32,
+            "readonly": false,
+            "required": false,
+            "title": "Multilingual",
+            "type": "object"
+          }
+        });
+
+        // -------- Multilingual textarea field
+
+        _.extend(form.data, {
+          "187420_62":
+              {
+                "en": "Tank Manual"
+              }
+        });
+
+        _.extend(form.options.fields, {
+          "187420_62": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "10) Multilingual (textarea)",
+            "readonly": false,
+            "type": "otcs_multilingual_textarea",
+            order: useOrder ? 10 : undefined,
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_62": {
+            "maxLength": 32,
+            "readonly": false,
+            "required": false,
+            "title": "Multilingual",
+            "type": "object"
+          }
+        });
+        // -------- date field
+
+        _.extend(form.data, {
+          "187420_11_x_14": null
+        });
+        _.extend(form.options.fields, {
+          "187420_11_x_14": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "3)Reviewed at (date)",
+            "order": useOrder ? 3 : undefined,
+            "readonly": false,
+            "type": "date"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_11_x_14": {
+            "readonly": false,
+            "required": false,
+            "title": "Reviewed at (date)",
+            "type": "string"
+          }
+        });
+
+        // -------- datetime field
+
+        _.extend(form.data, {
+          "187420_11_x_13": null
+        });
+        _.extend(form.options.fields, {
+          "187420_11_x_13": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "2)Reviewed at (datetime)",
+            "order": useOrder ? 2 : undefined,
+            "readonly": false,
+            "dateFormat": "DD/MM/YYYY HH:mm:ss",
+            "type": "datetime"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "187420_11_x_13": {
+            "readonly": false,
+            "required": false,
+            "title": "Reviewed at (datetime)",
+            "type": "string"
+          }
+        });
+
+        // -------- textarea field
+
+        _.extend(form.data, {
+          "186529_4": ""
+        });
+        _.extend(form.options.fields, {
+          "186529_4": {
+            "hidden": false,
+            "hideInitValidationError": true,
+            "label": "1)Description (textarea)",
+            "order": useOrder ? 1 : undefined,
+            "readonly": false,
+            "type": "textarea"
+          }
+        });
+        _.extend(form.schema.properties, {
+          "186529_4": {
+            "readonly": false,
+            "required": false,
+            "title": "Description",
+            "type": "string",
+            "maxLength": 50
+          }
+        });
+      }
+
+      mock.enable();
+      var displayMode = 'read';
+      var formModel = new FormModel(form);
+
+      var options = {
+        model: formModel,
+        mode: displayMode,
+        context: pageContext,
+        layoutMode: 'doubleCol'
+      };
+
+      var contentRegionForm = new Marionette.Region({el: "#form"}),
+          formView = new FormView(options);
+
+      contentRegionForm.show(formView);
+
+      //set ordering
+      $('#show').on('click', function () {
+        useOrder = $('#inlineCheckbox').is(':checked');
+        updateForm(useOrder);
+        options = {
+          model: formModel,
+          mode: displayMode,
+          context: pageContext,
+          layoutMode: 'doubleCol'
+        };
+        formView = new FormView(options);
+        contentRegionForm.show(formView);
+      });
+
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container">
+  <div class="binf-row binf-form-horizontal">
+    <div class="binf-col-sm-2 binf-control-label">Display Mode:</div>
+
+    <label class="binf-radio-inline">
+      <input type="checkbox" name="inlinecheckBox" id="inlineCheckbox" checked>
+      ordering required</label>
+  </div>
+
+  <div class="" style="margin:2em;">
+    <button type="button" class="binf-btn binf-btn-primary" id="show">update Form</button>
+  </div>
+
+  <div class="">
+    <div id="form"></div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

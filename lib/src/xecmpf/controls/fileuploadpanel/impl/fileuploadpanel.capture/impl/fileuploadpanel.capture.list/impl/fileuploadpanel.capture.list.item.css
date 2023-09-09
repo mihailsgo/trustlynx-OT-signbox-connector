@@ -1,0 +1,53 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-file-upload-capture-list-item {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  cursor: pointer;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item.selected, .binf-widgets .xecmpf-file-upload-capture-list-item:hover {
+  background-color: #CBD3D9;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item.xecmpf-file-upload-disabled-item {
+  cursor: not-allowed;
+  color: #999;
+  opacity: 0.8;
+  background: none;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-icon {
+  margin-right: 12px;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-icon span {
+  width: 26px;
+  height: 32px;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item.xecmpf-file-upload-disabled-item .xecmpf-file-upload-capture-item-icon span {
+  filter: grayscale(100%);
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-info {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-validation-icon {
+  display: flex;
+  align-items: center;
+  width: 12px;
+  margin-right: 5px;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-validation-icon span {
+  display: none;
+  width: 12px;
+  height: 12px;
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-validation-icon .xecmpf-file-upload-valid {
+  background-image: url('../../../../../../../image/icons/tick_valid.svg');
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-validation-icon .xecmpf-file-upload-invalid {
+  background-image: url('../../../../../../../image/icons/tick_invalid.svg');
+}
+.binf-widgets .xecmpf-file-upload-capture-list-item .xecmpf-file-upload-capture-item-validation-icon span.show-status-icon {
+  display: block;  
+}

@@ -1,0 +1,25 @@
+<h2 class="csui-item-name">
+<button class="csui-item-name-readonly binf-btn title csui-acc-focusable" title="{{itemTitleAria}}"
+     aria-expanded="false" aria-label="{{itemTitleAria}}">
+  <span class="csui-item-name-block">{{name}}</span>
+</button>
+</h2>
+<div class="csui-item-name-edit title-edit-div">
+  <input class="title-input" placeholder="{{placeholderName}}" type="text" value="{{name}}"
+          title="{{edit_name_tooltip}}">
+  {{#if mlDataEnabled}}
+    <span class="csui-multilingual-icon-label">
+      <button  class="icon csui-multilingual-icon">
+        {{{icon-v2 iconName="csui_action_language_switcher24" size='small' states='true'}}}
+      </button>
+    </span>
+  {{/if}}
+  <button type="button" class="csui-undo csui-edit-save inline-edit-icon" disabled title="{{save_edit_name_tooltip}}">
+    {{{icon-v2 iconName="csui_action_confirm32" size='normal' states='true'}}}
+  </button>
+  <button type="button" class="csui-undo csui-edit-cancel inline-edit-icon" title="{{cancel_edit_name_tooltip}}">
+    {{{icon-v2 iconName="csui_action_cancel32" size='normal' states='true'}}}
+  </button>
+  <div class="csui-item-name-error title-error binf-text-danger" title=""></div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

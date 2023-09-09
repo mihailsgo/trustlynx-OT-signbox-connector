@@ -1,0 +1,23 @@
+.binf-widgets .team-table-cell-avatar {
+    min-width: 64px;
+    max-width: 64px;
+}
+.team-table-cell-avatar .status-indicator {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  margin-left: 24px;
+}
+.team-table-cell-avatar .esoc-user-profile-pic-container img,
+.team-table-cell-avatar .esoc-user-profile-pic-container span{
+  height: 32px;
+  width: 32px;
+}
+.team-table-cell-avatar #status-indicator-new {
+  background-image: url('../../../image/icons/status_new.svg');
+  background-repeat: no-repeat;
+}
+.team-table-cell-avatar #status-indicator-inherited {
+  background-image: url('../../../image/icons/overlay_inherited.svg');
+  background-repeat: no-repeat;
+}

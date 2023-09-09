@@ -1,0 +1,11 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.xecmpf-fileupload-missing-icon {
+    background-image: url('../../../../image/icons/missing_documents_color_32.svg');
+  }
+  .xecmpf-fileupload-outdated-icon {
+    background-image: url('../../../../image/icons/outdated_documents_color_32.svg');
+  }
+  .xecmpf-fileupload-inprocess-icon {
+    background-image: url('../../../../image/icons/inprocess_documents_color_32.svg');
+  }

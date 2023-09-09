@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Thumbnail Test</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body.binf-widgets {
+      /*padding-top: 1em;*/
+      margin: 0;
+      height: 100%;
+      overflow-y: hidden;
+    }
+  </style>
+
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script src="../../../../nuc/config.js"></script>
+  <script src="../../../../smart/config.js"></script>
+
+  <script>
+    require.config({
+          paths: {
+            nuc: "../../../../nuc",
+            csui: "../../../../csui",
+            smart: "../../../../smart"
+          },
+          deps: [
+            'nuc/lib/require.config!nuc/nuc-extensions.json',
+            'csui/lib/require.config!csui/csui-extensions.json',
+            'nuc/lib/require.config!smart/smart-extensions.json'
+          ]
+    });
+    csui.require.config({
+      config: {"csui\/utils\/commands\/thumbnail.toggle":{"enableGridView":true}}
+    });
+    csui.require.config({
+      config: {
+        'csui/widgets/nodestable/nodestable.view': {
+          useV2RestApi: true,
+          useAppContainer: false,
+          isThumbnailEnabled: true
+        },
+        "csui/utils/commands": {
+          "extensions": {
+            "csui": [
+            "csui/utils/commands/add.categories",
+            "csui/utils/commands/add",
+            "csui/utils/commands/add.version",
+            "csui/utils/commands/browse",
+            "csui/utils/commands/copy",
+            "csui/utils/commands/delete",
+            "csui/utils/commands/delete/delete.self.handler",
+            "csui/utils/commands/download",
+            "csui/utils/commands/zipanddownload",
+            "csui/utils/commands/edit",
+            "csui/utils/commands/email.link",
+            "csui/utils/commands/favorite.add",
+            "csui/utils/commands/favorite.remove",
+            "csui/utils/commands/filter",
+            "csui/utils/commands/inlineedit",
+            "csui/utils/commands/move",
+            "csui/utils/commands/navigate",
+            "csui/utils/commands/open",
+            "csui/utils/commands/open.document/open.document",
+            "csui/utils/commands/permissions",
+            "csui/utils/commands/properties",
+            "csui/utils/commands/rename",
+            "csui/utils/commands/rename.favorite",
+            "csui/utils/commands/reserve",
+            "csui/utils/commands/unreserve",
+            "csui/utils/commands/copy.link",
+            "csui/utils/commands/collection/collect",
+            ]
+          }
+        }
+      }
+    });
+
+  </script>
+  <script src="index.js"></script>
+</head>
+
+<body class="binf-widgets">
+<div class="binf-container-fluid binf-grid-rows">
+  <div class="binf-row" id="navigation">
+    <div class="binf-col-sm-12">
+      Navigation is here
+    </div>
+  </div>
+
+  <div class="binf-row" id="table">
+    <div class="binf-col-sm-12 binf-row-xs-full" id="content"></div>
+  </div>
+
+  <div class="binf-row" id="footer">
+    <div class="binf-col-sm-12">
+      Footer is here
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

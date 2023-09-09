@@ -1,0 +1,38 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+.binf-widgets .binf-navbar-brand > .csui-logo > .csui-logo-image {
+  background-image: url("image/csui/headerbar_content_suite_platform_li.svg");
+}
+
+.binf-widgets .csui-about-box.cs-dialog .csui-logo-image {
+  background-image: url("image/csui/headerbar_content_suite_platform.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.csui-mime-compound-release {
+  background-image: url("image/csui/icons/mime_compound_release32.svg");
+  background-repeat: no-repeat;
+}
+
+.csui-mime-compound-revision {
+  background-image: url("image/csui/icons/mime_compound_revision32.svg");
+  background-repeat: no-repeat;
+}
+
+
+.binf-widgets .cs-list .tile-content:not(.csui-perfect-scrolling),
+.binf-widgets .csui-inline-menu .binf-dropdown .binf-dropdown-menu:not(.csui-perfect-scrolling),
+.binf-widgets .cs-perspective-panel .csui-normal-scrolling,
+.binf-widgets :not(.cs-perspective-panel) .csui-normal-scrolling,
+.binf-widgets .metadata-content .cs-metadata .cs-metadata-properties .binf-tab-content:not(.csui-perfect-scrolling),
+.binf-widgets .cs-form-set-container.csui-native-scrollbar .csui-scrollablecols {
+  overflow-y: overlay !important;  
+  scrollbar-width: thin;
+}
+
+.binf-widgets *:not(.cs-list) .load-container.smart-loading-state-dark-theme {
+  position: relative;
+}

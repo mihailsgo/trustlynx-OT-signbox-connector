@@ -1,0 +1,199 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-simpletreelistitem.binf-panel {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.binf-widgets .cs-simpletreelistitem.binf-panel:focus .cs-header {
+  outline: 1px dotted #333333;
+  outline-offset: -1px;
+}
+
+.binf-widgets .cs-simpletreelistitem .arrow-overlay {
+  display: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading {
+  height: 48px;
+  padding: 0 16px 0 16px;
+  background-color: #f7f7f7;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading span:focus,
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading span:active {
+  outline-style: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading:hover,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group > a:hover,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group > a.binf-active:hover,
+.binf-widgets:not(.csui-on-ipad) .cs-simpletreelistitem .cs-content .cs-list-group > a.csui-tile-with-more-btn {
+  background-color: #d7d7d7;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading:focus,
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading.binf-active:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.binf-active:focus {
+  outline: 1px dotted #333333;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .container-icon {
+  height: 32px;
+  width: 32px;
+  margin: 6px 8px 6px 0;
+  background-repeat: no-repeat;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .cs-title {
+  line-height: 3em;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.binf-widgets .cs-simpletreelistitem .binf-panel-heading .dropdown-icon {
+  width: 16px;
+  height: 48px;
+  background-repeat: no-repeat;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content {
+  min-height: 48px;
+  padding: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container {
+  height: 48px;
+  padding: 0 16px 0 56px;
+}
+
+.binf-widgets .tile-content .binf-list-group .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container {
+  height: 48px;
+  margin: 0;
+  background: none;
+  min-height: 48px;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-placeholder {
+  display: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-container .cs-emptylist-text {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
+  margin: 0;
+  position: inherit;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group {
+  padding: 0;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .cs-emptylist-text .csui-no-result-message {
+  text-align: left;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item {
+  width: 100%;
+  height: 44px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  border-radius: 0;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item:focus,
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item:active {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a {
+  width: 100%;
+  height: 48px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #323232;
+  text-decoration: none;
+  padding: 0 16px 0 56px;
+}
+
+.binf-widgets .cs-simpletreelistitem.flatten-tree .cs-content .cs-list-group > a {
+  padding: 0 16px 0 16px;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.binf-active {
+  background-color: #f7f7f7;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .csui-icon,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .list-item-title {
+  cursor: default;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .csui-icon {
+  opacity: 0.5;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group a.inactive .list-item-title {
+  color: #757575;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .binf-list-group-item > .csui-icon-group,
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .binf-list-group-item .csui-icon {
+  height: 32px;
+  width: 32px;
+  margin: 6px 8px 6px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group div.binf-list-group-item .csui-icon {
+  margin-right: 8px;
+  display: block;
+  position: absolute;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .list-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .csui-tile-with-more-btn .binf-list-group-item .list-item-title {
+  width: calc(100% - 97px); 
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .binf-list-group-item span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: normal;
+}
+
+.binf-widgets .cs-simpletreelistitem .cs-content .cs-list-group .binf-list-group-item .csui-tileview-more-btn {
+  display: inline-block;
+  padding: 0;
+  margin: 6px 0 6px 12px;
+  width: 32px;
+  height: 32px;
+}

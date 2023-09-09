@@ -1,0 +1,201 @@
+{
+  "$schema": "http://opentext.com/cs/json-schema/draft-04/schema#",
+  "title": "{{widgetTitle}}",
+  "description": "{{widgetDescription}}",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "workspace": {
+        "type": "object",
+        "title": "{{workspaceTitle}}",
+        "description": "{{workspaceDescription}}",
+        "properties": {
+          "properties": {
+            "type": "object",
+            "title": "{{workspacePropertiesTitle}}",
+            "description": "{{workspacePropertiesDesc}}",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "{{businessworkspaceTitle}}",
+                "default": "{name}",
+                "description": "{{businessworkspaceDesc}}"
+              },
+              "type": {
+                "type": "string",
+                "title": "{{workspaceTypeTitle}}",
+                "default": "{business_properties.workspace_type_name}",
+                "description": "{{workspaceTypeDesc}}"
+              },
+              "description": {
+                "type": "string",
+                "title": "{{descriptionSectionTitle}}",
+                "default": "{description}",
+                "description": "{{descriptionSection}}"
+              }
+            }
+          }
+        }
+      },
+      "completenessCheckSettings": {
+        "type": "object",
+        "title": "{{completenessCheckTitle}}",
+        "description": "{{completenessCheckDescription}}",
+        "properties": {
+          "hideMissingDocsCheck": {
+            "title": "{{hideMissingDocsCheckTitle}}",
+            "description": "{{hideMissingDocsCheckDescription}}",
+            "type": "boolean",
+            "default": false
+          },
+          "hideOutdatedDocsCheck": {
+            "title": "{{hideOutdatedDocsCheckTitle}}",
+            "description": "{{hideOutdatedDocsCheckDescription}}",
+            "type": "boolean",
+            "default": false
+          },
+          "hideInProcessDocsCheck": {
+            "title": "{{hideInProcessDocsCheckTitle}}",
+            "description": "{{hideInProcessDocsCheckDesc}}",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "headerwidget": {
+        "type": "object",
+        "title": "{{additionalWidgetTitle}}",
+        "description": "{{additionalWidgetDescription}}",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "none",
+              "activityfeed",
+              "metadata"
+            ],
+            "default": "none",
+            "title": "{{embedWidgetSectionTitle}}",
+            "description": "{{embedWidgetSectionDesc}}"
+          }
+        }
+      },
+      "metadataSettings": {
+        "type": "object",
+        "title": "{{metadataWidgetTitle}}",
+        "description": "{{metadataWidgetDescription}}",
+        "properties": {  
+          "metadataInColumns":{          
+            "type": "string",			
+            "enum": [
+              "singleCol",
+              "doubleCol"
+            ],
+            "default": "doubleCol",
+            "title": "{{showMetadataTitle}}",
+            "description": "{{showMetadataTitle}}"
+        },      
+          "hideMetadata": {
+            "type": "boolean",
+            "enum": [
+              true,
+              false
+            ],
+            "default": false,
+            "title": "{{hideMetadataTitle}}",
+            "description": "{{hideMetadataDesc}}"
+          },
+          "hideEmptyFields": {
+            "type": "boolean",
+            "enum": [
+              true,
+              false
+            ],
+            "default": false,
+            "title": "{{hideEmptyFieldsTitle}}",
+            "description": "{{hideEmptyFieldsDesc}}"
+          },
+          "metadata": {
+            "type": "array",
+            "title": "{{metadataWidgetTitle}}",
+            "description": "{{headerMetadataDesc}}",
+            "items": {
+              "type": "object",
+              "title": "{{categoryTitle}}",
+              "description": "{{categoryDescription}}"
+            }
+          }
+        }
+      },
+      "favoriteSettings": {
+        "type": "object",
+        "title": "{{favoriteWidgetTitle}}",
+        "description": "{{favoriteWidgetDesc}}",
+        "properties": {
+          "hideFavorite": {
+            "type": "boolean",
+            "enum": [
+              true,
+              false
+            ],
+            "default": false,
+            "title": "{{hideFavoriteTitle}}",
+            "description": "{{hideFavoriteDesc}}"
+          }
+        }
+      }
+    }
+  },
+  "options": {
+    "fields": {
+      "workspace": {
+        "fields": {
+          "properties": {
+            "fields": {
+              "title": {
+                "type": "otconws_metadata_string"
+              },
+              "type": {
+                "type": "otconws_metadata_string"
+              },
+              "description": {
+                "type": "otconws_metadata_string"
+              }
+            }
+          }
+        }
+      },
+      "metadataSettings": {
+        "fields": {
+            "metadata": {
+              "fields": {                        
+                "item": {
+                  "type": "otconws_metadata"          
+                }
+              }
+            },
+          "metadataInColumns": {
+            "type": "select",            
+            "optionLabels": [
+              "{{singleColumnOption}}",
+              "{{doubleColumnOption}}"
+            ]
+          }
+        }
+      },
+      
+      "headerwidget": {
+        "fields": {
+          "type": {
+            "type": "select",
+            "optionLabels": [
+              "{{embedWidgetOptionLabelNone}}",
+              "{{embedWidgetOptionLabelActivityFeed}}",
+              "{{embedWidgetOptionLabelMetadata}}"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

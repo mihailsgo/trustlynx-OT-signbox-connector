@@ -1,0 +1,27 @@
+{{#if isTypeAhead}}
+  <div class="search-box csui-table-searchbox cs-item-picker{{#unless show_input}} binf-hidden{{/unless}}"
+         role="combobox" aria-expanded="false" aria-haspopup="listbox">
+    <input type="text" class="csui-table-search-input typeahead"
+        placeholder="{{search_placeholder}}" title="{{search_input_tooltip}}" aria-autocomplete="list">
+    <span class="icon-search-placeholder" title="{{search_input_tooltip}}">{{{icon-v2
+            iconName='csui_action_search32' size='contain'}}}</span>
+    <span class="typeahead sbclearer binf-hidden formfield_clear" role="button" aria-expanded="false"
+        title="{{search_clear_icon_tooltip}}" aria-label="{{search_clear_icon_tooltip}}"
+        tabindex="0"></span>
+  </div>
+{{else}}
+  <div class="search-box csui-table-searchbox{{#unless show_input}} binf-hidden{{/unless}}">
+    <span class="icon-search-placeholder" title="{{search_input_tooltip}}">{{{icon-v2
+          iconName='csui_action_search32' size='contain'}}}</span>
+    <input type="search" class="csui-table-search-input"
+       placeholder="{{search_placeholder}}" title="{{search_input_tooltip}}" value="{{search_value}}">
+    <span class="fadeout csui-icon" title="{{search_input_tooltip}}"></span>
+    <span class="sbclearer binf-hidden formfield_clear" role="button" aria-expanded="false"
+          title="{{search_clear_icon_tooltip}}" aria-label="{{search_clear_icon_tooltip}}"
+          tabindex="0"></span>
+  </div>
+{{/if}}
+<div class="csui-table-search-icon" role="button" aria-expanded="false"
+     aria-label="{{search_icon_tooltip}}" title="{{search_icon_tooltip}}" tabindex="0">
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

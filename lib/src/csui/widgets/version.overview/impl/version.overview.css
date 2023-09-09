@@ -1,0 +1,682 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-form.cs-version-overview-wrapper {
+    min-height: calc(33.25em + 16px);
+    width: 100%;
+    min-width: 44em;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper.adjust-scroll {
+    margin-top: 0;
+    height: calc(100vh - 102px);
+    overflow-y: hidden;
+    padding-top: 32px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-container {
+    margin: 0;
+    height: calc(100% - 6em);
+    display: flex;
+    padding-right: 16px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content {
+    padding-top: 48px;
+    padding-bottom: 3em;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .description_section .cs-icon-exp-col {
+    display: none;
+    visibility: hidden;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-wrapper {
+    width: 46em;
+    height: 488px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    position: relative;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    border-radius: 3px;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    max-height: calc(100vh - 9em);
+    opacity: 1;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-wrapper.cs-content-overlay-wrapper {
+    opacity: 0;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-metadata-item-name-container .cs-dropdown-menu .binf-open>.binf-dropdown-menu {
+    position: absolute;
+    height: auto;
+    max-height: calc(100vh - 233px);
+    margin-top: 8px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-metadata-item-name-container .cs-dropdown-menu .binf-open>.binf-dropdown-menu .binf-dropdown-menu {
+    height: auto;
+    max-height: auto;
+    margin: auto;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-metadata-item-name-container .cs-dropdown-menu .binf-dropdown>.binf-dropdown-toggle {
+    margin: 0;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-content-header {
+    height: auto;
+    min-height: 48px;
+    background: #dce4e8;
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    padding: 0 12px 0 12px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: middle;
+    box-shadow: 0 16px 15px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .cs-content-header .overview-page-backbutton {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .title-container {
+    max-width: calc(100% - 160px);
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .title-header.cs-title-has-ellipses {
+    padding-right: 24px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name span.csui-icon-group {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-top: 10px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name span.csui-icon-group,
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name span.csui-icon-group span.csui-icon,
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name span.csui-icon-group .csui-icon-v2 {
+    position: relative;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-fadeout-container {
+    bottom: 48px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .title {
+    position: relative;
+    line-height: 1.3em;
+    cursor: pointer;
+    width: 100%;
+    font-family: OpenText Sans;
+    font-size: 18px;
+    color: #323232;
+    padding-right: 8px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .title.csui-disabled {
+    cursor: not-allowed;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-icon-div {
+    display: none;
+    vertical-align: top;
+    margin-top: 5px;
+    padding-left: 2px;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .title-header {
+    max-height: 60px;
+    line-height: 1.2;
+    overflow: hidden;
+    position: relative;
+    padding-left: 0.5em;
+    word-wrap: break-word;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-icon-div .inline-edit-icon {
+    display: inline-block;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    width: 95%;
+    margin-top: 8px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name.csui-acc-tab-region .title {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 95%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div .cs-icon-required {
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 3px;
+    float: left;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+    text-align: left;
+    height: 28px;
+    line-height: 0;   
+    display: inline-block;
+    max-width: calc(70% - 1.41em);
+    width: 95%;
+    float: none;
+    vertical-align: top;
+    margin-top: 2px;
+    padding: 0 0.5em 0 0.5em;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input.csui-red-border {
+    border: 2px solid #DF3324;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input::-ms-clear {
+    display: none;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name-container .title-error-div {
+    word-break: break-word;
+    font-size: 0.75em;
+    color: #df3324;
+    cursor: default;
+    line-height: 14px;
+    background: #FFFFFF;
+    border-left: 3px solid red;
+    border-radius: 2px;
+    width: 100%;
+    max-width: calc(100% - 145px);
+    margin: 5px 0px 5px 49px;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name-container .title-error-div .title-error.visible {
+    display: block;
+    padding: 2px 5px;
+  }
+
+  @media (max-width: 1024px) {
+    .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input {
+      max-width: calc(100% - 90px);
+    }
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-metadata-item-name .mime_image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .thumbnail_section .csui-icon {
+    width: 154px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .thumbnail_section {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .version-overview-general-information {
+    width: 100%;
+    float: left;
+    text-align: center;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer {
+    position: absolute;
+    text-align: center;
+    top: calc(100% - 48px);
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #e0e0e0;
+    background: #eeeeee;
+    -webkit-box-shadow: 0 -16px 15px 0 rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 -16px 15px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -16px 15px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .binf-btn {
+    height: 32px;
+    font-family: OpenText Sans;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px 0 24px;
+    margin-left: 16px;
+    vertical-align: middle;
+    border-radius: 16px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .binf-btn:focus {
+    outline: 1px solid #2e3d98;
+    outline-offset: 4px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .primary-btn {
+    background-color: #0072aa;
+    color: white;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .primary-btn:hover {
+    color: white;
+    background-color: #004b71;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .default-btn {
+    background-color: white;
+    color: #0072aa;
+    border: 1px solid #0072aa;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-footer .default-btn:hover {
+    border: 1px solid #004b71;
+    color: #004b71;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+    box-shadow: inset 0 0 0 1px rgba(0, 75, 113, 1);
+  }
+
+  .binf-widgets .cs-content-footer .binf-btn.primary-btn:focus, .binf-widgets .cs-content-footer .binf-btn.primary-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .user-photo {
+    height: 28px;
+    min-width: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cs-field-cont {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 24.5px;
+    height: 24.5px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-value, .binf-widgets .cs-form.cs-version-overview-wrapper .cs-label {
+    line-height: 24.5px;
+    margin-left: 8px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-label {
+    margin-right: 20px;
+    text-align: right;
+    width: 27%;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .description_section {
+    position: relative;
+    float: left;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .preview-section {
+    text-align: center;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .location-container .binf-btn[disabled] {
+    opacity: 1;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .location-container .version-overview-formfield {
+    height: auto;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .icon-expandArrowDown {
+    z-index: 1;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .icon-expandArrowUp {
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .user-photo {
+    min-width: 24px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .description-container {
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 0;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .thumbnail-container {
+    flex: 0 0 212px;
+    padding-right: 32px;
+    padding-left: 0;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .version-overview-formfield {
+    text-align: left;
+    height: auto;
+    line-height: 28px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .title .csui-title-ellipses::after {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 24px;
+    height: 28px;
+    content: "\02026";
+    background: #ffffff;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .version-overview-form-group .version-overview-control-label {
+    width: 144px;
+    margin-top: 0;
+    float: left;
+    display: inline-block;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 16px 0 0;
+    vertical-align: top;
+    color: #757575;
+    border-bottom: 0;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .version-overview-form-group .csui-icon-group {
+    height: 28px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-wrapper .cs-content-container .csui-parent-location .csui-parent-name {
+    overflow-x: hidden;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-wrapper .cs-content-container .csui-parent-location .csui-parent-name {
+    color: #2f4ed1;
+    line-height: 28px;
+    height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-content-header .cs-metadata-item-name-container .cs-metadata-item-name .csui-icon-group .csui-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  .binf-widgets .cs-form.cs-form.cs-version-overview-wrapper .version-overview-form-group>.binf-col-sm-9.cs-text-area-field-width {
+    max-width: calc(100% - 176px);
+    margin-right: 32px;
+    width: calc(100% - 176px);
+  }
+
+  .cs-version-overview-wrapper .version-overview-formfield.cs-textareafield {
+    max-height: 100%;
+  }
+
+  .cs-form.cs-version-overview-wrapper .cs-textareafield .cs-field-read button .csui-ellipsis-area {
+    margin-top: 2px;
+    line-height: 24px;
+    min-height: 24px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-bottom: -21px;
+    text-overflow: clip;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    cursor: text;
+    white-space: pre-wrap;
+  }
+
+  .cs-form.cs-version-overview-wrapper .cs-textareafield .cs-field-read button .csui-ellipsis-area.binf-line-clamp {
+    -webkit-line-clamp: unset;
+  }
+
+  .cs-version-overview-wrapper .csui-favorite-star-view-container .icon.csui-svg-icon {
+    height: 32px;
+    width: 32px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-version-overview-created-by {
+    display: flex;
+    vertical-align: middle;
+    height: 24px;
+    line-height: 24px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-version-overview-created-by .esoc-userwidget-wrapper .esoc-user-container span,
+   .binf-widgets .cs-form.cs-version-overview-wrapper .cs-version-overview-created-by .esoc-userwidget-wrapper .esoc-user-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .cs-version-overview-created-by .esoc-userwidget-wrapper .esoc-user-container span.esoc-user-show-profilepic {
+    font-size: 9px;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .esoc-user-display-name {
+    vertical-align: middle;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .binf-widgets .version-overview-form-group button {
+    border: 0;
+    background-color: transparent;
+    min-width: 16px;
+    max-height: 80px;
+    overflow: hidden;
+    padding: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: center;
+    -ms-flex-pack: justify;
+    -moz-box-pack: justify;
+    justify-content: center;
+    text-align: left;
+    cursor: default;
+  }
+
+  .binf-widgets .cs-form.cs-version-overview-wrapper .version-overview-form-group {
+    min-height: 24px;
+    height: auto;
+    border: 0;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    width: 100%;
+    line-height: 28px;
+  }
+
+  .binf-widgets .version-overview-form-group button .csui-ellipsis-area {
+    margin-top: 2px;
+    line-height: 24px;
+  }
+
+  .binf-widgets .version-overview-form-group button>span.csui-ellipsis-area {
+    min-height: 24px;
+    line-height: 22px;
+    margin-bottom: -21px;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: left;
+  }
+
+  .binf-widgets .version-overview-form-group button>span {
+    white-space: pre-wrap;
+  }
+
+  .binf-widgets .version-overview-form-group button>span {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    cursor: text;
+    white-space: nowrap;
+  }
+
+  .binf-widgets .version-overview-form-group span.cs-field-textarea-data {
+    width: 100%;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .version-overview-form-group>.binf-col-sm-9 {
+    width: calc(100% - 176px);
+    max-width: 272px;
+    margin-right: 32px;
+    float: left;
+    display: inline-block;
+    padding: 0;
+    overflow: visible;
+    text-align: left;
+    height: 28px;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-content-container .description_section .version-overview-form-group .binf-col-sm-9 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper.cs-version-overview-wrapper-with-thumbnail .description_section .version-overview-form-group .binf-col-sm-9 {
+    width: calc(100% - 176px);
+    max-width: 272px;
+    margin-right: 32px;
+    float: left;
+    display: inline-block;
+    padding: 0;
+    overflow: visible;
+    text-align: left;
+  }
+
+  .binf-widgets .version-overview-form-group button:focus {
+    border: none;
+    cursor: default;
+    padding: 0;
+    outline: 1px solid #2e3d98;
+    outline-offset: 3px;
+    line-height: 16px;
+  }
+
+  .binf-widgets .version-overview-form-group .csui-version-overview-created-by-user {
+    width: calc(100% - 24px);
+    display: inline;
+    text-align: left;
+    float: left;
+  }
+
+  .binf-widgets .version-overview-form-group .csui-version-overview-created-by-user span {
+    margin-left: 4px;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper.cs-version-overview-wrapper-with-thumbnail .description_section .version-overview-form-group button {
+    max-width: 272px;
+  }
+
+  .binf-widgets .description_section .version-overview-form-group button {
+    white-space: pre-wrap;
+    height: 100%;
+    word-wrap: break-word;
+    max-height: 100%;
+  }
+
+  .binf-widgets .version-overview-form-group .csui-version-overview-created-by-pic {
+    width: 24px;
+    display: inline;
+    float: left;
+    font-size: 9px;
+  }
+
+  .binf-widgets .version-overview-form-group .csui-version-overview-created-by-pic .esoc-user-widget-avatar, .binf-widgets .version-overview-form-group .csui-version-overview-created-by-pic .esoc-userwidget-default-avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .binf-widgets .title-edit-div .csui-undo.csui-edit-save.inline-edit-icon,
+  .binf-widgets .title-edit-div .csui-undo.csui-edit-cancel.inline-edit-icon {
+    display: inline-flex;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-content-header .overview-page-version-label {
+    text-decoration: none;
+    color: #627783;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 2.5em);
+    display: inline-block;
+    margin: 0 6px;
+    padding-top: 14px;
+  }
+
+  .binf-widgets .cs-version-overview-wrapper .cs-content-header .overview-page-version-label .csui-overview-version-label {
+    background-color: #fff;
+    border-radius: 2px;
+    cursor: default;
+    text-decoration: none;
+    padding: 2px 4px;
+    font-size: 11px;
+    color: #627783;
+    border: 1px solid #627783;
+  }

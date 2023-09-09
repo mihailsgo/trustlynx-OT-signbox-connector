@@ -1,0 +1,8 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+html[dir="rtl"] .csui-icon-v2__conws_action_navigate_up {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: 'FlipH';
+  -ms-filter: 'FlipH';
+}

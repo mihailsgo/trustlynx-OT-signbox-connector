@@ -1,0 +1,19 @@
+{{#if showSocialActions}}
+  <span class="esoc-social-actions-widget-area esoc-column-social" data-csid="{{id}}">
+      <span class="esoc-column-social-comment-wrapper">
+        <span class="esoc-socialactions-comment" data-value="{{id}}"
+              aria-label="{{wnd_comments_title}}">
+          <button class="esoc-socialactions-comment-button cs-icon-comment csui-acc-focusable"
+                title="{{messages.addComments}}" aria-label="{{messages.addComments}}">
+            {{{icon-v2 iconName=iconName theme=iconTheme states='true'}}}
+          </button>
+          <span title="{{wnd_comments_title}}" class="cs-text wnd_comments_validated"
+                data-csid="{{id}}">{{wnd_comments_validated}}</span>
+        </span>
+        <span class="binf-sr-only">{{messages.addAComment}}</span>
+      </span>
+  </span>
+{{else}}
+  <span class="esoc-socialactions-comment" data-value="{{id}}"
+        aria-label="{{wnd_no_comments}}"></span>
+{{/if}}

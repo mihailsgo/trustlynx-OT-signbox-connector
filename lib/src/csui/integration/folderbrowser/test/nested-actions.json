@@ -1,0 +1,169 @@
+[{
+    "signature": "Action",
+    "name": "Actions",
+    "flyout": "Action",
+    "group":"other"
+},
+{
+    "signature": "permissions",
+    "name": "View permissions",
+    "flyout": "Action",
+    "group": "subgroup1"
+},
+{
+    "signature": "Download",
+    "name": "Download",
+    "flyout": "Action",
+    "group": "subgroup1"
+},
+{
+    "signature": "ReserveDoc",
+    "name": "Reserve",
+    "flyout": "Action",
+    "group": "subgroup2"
+},
+{
+    "signature": "UnreserveDoc",
+    "name": "Unreserve",
+    "flyout": "Action",
+    "group": "subgroup2"
+},
+{
+    "signature": "Copy",
+    "name": "Copy",
+    "flyout": "Action",
+    "group": "subgroup1"
+},
+{
+    "signature": "Move",
+    "name": "Move",
+    "flyout": "Action",
+    "group": "subgroup1"
+},
+{
+    "signature": "AddVersion",
+    "name": "Add Version",
+    "flyout": "Action",
+    "group": "subgroup1"
+},
+{
+    "signature": "Collect",
+    "name": "Collect",
+    "flyout": "Action",
+    "group": "subgroup3"
+},
+{
+    "signature": "Delete",
+    "name": "Delete",
+    "flyout": "Action",
+    "group": "subgroup3"
+},
+{
+    "signature": "RemoveCollectedItems",
+    "name": "Remove from collection",
+    "flyout": "Action",
+    "group": "subgroup3"    
+},
+{
+    "signature": "ZipAndDownload",
+    "name": "Download",
+    "flyout": "Action",
+    "group": "subgroup3"
+},
+{
+    "signature": "SubAction",
+    "name": "SubActions",
+    "flyout": "Action",
+    "group": "subgroup4"
+},
+{
+    "signature": "Move",
+    "name": "Move",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg21"
+},
+{
+    "signature": "AddVersion",
+    "name": "Add Version",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg21"
+},
+{
+    "signature": "Collect",
+    "name": "Collect",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg22"
+},
+{
+    "signature": "Delete",
+    "name": "Delete",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg22"
+},
+{
+    "signature": "RemoveCollectedItems",
+    "name": "Remove from collection",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg23"
+},
+{
+    "signature": "ZipAndDownload",
+    "name": "Download",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg22"
+},
+{
+    "signature": "SubAction1",
+    "name": "SubActions1",
+    "flyout": "Action",
+    "subItemOf": "SubAction",
+    "group": "sg23"
+},
+{
+    "signature": "Move",
+    "name": "Move",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg31"
+},
+{
+    "signature": "AddVersion",
+    "name": "Add Version",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg31"
+},
+{
+    "signature": "Collect",
+    "name": "Collect",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg32"
+},
+{
+    "signature": "Delete",
+    "name": "Delete",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg32"
+},
+{
+    "signature": "RemoveCollectedItems",
+    "name": "Remove from collection",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg33"
+},
+{
+    "signature": "ZipAndDownload",
+    "name": "Download",
+    "flyout": "Action",
+    "subItemOf": "SubAction1",
+    "group": "sg33"
+}]

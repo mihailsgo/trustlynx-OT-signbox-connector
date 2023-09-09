@@ -1,0 +1,32 @@
+<form>
+  <div class="csui-inlineform-group greet-inlineform-group-hello">
+    <input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+           class="binf-form-control csui-inlineform-input-name {{#if validationFailed_Name~}} hasError
+         {{~/if}}">
+    <input type="text" value="{{description}}" placeholder="{{descriptionPlaceholder}}"
+           class="binf-hidden-xs binf-hidden-sm binf-form-control greet-inlineform-input-hello">
+    <button type="button" class="csui-btn-metadata btn"><span
+        class="icon icon-toolbar-metadata"></span></button>
+    <button type="submit"
+            class="csui-btn-save csui-btn btn binf-btn-default">{{SaveButtonLabel}}</button>
+    <button type="button" class="csui-btn-cancel csui-btn btn">{{CancelButtonLabel}}</button>
+  </div>
+  <div class="binf-hidden-md binf-hidden-lg binf-hidden-xl binf-hidden-xxl csui-inlineform-group
+greet-inlineform-group-hello-wrapped">
+    <input type="text" value="{{description}}" placeholder="{{descriptionPlaceholder}}"
+           class="binf-form-control greet-inlineform-input-hello">
+    <button type="button" class="csui-btn-metadata btn"><span
+        class="csui-icon icon-metadata"></span>
+    </button>
+    <button type="submit"
+            class="csui-btn-save csui-btn binf-btn binf-btn-default">{{SaveButtonLabel}}</button>
+    <button type="button" class="csui-btn-cancel csui-btn btn">{{CancelButtonLabel}}</button>
+  </div>
+</form>
+{{#if haveErrorMessage}}
+  <div class="csui-inlineform-group csui-inlineform-group-error">
+    <div class="text-danger">{{errorMessage}}</div>
+  </div>
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

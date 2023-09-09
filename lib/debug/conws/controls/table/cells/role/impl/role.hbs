@@ -1,0 +1,15 @@
+<div class="csui-user-container">
+  <div class="csui-profileimg binf-pull-left">
+    <span class="csui-icon-paceholder csui-icon conws-mime_roles" title="{{roleAccessTitle}}" aria-label="{{roleAria}}"></span>
+  </div>
+  <div class="member-info csui-fadeout{{#if disabled}} binf-disabled{{/if}} ">
+    <div class="">
+      <span class="csui-user-display-name csui-role" title="{{name}}"  aria-label="{{roleAria}}">{{name}}</span>
+    </div>
+  </div>
+  {{#if includeInlineToolBarPlaceholder}}
+  {{#unless addOwnerOrGroup}}
+  <div class="{{inlineToolBarPlaceholderClass}} binf-hidden"></div>
+  {{/unless}}
+  {{/if}}
+</div>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Visual Count Full Page Widget</title>
+
+    <link rel="stylesheet" href="../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+    <script src="../../../../lib/src/nuc/lib/require.js"></script>
+    <script src="../../../../lib/src/nuc/config.js" data-csui-path="../../../../lib/src/nuc"></script>
+    <script src="../../../../lib/src/smart/config.js" data-csui-path="../../../../lib/src/smart"></script>
+    <style type="text/css">
+        /* provide height for the chart for test pages */
+        .binf-widgets .webreports-visual-count-chart {
+            height: calc(100vh - 143px) !important;
+        }
+    </style>
+    <script>
+        // From a page in /pages/debug in the package root,
+        // where /lib and /src are located as usual.
+        require.config({
+            paths: {
+                csui: '../../../../lib/src/csui',
+                webreports: '../../..'
+            },
+            config: {
+                'csui/utils/contexts/factories/connector': {
+                    connection: {
+                        url: '//server/cgi/cs.exe/api/v1',
+                        supportPath: '/the_main_img',
+                        credentials: {
+                            username: 'Admin',
+                            password: 'livelink'
+                        }
+                    }
+                },
+                'i18n': {
+                    loadableLocales: {root: true}
+                },
+                'csui/lib/moment': {
+                    suppressSeconds: true
+                },
+                'csui/utils/base': {
+                    formatIsoDateTimeInUtc: true
+                },
+                'csui/widgets/nodestable/nodestable.view': {
+                    useV2RestApi: true
+                },
+                'csui/controls/tile/behaviors/perfect.scrolling.behavior': {
+                    usePerfectScrollbar: false
+                },
+                'csui/pages/start/impl/perspective.router': {
+                    developmentPage: true
+                },
+                'csui/utils/authenticator': {
+                    rememberTicket: true
+                },
+                'csui/utils/interactiveauthenticator': {
+                    enabled: true
+                }
+            },
+            deps: [
+                'require',
+                'csui/lib/require.config!nuc/nuc-extensions.json',
+                'csui/lib/require.config!smart/smart-extensions.json',
+                'csui/lib/require.config!csui/csui-extensions.json',
+                'csui/lib/require.config!webreports/webreports-extensions.json'
+            ],
+            callback: initializePage
+        });
+
+        function initializePage(require) {
+            require(['csui/lib/marionette',
+                    'csui/lib/underscore',
+                    'csui/lib/jquery',
+                    'csui/utils/contexts/page/page.context',
+                    '../visual.count.full.page.view.js',
+                    './visual.count.full.page.mock.js'
+            ], function (Marionette,
+                         _,
+                         $,
+                         PageContext,
+                         VisualCountFullPageView,
+                         VisualCountFullPageMock) {
+
+                VisualCountFullPageMock.enable();
+
+                var context = new PageContext(),
+                    barChartView = new VisualCountFullPageView({
+                        context: context,
+                        data: {
+                            id: 218890,
+                            title: 'Full Page Bar Chart',
+                            type: 'horizontalBar',
+                            theme: 'otPrimary',
+                            activeColumn: 'Habitat',
+                            viewValueAsPercentage: false,
+                            groupAfter: -1,
+                            sortBy: 'ordinal',
+                            sortOrder: 'asc',
+                            launchButtonConfig: {
+                                rowLimit: 2,
+                                launchButtons:
+                                    [
+                                        {
+                                            launchButtonID: 12345,
+                                            launchButtonLabel: "Email Results",
+                                            launchButtonTooltip: "Process filtered data using Email Results"
+                                        },
+                                        {
+                                            launchButtonID: 54321,
+                                            launchButtonLabel: "Export to CSV",
+                                            launchButtonTooltip: "Process filtered data using Export to CSV"
+                                        },
+                                        {
+                                            launchButtonID: 88888,
+                                            launchButtonLabel: "Save as Snapshot",
+                                            launchButtonTooltip: "Process filtered data using Save as Snapshot"
+                                        }
+                                    ]
+                            }
+                        }
+                    }),
+                    // Create helpers to show the views on the page
+                    barRegion = new Marionette.Region({
+                        el: "#bar"
+                    });
+
+                barRegion.show(barChartView);
+
+                context.fetch();
+
+            });
+        }
+    </script>
+</head>
+
+<body class="binf-widgets">
+
+<div class="binf-container-fluid binf-grid-rows">
+    <div class="binf-row">
+        <div class="binf-col-sm-12 binf-col-md-12 binf-col-lg-12 row-xs-full" id="bar"></div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

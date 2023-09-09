@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Test workspace picker form view</title>
+
+  <link rel="stylesheet" href="../../../../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+  <script src="../../../../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../../../../lib/src/nuc/config.js" data-csui-path="../../../../../../../lib/src/nuc"></script>
+
+  <script>
+
+    require.config({
+        paths: {
+            conws: '../../../../../../../src',
+            esoc:'../../../../../../../lib/src/esoc',
+            nuc:'../../../../../../../lib/src/nuc',
+            smart:'../../../../../../../lib/src/smart',
+            csui:'../../../../../../../lib/src/csui'
+        },
+        "i18n": {
+            loadableLocales: {root: true}
+        },
+        deps: [
+            'csui/lib/require.config!csui/csui-extensions.json',
+            'csui/lib/require.config!esoc/esoc-extensions.json',
+            'csui/lib/require.config!nuc/nuc-extensions.json',
+            'csui/lib/require.config!smart/smart-extensions.json',
+            'csui/lib/require.config!conws/conws-extensions.json'
+        ]
+    });
+
+  var connection = {
+		url: "http://murdoch.opentext.com/alpha/cs.exe/api/v1",
+		supportPath: "/alphasupport",
+		credentials: {
+		  username: "Admin",
+		  password: "october1"
+		}
+	  };
+
+    csui.require([
+        'csui/lib/jquery',
+        'csui/lib/underscore',
+        'csui/lib/backbone',
+        'csui/lib/marionette',
+        'csui/utils/contexts/page/page.context',
+        'csui/controls/form/form.view',
+        'csui/utils/connector',
+        'conws/controls/form/fields/alpaca/alpworkspacefield',
+        'csui/controls/form/fields/alpaca/alpuserfield'
+    ], function($, _, Backbone, Marionette, PageContext, FormView, Connector) {
+
+            function FormOptions() {
+                $.extend(this,{
+                    model: new Backbone.Model({
+                        data: {},
+                        schema: {
+                            properties: {}
+                        },
+                        options:{
+                            fields: {}
+                        }
+                    })
+                });
+
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdA: 30388683
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdA: {
+                                description: "Workspace displayed in this widget",
+                                title: "Workspace A",
+                                type: "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdA:{
+                                "type": "otconws_workspace_id",
+                                "type_control": {
+                                    "parameters": {
+                                        "workspace_types": [
+                                            26
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdB: 48501311
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdB: {
+                                "readonly": true,
+                                "required": false,
+                                "title": "",
+                                "type": "integer",
+                                "hidden": false
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdB:{
+                                "label": "Workspace B",
+                                "hidden": false,
+                                "readonly": true,
+                                "hideInitValidationError": false,
+                                "type": "otconws_workspace_id"
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdC: 49151910
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdC: {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdC:{
+                                "label": "Workspace C",
+                                "type": "otconws_workspace_id",
+                                "type_control": {
+                                    "parameters": {
+                                        "search_type": "startsWith" // "contains"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        userIdX: 1000
+                    },
+                    schema: {
+                        properties: {
+                            userIdX: {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            userIdX:{
+                                "label": "User X",
+                                "type": "otcs_user"
+                            }
+                        }
+                    }
+                });
+            }
+
+            var connector = new Connector({
+                connection: connection
+            });
+
+            var pageContext = new PageContext({
+                factories: {
+                    connector: connector
+                }
+            });
+
+            // parameters in scenario, when displayed in "Edit page" mode:
+            var formOptions1 = $.extend(new FormOptions(),{
+                context: pageContext,
+                mode: "create"
+            });
+
+            // parameters in scenario, when displayed in general tab:
+            var formOptions2 = $.extend(new FormOptions(),{
+                context: pageContext,
+                layoutMode: "singleCol",
+                mode: "update"
+            });
+
+			var contentRegion1 = new Marionette.Region({ el: "#controls1" });
+			var contentRegion2 = new Marionette.Region({ el: "#controls2" });
+
+            var formView1 = new FormView(formOptions1);
+            var formView2 = new FormView(formOptions2);
+
+            contentRegion1.show(formView1);
+            contentRegion2.show(formView2);
+
+            // How to get the changed values:
+            var formView = formView1;
+            var propertyId = "workspaceIdA";
+            formView.on("change:field",function(event){
+                var value = event.fieldView.getValue();
+                console.log("form field changed",event.name,event.value,_.pick(value,["id","name"]));
+            });
+            formView.once("render:form",function(){
+                var field = formView.form.childrenByPropertyId[propertyId];
+                var view = field.fieldView;
+                var model = view.model;
+                field.field.on("fieldupdate",function(){
+                    console.log("alpaca field updated");
+                });
+                field.field.on("change",function(){
+                    console.log("internal field change");
+                });
+                view.on("field:changed",function(){
+                    var value = view.getValue();
+                    console.log("view value changed:",_.pick(value,["id","name"]));
+                });
+                model.on("change:data",function(){
+                    var value = model.get("data");
+                    console.log("data changed:",_.pick(value,["id","name"]));
+                });
+            });
+
+        });
+
+  </script>
+
+<style>
+    #testtable>tbody>tr>td {
+        padding: 15px 30px;
+    }
+    #testtable>tbody>tr>td>div>* {
+        padding-bottom: 8px;
+    }
+</style>
+
+</head>
+
+<body class="binf-widgets">
+<form>
+<div>
+<div>
+	<table id="testtable" style="width: 540px; margin: 15px 30px;">
+	<tbody>
+		<tr>
+            <td>
+			    <div id="controls1"></div>
+    		</td>
+        </tr>
+		<tr>
+            <td>
+			    <div id="controls2"></div>
+    		</td>
+        </tr>
+	</tbody>
+	</table>
+</div>
+</div>
+</form>
+</body>
+</html>

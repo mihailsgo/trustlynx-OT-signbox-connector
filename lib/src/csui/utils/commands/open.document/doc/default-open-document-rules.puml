@@ -1,0 +1,17 @@
+@startuml
+
+(*) --> if "Document overview is enforced\n(configured with allowPerspective,\nsequence 500)" then
+     ->[true] "Navigate to document perspective"
+else
+  -->[false] if "ViewX is enabled\n(configured in ViewX moidule,\nsequence 50)" then
+     ->[true] "Show document preview"
+  else
+    -->[false] if "Document content is accessible\n(configured with allowViewContent,\nsequence 1000)" then
+    ->[true] "Use open-content plugin"
+    else
+      -->[false] "Navigate to document perspective\n(fallback, sequence 10000)"
+    endif
+  endif
+endif
+
+@enduml

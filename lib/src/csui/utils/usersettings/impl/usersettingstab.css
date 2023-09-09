@@ -1,0 +1,145 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.esoc-simple-user-widget-form-body  .cs-form  .binf-row.alpaca-field .alpaca-container-label  > h4 {
+  text-align: left;
+  padding: 0;
+}
+
+.esoc-simple-user-widget-form-body .cs-form .alpaca-field .csui-field-checkbox .alpaca-field-checkbox .binf-control-label.alpaca-control-label {
+  width: 60%;
+  text-align: left;
+  font-size: 14px;
+  color: #000000;
+}
+
+.esoc-simple-user-widget-form-body .cs-form .alpaca-field .csui-field-checkbox p.binf-help-block {
+  margin-left: 0;
+  text-align: left;
+  font-size: 12px;
+  color: #303030;
+}
+
+.cs-close.binf-close.esoc-user-widget-dialog-close:focus {
+  outline: 1px dotted #ffffff;
+  outline-offset: 4px;
+}
+
+.esoc-simple-user-widget .esoc-simple-user-widget-header .esoc-user-profile-presence-indicator .esoc-chat-presence-indicator:focus {
+  outline: 1px dotted #ffffff;
+  outline-offset: 2px;
+}
+
+.esoc-full-profile-avatar-cursor.esoc-full-profile-avatar[role="button"]:focus {
+  outline: 1px dotted #ffffff;
+  outline-offset: 2px;
+}
+
+.esoc-simple-user-widget-form-body .csui-usersettings {
+  height: 100%;
+}
+
+.reason-main-container {
+  padding: 8px !important;
+}
+.context-mgt-reason {
+  padding: 2px 24px 2px 8px;
+  width: 70%;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+.context-mgt-reason:focus {
+  border-radius: 4px;
+  border: 2px solid black;
+}
+
+.btn-reason {
+  background: transparent;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 8px;
+}
+
+.reason-main-container .show-reason-container {
+  width: 100%;
+}
+.reason-main-container .lbl-reason {
+  padding-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.show-error-reason {
+  display: none;
+  width: 174px;
+  height: 18px;
+  background-color: #ffffff;
+  margin-bottom: 24px !important;
+}
+
+.show-error-reason-msg{
+  height: 18px;
+  padding: 2px 8px 2px 6px !important;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  color: #f3324f;
+  text-align: left;
+  line-height: normal !important;
+  font-size: 12px !important;
+  margin-top: 8px !important;
+}
+
+.error-reason-msg-rectangle{
+  width: 16px;
+  height: 18px;
+  padding: 2px 2px 2px 2px !important;
+  border-radius: 2px;
+  background-color: #f3324f;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  left: -6px;
+  top: -2px;
+}
+
+.error-msg-txt{
+  position: relative;
+  top: -6px;
+}
+.error-cross-mark:after {
+  content: "\d7";
+  line-height: 15px;
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+  text-align: center;
+  color: #FFF;
+}
+
+.err-reason-txt{
+  border-color: rgba(243, 50, 79, 1);
+  background-color: rgba(243, 50, 79, 0.10196078431372549);
+}
+
+.reason-text-lbl{
+  color: #333333;
+  font-size: 14px;
+  padding: 5px !important;
+  line-height: normal;
+  text-overflow: ellipsis;
+}
+
+.edit-reason{
+  position: relative;
+  top: 6px;
+  cursor: pointer;
+}
+
+.lbl-reason-field{
+  display: none;
+}
+

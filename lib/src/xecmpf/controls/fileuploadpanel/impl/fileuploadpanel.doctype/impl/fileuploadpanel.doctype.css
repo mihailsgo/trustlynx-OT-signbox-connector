@@ -1,0 +1,19 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-file-upload-doctype-header {
+  font-size: 18px;
+  border-bottom: 2px solid #CCCCCC;
+  padding: 8px 0;
+}
+.binf-widgets .xecmf-fileupload-capture-doc-type .cs-form .alpaca-container-item>.binf-form-group.alpaca-field .alpaca-control-label {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+}
+.binf-widgets .xecmf-fileupload-capture-doc-type .cs-form .alpaca-container-item>.binf-form-group>.binf-col-sm-9 {
+  width: 100%;
+  height: 28px;
+}
+.binf-widgets .xecmf-fileupload-capture-doc-type .cs-form .alpaca-container-item .binf-help-block.alpaca-message {
+  margin-left: 0;
+}

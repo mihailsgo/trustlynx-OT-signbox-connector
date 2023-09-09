@@ -1,0 +1,14 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "\/api\/v2\/businessworkspaces\/27686\/roles?fields=members",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": []
+}

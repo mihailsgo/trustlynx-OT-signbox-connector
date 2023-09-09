@@ -1,0 +1,42 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .csui-checkbox {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0; 
+  margin: 0;
+  border-color: inherit;
+  border-radius: 0;
+  border-style: none;
+  border-width: 0;
+  border-image: none;
+  background-color: transparent;
+  text-indent: inherit;
+  text-shadow: inherit;
+}
+
+.binf-widgets .csui-checkbox span {
+  display: inline-flex;
+}
+
+.binf-widgets .csui-checkbox .csui-icon-v2 {
+  align-self: center; 
+}
+
+.csui-checkbox:disabled .csui-icon-v2-view .csui-icon-v2 {
+  filter: none;
+}
+
+.csui-checkbox:disabled .csui-icon-v2-metaphor0 {
+  fill: #999999;
+  stroke: #999999;
+}
+
+.csui-checkbox:disabled .csui-icon-v2-metaphor2 {
+  fill: #dedede;
+}

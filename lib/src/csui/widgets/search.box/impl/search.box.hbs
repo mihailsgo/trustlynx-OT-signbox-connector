@@ -1,0 +1,25 @@
+<div class="search-bar" role="dialog" aria-label="{{messages.searchLandmarkAria}}" aria-expanded="{{messages.showOptionsDropDown}}">
+  <div class="search-bar-content">
+    <div class="csui-search-input-container">
+      <input type="search" class="csui-input" placeholder="{{messages.placeholder}}"
+             title="{{messages.searchBoxTitle}}" aria-label="{{messages.searchBoxTitle}}">
+      {{#if messages.showOptionsDropDown}}
+        <div class="csui-search-options-dropdown binf-hidden" >
+        <div class="csui-search-options-wrapper"></div>
+        </div>
+      {{/if}}
+    </div>
+    <span class="csui-clearer formfield_clear" title="{{messages.clearerTitle}}"
+          aria-label="{{messages.clearerTitle}}" role="button"></span>
+    <span class="csui-separator"></span>
+    <span class="csui-formfield-search formfield_search" title="{{messages.startSearchTitle}}"
+          aria-label="{{messages.startSearchTitle}}" role="button"></span>
+  </div>
+</div>
+<div role="search" aria-label="{{messages.searchLandmarkAria}}" class="search-icon">
+  <a href="javascript:void(0);"
+     class="icon icon-global-search icon-header-search csui-header-search-icon csui-acc-focusable"
+     title="{{messages.searchIconTitle}}" aria-label="{{messages.searchIconAria}}"
+     aria-expanded="false"></a>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

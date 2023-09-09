@@ -1,0 +1,48 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-mime_businessobjecttype {
+    background-image: url('../../image/icons/mime_businessobjecttype.svg');
+    display: inline-block;
+}
+  
+.csui-icon-extended-ecm-volume {
+  background-image: url('../../image/icons/extended_ecm_volume.svg');
+}
+.csui-target-controls .xecmpf-icon_businessobjecttype {
+  background-image: url('../../BOtype_config.png');
+}
+.core-capture-rule {
+  background-image: url('../../image/icons/core_capture_rule_folder.svg');
+}
+.core-capture-profile {
+  background-image: url('../../image/icons/core_capture_profile.svg');
+}
+.metadata-export {
+  background-image: url('../../image/icons/metadata_export32.svg')
+}
+.binf-widgets .csui-mime_folder_help {
+  background-image: url('../../image/icons/mime_folder_help.svg');
+}
+.binf-widgets .csui-mime_folder_shortcut {
+  background-image: url('../../image/icons/mime_folder_shorcut.svg');
+}
+
+.xecmpf-nodestable-docgen-action{
+  background-image: url('../../image/icons/create_document_nodestable.svg');
+}
+
+.xecmpf-nodestable-docgen-action:hover{
+  background-image: url('../../image/icons/create_document_nodestable_mo.svg');
+}
+
+.xecmpf-nodestable-docgen-action:active{
+  background-image: url('../../image/icons/create_document_nodestable_md.svg');
+}
+
+.xecmpf-workspaces-docgen {
+  background-image: url('../../image/icons/generate_document.svg');
+}
+
+.xecmpf-workspaces-docgen:hover {
+  background-image: url('../../image/icons/generate_document_command_hover.svg');
+}

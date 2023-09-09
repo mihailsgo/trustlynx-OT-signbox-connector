@@ -1,0 +1,13 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .greet-metadata-property-hello {
+  margin-bottom: 1em;
+}
+
+.greet-metadata-property-hello > h3 {
+  color: #00498f;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Boolean Form View Control</title>
+
+    <link href="../../../themes/carbonfiber/theme.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #808080;
+            font-family: "OpenText Sans", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", "Segoe UI", "Tahoma", sans-serif;
+            height: 100%;
+        }
+        .cs-form {
+            background-color: #f0f0f0;
+            max-height: 500px;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+
+        #content {
+            height: 100%;
+        }
+
+    </style>
+    <script src="../../../lib/require.js"></script>
+    <script data-csui-path="../../.." src="../../../config.js"></script>
+    <script>
+
+      require(['csui/lib/underscore',
+        'csui/lib/jquery',
+        'csui/lib/marionette',
+        'csui/utils/contexts/page/page.context',
+        'csui/models/form',
+        'csui/models/forms',
+        'csui/controls/form/form.view'
+      ], function (_, $, Marionette, PageContext, FormModel, FormCollection, FormView) {
+
+
+        var rawFormsData =
+          {
+            "forms": [{
+              "data": {
+                "writeTrue": true,
+                  "writeFalse": false,
+                  "readTrue": true,
+                  "readFalse": false
+              },
+              "options": {
+                "fields": {
+                  "writeTrue": {
+                    "hidden": false,
+                    "label": "write, True",
+                    "type": "checkbox",
+                    "helper": "egal"
+                  },
+                    "writeFalse": {
+                        "hidden": false,
+                        "label": "write, False",
+                        "type": "checkbox",
+                        "helper": "egal"
+                    },
+
+                  "readTrue": {
+                      "hidden": false,
+                      "label": "readonly, True",
+                      "type": "checkbox",
+                      "helper": "egal"
+                  }
+                    ,
+                    "readFalse": {
+                        "hidden": false,
+                        "label": "readonly, False",
+                        "type": "checkbox",
+                        "helper": "egal"
+                    }
+                }
+              },
+              "schema": {
+                "properties": {
+                  "writeTrue": {
+                    "readonly": false,
+                    "required": false,
+                    "type": "boolean"
+                  },
+                    "writeFalse": {
+                        "readonly": false,
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    "readTrue": {
+                        "readonly": true,
+                        "required": false,
+                        "type": "boolean"
+                    },
+                    "readFalse": {
+                        "readonly": true,
+                        "required": false,
+                        "type": "boolean"
+                    }
+                },
+                "title": "Boolean Switch States",
+                "type": "object",
+              }
+            }
+            ]
+          };
+
+        var formModels = new FormCollection();
+        formModels.reset(formModels.parse(rawFormsData));
+
+        var singleFormModel = new FormModel(formModels.models[0].attributes.forms[0]);
+
+        var contentRegion = new Marionette.Region({
+          el: '#content'
+        });
+
+        var formView = new FormView({
+          context: new PageContext(),
+          model: singleFormModel,
+          mode: "create"
+        });
+
+        contentRegion.show(formView);
+
+        formView.on("change:field", function(event) {
+          console.log(event.name + ": " + event.value );
+        });
+
+      });
+
+    </script>
+</head>
+
+<body class="binf-widgets">
+    <div class="binf-container">
+        <div class="binf-row binf-form-horizontal">
+            <div id="content"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

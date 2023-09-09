@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>User Widget</title>
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+</head>
+
+<body class="binf-widgets">
+
+
+  <br />
+
+  <div class="user-profile" id="region" style="
+width: 425px;
+position: absolute;
+margin: 20px 112px;
+background-color: white; ">
+  </div>
+
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+
+  <script type="text/javascript">
+    require.config({
+      paths: {
+        nuc: "../../../../nuc",
+        smart: "../../.."
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json'
+      ],
+      config: {
+        'nuc/utils/contexts/factories/connector': {
+          connection: {
+            url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            supportPath: '/alphasupport',
+            crossDomain: true
+          }
+        },
+        "smart/controls/user/userprofile.view": {
+          "enableProfilePicture": true,
+          "enableSimpleUserProfile": true
+        },
+        "smart/controls/user/tab.extension": {
+          "extensions": {
+            "smart": [
+              "smart/controls/user/test/testTab"
+            ]
+          }
+        }
+      }
+    });
+
+    require(['nuc/lib/backbone', 'nuc/lib/marionette',
+      'nuc/utils/connector',
+      'nuc/utils/basicauthenticator',
+      'json!./user.profile.data.json',
+      'smart/controls/user/miniprofile.view',
+      'smart/controls/icons.v2/icons.v2'],
+      function (Backbone, Marionette,
+
+        Connector,
+        BasicAuthenticator,
+
+        UserMock,
+        MiniProfileView, iconsV2) {
+
+        var authenticator = new BasicAuthenticator({
+          credentials: {
+            username: 'Admin',
+            password: 'livelink'
+          }
+        });
+
+        var connector = new Connector({
+          authenticator: authenticator,
+          connection: {
+            url: '//server/otcs/cs/api/v2',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        });
+
+        var data = UserMock.auth.data;
+        data.otherUser = true;
+        var  options = {
+            connector: connector,
+            //otherUser:true,
+            userid: "1000", // mandatory
+            loggedUserId: "1000",
+            showPresenceIndicator: true,
+            chatEnabled: true,
+            //Provide a wrapper class to override css for both profile pic and display name
+            model: new Backbone.Model(data)//{id: "1000",type_name: "User",name: "Kristen",display_name: "Kristen",userid: "1000" })
+          };
+        //options.userWidgetView = options;
+        var miniProfileView = new MiniProfileView(options);
+        miniProfileView.layoutState = {};
+        var region = new Marionette.Region({
+          el: '#region'
+        });
+        region.show(miniProfileView);
+        miniProfileView.trigger("update:presence:indicator", {
+          showPresenceIndicator: true
+        });
+        miniProfileView.trigger("show:display:actions");
+
+      }
+    );
+  </script>
+</body>
+
+</html>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

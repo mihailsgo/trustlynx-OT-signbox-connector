@@ -1,0 +1,99 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-member-list-group {
+  height: 100%;
+}
+
+.binf-widgets .csui-member-list-group .csui-member-list-group-title {
+  margin-bottom: 1em;
+  padding: 8px;
+}
+
+.binf-widgets .csui-member-list-group .csui-member-list-group-title .title {
+  display: inline;
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 24px;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: #757575;
+  }
+
+.binf-widgets .csui-member-list-group .csui-member-list-group-title .title-recepients{
+ float: left;
+}
+
+.binf-widgets .csui-member-list-group .content {
+  height: calc(100% - 24px - 1em); 
+}
+
+.binf-widgets .csui-member-list-group .content .csui-member-list-group {
+  margin: 0
+}
+
+
+.binf-widgets .binf-list-group-item.csui-member-list-item {
+  min-height: 3em;
+  max-height: 3.75em;
+  padding: .75em 1em;
+  margin: 0;
+  background-color: transparent;
+  border-bottom: solid 1px #e6e7e8;
+  border-radius: 0;
+}
+
+.binf-widgets .binf-list-group-item.csui-member-list-item:focus,
+.binf-widgets .binf-list-group-item.csui-member-list-item:hover,
+.binf-widgets .binf-list-group-item.csui-member-list-item.focused {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .binf-list-group-item.csui-member-list-item:focus {
+  outline: 1px solid #2e3d98;
+  outline-offset: -1.5px;
+  -moz-outline-radius: 2px;
+}
+
+.binf-widgets .csui-member-list-item > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.binf-widgets .csui-member-list-item .csui-icon {
+  height: 1.5em;
+  width: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  font-size: 0.875em;
+}
+
+
+.binf-widgets .csui-member-list-item .list-item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+  max-width: calc(100% - 1.5em - 1em); 
+  padding: 0 0.75em;
+  line-height: 1em;
+  max-height: 2.1em;
+  white-space: normal;
+}
+
+.binf-widgets .csui-member-list-item .list-item-title .name {
+  font-size: 0.875em;
+  color: #333333;
+}
+
+.binf-widgets .csui-member-list-item .icon-remove {
+  display: inline-block;
+  position: absolute;
+}
+
+.binf-widgets .csui-member-list-item .icon-remove .csui-icon {
+  height: 1em;
+  width: 1em;
+  border: none;
+}

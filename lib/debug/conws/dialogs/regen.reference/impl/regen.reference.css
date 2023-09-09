@@ -1,0 +1,56 @@
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-dialog {
+  top: 65px;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-header {
+  display: none;
+  pointer-events: none;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body {
+  margin: 0;
+  padding: 0;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-header-content,
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-content,
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-boolean-container {
+  padding: 15px;
+  text-align: left;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-content,
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-boolean-container {
+  padding-left: 61px;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .binf-modal-body .conws-regen-ref-dialog-header-content {
+  border-bottom: 1px solid #e5e5e5;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog .cs-booleanfield {
+  max-height: 26px;
+  min-height: 26px;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog.cs-dialog .icon.icon-notification-information {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog.cs-dialog .conws-regen-ref-header-title {
+  margin-left: 15px;
+  width: calc(100% - 47px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 32px;
+  font-size: 24px;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog.cs-dialog .conws-regen-ref-dialog-boolean-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.binf-widgets .conws-regen-ref-boolean-dialog.cs-dialog .conws-regen-ref-dialog-boolean-input {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 10px;
+}

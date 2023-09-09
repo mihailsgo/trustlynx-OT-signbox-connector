@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "columns": [
+        {
+          "sizes": { "xs": 12, "sm": 7, "md": 8, "lg": 8, "xl": 9 },
+          "heights": { "xs": "full" },
+          "widget": {
+            "type": "csui/widgets/wiki",
+            "options": {}
+          }
+        },
+        {
+          "sizes": { "xs": 12, "sm": 5, "md": 4, "lg": 4, "xl": 3 },
+          "heights": { "xs": "full" },
+          "rows": [
+            {
+              "columns": [
+                {
+                  "sizes": { "xs": 12 },
+                  "heights": {
+                    "xs": "full",
+                    "sm": "half"
+                  },
+                  "widget": {
+                    "type": "webreports/widgets/nodelistreport",
+                    "options": {}
+                  }
+                }
+              ]
+            },
+            {
+              "columns": [
+                {
+                  "sizes": { "xs": 12 },
+                  "heights": {
+                    "xs": "full",
+                    "sm": "half"
+                  },
+                  "widget": { "type": "csui/widgets/myassignments" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

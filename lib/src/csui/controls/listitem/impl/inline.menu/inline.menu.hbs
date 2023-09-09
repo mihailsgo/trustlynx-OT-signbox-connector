@@ -1,0 +1,15 @@
+<div class="csui-icon-group csui-menu-btn" role="button" aria-expanded="false" {{#if dropDownText}}
+      title="{{dropDownText}}" aria-label="{{dropDownText}}" tabindex="-1"{{/if}}>
+  {{#if dropDownIcon}}<span class="{{dropDownIcon}}"></span>{{/if}}
+  {{#if dropDownIconName}}{{{icon-v2 iconName=dropDownIconName states='true'}}}{{/if}}
+</div>
+<div class="csui-icon-group csui-loading-parent-wrapper binf-disabled binf-hidden"
+      title="{{loadingTitle}}" role="presentation" tabindex="-1">
+  <div class="csui-loading-dots-wrapper">
+    <span class="csui-loading-dot"></span>
+    <span class="csui-loading-dot"></span>
+    <span class="csui-loading-dot"></span>
+  </div>
+</div>
+<div class="csui-menu-btn-region binf-hidden"></div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

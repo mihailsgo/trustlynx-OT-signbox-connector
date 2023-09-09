@@ -1,0 +1,12 @@
+<div class="cs-item-picker {{classItemPicker}}" role="combobox"
+     aria-expanded="false" aria-haspopup="listbox">
+  <input id="{{id_input}}" type="text" class="typeahead binf-form-control cs-search" autocomplete="off"
+         aria-autocomplete="list"{{#if ariaLabel}} aria-label="{{ariaLabel}}"{{/if}}
+    {{#if idBtnDescription}} aria-describedby="{{idBtnDescription}}" {{/if}}
+    {{#if isRequired}} aria-required="{{isRequired}}"{{/if}} placeholder="{{placeholder}}">
+  <div class="typeahead cs-search-clear csui-icon formfield_clear" title="{{titleClearIcon}}"
+       role="button" aria-label="{{titleClearIcon}}" style="" tabindex="0"></div>
+  <div class="typeahead cs-search-icon icon-sv-search" title="{{titleSearchIcon}}"
+       role="button" aria-label="{{titleSearchIcon}}"></div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

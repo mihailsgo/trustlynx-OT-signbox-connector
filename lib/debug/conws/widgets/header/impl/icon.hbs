@@ -1,0 +1,25 @@
+{{#if canChange}}
+  <div class="conws-header-edit" tabindex="0" role="button" data-binf-toggle="popover"
+    aria-label="{{iconMsg}}">
+    <div class="header-image">
+      {{#if iconCustomized }}
+        <img src="{{iconData}}" alt="{{type}}">
+      {{else}}
+        {{{icon-v2 iconName='conws_mime_workspace' size='contain'}}}
+      {{/if}}
+    </div>
+    <div class="header-editor">
+      <span> {{{icon-v2 iconName='csui_action_edit32' on='true'}}}</span>
+    </div>
+  </div>
+  <input class="conws-header-icon-file" title="{{chooseInpFileTitle}}" type="file"
+  accept="{{iconFileTypes}}" style="display:none">
+{{else}}
+  <div class="header-image">
+      {{#if iconCustomized }}
+        <img src="{{iconData}}" alt="{{type}}">
+      {{else}}
+        {{{icon-v2 iconName='conws_mime_workspace' size='contain'}}}
+      {{/if}}
+    </div>
+{{/if}}

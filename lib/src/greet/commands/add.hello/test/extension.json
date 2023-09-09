@@ -1,0 +1,29 @@
+{
+  "config": {
+    "csui/utils/commands": {
+      "extensions": {
+        "greet": [
+          "greet/commands/add.hello/add.hello.command",
+          "greet/commands/add.hello/add.hello.template.command"
+        ]
+      }
+    },
+    "csui/controls/tabletoolbar/tabletoolbar.view": {
+      "extensions": {
+        "greet": [
+          "greet/commands/add.hello/add.hello.tabletoolbar.extension"
+        ]
+      }
+    },
+    "csui/controls/table/inlineforms/inlineform.factory": {
+      "comment1": "The following module shows, how to register an existing inline form for a particular subtype.",
+      "extensions": {
+        "greet": [
+          "greet/commands/add.hello/impl/hello.inlineform.view"
+        ]
+      },
+      "comment2": "The following module shows, how to create and register an custom inline form instead of the generic one.",
+      "command2": "greet/commands/add.hello/custom.inlineform/hello.inlineform.view"
+    }
+  }
+}

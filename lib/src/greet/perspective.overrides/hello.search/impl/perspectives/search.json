@@ -1,0 +1,39 @@
+{
+  "type": "grid",
+  "options": {
+    "rows": [
+      {
+        "columns": [
+          {
+            "sizes": {
+              "sm": 3,
+              "md": 2,
+              "xxl": 1
+            },
+            "heights": {
+              "xs": "full"
+            },
+            "widget": {
+              "type": "greet/widgets/hello"
+            }
+          },
+          {
+            "sizes": {
+              "sm": 9,
+              "md": 10,
+              "xxl": 11
+            },
+            "heights": {
+              "xs": "full"
+            },
+            "widget": {
+              "type": "csui/widgets/search.results",
+              "options": {
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

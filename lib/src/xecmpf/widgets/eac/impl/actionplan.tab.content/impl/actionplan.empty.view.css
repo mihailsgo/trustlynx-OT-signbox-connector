@@ -1,0 +1,16 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-actionplan-empty-content {
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+}
+
+.binf-widgets .xecmpf-actionplan-emptyContent-icon {
+    background-image: url('../images/ill_add_action_plan2 1.svg');
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 143.83px;
+    margin: 59px auto 55px;
+}
+

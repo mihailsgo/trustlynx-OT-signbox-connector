@@ -1,0 +1,204 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "conws": {
+        "version": "1.0"
+      }
+    }
+  },
+  "csui/utils/nodesprites": {
+    "extensions": {
+      "conws": [
+        "conws/utils/icons/icons"
+      ]
+    }
+  },
+  "csui/controls/icons.v2": {
+    "extensions": {
+      "conws": [
+        "conws/utils/icons/conws.icons.v2"
+      ]
+    }
+  },
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/navigate/toolbaritems"
+      ]
+    }
+  },
+  "csui/controls/tabletoolbar/tabletoolbar.view": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/tabletoolbar.extension"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/move",
+        "conws/utils/commands/delete",
+        "conws/utils/commands/addconws",
+        "conws/utils/commands/addbwsfromsidepanel",
+        "conws/utils/commands/addconwstemplate",
+        "conws/utils/commands/navigate/navigateup",
+        "conws/utils/commands/permissions/addoreditrole",
+        "conws/utils/commands/deleterelateditem",
+        "conws/utils/commands/addrelateditem",
+        "conws/utils/commands/permissions/deleterole",
+        "conws/utils/commands/permissions/edit.role.permissions"
+      ]
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "conws": [
+        "conws/widgets/header",
+        "conws/widgets/relatedworkspaces",
+        "conws/widgets/team",
+        "conws/widgets/metadata",
+        "conws/widgets/myworkspaces",
+        "conws/widgets/configurationvolume"
+      ]
+    }
+  },
+
+  "csui/inlineform/inlineform.schemas": {
+    "extensions": {
+      "conws": [
+        "conws/controls/inlineforms/conwstemplate/conws.inlineform.schemas"
+      ]
+    }
+  },
+  "csui/controls/form/form.view": {
+    "extensions": {
+      "conws": [
+        "conws/controls/form/fields/alpaca/alpcustomcolumnpickerfield",
+        "conws/controls/form/fields/alpaca/alpworkspacetypefield",
+        "conws/controls/form/fields/alpaca/alpworkspacefield",
+        "conws/controls/form/fields/alpaca/referencefield"
+      ]
+    }
+  },
+  "csui/widgets/permissions/permissions.list/permissions.dropdown.menu.items": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/permissions/permissions.dropdown.menu.items.extension"
+      ]
+    }
+  },
+  "csui/widgets/permissions/permissions.list/toolbaritems": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/permissions/permissions.list.toolbaritems.extension"
+      ]
+    }
+  },
+  "csui/controls/table/cells/cell.factory": {
+    "extensions": {
+      "conws": [
+        "conws/controls/table/cells/role/role.view",
+        "conws/controls/table/cells/permission/role.permission.level.view"
+      ]
+    }
+  },
+  "csui/controls/userpicker/userpicker.view": {
+    "extensions": {
+      "conws": [
+        "conws/controls/userpicker/conws.roles"
+      ]
+    }
+  },
+  "csui/utils/dragndrop.supported.subtypes": {
+    "extensions": {
+      "conws": [
+        "conws/utils/dragndrop/dragndrop.subtypes"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.general.form.fields": {
+    "extensions": {
+      "conws": [
+        "conws/widgets/metadata/metadata.general.form.fields"
+      ]
+    }
+  },
+  "csui/dialogs/node.picker/start.locations/start.location.collection": {
+    "startLocations": {
+      "conws": [
+        "conws/dialogs/node.picker/start.locations/facets.volume"
+      ]
+    }
+  },
+  "csui/perspectives/tabbed/tab.index/tab.index.preferences": {
+    "extensions": {
+      "conws": [
+        "conws/perspectives/tabbed/tab.index/conws.tab.index.preferences.extension"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/perspective.context": {
+    "extensions": {
+      "conws": [
+        "conws/models/workspacecontext/impl/workspace.perspective.context.plugin"
+      ]
+    }
+  },
+  "csui/controls/treebrowse/navigation.tree": {
+    "extensions": {
+      "conws": [
+        "conws/controls/treebrowse/workspace.navigation.tree.plugin"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/plugins/node/main.node.extra.data": {
+    "extensions": {
+      "conws": [
+        "conws/utils/contexts/perspective/plugins/node/impl/conws.main.node.extra.data"
+      ]
+    }
+  },
+  "csui/utils/usersettings/usersettings.tabs/usersettings.tabs": {
+    "extensions": {
+      "conws": [
+        "conws/utils/usersettings/usersettings.tabs/core.usersettings.tabs"
+      ]
+    }
+  },
+  "csui/utils/toolitem.masks/children.toolitems.mask": {
+    "extensions": {
+      "conws": [
+        "conws/utils/toolitem.masks/conws.children.toolitems.mask"
+      ]
+    }
+  },
+  "csui/utils/commands/goto.location": {
+    "extensions": {
+      "conws": [
+        "conws/utils/commands/goto.location"
+      ]
+    }
+  },
+  "csui/widgets/navigation.header/navigation.header.controls": {
+    "extensions": {
+      "conws": [
+        "conws/controls/navigation.header/conws.add.navigation.header.controls"
+      ]
+    }
+  },
+  "csui/controls/breadcrumbspanel/breadcrumbspanel.view": {
+    "extensions": {
+      "conws": [
+        "conws/controls/breadcrumbspanel/breadcrumbspanel.extension"
+      ]
+    }
+  },
+  "csui/utils/context.help/context.help.ids": {
+    "extensions": {
+      "conws": [
+        "conws/utils/context.help/context.help.ids"
+      ]
+    }
+  }
+}

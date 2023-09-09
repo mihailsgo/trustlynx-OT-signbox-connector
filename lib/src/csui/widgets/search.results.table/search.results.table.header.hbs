@@ -1,0 +1,26 @@
+<div class="cs-back-button-container" title="{{backTitle}}"
+     tabindex="0" aria-label="{{backTitle}}" role="button">
+  <span class="arrow_back cs-go-back"></span>
+</div>
+<div class="cs-title-container">
+  <div class="cs-title-inner-container">
+    <span class="title-icon {{icon}}"></span>
+    <h2 class="title" title="{{title}}">{{title}}</h2>
+  </div>
+</div>
+<div class="csui-search-right-header-container">
+ <div class="csui-search-sorting" id="csui-search-sort"></div>
+  <span class="csui-search-header-action csui-description-toggle" aria-label="{{descriptionTitle}}"
+    title="{{descriptionTitle}}" role="button" tabindex="0">
+  </span>
+  {{#if showSettings}}
+  <div class="csui-search-header-action csui-search-settings">
+    <div class="csui-setting-icon" title="{{settingsLabel}}" aria-label="{{settingsLabel}}" tabindex="0" role="button"
+      aria-haspopup="true" aria-expanded="false">
+      {{{icon-v2 iconName='csui_action_settings32' theme=iconTheme states='true'}}}
+    </div>
+    <div class="csui-settings-dropdown" role='application'></div>
+  </div>
+  {{/if}}
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

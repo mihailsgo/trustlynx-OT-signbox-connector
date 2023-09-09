@@ -1,0 +1,31 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-file-upload-content-view {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+.binf-widgets .xecmpf-file-upload-content-view .xecmpf-fileupload-doc-upload-section {
+  display: flex;
+  justify-content: center;
+}
+.binf-widgets .xecmpf-file-upload-content-view .xecmpf-fileupload-drag-drop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed gray;
+  flex: 100% 1 1;
+  padding: 16px;
+}
+.binf-widgets .xecmpf-file-upload-content-view .xecmpf-fileupload-drag-drop p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.binf-widgets .xecmpf-file-upload-content-view .xecmpf-fileupload-add-doc {
+  background-image: url('../../../../image/icons/add_rule.svg');
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="21.5" height="21.5" viewBox="0 0 21.5 21.5">
+  <title>info_action</title>
+  <g>
+    <circle cx="10.75" cy="10.75" r="10" fill="#f9f9f9"/>
+    <path d="M12.093,22.78a10.75,10.75,0,1,1,10.75-10.75A10.762,10.762,0,0,1,12.093,22.78Zm0-20a9.25,9.25,0,1,0,9.25,9.25A9.26,9.26,0,0,0,12.093,2.78Z" transform="translate(-1.343 -1.28)" fill="#3f4950"/>
+  </g>
+  <path d="M12.093,8.786a1.2,1.2,0,1,0-1.2-1.2A1.2,1.2,0,0,0,12.093,8.786Z" transform="translate(-1.343 -1.28)" fill="#333"/>
+  <path d="M13.293,17.363a1.2,1.2,0,1,1-2.4,0v-6a1.2,1.2,0,0,1,2.4,0Z" transform="translate(-1.343 -1.28)" fill="#333"/>
+</svg>

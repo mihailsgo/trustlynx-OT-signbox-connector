@@ -1,0 +1,69 @@
+<div class="csui-search-header" aria-label= "{{messages.searchResultsHeaderAria}}" role="toolbar">
+  <span class="csui-search-arrow-back-parent">
+    <span class="icon arrow_back cs-go-back" aria-label="{{messages.searchBackTooltip}}"
+      title="{{messages.searchBackTooltip}}" tabindex="0" role="button"></span>
+  </span>
+  {{#if messages.enableSearchFilter}}
+  <span class="csui-search-facet-filter-parent binf-hidden">
+    <span class="csui-search-filter" role="button" aria-label="{{messages.filterLabelAria}}"
+       aria-expanded="{{messages.filterExpandedAria}}" title="{{messages.searchFilterTooltip}}" tabindex="0">
+    </span>
+  </span>
+  {{/if}}
+  {{#if enableCustomSearch}}
+  <span class="csui-search-filter-parent binf-hidden">
+    <span class="csui-search-form-filter" role="button" aria-label="{{messages.searchFormLabelAria}}"
+       aria-expanded="{{messages.searchFormExpandedAria}}" title="{{messages.searchFormTooltip}}" tabindex="0">
+    </span>
+  </span>
+  {{/if}}
+  <div class="csui-search-header-title"></div>
+  <div class="csui-search-right-header-container binf-hidden">
+    {{#if showSaveSearch}}
+    <div class="csui-save-search-tools">
+      <button class="binf-btn binf-btn-primary csui-query-save" aria-haspopup="true"
+         aria-expanded="false" aria-label="{{messages.saveAsAria}}" tabindex="0">{{messages.saveas}}</button>
+      <div class="csui-segemented-save-tools binf-hidden">
+        <button class="binf-btn binf-btn-primary csui-segmented-save csui-segmented-update-button"
+        aria-label="{{messages.updateSavedQueryAria}}" tabindex="0">{{messages.updateSavedQuery}}</button>
+        <div class="binf-dropdown csui-segmented-dropdown">
+          <button class="binf-btn binf-btn-primary binf-dropdown-toggle csui-segmented-save csui-segmented-dropdown-button"
+          data-binf-toggle="dropdown" tabindex="0" aria-haspopup="false" aria-label="{{messages.saveOptionsAria}}" aria-expanded="false">
+            <span class="icon-expandArrowDownWhite">
+            </span>
+          </button>
+          <ul class="binf-dropdown-menu" role="menu">
+            <li role="presentation">
+              <a role="button" href="#" class="csui-update-query" data-binf-toggle="tab">{{messages.updateSavedQuery}}</a>
+            </li>
+            <li role="presentation">
+              <a role="button" href="#" class="csui-create-query" data-binf-toggle="tab">{{messages.saveas}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    <div class="csui-search-header-action csui-search-sorting" id="csui-search-sorting"></div>
+    <span class="csui-search-header-action csui-description-toggle binf-hidden"
+          aria-label="{{messages.descriptionTitle}}" title="{{messages.descriptionTitle}}"
+          role="button" tabindex="0"></span>
+    <div class="csui-search-header-action csui-tabular-view"
+         aria-label="{{messages.tabularViewIconTitle}}"
+         role="button" title="{{messages.tabularViewIconTitle}}" tabindex="0">
+    </div>
+    {{#if messages.showSettings}}
+      <div class="csui-search-header-action csui-search-settings">
+        <div class="csui-setting-icon" title="{{messages.settingsLabel}}"
+             aria-label="{{messages.settingsLabel}}" tabindex="0"
+             role="button" aria-haspopup="true" aria-expanded="false">
+          {{{icon-v2 iconName='csui_action_settings32' theme=messages.iconTheme states='true'}}}
+        </div>
+        <div class="csui-settings-dropdown" role='application'></div>
+      </div>
+
+    {{/if}}
+  </div>
+</div>
+<div class="csui-table-rowselection-toolbar"></div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

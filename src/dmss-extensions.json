@@ -1,0 +1,24 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "dmss": {
+        "version": "1.0"
+      }
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "dmss": [
+        "dmss/commands/open.classic/open.classic.command"
+      ]
+    }
+  },
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "dmss": [
+        "dmss/commands/open.classic/open.classic.nodestable.toolitems"
+      ]
+    }
+  }
+}
+

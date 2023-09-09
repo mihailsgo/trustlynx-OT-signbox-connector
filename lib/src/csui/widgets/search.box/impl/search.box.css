@@ -1,0 +1,557 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-search-box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.csui-search-box .search-bar {
+  width: calc(100% - 65px);
+}
+
+.csui-search-box .search-bar-content {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-direction: row;
+  width: calc(100% - 1px);
+  margin-top: 2px;
+}
+
+.csui-search-box .icon-global-search {
+  height: 42px;
+  width: 42px;
+}
+
+.csui-search-box .csui-input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  font-size: 18px;
+}
+
+.binf-nav .csui-search-box .csui-input {
+  height: 38px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 7px 30px 7px 16px;
+  color: #0f0f0f;
+  background-color: #FFFFFF;
+}
+
+.csui-search-box .csui-search-box .csui-input:focus {
+  outline: 0;
+}
+
+.csui-search-box .csui-input::-ms-clear {
+  width: 0;
+  height: 0;
+}
+
+.binf-widgets .csui-input-focus {
+  box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.csui-search-box .csui-clearer {
+  color: #d3d3d3;
+  position: absolute;
+  right: 2.2em;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  pointer-events: auto;
+  z-index: 10;
+  display: none;
+}
+
+.csui-search-box .csui-clearer.formfield_clear {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.9em;
+  height: 0.9em;
+  margin: 10px 0 10px 0;
+}
+
+.csui-search-box span.csui-separator {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px 0 10px 0;
+  position: absolute;
+  right: 2.8em;
+  display: inline-block;
+  height: 1.4em;
+  width: 1px;
+  background-color: #D3D3D3;
+}
+
+
+.csui-search-box .csui-formfield-search {
+    color: #d3d3d3;
+    position: absolute;
+    right: 1em;
+    line-height: 1.4em;
+    font-size: 1.4em;
+    pointer-events: auto;
+    z-index: 10;
+    display: none;
+}
+
+.csui-search-box .csui-formfield-search.formfield_search {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 0.9em;
+    height: 0.9em;
+    margin: 10px 0 10px 0;
+}
+
+.csui-search-box a.csui-header-search-icon {
+  text-decoration: none;
+}
+
+.binf-widgets .csui-search-box .search-icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0px;
+  height: 100%;
+}
+
+.csui-search-box .csui-header-search-icon {
+  display: inline-block;
+}
+
+.binf-navbar-nav .csui-search .csui-search-box .csui-header-search-icon {
+  padding: 0px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover {
+  color: #333333;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+  width: 32px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.binf-widgets .csui-search-box .csui-search-box-slice-popover:focus {
+  outline-style: dotted;
+  outline: 1px dotted #333333;
+}
+
+.search-bar .binf-popover-content {
+  min-width: 225px;
+}
+
+.search-bar .binf-popover-title {
+  display: none;
+}
+
+.search-bar .binf-popover {
+  border-radius: 0;
+}
+
+
+
+.binf-widgets .csui-selected-checkbox.csui-searchbox-dd-panel {
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  display: flex;
+}
+
+.binf-widgets .csui-searchbox-dd-panel.csui-searchbox-custom-view-forms-wrapper {
+  display: block;
+}
+
+.binf-widgets .csui-selected-checkbox-hidden .csui-searchbox-slices-wrapper.csui-searchbox-dd-panel {
+  border-top: none;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper.csui-searchbox-dd-panel,
+.binf-widgets .csui-searchbox-custom-view-forms-wrapper.csui-searchbox-dd-panel,
+.binf-widgets .csui-searchbox-slices-footer.csui-searchbox-dd-panel {
+  min-height: 40px;
+  padding: 0;
+}
+
+.binf-widgets .csui-searchbox-slices-footer .binf-pull-right {
+  width: 100%;
+  text-align: right;
+}
+
+
+.binf-widgets .csui-searchbox-slices-wrapper.csui-searchbox-dd-panel .csui-search-slice-container {
+  width: calc(100%);
+}
+
+.binf-widgets .csui-search-popover-row {
+  margin-bottom: 1px;
+  cursor: pointer; 
+}
+
+.binf-widgets .csui-search-popover-row-body {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  cursor:pointer;
+}
+
+.binf-widgets .csui-search-popover-row-body .csui-slice-option{
+  opacity:0;
+  position: absolute;
+}
+
+.binf-widgets .csui-selected-checkbox.csui-searchbox-dd-panel:hover,
+.binf-widgets .csui-search-popover-row-body:hover,
+.csui-searchbox-searchform-wrapper a:hover,
+.csui-searchbox-searchform-wrapper a:focus,
+.binf-widgets .csui-selected-checkbox.active,
+.binf-widgets .csui-search-popover-row-body.active,
+.csui-searchbox-searchform-wrapper a:active  {
+  background-color: #b2bec5;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-selected-checkbox.csui-slice-checkbox.active:focus,
+.binf-widgets div.csui-search-popover-row:focus {
+  outline: unset;
+  outline-offset: unset;
+}
+
+.binf-widgets .csui-selected-checkbox.active,
+.binf-widgets .csui-search-popover-row-body.active,
+.csui-searchbox-searchform-wrapper a:active {
+  outline-style: none;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-icon,
+.binf-widgets .csui-search-popover-checked,
+.binf-widgets .csui-search-options-dropdown .icon-listview-checkmark.icon-checkbox-selected {
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.binf-widgets .csui-search-popover-checked,
+.binf-widgets .csui-search-options-dropdown .icon-listview-checkmark.icon-checkbox-selected {
+  display: block;
+}
+
+.binf-widgets .csui-search-options-dropdown .icon-listview-checkmark.icon-checkbox-selected {
+  cursor: pointer;
+  top: 12.5px;
+}
+
+.binf-widgets .csui-search-options-dropdown span.csui-control {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 14px;
+  width: 14px;
+  margin-left: -7px;
+}
+
+.binf-widgets .csui-search-popover-label,
+.binf-widgets .csui-searchforms-popover-row .cs-label {
+  width: calc(100% - 24px);
+  line-height: 34px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size:14px;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label {
+  padding: 0 16px;
+  width: 100%;
+  position: relative;
+  word-break: break-all;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox span.csui-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 34px;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label::before {
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox label::after {
+  left: 0;
+  margin-left: -1.5em;
+  top: 0;
+}
+
+.binf-widgets label.csui-search-slice-container-label {
+  line-height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #a9a9a9;
+  font-weight: 800;
+}
+
+.csui-selected-checkbox.csui-slice-checkbox input[type="checkbox"]:checked + label::after {
+  color: rgba(2, 115, 61, 0.99);
+  background-color: transparent;
+}
+
+.csui-search-box .binf-popover,
+.csui-search-box .binf-popover-content {
+  padding: 0;
+}
+
+.csui-search-box .icon-expandArrowDown:hover {
+  background-image: url('image/caret_down_mo.svg');
+}
+
+.csui-search-box .icon-expandArrowDown:active {
+  background-image: url('image/caret_down_md.svg');
+}
+
+
+
+.binf-widgets .csui-search-input-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: 1 1 auto;
+  margin-right: 0;
+  height: initial;
+  padding-left: 8px;
+}
+
+.binf-widgets input[type="search"]:focus {
+  border: 2px solid #666666;
+}
+
+.binf-widgets .csui-search-options-dropdown {
+  position: absolute;
+  background-color: #ffffff;
+  width: calc(100% - 8px);
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  font-size: 13px;
+  left: auto;
+  top: auto;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-search-options-wrapper{
+  max-height: 50vh;
+  width:100%;
+  padding-bottom: 8px;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-searchbox-option {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.binf-widgets .csui-search-options-dropdown .icon-checkbox-selected+.csui-ellipsis,
+.binf-widgets .csui-search-popover-row .icon-listview-checkmark + .csui-search-popover-label {
+  font-weight: bold;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-selected-checkbox.csui-slice-checkbox:focus {
+  outline: 1px dotted #333333;
+}
+
+.csui-search-box .csui-input::-webkit-input-placeholder {
+  color: #0f0f0f;
+  font-size: 18px;
+}
+
+.csui-search-box .csui-input:-moz-placeholder {
+  color: #0f0f0f;
+  font-size: 18px;
+}
+
+.csui-search-box .csui-input::-moz-placeholder {
+  color: #0f0f0f;
+  font-size: 18px;
+}
+
+.csui-search-box .csui-input:-ms-input-placeholder {
+  color: #0f0f0f;
+  font-size: 18px;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search {
+  width: 66px;
+  height: 64px;
+  transition: width 0.4s;
+  -webkit-transition: width 0.4s;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search.search-input-open {
+  width: 100%;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search .search-bar {
+  overflow: hidden;
+  display: none;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search .csui-search-box.csui-search-expanded .search-bar {
+  display: block;
+}
+
+.binf-navbar .binf-navbar-nav.binf-navbar-right > div.csui-search.search-input-open .csui-search-box.csui-searchbox-ready .search-bar {
+  overflow: visible;
+}
+
+.binf-widgets .csui-navbar.binf-navbar.masked {
+  z-index: 1045;
+}
+
+.binf-widgets .search-box-widget-mask {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1040;
+  opacity: 0.5;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper .csui-search-label,
+.binf-widgets .csui-searchbox-searchform-wrapper .csui-search-label {
+  font-weight: normal;
+  font-size: 14px;
+  color: #757575;
+  padding: 5px 16px;
+  display:block;
+  line-height: 24px;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper .csui-slices-more:hover,
+.binf-widgets .csui-searchbox-slices-wrapper .csui-slices-more:focus {
+  background-color: #B2BEC5;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper .csui-slices-more {
+  height:33px;
+  padding-left: 40px;
+  padding-right:16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display:block;
+  outline:none;
+  width:100%;
+  text-align:left;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper .csui-slices-more .csui-more-text {
+  font-weight: normal;
+  font-style:normal;
+  font-size: 12px;
+  color: #333333;
+  line-height: 34px;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper .csui-slices-more .csui-button-icon {
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-searchbox-slices-wrapper.csui-searchbox-dd-panel {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.csui-searchbox-searchform-wrapper li {
+  width:100%;
+}
+
+.csui-searchbox-searchform-wrapper a {
+  align-items: center;
+  display: flex;
+  line-height: 32px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-searchbox-searchform-wrapper a:hover,
+.binf-widgets .csui-search-options-dropdown .csui-searchbox-searchform-wrapper a:focus {
+  outline-style: none;
+  text-decoration: none;
+} 
+.csui-search-form-collection .csui-icon-query-form-search,
+.csui-search-form-collection .csui-icon-standard-search {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: 18px;
+  background-position: center left;
+  margin-right: 8px;
+} 
+
+.binf-widgets .csui-search-options-dropdown .csui-searchbox-searchform-wrapper span.cs-label {
+  color: #333333;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-searchbox-searchform-wrapper .csui-search-form-item {
+  padding: 0;
+}
+
+
+.binf-widgets .csui-search-options-dropdown .csui-searchforms-popover-row {
+  width:100%;
+  padding: 0 16px 0 40px;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-more-forms a:hover,
+.binf-widgets .csui-search-options-dropdown .csui-more-forms a:focus {
+  color: #333333;
+  outline-style: none;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-more-forms {
+  padding: 1px 0;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-search-form-collection .csui-search-form-item:hover,
+.binf-widgets .csui-search-options-dropdown .csui-search-form-collection .csui-search-form-item:focus,
+.binf-widgets .csui-search-options-dropdown .csui-search-form-collection .csui-search-form-item:active,
+.binf-widgets .csui-search-options-dropdown .csui-more-forms:hover,
+.binf-widgets .csui-search-options-dropdown .csui-more-forms:focus {
+  background-color: #b2bec5;
+}
+
+.binf-widgets .csui-search-options-dropdown .csui-more-forms a {
+  font-size: 12px;
+  text-transform: none;
+  padding: 0 16px 0 40px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

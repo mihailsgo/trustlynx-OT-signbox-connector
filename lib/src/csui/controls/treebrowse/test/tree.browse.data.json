@@ -1,0 +1,293 @@
+{
+  "definitions": {
+    "container": {
+      "key": "container",
+      "name": "Container",
+      "read_only": true,
+      "sort": true,
+      "type": 5,
+      "type_name": "Boolean"
+    },
+    "id": {
+      "key": "id",
+      "name": "ID",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "name": {
+      "key": "name",
+      "multiline": false,
+      "multilingual": true,
+      "name": "Name",
+      "read_only": false,
+      "sort": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "parent_id": {
+      "key": "parent_id",
+      "name": "Parent ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "size": {
+      "key": "size",
+      "name": "Size",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type": {
+      "key": "type",
+      "name": "Type",
+      "read_only": true,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    },
+    "type_name": {
+      "key": "type_name",
+      "multiline": false,
+      "multilingual": false,
+      "name": "Type",
+      "read_only": true,
+      "type": -1,
+      "type_name": "String"
+    },
+    "volume_id": {
+      "key": "volume_id",
+      "name": "Volume ID",
+      "read_only": false,
+      "sort": true,
+      "type": 2,
+      "type_name": "Integer"
+    }
+  },
+  "columns": [
+    {
+      "key": "type",
+      "name": "Type",
+      "data_type": 2,
+      "sortable": true
+    },
+    {
+      "key": "name",
+      "name": "Name",
+      "data_type": -1,
+      "sortable": true
+    },
+    {
+      "key": "size",
+      "name": "Size",
+      "data_type": 2,
+      "sortable": true
+    }
+  ],
+  "actions": {
+    "0": [
+      "browse"
+    ],
+    "141": [
+      "browse"
+    ]
+  },
+  "nodes": {
+    "2000": {
+      "container": true,
+      "id": 2000,
+      "name": "Enterprise",
+      "parent_id": -1,
+      "size": 2,
+      "type": 141,
+      "type_name": "Enterprise Volume",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "properties": {}
+      }
+    },
+    "2001": {
+      "container": true,
+      "id": 2001,
+      "name": "First child",
+      "parent_id": 2000,
+      "size": 1,
+      "type": 0,
+      "type_name": "Folder",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "3000": {
+      "container": true,
+      "id": 3000,
+      "name": "Nested item",
+      "parent_id": 2001,
+      "size": 0,
+      "type": 0,
+      "type_name": "Folder",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "4000": {
+      "container": true,
+      "id": 4000,
+      "name": "Folder with no children1",
+      "parent_id": 2000,
+      "size": 20,
+      "type": 0,
+      "type_name": "Folder",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "4001": {
+      "container": false,
+      "id": 4001,
+      "name": "My Document.docx",
+      "icon": "/img/webdoc/appword.gif",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "parent_id": 4000,
+      "size": 783043,
+      "size_formatted": "765 KB",
+      "type": 144,
+      "type_name": "Document",
+      "volume_id": 4000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "5000": {
+      "container": true,
+      "id": 5000,
+      "name": "Folder with no children2",
+      "parent_id": 2000,
+      "size": 20,
+      "type": 0,
+      "type_name": "Folder",
+      "volume_id": 2000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "5001": {
+      "container": false,
+      "id": 5001,
+      "description": "Hello World",
+      "name": "Item with short description.docx",
+      "icon": "/img/webdoc/appword.gif",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "parent_id": 5000,
+      "size": 783043,
+      "size_formatted": "765 KB",
+      "type": 144,
+      "type_name": "Document",
+      "volume_id": 5000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "5002": {
+      "container": false,
+      "id": 5002,
+      "description": "Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+      "name": "Item with lengthy description.docx",
+      "icon": "/img/webdoc/appword.gif",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "parent_id": 5000,
+      "size": 783043,
+      "size_formatted": "765 KB",
+      "type": 144,
+      "type_name": "Document",
+      "volume_id": 5000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    },
+    "5003": {
+      "container": false,
+      "id": 5003,
+      "name": "Item without description.docx",
+      "icon": "/img/webdoc/appword.gif",
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "parent_id": 5000,
+      "size": 783043,
+      "size_formatted": "765 KB",
+      "type": 144,
+      "type_name": "Document",
+      "volume_id": 5000,
+      "actions": {
+        "browse": {},
+        "delete": {},
+        "properties": {}
+      }
+    }
+  },
+  "ancestors": {
+    "ancestors": [
+      {
+        "volume_id": -2000,
+        "id": 2000,
+        "parent_id": -1,
+        "name": "Enterprise",
+        "type": 141,
+        "type_name": "Enterprise Workspace"
+      },
+      {
+        "volume_id": -2000,
+        "id": 37474,
+        "parent_id": 2000,
+        "name": "Items22",
+        "type": 0,
+        "type_name": "Folder"
+      },
+      {
+        "volume_id": -2000,
+        "id": 103298,
+        "parent_id": 37474,
+        "name": "SecondTear",
+        "type": 0,
+        "type_name": "Folder"
+      },
+      {
+        "volume_id": -2000,
+        "id": 103299,
+        "parent_id": 103298,
+        "name": "ThirdTear",
+        "type": 0,
+        "type_name": "Folder"
+      },
+      {
+        "volume_id": -2000,
+        "id": 103408,
+        "parent_id": 103299,
+        "name": "forthTear",
+        "type": 0,
+        "type_name": "Folder"
+      }
+    ]
+  }
+}

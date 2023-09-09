@@ -1,0 +1,18 @@
+<div class="binf-pull-left">
+  {{#if type}}
+  <span class="csui-icon-paceholder csui-icon image_group_placeholder"></span>
+  <img class="csui-icon-group csui-icon binf-img-circle binf-hidden" alt="{{name}}"> </img>
+  {{else}}
+  <span class="csui-icon-paceholder csui-icon image_user_placeholder">{{initials}}</span>
+  <img class="csui-icon-user csui-icon binf-img-circle binf-hidden" alt="{{name}}"
+         src="{{userImgSrc}}" > </img>
+  {{/if}}
+</div>
+<div class="list-item-title">
+  <span class="name" title="{{name}}">{{name}}</span>
+</div>
+<div class="icon-remove binf-pull-right">
+  <button class="csui-icon circle_delete" aria-label="{{ariaDelete}}" title="{{ariaDelete}}" tabindex="0"></button>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

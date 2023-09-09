@@ -1,0 +1,2843 @@
+{
+  "response_nodes_workspace_1": {
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/nodes/98015?actions=open&actions=initiateworkflow&actions=openform&expand=external_source&expand=properties{reserved_user_id,reserved_user_id}&fields=bwsinfo&fields=columns&fields=external_source&fields=followups&fields=properties&fields=versions{owner_id}.element(0)&metadata&state=true",
+          "method": "GET",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "actions": {
+        "data": {
+          "open": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015/nodes",
+            "method": "GET",
+            "name": "Open"
+          }
+        },
+        "map": {
+          "default_action": ""
+        },
+        "order": [
+          "open"
+        ]
+      },
+      "data": {
+        "bwsinfo": {
+          "id": 98015
+        },
+        "columns": [
+          {
+            "data_type": 2,
+            "key": "type",
+            "name": "Type",
+            "sort_key": "type"
+          },
+          {
+            "data_type": -1,
+            "key": "name",
+            "name": "Name",
+            "sort_key": "name"
+          },
+          {
+            "data_type": -1,
+            "key": "size_formatted",
+            "name": "Size",
+            "sort_key": "size"
+          },
+          {
+            "data_type": 401,
+            "include_time": true,
+            "key": "modify_date",
+            "name": "Modified",
+            "sort_key": "modify_date"
+          }
+        ],
+        "followups": [],
+        "properties": {
+          "advanced_versioning": null,
+          "container": true,
+          "container_size": 3,
+          "create_date": "2019-04-24T07:40:25",
+          "create_user_id": 1000,
+          "description": "",
+          "description_multilingual": {
+            "de": "",
+            "en": "",
+            "fr": ""
+          },
+          "external_create_date": null,
+          "external_identity": "",
+          "external_identity_type": "",
+          "external_modify_date": null,
+          "external_source": "",
+          "favorite": true,
+          "hidden": false,
+          "id": 98015,
+          "mime_type": null,
+          "modify_date": "2020-09-18T13:20:21",
+          "modify_user_id": 1000,
+          "name": "contract smart 01",
+          "name_multilingual": {
+            "de": "contract smart 01",
+            "en": "contract smart 01",
+            "fr": ""
+          },
+          "owner": "Admin",
+          "owner_group_id": 999,
+          "owner_user_id": 1000,
+          "parent_id": 262468,
+          "permissions_model": "advanced",
+          "reserved": false,
+          "reserved_date": null,
+          "reserved_shared_collaboration": false,
+          "reserved_user_id": 0,
+          "rm_enabled": false,
+          "size": 3,
+          "size_formatted": "3 Items",
+          "status": null,
+          "type": 848,
+          "type_name": "Business Workspace",
+          "versionable": false,
+          "versions_control_advanced": false,
+          "volume_id": -2000,
+          "wksp_type_name": "Contract"
+        }
+      },
+      "metadata": {
+        "followups": {
+          "activation_by_day": {
+            "key": "activation_by_day",
+            "name": "Activation by day",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "activation_date": {
+            "key": "activation_date",
+            "name": "Activation date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "assignees": {
+            "key": "assignees",
+            "name": "assignees",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "create_date": {
+            "key": "create_date",
+            "name": "Create date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "create_user_id": {
+            "key": "create_user_id",
+            "name": "Create user id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "data_id": {
+            "key": "data_id",
+            "name": "Reminder node id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "description": {
+            "key": "description",
+            "name": "Description",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "due_date": {
+            "key": "due_date",
+            "name": "Due Date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "end_sequence_date": {
+            "key": "end_sequence_date",
+            "name": "End sequence date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "followup_client_id": {
+            "key": "followup_client_id",
+            "name": "Reminder client id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_client_name": {
+            "key": "followup_client_name",
+            "name": "Reminder client name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "followup_handler": {
+            "key": "followup_handler",
+            "name": "Reminder handler",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "followup_id": {
+            "key": "followup_id",
+            "name": "Reminder id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_type": {
+            "key": "followup_type",
+            "name": "Reminder type",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_type_name": {
+            "key": "followup_type_name",
+            "name": "Reminder type name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "modify_date": {
+            "key": "modify_date",
+            "name": "Modify date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "name": {
+            "key": "name",
+            "name": "Name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "parent_id": {
+            "key": "parent_id",
+            "name": "Reminder parent id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "rule": {
+            "key": "rule",
+            "name": "Rule",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "start_sequence_date": {
+            "key": "start_sequence_date",
+            "name": "Start sequence date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "status": {
+            "key": "status",
+            "name": "Status",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "status_by": {
+            "key": "status_by",
+            "name": "Status_by",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          }
+        },
+        "properties": {
+          "advanced_versioning": {
+            "allow_undefined": true,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "advanced_versioning",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Advanced Versioning",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "container": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "container",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Container",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "container_size": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "container_size",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Container Size",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "create_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "create_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Created",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "create_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "create_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Created By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "description": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "description",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": true,
+            "multilingual": true,
+            "name": "Description",
+            "password": false,
+            "persona": "",
+            "read_only": false,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_create_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "external_create_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "External Create Date",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_identity": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_identity",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Identity",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_identity_type": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_identity_type",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Identity Type",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_modify_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "external_modify_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "External Modify Date",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_source": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_source",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Source",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "favorite": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "favorite",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Favorite",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "hidden": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": false,
+            "description": null,
+            "hidden": false,
+            "key": "hidden",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Hidden",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "ID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "modify_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "modify_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Modified",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "modify_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "modify_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Modified By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": true,
+            "name": "Name",
+            "password": false,
+            "persona": "",
+            "read_only": false,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Owner",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner_group_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner_group_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Owned By",
+            "persona": "group",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Owned By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "parent_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "parent_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Parent ID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "reserved",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "reserved_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "reserved_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved By",
+            "persona": "member",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "rm_enabled": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": true,
+            "key": "rm_enabled",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Records Management enabled",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "status": {
+            "allow_undefined": true,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "status",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Status",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "type": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "type",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Type",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "type_name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "type_name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Type",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "versionable": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "versionable",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Versionable",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "versions_control_advanced": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": false,
+            "description": null,
+            "hidden": false,
+            "key": "versions_control_advanced",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Versions Control Advanced",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "volume_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "volume_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "VolumeID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "wksp_type_name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "wksp_type_name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Workspace type name",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          }
+        }
+      },
+      "metadata_map": {},
+      "metadata_order": {
+        "followups": [
+          "followup_id",
+          "parent_id",
+          "data_id",
+          "followup_type",
+          "rule",
+          "status",
+          "create_user_id",
+          "create_date",
+          "description",
+          "due_date",
+          "start_sequence_date",
+          "end_sequence_date",
+          "status_by",
+          "activation_by_day",
+          "activation_date",
+          "followup_handler",
+          "followup_type_name",
+          "followup_client",
+          "followup_client_name",
+          "assignees"
+        ],
+        "properties": [
+          "id",
+          "type",
+          "type_name",
+          "name",
+          "description",
+          "parent_id",
+          "volume_id",
+          "hidden",
+          "create_date",
+          "create_user_id",
+          "modify_date",
+          "modify_user_id",
+          "owner_user_id",
+          "owner_group_id",
+          "reserved",
+          "reserved_date",
+          "reserved_user_id",
+          "status",
+          "versionable",
+          "advanced_versioning",
+          "versions_control_advanced",
+          "container",
+          "container_size",
+          "favorite",
+          "external_create_date",
+          "external_modify_date",
+          "external_source",
+          "external_identity",
+          "external_identity_type",
+          "rm_enabled",
+          "wksp_type_name",
+          "owner"
+        ]
+      },
+      "perspective": {
+        "canEditPerspective": false,
+        "id": 256968,
+        "options": {
+          "header": {
+            "widget": {
+              "options": {
+                "workspace": {
+                  "properties": {
+                    "description": "{description}",
+                    "title": "{name}",
+                    "type": "{business_properties.workspace_type_name}"
+                  }
+                }
+              },
+              "type": "conws/widgets/header",
+              "w_id": "pman-1603808394295"
+            }
+          },
+          "tabs": [
+            {
+              "columns": [
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "showTitleIcon": true,
+                      "showWorkspaceIcon": true,
+                      "title": {
+                        "en-US": "Team"
+                      }
+                    },
+                    "type": "conws/widgets/team",
+                    "w_id": "pman-1595841503885"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "hideEmptyFields": false,
+                      "metadata": [
+                        {
+                          "categoryId": 26196,
+                          "type": "category"
+                        }
+                      ],
+                      "title": {
+                        "en-US": "Contract Metadata"
+                      }
+                    },
+                    "type": "conws/widgets/metadata",
+                    "w_id": "pman-1595841503915"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "kind": "tile",
+                    "options": {
+                      "openInMaximizedView": false,
+                      "openInSmartView": true,
+                      "showTitleIcon": true,
+                      "showWorkspaceIcon": true,
+                      "title": "Discussion"
+                    },
+                    "type": "cop/widgets/forum",
+                    "w_id": "pman-1595841503949"
+                  }
+                }
+              ],
+              "title": {
+                "en-US": "Overview"
+              }
+            },
+            {
+              "columns": [
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12,
+                    "xl": 12,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "kind": "fullpage",
+                    "options": {
+                      "undefined": "12",
+                      "viewState": true
+                    },
+                    "type": "csui/widgets/nodestable",
+                    "w_id": "pman-1602755764494"
+                  }
+                }
+              ],
+              "title": {
+                "en-US": "Documents"
+              }
+            },
+            {
+              "columns": [
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12,
+                    "xl": 12,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "kind": "fullpage",
+                    "options": {
+                      "viewState": true
+                    },
+                    "type": "csui/widgets/nodestable",
+                    "w_id": "pman-1595841504020"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "relationType": "child",
+                      "title": {
+                        "en-US": "Child Contracts"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "1"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1596027844052"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "relationType": "parent",
+                      "title": {
+                        "en-US": "Wksp Test 001 Instances"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "496"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1599125711119"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "collapsedView": {
+                        "bottomLeft": {
+                          "value": "{wnf_att_w81_4}"
+                        },
+                        "bottomRight": {
+                          "value": "{wnd_att_w81_7}"
+                        },
+                        "preview": {
+                          "metadata": [
+                            {
+                              "categoryId": 26196,
+                              "type": "category"
+                            }
+                          ]
+                        },
+                        "topRight": {
+                          "value": "{wnf_att_w81_3}"
+                        }
+                      },
+                      "expandedView": {
+                        "customColumns": [
+                          {
+                            "key": "{wnf_att_w81_3}"
+                          },
+                          {
+                            "key": "{wnf_att_w81_5}"
+                          },
+                          {
+                            "key": "{wnd_att_w81_7}"
+                          }
+                        ]
+                      },
+                      "relationType": "parent",
+                      "title": {
+                        "en-US": "Parent Contracts"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "1"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1596027863068"
+                  }
+                }
+              ],
+              "title": {
+                "en-US": "Browse"
+              }
+            }
+          ]
+        },
+        "override": {
+          "applies_to_id": 0,
+          "asset_container_id": null,
+          "cascade": 0,
+          "ordering": 1,
+          "perspective_id": 256968,
+          "perspective_info": {
+            "workspaceTypes": [
+              12577
+            ]
+          },
+          "perspective_type": "Workspace",
+          "perspective_version": 7,
+          "rule_id": null
+        },
+        "type": "tabbed"
+      },
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      }
+    }
+  },
+
+  "response_nodes_workspace_actions_1": {
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/nodes/actions",
+          "method": "POST",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "98015": {
+        "data": {
+          "addcategory": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015/categories",
+            "method": "POST",
+            "name": "Add Category"
+          },
+          "comment": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "POST",
+            "name": "Comments"
+          },
+          "copy": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes",
+            "method": "POST",
+            "name": "Copy"
+          },
+          "delete": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015",
+            "method": "DELETE",
+            "name": "Delete"
+          },
+          "editpermissions": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "Edit Permissions"
+          },
+          "initiatedocumentworkflow": {
+            "body": "initiate_in_smartview",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "",
+            "wfList": []
+          },
+          "move": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015",
+            "method": "PUT",
+            "name": "Move"
+          },
+          "permissions": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "Permissions"
+          },
+          "properties": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015",
+            "method": "GET",
+            "name": "Properties"
+          },
+          "rename": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98015",
+            "method": "PUT",
+            "name": "Rename"
+          }
+        },
+        "map": {
+          "default_action": "",
+          "more": [
+            "properties"
+          ]
+        },
+        "order": [
+          "initiatedocumentworkflow",
+          "addcategory",
+          "rename",
+          "copy",
+          "move",
+          "editpermissions",
+          "permissions",
+          "delete",
+          "comment"
+        ]
+      }
+    }
+  },
+
+  "response_nodes_workspace_2": {
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/nodes/98022?actions=open&actions=initiateworkflow&actions=openform&expand=properties{reserved_user_id,reserved_user_id}&fields=bwsinfo&fields=columns&fields=followups&fields=properties&fields=versions{owner_id}.element(0)&metadata&state=true",
+          "method": "GET",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "actions": {
+        "data": {
+          "open": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022/nodes",
+            "method": "GET",
+            "name": "Open"
+          }
+        },
+        "map": {
+          "default_action": ""
+        },
+        "order": [
+          "open"
+        ]
+      },
+      "data": {
+        "bwsinfo": {
+          "id": 98022
+        },
+        "columns": [
+          {
+            "data_type": 2,
+            "key": "type",
+            "name": "Type",
+            "sort_key": "type"
+          },
+          {
+            "data_type": -1,
+            "key": "name",
+            "name": "Name",
+            "sort_key": "name"
+          },
+          {
+            "data_type": -1,
+            "key": "size_formatted",
+            "name": "Size",
+            "sort_key": "size"
+          },
+          {
+            "data_type": 401,
+            "include_time": true,
+            "key": "modify_date",
+            "name": "Modified",
+            "sort_key": "modify_date"
+          }
+        ],
+        "followups": [],
+        "properties": {
+          "advanced_versioning": null,
+          "container": true,
+          "container_size": 6,
+          "create_date": "2019-04-24T08:19:30",
+          "create_user_id": 1000,
+          "description": "",
+          "description_multilingual": {
+            "de": "",
+            "en": "",
+            "fr": ""
+          },
+          "external_create_date": null,
+          "external_identity": "",
+          "external_identity_type": "",
+          "external_modify_date": null,
+          "external_source": "",
+          "favorite": false,
+          "hidden": false,
+          "id": 98022,
+          "mime_type": null,
+          "modify_date": "2020-09-07T15:55:13",
+          "modify_user_id": 1000,
+          "name": "Workspace",
+          "name_multilingual": {
+            "de": "",
+            "en": "Workspace",
+            "fr": ""
+          },
+          "owner": "Admin",
+          "owner_group_id": 999,
+          "owner_user_id": 1000,
+          "parent_id": 262468,
+          "permissions_model": "advanced",
+          "reserved": false,
+          "reserved_date": null,
+          "reserved_shared_collaboration": false,
+          "reserved_user_id": 0,
+          "rm_enabled": false,
+          "size": 6,
+          "size_formatted": "6 Items",
+          "status": null,
+          "type": 848,
+          "type_name": "Business Workspace",
+          "versionable": false,
+          "versions_control_advanced": false,
+          "volume_id": -2000,
+          "wksp_type_name": "Contract"
+        }
+      },
+      "metadata": {
+        "followups": {
+          "activation_by_day": {
+            "key": "activation_by_day",
+            "name": "Activation by day",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "activation_date": {
+            "key": "activation_date",
+            "name": "Activation date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "assignees": {
+            "key": "assignees",
+            "name": "assignees",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "create_date": {
+            "key": "create_date",
+            "name": "Create date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "create_user_id": {
+            "key": "create_user_id",
+            "name": "Create user id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "data_id": {
+            "key": "data_id",
+            "name": "Reminder node id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "description": {
+            "key": "description",
+            "name": "Description",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "due_date": {
+            "key": "due_date",
+            "name": "Due Date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "end_sequence_date": {
+            "key": "end_sequence_date",
+            "name": "End sequence date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "followup_client_id": {
+            "key": "followup_client_id",
+            "name": "Reminder client id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_client_name": {
+            "key": "followup_client_name",
+            "name": "Reminder client name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "followup_handler": {
+            "key": "followup_handler",
+            "name": "Reminder handler",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          },
+          "followup_id": {
+            "key": "followup_id",
+            "name": "Reminder id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_type": {
+            "key": "followup_type",
+            "name": "Reminder type",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "followup_type_name": {
+            "key": "followup_type_name",
+            "name": "Reminder type name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "modify_date": {
+            "key": "modify_date",
+            "name": "Modify date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 0
+          },
+          "name": {
+            "key": "name",
+            "name": "Name",
+            "persona": "",
+            "type": -1,
+            "width_weight": 100
+          },
+          "parent_id": {
+            "key": "parent_id",
+            "name": "Reminder parent id",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "rule": {
+            "key": "rule",
+            "name": "Rule",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "start_sequence_date": {
+            "key": "start_sequence_date",
+            "name": "Start sequence date",
+            "persona": "",
+            "type": -7,
+            "width_weight": 100
+          },
+          "status": {
+            "key": "status",
+            "name": "Status",
+            "persona": "",
+            "type": 2,
+            "width_weight": 0
+          },
+          "status_by": {
+            "key": "status_by",
+            "name": "Status_by",
+            "persona": "",
+            "type": 2,
+            "width_weight": 100
+          }
+        },
+        "properties": {
+          "advanced_versioning": {
+            "allow_undefined": true,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "advanced_versioning",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Advanced Versioning",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "container": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "container",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Container",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "container_size": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "container_size",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Container Size",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "create_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "create_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Created",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "create_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "create_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Created By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "description": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "description",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": true,
+            "multilingual": true,
+            "name": "Description",
+            "password": false,
+            "persona": "",
+            "read_only": false,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_create_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "external_create_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "External Create Date",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_identity": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_identity",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Identity",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_identity_type": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_identity_type",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Identity Type",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_modify_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "external_modify_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "External Modify Date",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "external_source": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "external_source",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "External Source",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "favorite": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "favorite",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Favorite",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "hidden": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": false,
+            "description": null,
+            "hidden": false,
+            "key": "hidden",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Hidden",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "ID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "modify_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "modify_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Modified",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "modify_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "modify_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Modified By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": true,
+            "name": "Name",
+            "password": false,
+            "persona": "",
+            "read_only": false,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Owner",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner_group_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner_group_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Owned By",
+            "persona": "group",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "owner_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "owner_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Owned By",
+            "persona": "user",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "parent_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "parent_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Parent ID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "reserved",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved_date": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "include_time": true,
+            "key": "reserved_date",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": -7,
+            "type_name": "Date",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "reserved_user_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "reserved_user_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Reserved By",
+            "persona": "member",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "rm_enabled": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": true,
+            "key": "rm_enabled",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Records Management enabled",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "status": {
+            "allow_undefined": true,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "status",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Status",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "type": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "type",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Type",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "type_name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "type_name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Type",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "versionable": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "versionable",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Versionable",
+            "persona": "",
+            "read_only": true,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "versions_control_advanced": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": false,
+            "description": null,
+            "hidden": false,
+            "key": "versions_control_advanced",
+            "key_value_pairs": false,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "Versions Control Advanced",
+            "persona": "",
+            "read_only": false,
+            "required": false,
+            "type": 5,
+            "type_name": "Boolean",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "volume_id": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "volume_id",
+            "key_value_pairs": false,
+            "max_value": null,
+            "min_value": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "name": "VolumeID",
+            "persona": "node",
+            "read_only": false,
+            "required": false,
+            "type": 2,
+            "type_name": "Integer",
+            "valid_values": [],
+            "valid_values_name": []
+          },
+          "wksp_type_name": {
+            "allow_undefined": false,
+            "bulk_shared": false,
+            "default_value": null,
+            "description": null,
+            "hidden": false,
+            "key": "wksp_type_name",
+            "key_value_pairs": false,
+            "max_length": null,
+            "min_length": null,
+            "multi_value": false,
+            "multi_value_unique": false,
+            "multiline": false,
+            "multilingual": false,
+            "name": "Workspace type name",
+            "password": false,
+            "persona": "",
+            "read_only": true,
+            "regex": "",
+            "required": false,
+            "type": -1,
+            "type_name": "String",
+            "valid_values": [],
+            "valid_values_name": []
+          }
+        }
+      },
+      "metadata_map": {},
+      "metadata_order": {
+        "followups": [
+          "followup_id",
+          "parent_id",
+          "data_id",
+          "followup_type",
+          "rule",
+          "status",
+          "create_user_id",
+          "create_date",
+          "description",
+          "due_date",
+          "start_sequence_date",
+          "end_sequence_date",
+          "status_by",
+          "activation_by_day",
+          "activation_date",
+          "followup_handler",
+          "followup_type_name",
+          "followup_client",
+          "followup_client_name",
+          "assignees"
+        ],
+        "properties": [
+          "id",
+          "type",
+          "type_name",
+          "name",
+          "description",
+          "parent_id",
+          "volume_id",
+          "hidden",
+          "create_date",
+          "create_user_id",
+          "modify_date",
+          "modify_user_id",
+          "owner_user_id",
+          "owner_group_id",
+          "reserved",
+          "reserved_date",
+          "reserved_user_id",
+          "status",
+          "versionable",
+          "advanced_versioning",
+          "versions_control_advanced",
+          "container",
+          "container_size",
+          "favorite",
+          "external_create_date",
+          "external_modify_date",
+          "external_source",
+          "external_identity",
+          "external_identity_type",
+          "rm_enabled",
+          "wksp_type_name",
+          "owner"
+        ]
+      },
+      "perspective": {
+        "canEditPerspective": false,
+        "id": 256968,
+        "options": {
+          "header": {
+            "widget": {
+              "options": {
+                "completenessCheckSettings": {
+                  "hideInProcessDocsCheck": false,
+                  "hideMissingDocsCheck": false,
+                  "hideOutdatedDocsCheck": false
+                },
+                "favoriteSettings": {
+                  "hideFavorite": false
+                },
+                "headerwidget": {
+                  "type": "none"
+                },
+                "metadataSettings": {
+                  "hideEmptyFields": false,
+                  "hideMetadata": false,
+                  "metadataInColumns": "doubleCol"
+                },
+                "workspace": {
+                  "properties": {
+                    "description": "{description}",
+                    "title": "{name}",
+                    "type": "{business_properties.workspace_type_name}"
+                  }
+                }
+              },
+              "type": "xecmpf/widgets/header",
+              "w_id": "pman-1599647620328"
+            }
+          },
+          "tabs": [
+            {
+              "columns": [
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "showTitleIcon": true,
+                      "showWorkspaceIcon": true,
+                      "title": {
+                        "en-US": "Team"
+                      }
+                    },
+                    "type": "conws/widgets/team",
+                    "w_id": "pman-1595841503885"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "hideEmptyFields": false,
+                      "metadata": [
+                        {
+                          "categoryId": 26196,
+                          "type": "category"
+                        }
+                      ],
+                      "title": {
+                        "en-US": "Contract Metadata"
+                      }
+                    },
+                    "type": "conws/widgets/metadata",
+                    "w_id": "pman-1595841503915"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "kind": "tile",
+                    "options": {
+                      "openInMaximizedView": false,
+                      "openInSmartView": true,
+                      "showTitleIcon": true,
+                      "showWorkspaceIcon": true,
+                      "title": "Discussion"
+                    },
+                    "type": "cop/widgets/forum",
+                    "w_id": "pman-1595841503949"
+                  }
+                }
+              ],
+              "title": {
+                "en-US": "Overview"
+              }
+            },
+            {
+              "columns": [
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 12,
+                    "md": 12,
+                    "sm": 12,
+                    "xl": 12,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "kind": "fullpage",
+                    "options": {},
+                    "type": "csui/widgets/nodestable",
+                    "w_id": "pman-1595841504020"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "relationType": "child",
+                      "title": {
+                        "en-US": "Child Contracts"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "1"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1596027844052"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "relationType": "parent",
+                      "title": {
+                        "en-US": "Wksp Test 001 Instances"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "496"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1599125711119"
+                  }
+                },
+                {
+                  "heights": {
+                    "lg": "half",
+                    "md": "half",
+                    "sm": "three-quarters",
+                    "xs": "full"
+                  },
+                  "sizes": {
+                    "lg": 4,
+                    "md": 4,
+                    "sm": 6,
+                    "xl": 4,
+                    "xs": 12
+                  },
+                  "widget": {
+                    "options": {
+                      "relationType": "parent",
+                      "title": {
+                        "en-US": "Parent Contracts"
+                      },
+                      "undefined": "4",
+                      "workspaceTypeId": "1"
+                    },
+                    "type": "conws/widgets/relatedworkspaces",
+                    "w_id": "pman-1596027863068"
+                  }
+                }
+              ],
+              "title": {
+                "en-US": "Documents"
+              }
+            }
+          ]
+        },
+        "override": {
+          "applies_to_id": 0,
+          "asset_container_id": null,
+          "cascade": 0,
+          "ordering": 1,
+          "perspective_id": 256968,
+          "perspective_info": {
+            "workspaceTypes": [
+              12577
+            ]
+          },
+          "perspective_type": "Workspace",
+          "perspective_version": 4,
+          "rule_id": null
+        },
+        "type": "tabbed"
+      },
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      }
+    }
+  },
+
+  "response_nodes_workspace_actions_2": {
+    "links": {
+      "data": {
+        "self": {
+          "body": "",
+          "content_type": "",
+          "href": "/api/v2/nodes/actions",
+          "method": "POST",
+          "name": ""
+        }
+      }
+    },
+    "results": {
+      "98022": {
+        "data": {
+          "addcategory": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022/categories",
+            "method": "POST",
+            "name": "Add Category"
+          },
+          "comment": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "POST",
+            "name": "Comments"
+          },
+          "copy": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes",
+            "method": "POST",
+            "name": "Copy"
+          },
+          "delete": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022",
+            "method": "DELETE",
+            "name": "Delete"
+          },
+          "editpermissions": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "Edit Permissions"
+          },
+          "initiatedocumentworkflow": {
+            "body": "initiate_in_smartview",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "",
+            "wfList": []
+          },
+          "move": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022",
+            "method": "PUT",
+            "name": "Move"
+          },
+          "permissions": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "",
+            "method": "",
+            "name": "Permissions"
+          },
+          "properties": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022",
+            "method": "GET",
+            "name": "Properties"
+          },
+          "rename": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "/api/v2/nodes/98022",
+            "method": "PUT",
+            "name": "Rename"
+          }
+        },
+        "map": {
+          "default_action": "",
+          "more": [
+            "properties"
+          ]
+        },
+        "order": [
+          "initiatedocumentworkflow",
+          "addcategory",
+          "rename",
+          "copy",
+          "move",
+          "editpermissions",
+          "permissions",
+          "delete",
+          "comment"
+        ]
+      }
+    }
+  }
+
+}

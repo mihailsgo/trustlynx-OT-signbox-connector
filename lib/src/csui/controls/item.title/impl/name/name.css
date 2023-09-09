@@ -1,0 +1,122 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-item-name {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  min-width: 0; 
+  height: 100%;
+  align-items: center;
+}
+
+.binf-widgets .csui-item-name .csui-item-name-readonly {
+  font-size: inherit;
+  display: inline-flex;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  align-items: center;
+  font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+  height: 100%;
+  padding-left: 0.33em;
+  padding-right: 0.33em;
+  background-color: inherit;
+}
+_:-ms-lang(x), .binf-widgets .csui-item-name .csui-item-name-readonly {  background-color: #dce4e8; }
+
+.binf-widgets .csui-item-name .csui-item-name-readonly:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.binf-widgets .csui-item-name .csui-item-name-readonly:disabled > span{
+  cursor: not-allowed;
+}
+
+.binf-widgets .csui-item-name .csui-item-name-readonly:hover {
+  cursor: text;
+}
+
+.binf-widgets .csui-item-name .csui-item-name-readonly > .csui-item-name-block {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  float: none;
+  outline: none;
+  margin: 1px 0;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  width: 100%;
+  min-width: 5em;
+  align-items: center;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > input {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  flex: 1 10 auto;
+  -webkit-flex: 1 10 auto;
+  text-align: left;
+  font-size: 20px;
+  line-height: 24px;
+  min-width: 3em;
+  max-width: 20em;
+  border: 1px solid #a7a9ac;
+  border-radius: 5px;
+  float: none;
+  padding: 0 0.2em 0 0.5em;
+  outline: none;
+  height: 28px;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > .edit-cancel {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.binf-widgets .csui-item-name > .csui-item-name-edit > .csui-item-name-error {
+  font-size: 14px;
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  padding-left: 1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.binf-widgets .csui-edit-save {
+  margin-left: 8px;
+}
+
+
+.binf-widgets .csui-item-name span.csui-multilingual-icon-label {
+  margin-top: -3px;
+}
+
+.binf-widgets .csui-edit-save.inline-edit-icon,
+.binf-widgets .csui-edit-cancel.inline-edit-icon {
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  display: block;
+  padding: 0px;
+  margin-top:0px;
+}
+
+.binf-widgets .csui-edit-save.inline-edit-icon:focus,
+.binf-widgets .csui-edit-cancel.inline-edit-icon:focus {
+  outline: none;
+}

@@ -1,0 +1,63 @@
+{
+  "id": {
+    "data": {
+      "deleted": false,
+      "display_name": "Admin",
+      "group_id": 1001,
+      "id": 1000,
+      "name": "Admin",
+      "privilege_login": true,
+      "privilege_modify_groups": true,
+      "privilege_modify_users": true,
+      "privilege_public_access": true,
+      "privilege_system_admin_rights": true,
+      "privilege_user_admin_rights": true,
+      "type": 0,
+      "type_name": "User"
+    }
+  },
+  "actions": {
+    "data": {
+      "delete": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v2\/nodes\/1112226",
+        "method": "DELETE",
+        "name": "Delete"
+      },
+      "properties": {
+        "body": "",
+        "content_type": "",
+        "form_href": "",
+        "href": "\/api\/v2\/nodes\/1112226",
+        "method": "GET",
+        "name": "Properties"
+      }
+    },
+    "map": {"default_action": "open", "more": ["properties"]},
+    "order": ["delete"]
+  },
+  "properties": {
+    "Document": {
+      "container": false,
+      "create_user_id": 1000,
+      "favorite": true,
+      "id": 1112226,
+      "mime_type": "application\/pdf",
+      "modify_date": "2017-05-15T17:20:16",
+      "modify_user_id": 1000,
+      "name": "Document",
+      "name_multilingual": { "en_IN": "Document" },
+      "owner_group_id": 1001,
+      "owner_user_id": 1000,
+      "parent_id": 1112222,
+      "size": 1244967,
+      "size_formatted": "2 MB",
+      "type": 144,
+      "type_name": "Document",
+      "versions_control_advanced": true,
+      "volume_id": -1112222
+    }
+  }
+}

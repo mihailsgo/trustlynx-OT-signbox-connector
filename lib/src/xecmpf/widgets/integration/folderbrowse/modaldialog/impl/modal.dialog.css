@@ -1,0 +1,58 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-dialog .binf-modal-content .xecm-modal-header {
+  height: 45px;
+  background-color: #004b71;
+  width: 100%;
+  position: relative;
+}
+
+.cs-dialog .xecm-modal-header .cs-close.icon-pagewidget-collapse {
+  width: 30px;
+  height: 30px;
+  float: right;
+  opacity: 0.9;
+  right: 6px;
+  cursor: pointer;
+  top: 22px;
+}
+
+.binf-widgets .xecm-modal-dialog.binf-modal .xecm-modal-header {
+  display: none;
+}
+
+.binf-widgets .xecm-modal-dialog.binf-modal .binf-modal-lg {
+  top: 0px;
+  width: calc(100% - 40px);
+}
+
+body:not(.binf-widgets) .binf-widgets .csui-toolbar .binf-open > .binf-dropdown-menu,
+body:not(.binf-widgets) .binf-widgets .csui-table-cell-name-appendix,
+body:not(.binf-widgets) .binf-widgets .binf-modal,
+body:not(.binf-widgets) .binf-widgets .binf-popover,
+body:not(.binf-widgets) .binf-widgets .esoc-social-comment-widget,
+body:not(.binf-widgets) .binf-widgets .csui-alert,
+body:not(.binf-widgets) .binf-widgets .csui-global-message.position-show,
+body:not(.binf-widgets) .binf-widgets .csui-global-message,
+body:not(.binf-widgets) .binf-widgets.binf-modal-open .csui-global-message.position-show,
+body:not(.binf-widgets) .binf-widgets.binf-modal-open .csui-alert,
+body:not(.binf-widgets) .binf-widgets.binf-modal-open .csui-global-message,
+body:not(.binf-widgets) .binf-widgets.binf-modal-open .csui-zipanddownload-dialog.csui-download-dialog,
+body:not(.binf-widgets) .binf-widgets.binf-modal-open .cs-dialog,
+body:not(.binf-widgets) .binf-widgets .csui-sidepanel,
+body:not(.binf-widgets).igc-brava-modal-open .igc-brava-modal,
+body:not(.binf-widgets).ot-iv-modal-open .ot-iv-modal{
+  z-index: 11112;
+}
+body:not(.binf-widgets) .binf-widgets .csui-toolbar .binf-open > .binf-dropdown-menu {
+  max-height: 220px;
+}
+
+body:not(.binf-widgets) .binf-popover.csui-multilingual-input-wrapper {
+  z-index: 99999;
+}
+body.binf-widgets.binf-modal-open.csui-support-maximize-widget.csui-sidepanel-open.csui-doc-preview #ot-iv.ot-iv-app .ot-iv-MarkupDetails ,
+body.binf-widgets.csui-support-maximize-widget.csui-sidepanel-open.csui-doc-preview #ot-iv.ot-iv-app .ot-iv-StampRasterPane,
+body.binf-widgets.csui-support-maximize-widget.csui-sidepanel-open.csui-doc-preview .ot-iv-StampRasterPane {
+  overflow: auto;
+}

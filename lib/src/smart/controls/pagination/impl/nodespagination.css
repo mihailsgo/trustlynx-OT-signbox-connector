@@ -1,0 +1,352 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-pager {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #F4F4F4;
+  font-size: 12px;
+  font-stretch: normal;
+  color: #232e72;
+  height: 32px;
+  justify-content: space-between;
+}
+
+.binf-widgets .csui-pager .csui-total-container-items {
+  padding: 0 16px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-pager .csui-pagination {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu {
+  height: 100%;
+  padding: 0;
+  z-index: 2;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div,
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a {
+  vertical-align: middle;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a,
+.binf-widgets .csui-pager .csui-pagesize-menu > div.binf-open > a {
+  color: #232e72;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #e8e8e8;
+  box-shadow: none;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a:hover {
+  text-decoration: none;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a:focus {
+  text-decoration: none;
+  outline: 1px solid #2e3d98;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: normal;
+  min-width: 42px;
+  height: initial;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu > div > a > div {
+  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-pager .csui-pagesize-menu .csui-icon {
+  width: 14px;
+  line-height: 32px;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar {
+  background-color: inherit;
+  width: calc(100%);
+  overflow: hidden;
+  max-width: 392px;
+  margin: 0 auto;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul {
+  display: none;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul.csui-active {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li {
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 42px;
+  cursor: pointer;  
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li > a {
+  height: 32px;
+  width: inherit;
+  color: #232E72;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li.csui-overflow {
+  min-width: 80px;
+  background-color: #F4F4F4;
+  z-index: 1;
+  float: none;
+  flex-grow: 1;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li.csui-overflow a {
+  min-width: 80px;
+  width: auto;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li:not(.csui-overflow) {
+  margin-right: 4px;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li:last-child {
+  margin-left: -4px;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li > a:hover {
+  background-color: #b2bec5;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li > a:focus {
+  outline: 1px solid #2e3d98;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li > a:active {
+  background-color: #98a8b2;
+}
+
+.binf-widgets .csui-pagination div.csui-paging-navbar > ul > li > a.csui-activePage {
+  background-color: #cbd3d9;
+  color: #333333;
+  font-weight: bold;
+}
+
+.binf-widgets .csui-pager div.csui-paging-navbar > ul > li.csui-overflow span {
+  height: 14px;
+  margin: auto;
+  width: 1em;
+}
+
+.binf-widgets .csui-paging-navbar > ul > li:not(.csui-overflow) > a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.binf-widgets .smart-empty-placeholder{
+  visibility: hidden;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu {
+  background-color: #ffffff;
+  min-width: 192px;
+  bottom: 100%;
+  top: auto; 
+  border-radius: 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  padding: 4px 0;
+  border: 0;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu > li > a {
+  padding: 6px 16px 6px 38px;
+  color: #321f20;
+  text-align: left;
+}
+
+.binf-widgets .csui-select .csui-pagination-checked {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  left: 16px;
+  position: absolute;
+  margin-top: 3px;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu .binf-open,
+.binf-widgets .csui-pager ul.binf-dropdown-menu .binf-open:hover,
+.binf-widgets .csui-pager ul.binf-dropdown-menu .binf-open:focus {
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu > li > a:hover {
+  color: #333333;
+  border: 0;
+  outline: 0;
+  background-color: #bac9ce;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu > li > a:focus {
+  outline: 1px solid #2e3d98;
+  outline-offset: -1px;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu > li > a:active {
+  background-color: #dfe7ea;
+}
+
+.binf-widgets .csui-pager ul.binf-dropdown-menu li {
+  float: none !important;
+  display: block !important;
+  border-right: 0;
+  border-top: 0;
+  text-align: center;
+  line-height: 1.2em;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+.binf-widgets .csui-paging-navbar > ul.csui-pages.csui-slide > li:not(.csui-overflow) {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  animation: slide 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation: slide 300ms forwards;
+  -moz-animation: slide 300ms forwards;
+  -moz-animation-fill-mode: forward;
+  -o-animation: slide 300ms;
+  -o-animation-fill-mode: forward;
+
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .binf-widgets .csui-pager .csui-pagination {
+    position: static;
+  }
+}
+
+
+@-webkit-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-moz-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-o-keyframes slide {
+  0% {
+    left: 60%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    left: 60%;
+  }
+  to {
+    left:0;
+  }
+}
+
+
+
+.binf-widgets .csui-paging-navbar.csui-prev-active > ul.csui-pages.csui-slide > li:not(.csui-overflow) {
+  animation: reslide 300ms;
+}
+@-webkit-keyframes reslide {
+  0% {
+    right: 60%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes reslide {
+  0% {
+    right: 60%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-o-keyframes reslide {
+  0% {
+    right: 60%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes reslide {
+  from {
+    right: 60%;
+  }
+  to {
+    right:0;
+  }
+}

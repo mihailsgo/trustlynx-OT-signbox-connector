@@ -1,0 +1,47 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-tilereport {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.binf-widgets .webreports-tilereport-content-view {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.binf-widgets .webreports-tilereport-content {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.binf-widgets .webreports-tilereport .tile-header {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+
+.binf-widgets .webreports-tilereport .tile-content {
+    flex-grow: 1;
+}
+
+.binf-widgets .webreports-tilereport .tile-footer {
+    flex-grow: 0;
+}
+
+.binf-widgets .webreports-tilereport-spacer {
+    display: block;
+}
+
+.binf-widgets .webreports-tilereport-content-view .tile-header .cs-go-back {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.binf-widgets .webreports-tilereport .tile-header .tile-controls {
+    flex-grow: unset;
+}

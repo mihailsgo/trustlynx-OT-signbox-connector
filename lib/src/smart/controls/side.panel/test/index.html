@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SidePanel Control</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    #medium .binf-modal-dialog {
+      margin-top: 200px;
+    }
+
+    #large .binf-modal-dialog {
+      margin-top: 300px;
+    }
+
+    #viewInside .binf-modal-dialog {
+      margin-top: 550px;
+    }
+
+    .binf-modal-backdrop {
+      display: none;
+    }
+
+    .sidepanel-container {
+      background-color: #ffffff;
+      padding: 20px !important;
+      margin: 20px !important;
+    }
+
+    .trigger-btn {
+      margin: 10px 0px !important;
+    }
+
+    #custom {
+      width: 500px;
+      height: 600px;
+    }
+  </style>
+
+  <style>
+
+    .csui-side-panel-main .step-view {
+      height: 100%;
+      width: 100%;
+    }
+
+    .step-view h1 {
+      font-size: 38px;
+      padding: 20px;
+    }
+
+    .form1.csui-sidepanel-container {
+      width: 40%;
+    }
+
+    .form2.csui-sidepanel-container {
+      width: 70%;
+    }
+
+    .form3.csui-sidepanel-container {
+      width: 30%;
+    }
+  </style>
+
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+
+  <script type="text/x-template" id="step-template">
+    <div>
+      <i>What is Lorem Ipsum?</i>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry`s standard dummy text ever since the 1500s, when an unknown
+        printer took a galley of type and scrambled it to make a type specimen book. It has
+        survived not only five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+      <i>Why do we use it?</i>
+      <p>It is a long established fact that a reader will be distracted by the readable content of
+        a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+        more-or-less normal distribution of letters, as opposed to using `Content here, content
+        here`, making it look like readable English. Many desktop publishing packages and web
+        page editors now use Lorem Ipsum as their default model text, and a search for `lorem
+        ipsum` will uncover many web sites still in their infancy. Various versions have evolved
+        over the years, sometimes by accident, sometimes on purpose (injected humour and the
+        like).</p>
+
+      <i>Where does it come from?</i>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+        piece of
+        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+        Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
+        words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+        classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+        1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during
+        the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a
+        line in section 1.10.32.
+
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+        interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+        also reproduced in their exact original form, accompanied by English versions from the 1914
+        translation by H. Rackham.</p>
+
+      <i>Where can I get some?</i>
+      <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+        suffered
+        alteration in some form, by injected humour, or randomised words which don`t look even
+        slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure
+        there isn`t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+        on the Internet tend to repeat predefined chunks as necessary, making this the first true
+        generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a
+        handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The
+        generated Lorem Ipsum is therefore always free from repetition, injected humour, or
+        non-characteristic words etc.</p>
+    </div>
+
+    {{#if hasCloseBtn}}
+    <button id="closeBtn" class="binf-btn binf-btn-primary">Close this side panel</button>{{/if}}
+
+    {{#if hasInput}}
+    <div>
+      <input type="text" class="binf-form-control" id="titleText" placeholder="New main title"
+             value="Sample main title" />
+      <input type="text" class="binf-form-control" id="subTitleText" placeholder="New sub title"
+             value="Sample main sub-title" />
+    </div>{{/if}}{{#if hasAction}}
+    <div>
+      <button class="binf-btn binf-btn-default" id="customaction2">Enable Custom Action</button>
+      <button class="binf-btn binf-btn-default" id="updateHeader">update Header</button>
+    </div>{{/if}}
+
+    <div id="action-trigger"></div>
+  </script>
+
+  <script type="text/x-template" id="cs-view">
+    <div class="custom-search"></div>
+    <div class="results"></div>
+  </script>
+
+  <script>
+    require.config({
+      paths: {
+        nuc: "../../../../nuc",
+        smart: "../../.."
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json'
+      ]
+    });
+
+    require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: csui.connection
+        }
+      }
+    });
+
+    require(['nuc/lib/jquery', 'nuc/lib/underscore', 'nuc/lib/backbone', 'nuc/lib/marionette',
+          'nuc/lib/handlebars', '../side.panel.view', 'smart/controls/icons.v2/icons.v2'
+        ],
+
+        function ($, _, Backbone, Marionette, Handlebars, SidePanelView) {
+
+          var StepView = Marionette.ItemView.extend({
+            className: 'step-view',
+            template: function (data) {
+              return Handlebars.compile($('#step-template').html())(data);
+            },
+            templateHelpers: function () {
+              return {
+                name: this.options.name,
+                hasAction: this.options.hasAction,
+                hasInput: this.options.hasInput,
+                hasCloseBtn: this.options.hasCloseBtn
+              };
+            },
+            events: {
+              'click #customaction2': function () {
+                this.trigger("update:button", "customaction2", {
+                  disabled: false
+                });
+              },
+              'click #updateHeader': function () {
+                var title    = (document.getElementById('titleText').value).trim(),
+                    subTitle = (document.getElementById('subTitleText').value).trim();
+                this.trigger('update:header', {
+                  title: title || 'New main title',
+                  subTitle: subTitle || 'New sub title'
+                });
+              }
+            },
+            onRender: function () {
+              this.listenTo(this, "button:click", function (actionButton) {
+                this.$el.find("#action-trigger").text('Action Button Clicked: "' +
+                                                      actionButton.label + '"');
+                if (!!actionButton.updateHeader) {
+                  this.trigger('update:header', actionButton.updateHeader);
+                }
+              });
+            },
+          });
+
+          function showSidePanel(options) {
+            var sidePanel = new SidePanelView(_.extend({
+              slides: [{
+                title: 'Form1',
+                subTitle: 'Sub Title here',
+                containerClass: 'form1',
+                content: new StepView({
+                  name: 'Form1'
+                }),
+                footer: {
+                  buttons: [{
+                    label: 'Edit properties',
+                    type: 'action',
+                    className: 'binf-btn binf-btn-primary'
+                  }]
+                }
+              }, {
+                title: 'Form2',
+                containerClass: 'form2',
+                content: new StepView({
+                  name: 'Form2',
+                  hasAction: true,
+                  hasInput: true
+                }), footer: {
+                  buttons: [{
+                    label: 'Custom Acton1',
+                    type: 'action',
+                    className: 'binf-btn binf-btn-primary'
+                  },
+                    {
+                      label: 'Custom Action2',
+                      type: 'action',
+                      id: "customaction2",
+                      disabled: true,
+                      className: 'binf-btn binf-btn-primary'
+                    }
+                  ]
+                }
+              },
+                {
+                  title: 'Confirm changes',
+                  containerClass: 'form3',
+                  content: new StepView({
+                    name: 'Changes Here'
+                  }), footer: {
+                  buttons: [{
+                    label: '(Custom) Finish',
+                    type: 'action'
+                  },
+                    {
+                      label: '(Custom) update header',
+                      type: 'action',
+                      updateHeader: {
+                        title: 'new heading from footer',
+                        subTitle: 'new sub heading from footer'
+                      },
+                      className: 'binf-btn binf-btn-primary'
+                    }]
+                }
+                }
+              ]
+            }, options));
+            return sidePanel;
+          }
+
+          $('#simple').on('click', function () {
+            var sp = new SidePanelView({
+              title: 'Simple Usage',
+              subTitle: 'SubTitle here',
+              content: new StepView({name: 'Changes Here'})
+            });
+            sp.show();
+          });
+
+          $('#noHeader').on('click', function () {
+            var sp = new SidePanelView({
+              layout: {
+                header: false
+              },
+              content: new StepView({name: 'This side panel has no header!'})
+            });
+            sp.show();
+          });
+
+          $('#noFooter').on('click', function () {
+            var sp = new SidePanelView({
+              layout: {
+                footer: false
+              },
+              title: 'No footer',
+              subTitle: 'Example for no footer side panel',
+              content: new StepView({name: 'This side panel has no footer!'})
+            });
+            sp.show();
+          });
+
+          $('#noMask').on('click', function () {
+            var sp = new SidePanelView({
+              layout: {
+                mask: false
+              },
+              title: 'No mask',
+              subTitle: 'Example for no masking behavior',
+              //content: new StepView({name: 'This side panel has no masking behavior!'})
+              content: new StepView({name: 'What is Lorem Ipsum?                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Why do we use it?It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using `Content here, content here`, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for `lorem ipsum` will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).Where does it come from?Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.Where can I get some?There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don`t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn`t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.'})
+            });
+            sp.show();
+          });
+
+          $('#withResize').on('click', function () {
+            var sp = new SidePanelView({
+              layout: {
+                resize: true
+              },
+              title: 'With resize',
+              subTitle: 'Example for resize',
+              content: new StepView({name: "This side panel can be re-sized to it's max extend"})
+            });
+            sp.show();
+          });
+
+          $('#withAll').on('click', function () {
+            var sp        = new SidePanelView({
+                  layout: {
+                    header: false,
+                    footer: false,
+                    mask: false,
+                    resize: true
+                  },
+                  content: new StepView({
+                    name: 'This side panel has no header, no footer, no masking behaviour and can be re-sized!',
+                    hasCloseBtn: true
+                  })
+                }),
+                destroySp = function () {
+                  sp.destroy();
+                };
+            sp.show();
+
+            $('#closeBtn').off('click', destroySp).on('click', destroySp);
+          });
+
+          $('#customFooter').on('click', function () {
+            var sp = new SidePanelView({
+              title: 'Custom buttons on footer',
+              content: new StepView({name: 'See footer for custom buttons'}),
+              footer: {
+                leftButtons: [{
+                  label: 'Left Action',
+                  close: true
+                }],
+                rightButtons: [{
+                  label: 'Custom Button2'
+                }]
+              }
+            });
+            sp.show();
+          });
+
+          $('#sidePanelFromRight').on('click', function () {
+            var panel1 = showSidePanel({
+              openFrom: 'right'
+            });
+            panel1.show();
+          });
+
+          $('#sidePanelFromLeft').on('click', function () {
+            var panel2 = showSidePanel({
+              openFrom: 'left'
+            });
+            panel2.show();
+          });
+
+        });
+  </script>
+</head>
+
+<body class="binf-widgets sidepanel-container">
+<div class="binf-container-fluid ">
+  <div class="binf-row">
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="simple" class="binf-btn binf-btn-primary trigger-btn">Simple Usage
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="noHeader" class="binf-btn binf-btn-primary trigger-btn">
+        Side panel with no header
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="noFooter" class="binf-btn binf-btn-primary trigger-btn">
+        Side panel with no footer
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="noMask" class="binf-btn binf-btn-primary trigger-btn">
+        Side panel with no mask
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="withResize" class="binf-btn binf-btn-primary trigger-btn">
+        Side panel with resize
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="withAll" class="binf-btn binf-btn-primary trigger-btn">
+        No header, footer, mask, with resize
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="customFooter" class="binf-btn binf-btn-primary trigger-btn">Custom buttons on
+        footer
+      </button>
+    </div>
+
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="sidePanelFromRight" class="binf-btn binf-btn-primary trigger-btn">
+        Open SidePanel From Right (with dynamic header)
+      </button>
+    </div>
+    <div class="binf-col-sm-6 binf-col-md-4 binf-col-lg-3">
+      <button id="sidePanelFromLeft" class="binf-btn binf-btn-primary trigger-btn">
+        Open SidePanel from Left (RTL sliding)
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="binf-hidden">
+  <div id="custom"></div>
+  <div id="result"></div>
+</div>
+</body>
+
+</html>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

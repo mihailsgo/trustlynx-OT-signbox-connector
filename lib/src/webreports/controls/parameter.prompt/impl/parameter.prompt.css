@@ -1,0 +1,72 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .webreports-parameter-prompt-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    background-color: #fff;
+}
+
+.binf-widgets .webreports-parameter-prompt-form-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.webreport-parameter-prompt .cs-form.cs-form-create.cs-form-show-helper {
+    margin: 8px auto;
+    width: 50%;
+    min-width: 500px;
+}
+
+.binf-widgets .webreports-parameter-prompt .cs-field-write-inner input {
+    width: auto;
+}
+
+.binf-widgets .webreports-parameter-prompt .cs-textfield input {
+    flex: 0 1 300px !important;
+}
+
+.binf-widgets .webreports-parameter-prompt-footer {
+    flex-grow: 0;
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.binf-widgets .webreports-parameter-prompt-footer .binf-btn.binf-btn-primary {
+    height: 2rem;
+    padding: 0 1.5rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    line-height: 0.75rem;
+    background-color: #ffffff;
+    border: 1px solid #0072aa;
+    color: #0072aa;
+}
+
+.binf-widgets .webreports-parameter-prompt-footer .binf-btn.binf-btn-primary:focus {
+    background-color: #ffffff;
+    border: 1px solid #004b71;
+    box-shadow: 0;
+    color: #0072aa;
+    outline: 1px dotted #333333;
+    outline-offset: 2px;
+}
+
+.binf-widgets .webreports-parameter-prompt-footer .binf-btn.binf-btn-primary:hover {
+    background-color: #ffffff;
+    border: 1px solid #004b71;
+    color: #004b71;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+    box-shadow: inset 0 0 0 1px rgba(0,75,113,1);
+}
+
+.binf-widgets .webreports-parameter-prompt-content .csui-no-result-message {
+    margin: 20px 0;
+}
+

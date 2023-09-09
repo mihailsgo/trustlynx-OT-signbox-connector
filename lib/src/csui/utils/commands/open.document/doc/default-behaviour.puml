@@ -1,0 +1,35 @@
+@startuml
+
+note right
+The first action with the true condition will be taken.
+end note
+
+(*) --> if "Enable Document Overview checked" then
+     ->[true] "Navigate to document perspective"
+else
+-->[false] if "Intelligent Viewer enabled" then
+ ->[true] "Preview in Intelligent Viewer"
+  else
+  -->[false] if "Office Editor enabled" then
+  ->[true] "Show in Office Editor"
+    else
+    -->[false] if "Brava Viewer enabled" then
+    ->[true] "Show in Brava Viewer"
+      else
+      -->[false] if "CS Viewer inabled" then
+      ->[true] "Show in CS Viewer"
+      else
+        -->[false] if "Enable Document Open checked" then
+        ->[true] "Show in browser"
+        else
+        -->[false] if "Download allowed" then
+        ->[true] "Download (fallback)"
+          else
+          -->[false] "Navigate to document perspective (fallback)"
+        endif
+      endif
+    endif
+  endif
+endif
+
+@enduml

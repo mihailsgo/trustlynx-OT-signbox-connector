@@ -1,0 +1,1219 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/members\/objecttypes",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "data": {
+      "objects": [
+        {
+          "type": 0,
+          "type_name": "Folder"
+        },
+        {
+          "type": 1,
+          "type_name": "Shortcut"
+        },
+        {
+          "type": 2,
+          "type_name": "Generation"
+        },
+        {
+          "type": 128,
+          "type_name": "Workflow Map"
+        },
+        {
+          "type": 130,
+          "type_name": "Topic"
+        },
+        {
+          "type": 131,
+          "type_name": "Category"
+        },
+        {
+          "type": 132,
+          "type_name": "Category Folder"
+        },
+        {
+          "type": 133,
+          "type_name": "Categories Volume"
+        },
+        {
+          "type": 134,
+          "type_name": "Reply"
+        },
+        {
+          "type": 136,
+          "type_name": "Compound Document"
+        },
+        {
+          "type": 137,
+          "type_name": "Release Volume"
+        },
+        {
+          "type": 138,
+          "type_name": "Release"
+        },
+        {
+          "type": 139,
+          "type_name": "Revision"
+        },
+        {
+          "type": 140,
+          "type_name": "URL"
+        },
+        {
+          "type": 141,
+          "type_name": "Enterprise Workspace"
+        },
+        {
+          "type": 142,
+          "type_name": "My Workspace"
+        },
+        {
+          "type": 143,
+          "type_name": "Discussion Volume"
+        },
+        {
+          "type": 144,
+          "type_name": "Document"
+        },
+        {
+          "type": 145,
+          "type_name": "Text Document"
+        },
+        {
+          "type": 146,
+          "type_name": "Custom View"
+        },
+        {
+          "type": 147,
+          "type_name": "Index Tracer"
+        },
+        {
+          "type": 148,
+          "type_name": "System Volume"
+        },
+        {
+          "type": 149,
+          "type_name": "Tracer Volume"
+        },
+        {
+          "type": 154,
+          "type_name": "Workflow Attachments"
+        },
+        {
+          "type": 161,
+          "type_name": "Workflow Volume"
+        },
+        {
+          "type": 162,
+          "type_name": "Workflows Edit Volume"
+        },
+        {
+          "type": 180,
+          "type_name": "Domain Workspace"
+        },
+        {
+          "type": 190,
+          "type_name": "Workflow Status"
+        },
+        {
+          "type": 194,
+          "type_name": "Classified Items"
+        },
+        {
+          "type": 195,
+          "type_name": "Profile"
+        },
+        {
+          "type": 196,
+          "type_name": "Classification Tree"
+        },
+        {
+          "type": 197,
+          "type_name": "Classification Shortcut"
+        },
+        {
+          "type": 198,
+          "type_name": "Classification Volume"
+        },
+        {
+          "type": 199,
+          "type_name": "Classification"
+        },
+        {
+          "type": 201,
+          "type_name": "Project Workspace"
+        },
+        {
+          "type": 202,
+          "type_name": "Project"
+        },
+        {
+          "type": 204,
+          "type_name": "Task List"
+        },
+        {
+          "type": 205,
+          "type_name": "Task Group"
+        },
+        {
+          "type": 206,
+          "type_name": "Task"
+        },
+        {
+          "type": 207,
+          "type_name": "Channel"
+        },
+        {
+          "type": 208,
+          "type_name": "News"
+        },
+        {
+          "type": 209,
+          "type_name": "Channel Volume"
+        },
+        {
+          "type": 210,
+          "type_name": "Task List Volume"
+        },
+        {
+          "type": 211,
+          "type_name": "Reports Volume"
+        },
+        {
+          "type": 212,
+          "type_name": "Milestone"
+        },
+        {
+          "type": 215,
+          "type_name": "Discussion"
+        },
+        {
+          "type": 218,
+          "type_name": "Poll"
+        },
+        {
+          "type": 223,
+          "type_name": "Form"
+        },
+        {
+          "type": 226,
+          "type_name": "HTML View"
+        },
+        {
+          "type": 230,
+          "type_name": "Form Template"
+        },
+        {
+          "type": 231,
+          "type_name": "Submit Version"
+        },
+        {
+          "type": 233,
+          "type_name": "Database Lookups"
+        },
+        {
+          "type": 234,
+          "type_name": "Database Lookup"
+        },
+        {
+          "type": 235,
+          "type_name": "Database Connection"
+        },
+        {
+          "type": 236,
+          "type_name": "Database Connections"
+        },
+        {
+          "type": 257,
+          "type_name": "Content Server Search Federator"
+        },
+        {
+          "type": 258,
+          "type_name": "Search Query"
+        },
+        {
+          "type": 259,
+          "type_name": "Enterprise Extractor"
+        },
+        {
+          "type": 260,
+          "type_name": "Proxy"
+        },
+        {
+          "type": 268,
+          "type_name": "Template Folder"
+        },
+        {
+          "type": 269,
+          "type_name": "Search Manager"
+        },
+        {
+          "type": 270,
+          "type_name": "Data Flow Manager"
+        },
+        {
+          "type": 271,
+          "type_name": "Process"
+        },
+        {
+          "type": 272,
+          "type_name": "Enterprise Search Federator"
+        },
+        {
+          "type": 273,
+          "type_name": "Merge"
+        },
+        {
+          "type": 274,
+          "type_name": "Best Bets"
+        },
+        {
+          "type": 275,
+          "type_name": "Slice Folder"
+        },
+        {
+          "type": 276,
+          "type_name": "Data Source Folder"
+        },
+        {
+          "type": 277,
+          "type_name": "Directory Walker"
+        },
+        {
+          "type": 278,
+          "type_name": "Search Result Snapshot"
+        },
+        {
+          "type": 280,
+          "type_name": "Spider"
+        },
+        {
+          "type": 281,
+          "type_name": "Update Distributor"
+        },
+        {
+          "type": 282,
+          "type_name": "Document Conversion"
+        },
+        {
+          "type": 283,
+          "type_name": "Document Conversion Server"
+        },
+        {
+          "type": 285,
+          "type_name": "XML Activator Producer"
+        },
+        {
+          "type": 286,
+          "type_name": "XML Activator Consumer"
+        },
+        {
+          "type": 290,
+          "type_name": "Backup Manager"
+        },
+        {
+          "type": 291,
+          "type_name": "Backup Process"
+        },
+        {
+          "type": 292,
+          "type_name": "Search Form"
+        },
+        {
+          "type": 293,
+          "type_name": "Importer"
+        },
+        {
+          "type": 294,
+          "type_name": "Tee"
+        },
+        {
+          "type": 296,
+          "type_name": "Query File"
+        },
+        {
+          "type": 298,
+          "type_name": "Collection"
+        },
+        {
+          "type": 299,
+          "type_name": "LiveReport"
+        },
+        {
+          "type": 302,
+          "type_name": "My Projects"
+        },
+        {
+          "type": 327,
+          "type_name": "Recent Items"
+        },
+        {
+          "type": 335,
+          "type_name": "XML DTD"
+        },
+        {
+          "type": 336,
+          "type_name": "XML DTD Volume"
+        },
+        {
+          "type": 345,
+          "type_name": "Comments"
+        },
+        {
+          "type": 346,
+          "type_name": "Comments Associated Volume"
+        },
+        {
+          "type": 347,
+          "type_name": "Comments Volume"
+        },
+        {
+          "type": 348,
+          "type_name": "Comment Reply"
+        },
+        {
+          "type": 356,
+          "type_name": "Blog"
+        },
+        {
+          "type": 357,
+          "type_name": "Blog Entry"
+        },
+        {
+          "type": 361,
+          "type_name": "Journal Volume"
+        },
+        {
+          "type": 368,
+          "type_name": "Index Engine"
+        },
+        {
+          "type": 369,
+          "type_name": "Search Engine"
+        },
+        {
+          "type": 370,
+          "type_name": "Partition Map"
+        },
+        {
+          "type": 371,
+          "type_name": "Partition"
+        },
+        {
+          "type": 372,
+          "type_name": "Directory"
+        },
+        {
+          "type": 373,
+          "type_name": "Directory Tree"
+        },
+        {
+          "type": 374,
+          "type_name": "Front Porch"
+        },
+        {
+          "type": 375,
+          "type_name": "Directory Volume"
+        },
+        {
+          "type": 380,
+          "type_name": "Prospector Queries"
+        },
+        {
+          "type": 381,
+          "type_name": "Remote Content Server"
+        },
+        {
+          "type": 383,
+          "type_name": "Search Results Template"
+        },
+        {
+          "type": 384,
+          "type_name": "Prospector"
+        },
+        {
+          "type": 387,
+          "type_name": "Prospector Snapshot"
+        },
+        {
+          "type": 397,
+          "type_name": "My Personal Staging Folders"
+        },
+        {
+          "type": 398,
+          "type_name": "Personal Staging Folder"
+        },
+        {
+          "type": 403,
+          "type_name": "Orphaned Items Volume"
+        },
+        {
+          "type": 405,
+          "type_name": "Recycle Bin"
+        },
+        {
+          "type": 410,
+          "type_name": "Physical Item Type"
+        },
+        {
+          "type": 411,
+          "type_name": "Physical Item"
+        },
+        {
+          "type": 412,
+          "type_name": "Physical Item Container"
+        },
+        {
+          "type": 413,
+          "type_name": "Physical Objects Workspace"
+        },
+        {
+          "type": 414,
+          "type_name": "Physical Item Types"
+        },
+        {
+          "type": 415,
+          "type_name": "Physical Objects Administration"
+        },
+        {
+          "type": 416,
+          "type_name": "Circulation"
+        },
+        {
+          "type": 417,
+          "type_name": "Reports"
+        },
+        {
+          "type": 418,
+          "type_name": "Batch Labels"
+        },
+        {
+          "type": 419,
+          "type_name": "Physical Item Copy"
+        },
+        {
+          "type": 420,
+          "type_name": "Temporary Volume"
+        },
+        {
+          "type": 421,
+          "type_name": "Storage Management"
+        },
+        {
+          "type": 422,
+          "type_name": "Locators"
+        },
+        {
+          "type": 423,
+          "type_name": "Transfers"
+        },
+        {
+          "type": 424,
+          "type_name": "Physical Item Box"
+        },
+        {
+          "type": 425,
+          "type_name": "Record Type"
+        },
+        {
+          "type": 426,
+          "type_name": "RM Folder"
+        },
+        {
+          "type": 427,
+          "type_name": "RM Part"
+        },
+        {
+          "type": 428,
+          "type_name": "Record Types"
+        },
+        {
+          "type": 430,
+          "type_name": "Question"
+        },
+        {
+          "type": 431,
+          "type_name": "Question Volume"
+        },
+        {
+          "type": 432,
+          "type_name": "Question Reply"
+        },
+        {
+          "type": 441,
+          "type_name": "QAFolder"
+        },
+        {
+          "type": 480,
+          "type_name": "Appearance"
+        },
+        {
+          "type": 481,
+          "type_name": "Content Server Appearances"
+        },
+        {
+          "type": 482,
+          "type_name": "Global Appearance"
+        },
+        {
+          "type": 483,
+          "type_name": "Appearance Workspace Folder"
+        },
+        {
+          "type": 484,
+          "type_name": "Appearance Folder"
+        },
+        {
+          "type": 525,
+          "type_name": "Transport Warehouse"
+        },
+        {
+          "type": 526,
+          "type_name": "Transport Item"
+        },
+        {
+          "type": 527,
+          "type_name": "Transport Item Part"
+        },
+        {
+          "type": 528,
+          "type_name": "Workbench"
+        },
+        {
+          "type": 529,
+          "type_name": "Warehouse Folder"
+        },
+        {
+          "type": 530,
+          "type_name": "Transport Package Folder"
+        },
+        {
+          "type": 531,
+          "type_name": "Transport Package"
+        },
+        {
+          "type": 532,
+          "type_name": "My Workbenches"
+        },
+        {
+          "type": 541,
+          "type_name": "Templates Volume"
+        },
+        {
+          "type": 542,
+          "type_name": "Template Folder"
+        },
+        {
+          "type": 543,
+          "type_name": "Project Template"
+        },
+        {
+          "type": 550,
+          "type_name": "Records Management Workspace"
+        },
+        {
+          "type": 551,
+          "type_name": "RM Classification"
+        },
+        {
+          "type": 552,
+          "type_name": "Hold Maintenance"
+        },
+        {
+          "type": 553,
+          "type_name": "RSI\u0027s"
+        },
+        {
+          "type": 554,
+          "type_name": "Dispositions"
+        },
+        {
+          "type": 555,
+          "type_name": "Disposition Search"
+        },
+        {
+          "type": 556,
+          "type_name": "Records Management Administration"
+        },
+        {
+          "type": 557,
+          "type_name": "Compound Email"
+        },
+        {
+          "type": 558,
+          "type_name": "Reports"
+        },
+        {
+          "type": 559,
+          "type_name": "RM Classification Terms"
+        },
+        {
+          "type": 602,
+          "type_name": "Disposition Group"
+        },
+        {
+          "type": 603,
+          "type_name": "Hold"
+        },
+        {
+          "type": 731,
+          "type_name": "Inbox"
+        },
+        {
+          "type": 732,
+          "type_name": "Mailbox"
+        },
+        {
+          "type": 749,
+          "type_name": "Email"
+        },
+        {
+          "type": 751,
+          "type_name": "Email Folder"
+        },
+        {
+          "type": 753,
+          "type_name": "Archived Document"
+        },
+        {
+          "type": 795,
+          "type_name": "Content Move Volume"
+        },
+        {
+          "type": 796,
+          "type_name": "Content Move Job Folder"
+        },
+        {
+          "type": 797,
+          "type_name": "Content Move Job"
+        },
+        {
+          "type": 800,
+          "type_name": "Intelligent Filing Folder"
+        },
+        {
+          "type": 801,
+          "type_name": "Document (to be filed)"
+        },
+        {
+          "type": 802,
+          "type_name": "Intelligent Filing Volume"
+        },
+        {
+          "type": 803,
+          "type_name": "Core Capture Rule"
+        },
+        {
+          "type": 804,
+          "type_name": "Core Capture Metadata Export"
+        },
+        {
+          "type": 806,
+          "type_name": "Event Definition"
+        },
+        {
+          "type": 807,
+          "type_name": "Core Capture Profile"
+        },
+        {
+          "type": 829,
+          "type_name": "Provenance"
+        },
+        {
+          "type": 833,
+          "type_name": "Hold Group"
+        },
+        {
+          "type": 834,
+          "type_name": "Accession Search"
+        },
+        {
+          "type": 835,
+          "type_name": "Search Enabled Hold"
+        },
+        {
+          "type": 844,
+          "type_name": "Custom View Template"
+        },
+        {
+          "type": 848,
+          "type_name": "Business Workspace"
+        },
+        {
+          "type": 849,
+          "type_name": "Business Workspace Volume"
+        },
+        {
+          "type": 854,
+          "type_name": "Related Business Workspaces"
+        },
+        {
+          "type": 855,
+          "type_name": "Policy"
+        },
+        {
+          "type": 856,
+          "type_name": "Policy Volume"
+        },
+        {
+          "type": 857,
+          "type_name": "Policy Folder"
+        },
+        {
+          "type": 858,
+          "type_name": "SAP DMS Folder"
+        },
+        {
+          "type": 860,
+          "type_name": "Saved Search Forms Volume"
+        },
+        {
+          "type": 861,
+          "type_name": "Saved Queries Folder"
+        },
+        {
+          "type": 862,
+          "type_name": "Business Workspaces"
+        },
+        {
+          "type": 863,
+          "type_name": "Workspace Types"
+        },
+        {
+          "type": 864,
+          "type_name": "Workspace Type"
+        },
+        {
+          "type": 865,
+          "type_name": "Variables for Replacement Tags"
+        },
+        {
+          "type": 866,
+          "type_name": "Outlook Add-in Configuration"
+        },
+        {
+          "type": 867,
+          "type_name": "Suggested Workspaces Configuration"
+        },
+        {
+          "type": 868,
+          "type_name": "General Configuration"
+        },
+        {
+          "type": 869,
+          "type_name": "Search Forms"
+        },
+        {
+          "type": 870,
+          "type_name": "My Reserved Items"
+        },
+        {
+          "type": 871,
+          "type_name": "Scheduled Processing"
+        },
+        {
+          "type": 872,
+          "type_name": "Scheduled Job"
+        },
+        {
+          "type": 873,
+          "type_name": "Licensing"
+        },
+        {
+          "type": 875,
+          "type_name": "Action plan"
+        },
+        {
+          "type": 880,
+          "type_name": "Attachment Declarations"
+        },
+        {
+          "type": 881,
+          "type_name": "Attachment Declaration"
+        },
+        {
+          "type": 882,
+          "type_name": "Extended ECM"
+        },
+        {
+          "type": 883,
+          "type_name": "Unique Names"
+        },
+        {
+          "type": 884,
+          "type_name": "Connections to Business Applications (External Systems)"
+        },
+        {
+          "type": 885,
+          "type_name": "Business Application"
+        },
+        {
+          "type": 886,
+          "type_name": "Unique Name Group"
+        },
+        {
+          "type": 887,
+          "type_name": "Unique Name"
+        },
+        {
+          "type": 888,
+          "type_name": "Business Object Types"
+        },
+        {
+          "type": 889,
+          "type_name": "Business Object Type"
+        },
+        {
+          "type": 897,
+          "type_name": "Connection to Document Generation Platform"
+        },
+        {
+          "type": 898,
+          "type_name": "Event Action Center Configuration"
+        },
+        {
+          "type": 899,
+          "type_name": "Virtual Folder"
+        },
+        {
+          "type": 900,
+          "type_name": "Dynamic View"
+        },
+        {
+          "type": 901,
+          "type_name": "Facets Volume"
+        },
+        {
+          "type": 902,
+          "type_name": "Column"
+        },
+        {
+          "type": 903,
+          "type_name": "Facet Tree"
+        },
+        {
+          "type": 904,
+          "type_name": "Facet"
+        },
+        {
+          "type": 905,
+          "type_name": "Facet Folder"
+        },
+        {
+          "type": 906,
+          "type_name": "Fixed System Column"
+        },
+        {
+          "type": 907,
+          "type_name": "Activity Manager"
+        },
+        {
+          "type": 908,
+          "type_name": "Perspectives Volume"
+        },
+        {
+          "type": 909,
+          "type_name": "My Favorites"
+        },
+        {
+          "type": 919,
+          "type_name": "Process Folder"
+        },
+        {
+          "type": 920,
+          "type_name": "Memcached Process"
+        },
+        {
+          "type": 924,
+          "type_name": "Internal OTDS"
+        },
+        {
+          "type": 954,
+          "type_name": "Perspective Assets"
+        },
+        {
+          "type": 955,
+          "type_name": "Perspective Asset Folder"
+        },
+        {
+          "type": 957,
+          "type_name": "Perspective"
+        },
+        {
+          "type": 958,
+          "type_name": "Rule"
+        },
+        {
+          "type": 980,
+          "type_name": "SAP CMIS Repositories Volume"
+        },
+        {
+          "type": 981,
+          "type_name": "SAPCMIS Item"
+        },
+        {
+          "type": 982,
+          "type_name": "Extended ECM Root Folders"
+        },
+        {
+          "type": 1280,
+          "type_name": "SocialObject"
+        },
+        {
+          "type": 1281,
+          "type_name": "MicroPost"
+        },
+        {
+          "type": 1282,
+          "type_name": "Pulse"
+        },
+        {
+          "type": 1283,
+          "type_name": "Social Object Volume"
+        },
+        {
+          "type": 1296,
+          "type_name": "O365 Office Online Volume"
+        },
+        {
+          "type": 1297,
+          "type_name": "O365 Office Online Document"
+        },
+        {
+          "type": 1298,
+          "type_name": "Active Editing Sessions"
+        },
+        {
+          "type": 1299,
+          "type_name": "Failed Editing Sessions"
+        },
+        {
+          "type": 1307,
+          "type_name": "Support Asset"
+        },
+        {
+          "type": 1308,
+          "type_name": "Support Asset Folder"
+        },
+        {
+          "type": 1309,
+          "type_name": "Support Asset Volume"
+        },
+        {
+          "type": 2504,
+          "type_name": "Items in Email Conversation"
+        },
+        {
+          "type": 2510,
+          "type_name": "Syndication"
+        },
+        {
+          "type": 5573,
+          "type_name": "Wiki"
+        },
+        {
+          "type": 5574,
+          "type_name": "Wiki Page"
+        },
+        {
+          "type": 20541,
+          "type_name": "Document Template Volume"
+        },
+        {
+          "type": 30303,
+          "type_name": "WebReport"
+        },
+        {
+          "type": 30309,
+          "type_name": "ActiveView"
+        },
+        {
+          "type": 31066,
+          "type_name": "Binder"
+        },
+        {
+          "type": 31069,
+          "type_name": ""
+        },
+        {
+          "type": 31091,
+          "type_name": "Partner Database CLient Volume"
+        },
+        {
+          "type": 31092,
+          "type_name": "Partner Database Section"
+        },
+        {
+          "type": 31109,
+          "type_name": "Hierarchical Storage Folder"
+        },
+        {
+          "type": 31214,
+          "type_name": "Reminder"
+        },
+        {
+          "type": 31268,
+          "type_name": "Interview"
+        },
+        {
+          "type": 31269,
+          "type_name": "Interview Temp Volume"
+        },
+        {
+          "type": 31275,
+          "type_name": "Reminders"
+        },
+        {
+          "type": 31276,
+          "type_name": "Reminder Client"
+        },
+        {
+          "type": 31277,
+          "type_name": "Answerset"
+        },
+        {
+          "type": 31601,
+          "type_name": "Binding Folder"
+        },
+        {
+          "type": 31602,
+          "type_name": "Binding"
+        },
+        {
+          "type": 31603,
+          "type_name": "Binding Volume"
+        },
+        {
+          "type": 32657,
+          "type_name": "Content Server Applications"
+        },
+        {
+          "type": 32658,
+          "type_name": "CS Application Manifest"
+        },
+        {
+          "type": 123461,
+          "type_name": "Blog Volume"
+        },
+        {
+          "type": 123469,
+          "type_name": "Forum"
+        },
+        {
+          "type": 123470,
+          "type_name": "Forum Topics & Replies"
+        },
+        {
+          "type": 123475,
+          "type_name": "FAQ"
+        },
+        {
+          "type": 123476,
+          "type_name": "FAQ Entry"
+        },
+        {
+          "type": 310660,
+          "type_name": "Binder Volume"
+        },
+        {
+          "type": 3030001,
+          "type_name": "Community Templates Volume"
+        },
+        {
+          "type": 3030002,
+          "type_name": "Community Template"
+        },
+        {
+          "type": 3030003,
+          "type_name": "Personal Frontpage Volume"
+        },
+        {
+          "type": 3030004,
+          "type_name": "Community Templates Volume"
+        },
+        {
+          "type": 3030130,
+          "type_name": "E-Mail Message"
+        },
+        {
+          "type": 3030201,
+          "type_name": "Community Workspace"
+        },
+        {
+          "type": 3030202,
+          "type_name": "Community"
+        },
+        {
+          "type": 3030203,
+          "type_name": "Personal Frontpage"
+        },
+        {
+          "type": 3030204,
+          "type_name": "Personal Community Workspace"
+        },
+        {
+          "type": 3030205,
+          "type_name": "Community XSL Volume"
+        },
+        {
+          "type": 3030329,
+          "type_name": "Comm Store"
+        },
+        {
+          "type": 3030330,
+          "type_name": "Urgent Request"
+        },
+        {
+          "type": 3030331,
+          "type_name": "Mail Store"
+        },
+        {
+          "type": 3030333,
+          "type_name": "Community Template Folder"
+        },
+        {
+          "type": 3030334,
+          "type_name": "Comm Workspace"
+        },
+        {
+          "type": 3030335,
+          "type_name": "Comm URL Store"
+        },
+        {
+          "type": 3030338,
+          "type_name": "Comm Expert Container"
+        },
+        {
+          "type": 3030339,
+          "type_name": "Comm Expert Group"
+        },
+        {
+          "type": 3030343,
+          "type_name": "Personal Webpage"
+        },
+        {
+          "type": 3030371,
+          "type_name": "Text Module"
+        },
+        {
+          "type": 3030372,
+          "type_name": "Content Module Folder"
+        },
+        {
+          "type": 3030756,
+          "type_name": "Navigation Menu Volume"
+        }
+      ]
+    }
+  }
+}

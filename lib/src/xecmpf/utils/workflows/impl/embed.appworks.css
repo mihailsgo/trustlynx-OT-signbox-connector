@@ -1,0 +1,27 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+#embedAppWorks {
+  width: 100%;
+  height: calc(100vh - 15.625em);
+  display: block;
+}
+
+.binf-widgets .cs-dialog .binf-modal-dialog.binf-modal-lg {
+  width: calc(100% - 64px);
+}
+
+.binf-widgets .xecm4egov-appworks-workflow-dialog.xecm4egov-fullsize #embedAppWorks {
+  height: calc(100vh - 13.5em);
+}
+.binf-widgets .workflow-dailog .binf-modal-dialog.binf-modal-lg .binf-modal-body {
+  height:auto; 
+}
+
+.binf-widgets .workflow-dailog .binf-modal-dialog .xecm4gov-embed-appworks, .xecm4gov-embed-appworks-view {
+  height: 100%;
+}
+
+.binf-widgets .cs-dialog.xecm4egov-appworks-workflow-dialog .cs-close {
+  display : none;
+}
+

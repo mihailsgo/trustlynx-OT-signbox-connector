@@ -1,0 +1,74 @@
+<div class="tile-header reduced-width">
+
+    {{#if icon}}
+    <div class="tile-type-icon">
+        <span class="icon {{icon}}" aria-label="{{expandAria}}"></span>
+    </div>
+    {{else}}
+    {{#if imageUrl}}
+    <div class="tile-type-image {{imageClass}}">
+        <span class="tile-type-icon tile-type-icon-img"><img src="{{imageUrl}}" alt="{{expandAria}}"></span>
+    </div>
+    {{/if}}
+    {{/if}}
+
+    <div class="tile-title" title="{{title}}">
+        <h2 class="csui-heading">{{title}}</h2>
+    </div>
+
+    <div class="tile-controls">
+        {{#unless hideSearch}}
+        <div class="search-box">
+            <span class="icon-search-placeholder">{{{icon-v2 iconName='csui_action_search32'}}}</span>
+            <input class="search" type="search" placeholder="{{searchPlaceholder}}" title="{{searchTitle}}">
+            <span class="clearer csui-icon formfield_clear" title="{{clearAll}}" aria-label="{{clearAllAria}}"
+                role="button"></span>
+            <span class="fadeout csui-icon" title="{{searchTitle}}"></span>
+        </div>
+        {{/unless}}
+
+        <div class="tile-icons">
+            {{#unless hideSearch}}
+            <div title="{{searchTooltip}}" class="cs-icon-container cs-search-button" role="button"
+                aria-label="{{searchAria}}" aria-expanded="false">
+                {{{icon-v2 iconName='csui_action_search32' states='true'}}}
+            </div>
+            {{/unless}}
+            {{#if enableOpenPerspective}}
+            <div title="{{openPerspectiveAria}}" class="cs-icon-container cs-open-perspective-button" role="button"
+                aria-label="{{openPerspectiveAria}}">
+                {{{icon-v2 iconName='csui_action_expand32' states='true'}}}
+            </div>
+            {{/if}}
+            {{#if showParameterEditBtn}}
+            <div class="csui-favorite csui-acc-tab-region webreports-widget-parameters-btn">
+                <span class="csui-icon-edit inline-edit-icon icon-edit wr-icon-edit" role="button" tabindex="0"
+                    aria-label="{{settings}}"></span>
+            </div>
+            {{/if}}
+        </div>
+        <div class="close-search-icon">
+            {{^if hideSearch}}
+            <div title="{{searchCloseTooltip}}" class="cs-icon-container cs-search-close-button" role="button"
+                aria-label="{{searchCloseAria}}" aria-expanded="true">
+                {{{icon-v2 iconName='csui_action_close_mid' states='true'}}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+</div>
+
+<div class="tile-content" role="listbox">
+    <div class="binf-list-group"></div>
+    <div class="binf-sr-only" aria-live="off"></div>
+</div>
+
+{{#unless enableOpenPerspective}}
+<div class="tile-footer">
+    <div class="cs-more tile-expand" title="{{expandTitle}}" aria-label="{{expandAria}}" role="button">
+        {{{icon-v2 iconName='csui_action_expand32' states='true'}}}
+    </div>
+</div>
+{{/unless}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

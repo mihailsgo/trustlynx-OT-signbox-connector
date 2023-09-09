@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dialog Control</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    .binf-widgets .control-options {
+      position: relative;
+      float: right;
+      max-width: 20%;
+      min-width: 200px;
+      z-index: 9999;
+      color: black;
+      border: 1px solid #feffff;
+      padding: 10px;
+      margin: 10px;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 3px 3px #bfb5b5;
+      opacity: 0.5;
+    }
+
+    .binf-widgets .control-options:hover,
+    .binf-widgets .control-options:focus {
+      opacity: 1;
+    }
+
+    .binf-modal-backdrop {
+      display: none;
+    }
+
+    .binf-widgets .binf-divider {
+      height: 1px;
+      border: 1px solid #bdaaaa;
+      margin: 10px 0;
+    }
+
+    #heading {
+      font-size: 36px;
+    }
+
+
+  </style>
+
+  <script src="../../../../../src/nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../../src/nuc" src="../../../../../src/nuc/config.js"></script>
+
+  <script>
+    require.config({
+      paths: {
+        smart: "../../../../../src/smart",
+        nuc: "../../../../../src/nuc",
+        "css": "../../../../../src/nuc/lib/css",
+        "csui-ext": "../../../../../src/nuc/utils/load-extensions/load-extensions"
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json'
+      ]
+    });
+
+    require(['nuc/lib/jquery', 'nuc/lib/underscore', 'nuc/lib/marionette',
+      'smart/controls/dialog/dialog.view'
+    ], function ($, _, Marionette, DialogView) {
+
+      var title, bodyMessage;
+
+      title = 'Small Size';
+      bodyMessage = 'Small size dialog, with a body mesaage';
+
+      var smallRegion = new Marionette.Region({
+            el: '#small'
+          }),
+          smallDialog = new DialogView({
+            title: title,
+            smallSize: true,
+            bodyMessage: bodyMessage,
+            dialogTxtAria: title + " " + bodyMessage
+          });
+
+      title = 'Default Size';
+      bodyMessage = 'Default size message. With a lot of text in the message body, it wraps as one would expect.';
+      var defaultRegion = new Marionette.Region({
+            el: '#default'
+          }),
+
+          defaultDialog = new DialogView({
+            title: title,
+            bodyMessage: bodyMessage,
+            dialogTxtAria: title + " " + bodyMessage
+          });
+
+      title = 'Medium Size';
+      bodyMessage = 'A message for medium size, nothing special here.';
+
+      var mediumRegion = new Marionette.Region({
+            el: '#medium'
+          }),
+
+          mediumDialog = new DialogView({
+            title: title,
+            midSize: true,
+            bodyMessage: bodyMessage,
+            dialogTxtAria: title + " " + bodyMessage
+          });
+
+      title = 'Large Size';
+      bodyMessage = 'Lots of space for a detailed message.<br>Some HTML tags are possible.<br>In all sizes there should be nice padding around the message.';
+
+      var largeRegion = new Marionette.Region({
+            el: '#large'
+          }),
+          largeDialog = new DialogView({
+            title: title,
+            largeSize: true,
+            bodyMessage: bodyMessage,
+            dialogTxtAria: title + " " + bodyMessage
+          });
+
+      title = 'Full Size';
+      bodyMessage = 'Full size dialog body message.';
+
+      var fullRegion = new Marionette.Region({
+            el: '#full'
+          }),
+          fullDialog = new DialogView({
+            title: title,
+            fullSize: true,
+            bodyMessage: bodyMessage,
+            dialogTxtAria: title + " " + bodyMessage
+          });
+
+      title = 'Dialog With View Inside';
+      var viewInsideRegion = new Marionette.Region({
+            el: '#bodyview'
+          }),
+          xView = Marionette.ItemView.extend({
+            template: function () {
+              return '<p>Body content here...<br>Dialog with a view inside</p>';
+            }
+          }),
+          viewInsideDialog = new DialogView({
+            title: title,
+            dialogTxtAria: title,
+            largeSize: true,
+            view: new xView()
+          });
+
+      title = 'Dialog with Header and Footer';
+      var headerRegion = new Marionette.Region({
+            el: '#header'
+          }),
+          headerView = Marionette.ItemView.extend({
+            template: _.template('<h1 id="heading">Heading</h1>'),
+          }),
+          footerView = Marionette.ItemView.extend({
+            template: _.template(
+                '<button class="binf-btn binf-btn-default" id="accept">Accept</button> <button class="binf-btn binf-btn-default" id="reject">Reject</button>'),
+          }),
+
+          headerDialog = new DialogView({
+            standardHeader: true,
+            title: 'Dialog with Header',
+            dialogTxtAria: title,
+            midSize: true,
+            view: new xView(),
+            headerView: new headerView(),
+            footerView: new footerView()
+          });
+
+      defaultRegion.show(defaultDialog);
+      $('input').on('change', function () {
+        var id = this.name;
+        if (this.checked) {
+          $('.size').addClass('binf-hidden');
+          $('input:checkbox').prop('checked', false);
+          $(this).prop('checked', true);
+          $('#' + id).removeClass('binf-hidden');
+          switch (id) {
+          case 'small':
+            smallRegion.show(smallDialog);
+            break;
+          case 'default':
+            defaultRegion.show(defaultDialog);
+            break;
+          case 'medium':
+            mediumRegion.show(mediumDialog);
+            break;
+          case 'large':
+            largeRegion.show(largeDialog);
+            break;
+          case 'full':
+            fullRegion.show(fullDialog);
+            break;
+          case 'bodyview':
+            viewInsideRegion.show(viewInsideDialog);
+            break;
+          case 'header':
+            headerRegion.show(headerDialog);
+            break;
+          default:
+            break;
+          }
+        } else {
+          $('#' + id).addClass('binf-hidden');
+        }
+      });
+
+    });
+  </script>
+</head>
+
+
+<body class="binf-widgets">
+<div class="control-options">
+  <div>
+    <div class="size-options">
+      <h1>Show various sizes:</h1>
+      <div>
+        <label>Default:</label>
+        <input type="checkbox" checked name="default"/>
+      </div>
+      <div>
+        <label>Small:</label>
+        <input type="checkbox" name="small"/>
+      </div>
+      <div>
+        <label>Medium:</label>
+        <input type="checkbox" name="medium"/>
+      </div>
+      <div>
+        <label>Large:</label>
+        <input type="checkbox" name="large"/>
+      </div>
+      <div>
+        <label>Full:</label>
+        <input type="checkbox" name="full"/>
+      </div>
+      <div>
+        <label>View Inside:</label>
+        <input type="checkbox" name="bodyview"/>
+      </div>
+      <div class="binf-divider"></div>
+      <div class="view-options">
+        <label>Show Dialog with header and footer</label>
+        <input type="checkbox" name="header"/>
+      </div>
+    </div>
+
+  </div>
+</div>
+<h1>Dialog control samples</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="small"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="default"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="medium"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="large"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="full"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="bodyview"></div>
+  </div>
+</div>
+<div class="headerFooter">
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-4 size" id="header">
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

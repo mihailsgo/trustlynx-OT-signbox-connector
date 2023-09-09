@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TabPanelView</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+  <style>
+    body {
+      padding: 1em;
+      color: #999999;
+    }
+
+    #content {
+      background-color: #ffffff;
+      width: 60%;
+      height: 200px;
+      display: block;
+    }
+
+    .binf-widgets .samples-content {
+      height: 10em;
+      padding: 1em;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    .samples-anton {
+      background-color: #6666bb;
+    }
+
+    .samples-berta {
+      background-color: #448844;
+    }
+
+    .samples-content a {
+      color: #ffffff;
+    }
+
+    .binf-widgets .binf-active {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .tab-links-bar {
+      display: inline-block;
+      width: calc(100% - 96px);
+      height: 48px;
+    }
+
+    .tab-links-bar.with-left-toolbar {
+      width: calc(100% - 120px);
+    }
+
+    .left-toolbar {
+      float: left;
+      width: 48px;
+      height: 3em;
+      display: inline-block;
+    }
+
+    .right-toolbar {
+      width: 54px;
+      float: right;
+      display: inline-block;
+      height: 3em;
+    }
+
+    .binf-widgets .goto_next_page,
+    .binf-widgets .goto_previous_page {
+      display: inline-block;
+      margin-top: calc((3em - 14px)/2);
+      width: 14px;
+      height: 14px;
+      opacity: .5;
+    }
+
+    .binf-widgets .goto_next_page {
+    background-image: url(./caret_right16_md.svg);
+    }
+
+    .binf-widgets .goto_previous_page {
+    background-image: url(./caret_left16_md.svg);
+    }
+
+    .tab-links-bar .binf-nav-tabs {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .binf-tab-content > div {
+      display: none;
+    }
+
+    .binf-tab-content > div.binf-active {
+      display: block;
+    }
+
+    .binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a {
+      color: #000000;
+      font-weight: 700;
+      border-bottom: 4px solid #0072aa;
+    }
+
+
+
+  </style>
+
+  <script src="../../../../nuc/lib/require.js"></script>
+  <script data-csui-path="../../../../nuc" src="../../../../nuc/config.js"></script>
+  <script>
+    require.config({
+      paths: {
+        nuc: "../../../../nuc",
+        smart: "../../.."
+      },
+      deps: [
+        'nuc/lib/require.config!nuc/nuc-extensions.json',
+        'nuc/lib/require.config!smart/smart-extensions.json'
+      ]
+    });
+
+    require([
+      'csui/lib/underscore', 'csui/lib/jquery', 'csui/lib/handlebars', 'csui/lib/marionette',
+      '../tab.panel.view',
+      '../tab.links.ext.view',
+      '../tab.links.ext.scroll.mixin'
+    ], function (_, $, Handlebars, Marionette, TabPanelView, TabLinkCollectionViewExt, TabLinksScrollMixin) {
+      _.extend(TabPanelView.prototype, TabLinksScrollMixin);
+      var contentRegion = new Marionette.Region({
+            el: '.content123'
+          }),
+
+          TabContentView = Marionette.ItemView.extend({
+            className: function () {
+              return 'samples-content samples-' + this.model.get('team');
+            },
+            template: Handlebars.compile($('#samples-tab-content').html()),
+
+            render: function () {
+              var extendedAttrs = this.model.attributes;
+              extendedAttrs.random = Math.random();
+              this.$el.html(this.template(extendedAttrs));
+              return this;
+            }
+          }),
+
+          tabPanelView = new TabPanelView({
+                tabType: '',
+                mode: 'spy',
+            //activeTab: 1,
+                toolbar: true,
+                delete_icon: 'category_delete',
+                delete_tooltip: "remove something",
+                contentView: TabContentView,
+                TabLinkCollectionViewClass: TabLinkCollectionViewExt,
+                tabs: [
+                  {title: {en: 'Joe longer', de: 'Josef'}, team: 'anton'},
+                  {title: {en: 'Jane longer', de: 'Johanna'}, team: 'berta'},
+                  {title: {en: 'Fred longer', de: 'Fritz'}, team: 'anton'},
+                  {title: {en: 'Frieda longer', de: 'Frieda'}, team: 'berta'},
+                  {title: {en: 'Hans longer', de: 'Hans'}, team: 'anton'},
+                  {title: {en: 'Juliet longer', de: 'Julia'}, team: 'berta'},
+                  {title: {en: 'Julius longer', de: 'Julius'}, team: 'anton'},
+                  {title: {en: 'Karoline longer', de: 'Karoline'}, team: 'berta'}
+                ]
+              });
+
+
+
+        contentRegion.show(tabPanelView);
+
+      $(window).on('resize', {view: this}, function () {
+        tabPanelView._initializeToolbars();
+        tabPanelView._enableToolbarState();
+        // delay this a bit since the initial dialog fade in makes the tab to be hidden
+        //  setTimeout(_.bind(tabPanel._enableToolbarState, tabPanel), 300);
+      });
+
+      setTimeout(function() {
+        tabPanelView._initializeToolbars();
+        tabPanelView._enableToolbarState();
+      }, 1);
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+
+<div id="content" class="content123">
+</div>
+
+
+<script id="samples-tab-content" type="text/template">
+  {{title.en}} (also known as {{title.de}}) is in team '{{team}}', current number is {{random}}
+  <br><a href="http://www.heise.de">Outside link</a>
+</script>
+
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

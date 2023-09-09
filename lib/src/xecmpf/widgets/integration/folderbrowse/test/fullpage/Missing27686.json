@@ -1,0 +1,87 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "\/api\/v2\/businessworkspaces\/27686\/missingdocuments",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"data": [],
+		"definitions": {
+			"id": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "id",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"name": null,
+				"persona": "",
+				"read_only": true,
+				"required": false,
+				"type": -1,
+				"type_name": "Integer",
+				"valid_values": [],
+				"valid_values_name": []
+			},
+			"name": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "name",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"multiline": false,
+				"multilingual": false,
+				"name": "Document Type",
+				"password": false,
+				"persona": "",
+				"read_only": true,
+				"regex": "",
+				"required": false,
+				"type": -1,
+				"type_name": "String",
+				"valid_values": [],
+				"valid_values_name": []
+			},
+			"parent_id": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "parent_id",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"name": "Location",
+				"persona": "",
+				"read_only": true,
+				"required": false,
+				"type": -1,
+				"type_name": "Integer",
+				"valid_values": [],
+				"valid_values_name": []
+			}
+		},
+		"definitions_map": {},
+		"definitions_order": [
+			"id",
+			"name",
+			"parent_id"
+		],
+		"total_count": 0,
+		"type": "missingDocuments"
+	}
+}

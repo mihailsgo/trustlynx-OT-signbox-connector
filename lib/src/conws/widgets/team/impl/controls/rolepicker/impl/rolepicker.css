@@ -1,0 +1,59 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .conws-control-rolepicker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.conws-control-rolepicker .cs-search {
+  position: absolute;
+}
+
+.conws-control-rolepicker .cs-search::-ms-clear {
+  display: none;
+}
+
+.conws-control-rolepicker .cs-search-clear {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  right: 24px;
+  top: 6px; 
+}
+
+.conws-control-rolepicker .binf-dropdown-menu {
+  width: inherit;
+}
+
+.conws-control-rolepicker .binf-dropdown-menu li a {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conws-control-rolepicker .scroll-container {
+  top: 28px;
+  overflow: hidden;
+  position: relative;
+  width: 224px;
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+}
+
+.conws-control-rolepicker .scroll-container .binf-dropdown-menu {
+  position: static;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.conws-control-rolepicker .cs-search-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  top: 6px; 
+}

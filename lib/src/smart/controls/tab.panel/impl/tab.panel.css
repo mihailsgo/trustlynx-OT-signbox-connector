@@ -1,0 +1,124 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .tab-links-bar {
+  display: inline-block;
+  width: calc(100% - 54px);
+  height: 48px;
+  
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.binf-widgets .tab-links .left-toolbar {
+  float: left;
+  width: 48px;
+  height: 3em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.binf-widgets .tab-links .right-toolbar {
+  width: 54px;
+  float: right;
+  display: inline-block;
+  height: 3em;
+  cursor: pointer;
+}
+
+.binf-widgets .tab-links .goto_next_div {
+  border-left: 1px solid #ccc;
+  height: 25px;
+  margin-top: 12px;
+}
+
+.binf-widgets .tab-links .goto_previous_div {
+  border-right: 1px solid #ccc;
+  height: 25px;
+  margin-top: 12px;
+}
+
+.binf-widgets .tab-links .goto_next_page,
+.binf-widgets .tab-links .goto_previous_page {
+  display: inline-block;
+  margin: 4px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.binf-widgets .tab-links .binf-nav {
+  display: inline-block;
+  height: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+
+
+.binf-widgets .tab-links .binf-nav-tabs {
+  border-bottom: 0;
+}
+
+.binf-widgets .tab-links {
+  border-bottom: 1px solid #cccccc;
+}
+
+.binf-widgets .tab-links .binf-nav.binf-nav-tabs > li {
+  padding: 0 16px;
+}
+
+.binf-widgets .tab-links-bar.with-left-toolbar {
+  padding-left: 0;
+  width: calc(100% - (54px + 48px));
+}
+
+.binf-tab-content > div {
+  display: none;
+}
+
+.binf-tab-content > div.binf-active {
+  display: block;
+}
+
+.binf-widgets .tab-links .binf-nav.binf-nav-tabs > li > a {
+  margin-right: 0;
+  line-height: 32px;
+  border: 0;
+  border-radius: 0;
+  padding: 8px 2px;
+  height: 48px;
+  color: #000000;
+  font-weight: normal;
+  background: transparent;
+}
+
+.binf-widgets .tab-links-bar .binf-nav-tabs > li > a:hover ,
+.binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a:hover {
+  border-bottom: 4px solid #09BCEF;
+}
+
+.binf-widgets .tab-links-bar .binf-nav-tabs > li > a:active {
+  color: #333333;
+  border-bottom: 4px solid #232E72;
+}
+
+.binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a,
+.binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a:active {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 4px solid #232E72;
+}
+
+
+.binf-widgets .tab-links-bar .binf-nav-tabs > li > a:focus-visible,
+.binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a:focus-visible {
+  outline: 1px solid #2e3d98;
+  outline-offset: -1px;
+}
+
+.binf-widgets .tab-links-bar .binf-nav-tabs > li > a:focus:not(:focus-visible),
+.binf-widgets .tab-links-bar .binf-nav-tabs > li.binf-active > a:focus:not(:focus-visible) {
+  outline: none;
+  outline-offset: 0;
+}
+

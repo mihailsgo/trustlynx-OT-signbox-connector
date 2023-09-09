@@ -1,0 +1,383 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.csui-icon-v2,
+.csui-icon-v2.csui-icon-v2-size-normal {
+  width: 32px;
+  height: 32px;
+}
+
+.csui-icon-v2.csui-icon-v2-size-xlarge {
+  width: 48px;
+  height: 48px;
+}
+
+.csui-icon-v2.csui-icon-v2-size-large {
+  width: 40px;
+  height: 40px;
+}
+
+.csui-icon-v2.csui-icon-v2-size-small {
+  width: 24px;
+  height: 24px;
+}
+
+.csui-icon-v2.csui-icon-v2-size-xsmall {
+  width: 16px;
+  height: 16px;
+}
+
+.csui-icon-v2.csui-icon-v2-size-contain {
+  width: 100%;
+  height: 100%;
+}
+
+.csui-icon-v2 .csui-icon-v2-state {
+  stroke: none;
+  fill: none;
+}
+
+.csui-icon-v2 .csui-icon-v2-focus {
+  stroke: none;
+  fill: none;
+}
+
+.csui-icon-v2 .csui-icon-v2-metaphor0 {
+  fill: #333333;
+}
+
+.csui-icon-v2-state-el:not(.csui-disabled):not(button):hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-state {
+  fill: #f3fbff;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+
+*:enabled:hover .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor1,
+  
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1 {
+  fill: #627783;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+*:enabled:active .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states:active .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-with-states:active .csui-icon-v2-state {
+  fill: #cccccc;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+*:enabled:active .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0 {
+  fill: #666666;
+}
+
+
+
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):focus-visible .csui-icon-v2.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2-state-el:enabled:focus-visible .csui-icon-v2.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2.csui-icon-v2-with-states:focus-visible .csui-icon-v2-focus,
+*:focus-visible > .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-focus,
+*:focus-visible > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-focus {
+  stroke: #2e3d98;
+  fill: none;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):focus:not(:focus-visible) .csui-icon-v2.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2-state-el:enabled:focus:not(:focus-visible) .csui-icon-v2.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2.csui-icon-v2-with-states:focus:not(:focus-visible) .csui-icon-v2-focus,
+*:focus:not(:focus-visible) > .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-focus,
+*:focus:not(:focus-visible) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-focus {
+  stroke: none;
+  fill: none;
+}
+
+
+
+.csui-icon-v2.csui-icon-v2-on .csui-icon-v2-state {
+  fill: #627783;
+}
+
+.csui-icon-v2.csui-icon-v2-on .csui-icon-v2-metaphor0 {
+  fill: #ffffff;
+}
+
+.csui-icon-v2.csui-icon-v2-on .csui-icon-v2-metaphor1 {
+  fill: #ffffff;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-state {
+  fill: #98a8b2;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+
+*:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-metaphor1,
+  
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1 {
+  fill: #ffffff;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+*:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-state {
+  fill: #cccccc;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor1,
+
+*:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:enabled:active .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-metaphor1,
+  
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0,
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-metaphor1,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:active .csui-icon-v2-metaphor1 {
+  fill: #ffffff;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):focus .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-focus-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:focus .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-focus-by-el .csui-icon-v2-state,
+.csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states:focus .csui-icon-v2-state,
+*:focus > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-state,
+*:focus > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-on.csui-icon-v2-with-states .csui-icon-v2-state {
+  fill: #627783;
+}
+
+
+
+.csui-icon-v2.csui-icon-v2-theme-dark .csui-icon-v2-metaphor0,
+.csui-icon-v2.csui-icon-v2-theme-dark .csui-icon-v2-metaphor1 {
+  fill: #ffffff;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-state,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-state {
+  fill: #dfeefa;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-hover-by-el .csui-icon-v2-metaphor1,
+
+*:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:enabled:hover .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-metaphor1,
+  
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor0,
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:hover .csui-icon-v2-metaphor1 {
+  fill: #627783;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-state,
+*:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-state,
+*:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-state,
+*:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-state {
+  fill: #a0a4bc;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-active-by-el .csui-icon-v2-metaphor1,
+
+*:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:enabled:active .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-metaphor1,
+  
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-metaphor0,
+:not(button) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-metaphor1,
+:not(button):not(.csui-icon-v2-view) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:active .csui-icon-v2-metaphor1 {
+  fill: #414979;
+}
+
+
+
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):focus-visible .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2-state-el:enabled:focus-visible .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:focus-visible .csui-icon-v2-focus,
+*:focus-visible > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-focus,
+*:focus-visible > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-focus {
+  stroke: #cccccc;
+  fill: none;
+}
+
+.csui-icon-v2-state-el:not(button):not(.csui-disabled):focus:not(:focus-visible) .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2-state-el:enabled:focus:not(:focus-visible) .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-focus-by-el .csui-icon-v2-focus,
+.csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states:focus:not(:focus-visible) .csui-icon-v2-focus,
+*:focus:not(:focus-visible) > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-focus,
+*:focus:not(:focus-visible) > .csui-icon-v2-view > .csui-icon-v2.csui-icon-v2-theme-dark.csui-icon-v2-with-states .csui-icon-v2-focus {
+  stroke: none;
+  fill: none;
+}
+
+
+
+.csui-icon-v2.csui-icon-v2-grayscale {
+  filter: grayscale(100) brightness(1.4);
+}
+
+
+.csui-icon-v2.csui-icon-v2-filter_grayscale {
+  filter: grayscale(100) brightness(1.4);
+}
+
+
+
+
+.csui-icon-v2 .csui-icon-v2-colorFirst,
+.csui-icon-v2 .csui-icon-v2-colorSecond,
+.csui-icon-v2 .csui-icon-v2-colorThird {
+  stroke: none;
+}
+
+
+.csui-icon-v2 .csui-icon-v2-colorSecond {
+  fill: #ffffff;
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--tree .csui-icon-v2-colorFirst {
+  fill: #98a8b2;
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--tree .csui-icon-v2-colorThird {
+  fill: #758b98;
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-light .csui-icon-v2-colorFirst {
+  fill: none;
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-light .csui-icon-v2-colorSecond {
+  fill: white;
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-light .csui-icon-v2-colorThird {
+  fill: none;
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-dark .csui-icon-v2-colorFirst {
+  fill: none;
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-dark .csui-icon-v2-colorSecond {
+  fill: black;
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--outline-dark .csui-icon-v2-colorThird {
+  fill: none;
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-cloud .csui-icon-v2-colorFirst {
+  fill: #a9aeb9; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-cloud .csui-icon-v2-colorThird {
+  fill: #71747b; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-steal .csui-icon-v2-colorFirst {
+  fill: #5f6e77; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-steal .csui-icon-v2-colorThird {
+  fill: #3f4950; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-light-blue .csui-icon-v2-colorFirst {
+  fill: #078db3; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-light-blue .csui-icon-v2-colorThird {
+  fill: #055e78; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-teal .csui-icon-v2-colorFirst {
+  fill: #008a8b; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-teal .csui-icon-v2-colorThird {
+  fill: #005c5d; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-plum .csui-icon-v2-colorFirst {
+  fill: #3b296c; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-plum .csui-icon-v2-colorThird {
+  fill: #281b48; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-indigo .csui-icon-v2-colorFirst {
+  fill: #232e72; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-indigo .csui-icon-v2-colorThird {
+  fill: #171f4c; 
+}
+
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-navy .csui-icon-v2-colorFirst {
+  fill: #0d1442; 
+}
+
+.csui-icon-v2.csui-icon-v2-colortheme--ot-navy .csui-icon-v2-colorThird {
+  fill: #090e2c; 
+}
+
+
+
+.csui-icon-v2-state-el:disabled .csui-icon-v2.csui-icon-v2-with-disabled-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el:disabled .csui-icon-v2.csui-icon-v2-with-disabled-by-el .csui-icon-v2-metaphor1,
+.csui-icon-v2-state-el.csui-disabled .csui-icon-v2.csui-icon-v2-with-disabled-by-el .csui-icon-v2-metaphor0,
+.csui-icon-v2-state-el.csui-disabled .csui-icon-v2.csui-icon-v2-with-disabled-by-el .csui-icon-v2-metaphor1,
+*:disabled .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+*:disabled .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor1 {
+  fill: #999999;
+  stroke: #999999;
+}

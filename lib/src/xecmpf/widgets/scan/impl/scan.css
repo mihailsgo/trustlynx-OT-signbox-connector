@@ -1,0 +1,104 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.xecmpf-scan-list .tile-header {
+  display: none;
+}
+.xecmpf-scan-list{
+  height: 100%;  
+}
+.cs-list .tile-content .xecmpf-scan-list .binf-list-group .cs-emptylist-container:not(.csui-state-loading){
+  background-image: url(../../../image/icons/scan.svg);
+}
+.xecmpf-scan-list .tile-footer {
+  display : none;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .csui-pman-form-header .csui-pman-form-title {
+  font-size: 16px;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .csui-pman-form-header .csui-pman-form-description {
+  font-size: 10px;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container > .cs-array.alpaca-container-item.alpaca-container-item-first > .cs-pull-left {
+  border: none;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field .alpaca-control-label {
+  font-size: 10px;
+  padding: 0;
+  border: 0;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field .alpaca-control-label {
+  flex: 1 0 24px;
+  -webkit-flex: 1 0 24px;
+  -ms-flex: 1 0 24px;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .alpaca-field.binf-has-error .cs-field-write input {
+  padding: 1px 8px;
+  line-height: 24px;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .cs-form-set-container .binf-help-block.alpaca-message {
+  margin-top: 4px;
+  padding-bottom: 3px;
+  margin-bottom: 2px;
+  font-size: 11px;
+  padding-left: 8px;
+  width: 56%;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-formview-wrappe .cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right.csui-set-action-bar {
+  backgroud: #f5f5f5;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container .alpaca-container-item.alpaca-container-item-first .cs-pull-right {
+  margin-top: 24px;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .csui-set-locked-container.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left,
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-field.alpaca-field-array .cs-form-set-container .cs-array > .cs-pull-left {
+  width: calc(100% - 10px);
+  border: none;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item .cs-pull-right,
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container .alpaca-container-item .alpaca-field-object .alpaca-container .alpaca-field {
+  background: #f5f5f5;
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .alpaca-container-item:not(:first-child) {
+  margin-top: 10px
+}
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right button[data-alpaca-array-actionbar-action="remove"],
+.binf-widgets div[data-csui-widget_type="scan"] .cs-form .cs-form-set .alpaca-container.cs-form-set-container .alpaca-container-item > .cs-pull-right.csui-set-action-bar button[data-alpaca-array-actionbar-action="remove"] {
+  margin-bottom: 0;
+}
+.binf-widgets.perspective-editing div[data-csui-widget_type="scan"] .binf-popover.binf-left > .binf-arrow:after {
+  border-left-color: #00b8ba;
+}
+.binf-widgets.perspective-editing div[data-csui-widget_type="scan"] .binf-popover.binf-left .binf-popover-content {
+  border-right: 4px solid #00b8ba;
+}
+.binf-widgets.perspective-editing div[data-csui-widget_type="scan"] .binf-perspective-has-error .binf-popover.binf-left > .binf-arrow:after {
+  border-left-color: #df3324;
+}
+.binf-widgets.perspective-editing div[data-csui-widget_type="scan"] .binf-perspective-has-error .binf-popover.binf-left .binf-popover-content {
+  border-right: 4px solid #df3324;
+}
+.binf-widgets div[data-csui-widget_type=scan] .csui-pman-form-header .csui-pman-form-title {
+  font-size: 16px
+}
+.binf-widgets div[data-csui-widget_type=scan] .csui-pman-form-header .csui-pman-form-description {
+  font-size: 10px
+}
+.binf-widgets div[data-csui-widget_type=scan] .cs-form .cs-form-doublecolumn .cs-form-set-container .alpaca-container-item {
+  margin-bottom: 0;
+}
+.binf-widgets div[data-csui-widget_type=scan] .csui-pman-form-wrapper .cs-field-write-inner input {
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+}
+.binf-widgets div[data-csui-widget_type=scan] .csui-pman-form-wrapper .csui-pman-form-header {
+  margin-bottom: 22px;
+}
+.binf-widgets div[data-csui-widget_type=scan] .csui-start-locations .binf-dropdown-menu .cs-label,
+.binf-widgets div[data-csui-widget_type=scan].csui-start-locations .binf-dropdown-toggle .cs-label {
+  font-size: 12px;
+}
+.binf-widgets div[data-csui-widget_type=scan] .cs-form .cs-form-doublecolumn .alpaca-field.alpaca-field-array .alpaca-container-label {
+  font-size: 10px;
+  font-weight: bolder;
+  color: #333333;
+}

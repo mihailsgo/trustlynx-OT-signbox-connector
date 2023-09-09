@@ -1,0 +1,44 @@
+{{#if saveFilter}}
+  <h2 class="csui-title">{{title}}</h2>
+  <div class='csui-filtername-container'>
+    <span class="cs-icon-required category_required" title=""></span>
+    <input type='text' class='csui-filtername' placeholder="{{placeHolderName}}" tabindex="-1"
+           data-cstabindex="-1" aria-invalid="false" aria-errormessage="csui-filtername-error-id" />
+      {{#if mlDataEnabled}}
+          <span class="csui-multilingual-icon-label">
+      <button class="icon csui-multilingual-icon">
+          {{{icon-v2 iconName="csui_action_language_switcher24" size='small' states='true'}}}
+      </button>
+    </span>
+      {{/if}}
+  <div class="csui-filtername-error-wrapper binf-hidden">
+      <span class="binf-text-danger csui-filtername-error" id="csui-filtername-error-id"></span>
+  </div>
+  </div>
+{{else}}
+  <h2 class="csui-title">{{title}}</h2>
+{{/if}}
+
+<div class="csui-target-controls {{#xif "this.globalSearch !== false"}}csui-no-search{{/xif}}">
+  {{#if locationSelector}}
+    {{^if saveFilter}}
+      <span class="csui-separator"></span>
+    {{/if}}
+    <div class="csui-start-locations binf-dropdown" ></div>
+  {{/if}}
+
+  <div class="csui-target-search-property-container">
+    {{#xif "this.globalSearch !== false"}}
+      <div class="csui-global-search {{#if saveFilter}}csui-save-filter {{/if}}{{#if
+          propertiesSeletor}}{{else}}csui-no-properties-selector for-shortcut{{/if}}"></div>
+    {{/xif}}
+
+    {{#if propertiesSeletor}}
+      <div class="apply-properties-selector"></div>
+    {{/if}}
+    <span class="csui-separator {{#if
+        propertiesSeletor}}{{else}}csui-no-properties-selector{{/if}}"></span>
+  </div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,18 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmpf-file-upload-preview-error {
+  height: auto;
+  padding: 24px;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.binf-widgets .xecmpf-file-upload-preview-error span {
+  width: 160px;
+  height: 160px;
+  margin: 24px auto 24px auto;
+}

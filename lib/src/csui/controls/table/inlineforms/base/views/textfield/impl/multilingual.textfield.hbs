@@ -1,0 +1,12 @@
+<input type="text" value="{{name}}" placeholder="{{namePlaceholder}}"
+       class="binf-form-control csui-inlineform-type-{{prefix}} {{#if
+           haveErrorMessage}}csui-inlineform-error{{/if}}"
+       aria-label="{{#if name}}{{name}}{{else}}{{namePlaceholder}}{{/if}}"
+      {{#if haveErrorMessage}} aria-errormessage="{{errorMsgId}}" aria-invalid="true" {{/if}}/>
+<span class="csui-multilingual-icon-label">
+<button type="button" class="icon csui-multilingual-icon">
+  {{{icon-v2 iconName="csui_action_language_switcher24" size='small' states='true'}}}
+</button>
+</span>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

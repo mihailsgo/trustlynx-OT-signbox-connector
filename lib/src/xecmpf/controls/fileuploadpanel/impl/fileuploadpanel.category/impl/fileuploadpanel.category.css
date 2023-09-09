@@ -1,0 +1,25 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .alpaca-container-item>.binf-form-group.alpaca-field .alpaca-control-label {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 0;
+}
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .alpaca-container-item>.binf-form-group>.binf-col-sm-9 {
+  width: 100%;
+  height: 28px;
+}
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .alpaca-container-item .binf-help-block.alpaca-message {
+  margin-left: 0;
+}
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .binf-form-group {
+  margin-top: 24px;
+}
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .alpaca-container-item>.alpaca-field.alpaca-field-object {
+  margin-top: 24px;
+}
+.binf-widgets .xecmf-fileupload-capture-category-info .cs-form .alpaca-container-item>.alpaca-field.alpaca-field-object>label {
+  padding-left: 0;
+  margin-bottom: 0;
+}

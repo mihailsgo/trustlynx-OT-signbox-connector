@@ -1,0 +1,265 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .cs-dialog.cs-multilingual-picker .binf-modal-body {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 16px 0px;
+}
+
+.binf-widgets .cs-dialog.cs-multilingual-picker .binf-modal-body .binf-control-label {
+  padding-bottom: 0px;
+}
+
+.binf-widgets .csui-multilingual-invisibleOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1059; 
+}
+
+.binf-widgets .cs-header-control .csui-filtername-container.csui-multilingual-input .csui-multilingual-icon-label {
+  position: relative;
+  top: 3px;
+}
+
+
+.binf-widgets .csui-multilingual-greyout button:not(.csui-multilingual-icon) .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor0,
+.binf-widgets .csui-multilingual-greyout button:not(.csui-multilingual-icon) .csui-icon-v2.csui-icon-v2-with-states .csui-icon-v2-metaphor1 {
+  fill: #999999;
+  stroke: #999999;
+}
+
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover .cs-multilingual-form {
+  padding: 0px;
+}
+
+.binf-widgets .cs-multilingual-form .cs-header {
+  padding-bottom: 20px;
+}
+
+.binf-widgets .cs-multilingual-form .cs-ml-form-container {
+  padding-bottom: 12px;
+}
+
+.binf-widgets .cs-multilingual-form .input-container label {
+  width: 100%;
+}
+
+.binf-widgets .cs-multilingual-form input {
+  width: 100%;
+  height: 28px;
+  padding: 0 6px;
+}
+
+.binf-widgets .cs-multilingual-form .alpaca-container-item:not(:first-child) {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.cs-form .description_section .cs-multilingual-form .alpaca-container-item > .binf-form-group.alpaca-field .alpaca-control-label {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover {
+  max-width: 300px;
+  width: 300px;
+  z-index: 1060;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover .binf-popover-content {
+  padding: 0;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover .cs-multilingual-form .cs-ml-form-container {
+  padding: 16px 16px 0 16px;
+  position: relative;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover .globe-icon-mask {
+  background: transparent;
+  z-index: 99;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top {
+  left: 0px;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top > .binf-arrow.csui-remove-arrow-mark-styles,
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow.csui-remove-arrow-mark-styles {
+  left: 15px !important;
+  
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top > .binf-arrow:not(.csui-remove-arrow-mark-styles),
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow:not(.csui-remove-arrow-mark-styles) {
+  left: calc(100% - 15px) !important;
+  
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top > .binf-arrow:not(.csui-remove-arrow-mark-styles) .globe-icon-mask,
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow:not(.csui-remove-arrow-mark-styles) .globe-icon-mask {
+  left: -11px;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow {
+  top: -14px;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow .globe-icon-mask {
+  top: -23px
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top > .binf-arrow {
+  bottom: -15px;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow .globe-icon-mask {
+  bottom: -24px
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top > .binf-arrow:after {
+  border-top-color: #00b8ba;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom > .binf-arrow:after {
+  border-bottom-color: #00b8ba;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top {
+  border-bottom: 4px solid #00b8ba;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-bottom {
+  border-top: 4px solid #00b8ba;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.cs-multilingual-form label {
+  text-align: left;
+}
+
+.binf-widgets .cs-ml-form-container .csui-footer-buttons {
+  margin-top: 16px;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.binf-widgets .cs-ml-form-container .csui-footer-buttons .csui-btn-done {
+  margin-right: 16px;
+}
+
+.binf-widgets .cs-ml-form-container .csui-inlineform-required-error {
+  display: none;
+  margin-bottom: 16px;
+}
+
+.binf-widgets .alpaca-container-item .binf-text-danger {
+  margin-top: 0;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper .cs-multilingual-form label {
+  text-align: left;
+}
+
+.binf-widgets .binf-popover-content .cs-multilingual-form .cs-ml-form-container .binf-control-label.alpaca-control-label {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  padding-left: 8px;
+  font-size: 14px;
+  text-overflow: initial;
+  overflow: inherit;
+  white-space: inherit;
+  word-break: break-word;
+  line-height: 24px;
+  height: 100%;
+}
+
+.binf-widgets .binf-popover-content .cs-multilingual-form .cs-ml-form-container .input-container {
+  padding: 0 8px;
+  height: auto;
+  line-height: 11px;
+  margin-bottom: 16px;
+}
+
+.binf-widgets .binf-popover-content .cs-multilingual-form .cs-ml-form-container textarea {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 3px;
+  padding: 3px;
+  width: 100%;
+  height: 28px;
+  overflow: hidden;
+  line-height: 22px;
+  resize: none;
+}
+
+.binf-widgets input.csui-multilingual-input,
+.binf-widgets .cs-form.cs-document-overview-wrapper .cs-metadata-item-name .title-edit-div .title-input.csui-multilingual-input,
+.binf-widgets .title-edit-div .title-input.csui-multilingual-input {
+  padding-right: 28px;
+}
+
+.binf-widgets input.csui-multilingual-input:disabled {
+  color: #757575;
+  cursor: default;
+  background-color: #eeeeee;
+}
+
+.binf-widgets .csui-multilingual-icon-label {
+  margin-left: -28px;
+  margin-right: 5px;
+}
+
+.binf-widgets button.csui-multilingual-icon {
+  padding: 0;
+  background-color: transparent;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  vertical-align: text-bottom;
+  border: none;
+}
+
+.binf-widgets button.csui-multilingual-icon > svg {
+  float: left;
+  height: 100%;
+}
+
+.binf-widgets .cs-ml-form-container .csui-footer-buttons {
+  margin-top: 12px;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.binf-widgets .csui-multilingual-icon:focus{
+  outline: none;
+}
+
+.binf-widgets .alpaca-field-otcs_multilingual_string .cs-formfield.cs-multilingualfield .cs-field-write{
+  position: relative;
+}
+
+
+.binf-widgets .csui-popover-rtl.csui-multilingual-icon-label {
+  position: relative;
+}
+
+.binf-widgets .csui-multilingual-input-wrapper.binf-popover.binf-top.csui-popover-rtl {
+  left: auto;
+}
+
+.binf-widgets .csui-popover-rtl.binf-popover.binf-top > .binf-arrow:not(.csui-remove-arrow-mark-styles),
+.binf-widgets .csui-popover-rtl.binf-popover.binf-bottom > .binf-arrow:not(.csui-remove-arrow-mark-styles) {
+  right: 11px !important;
+}

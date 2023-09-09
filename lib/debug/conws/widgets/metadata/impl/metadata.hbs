@@ -1,0 +1,36 @@
+<div class="conws-metadata tile content-tile">
+
+    {{#unless hideHeader}}
+        <div class="tile-header">
+
+            <div class="tile-type-icon">
+                <div class="title-icon {{icon}}"></div>
+            </div>
+
+            <div class="tile-title" title="{{title}}">
+                <h2 class="csui-heading">{{title}}</h2>
+            </div>
+
+        </div>
+    {{/unless}}
+
+    <div class="tile-content metadata-tile-content csui-normal-scrolling  csui-no-scroll-x">
+        <div class="load-container">
+            <div class="csui-common-loading-parent-wrapper">
+                <div class="csui-loading-3dots">
+                    <div class="csui-loading-dots-wrapper">
+                        <span class="csui-loading-dot"></span>
+                        <span class="csui-loading-dot"></span>
+                        <span class="csui-loading-dot"></span>
+                    </div>
+                    <div class="placeholder" role="alert" aria-live="polite">
+                        {{loadingMetadata}}
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="form-metadata">
+		</div>
+    </div>
+
+</div>

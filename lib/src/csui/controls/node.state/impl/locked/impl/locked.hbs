@@ -1,0 +1,10 @@
+{{#if locked}}
+  {{#if canUnlock}}
+    <button type="button" title="{{lockedTooltip}}" aria-label="{{lockedAria}}" class="csui-unlock-cellview">
+  {{/if}}
+      <span title="{{lockedTooltip}}" class="csui-icon-locked"> {{{icon-v2 iconName="csui_mime_locked24" size='small' states='true'}}} </span>
+  {{#if canUnlock}}
+    </button>
+  {{/if}}
+{{/if}}
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,165 @@
+diff --git a/src/utils/commands/doc.preview.js b/src/utils/commands/doc.preview.js
+index 3c349198b..4595f9d9d 100644
+--- a/src/utils/commands/doc.preview.js
++++ b/src/utils/commands/doc.preview.js
+@@ -20,6 +20,8 @@ define([
+       name: lang.DocumentPreview
+     },
+
++    delegatableOpenCommand: 'OpenDocument',
++
+     enabled: function (status, options) {
+       var disablePreview = status.originatingView && status.originatingView.disablePreview;
+       if (disablePreview) {
+@@ -239,7 +241,7 @@ define([
+   function getOpenDelegateSignature(command, status, options) {
+     var commands = command.collection;
+     if (commands) {
+-      var openDocument = commands.get('OpenDocument');
++      var openDocument = commands.get(command.delegatableOpenCommand);
+       if (openDocument) {
+         var delegate = openDocument.getDelegatedCommand(status, options);
+         return delegate && delegate.get('signature');
+
+diff --git a/src/utils/commands/open.document/open.document.js b/src/utils/commands/open.document/open.document.js
+index 119d06c9f..4d591f264 100644
+--- a/src/utils/commands/open.document/open.document.js
++++ b/src/utils/commands/open.document/open.document.js
+@@ -4,13 +4,13 @@ define([
+ ], function (_, CommandModel, CommandHelper, openDocumentDelegates) {
+   'use strict';
+
+-  var OpenDocumentCommand = CommandModel.extend({
+-    defaults: { signature: 'OpenDocument' },
++  var OpenCommandBase = CommandModel.extend({
++    openDelegates: null,
+
+     // Collect required permitted actions from all delegates, so that these
+     // actions will be requested ahead for a proper command enabling.
+     getCommandKey: function () {
+-      var commandKeys = openDocumentDelegates.map(function (delegate) {
++      var commandKeys = this.openDelegates.map(function (delegate) {
+         var command = delegate.get('command');
+         return command.getCommandKey && command.getCommandKey()
+           || command.get('command_key') || [];
+@@ -39,7 +39,7 @@ define([
+       }
+       // Check permissions of the least demanding command - the fallback,
+       // which is evaluated at the end of the prioritized collection.
+-      var fallbackCommand = openDocumentDelegates.last().get('command');
++      var fallbackCommand = this.openDelegates.last().get('command');
+       return fallbackCommand.enabled(status, options);
+     },
+
+@@ -50,9 +50,21 @@ define([
+
+     getDelegatedCommand: function (status, options) {
+       var node = CommandHelper.getJustOneNode(status);
+-      return node && openDocumentDelegates.findByNode(node, status, options);
++      return node && this.openDelegates.findByNode(node, status, options);
+     }
+   });
+
++  var OpenDocumentCommand = OpenCommandBase.extend({
++    defaults: { signature: 'OpenDocument' },
++
++    openDelegates: openDocumentDelegates
++  });
++
++  var OpenVersionCommand = OpenCommandBase.extend({
++    defaults: { signature: 'OpenDocument' },
++
++    openDelegates: openDocumentDelegates
++  });
++
+   return OpenDocumentCommand;
+ });
+
+diff --git a/src/utils/commands/open.node.perspective.js b/src/utils/commands/open.node.perspective.js
+index 6de4b1b76..6e338046e 100644
+--- a/src/utils/commands/open.node.perspective.js
++++ b/src/utils/commands/open.node.perspective.js
+@@ -4,35 +4,23 @@ define(['require', 'csui/lib/jquery', 'csui/lib/underscore',
+ ], function (require, $, _, CommandModel, CommandHelper, lang) {
+   'use strict';
+
+-  var OpenNodePerspectiveCommand = CommandModel.extend({
++  var OpenVersionPerspectiveCommand = CommandModel.extend({
++    defaults: {
++      signature: 'OpenVersionPerspective'
++    },
+
+-    execute: function (status, options) {
+-      var deferred = $.Deferred();
+-      options && options.originatingView && options.originatingView.trigger('destroy:gallery');
+-      require(['csui/utils/contexts/factories/next.node'
+-      ], function (NextNodeModelFactory) {
+-        var context = status.context || options && options.context,
+-            nextNode = context.getModel(NextNodeModelFactory),
+-            node = CommandHelper.getJustOneNode(status);
+-
+-        if (!node || !node.get('id')) {
+-          deferred.reject({message: lang.MissingNodeId});
+-          return;
+-        }
++    enabled: function (status) {
++      var version = CommandHelper.getJustOneNode(status);
++      return version && version.get('id') && version.get('version_number');
++    },
+
+-        var viewState = context.viewStateModel.get('state');
+-        if (viewState) {
+-          context.viewStateModel.set('state', _.omit(viewState, 'filter'), {silent: true});
+-        }
++    execute: function (status, options) {
++      var context = status.context || options && options.context,
++          nextVersion = context.getModel('nextVersion'),
++          version = CommandHelper.getJustOneNode(status);
+
+-        // The nodestable uses this event to remove the order_by from the viewStateModel
+-        nextNode.trigger('before:change:id', node, options && options.originatingView);
+-        nextNode.unset('id', { silent: true }).set('id', node.get('id'));
+-        deferred.resolve();
+-      }, function (error) {
+-        deferred.reject(error);
+-      });
+-      return deferred.promise();
++      nextVersion.set('id', version.get('id'));
++      return $.Deferred().resolve().promise();
+     }
+
+   });
+diff --git a/src/utils/versions.default.action.items.js b/src/utils/versions.default.action.items.js
+index 4100d77a9..bb4682034 100644
+--- a/src/utils/versions.default.action.items.js
++++ b/src/utils/versions.default.action.items.js
+@@ -5,11 +5,15 @@ define([
+ ], function (_, ActionItemCollection, extraActions) {
+   'use strict';
+
++  var config = _.extend({
++    openVersionContentOnly: false
++  }, module.config());
++
+   var defaultActionItems = new ActionItemCollection([
+     // Default for versions is always version open command
+     {
+       type: 144,
+-      signature: 'VersionOpen',
++      signature: config.sadas ? '' : 'VersionOpen',
+       sequence: 10
+     }
+   ]);
+diff --git a/src/utils/commands/email.link.js b/src/utils/commands/email.link.js
+index c1404eb59..5904686ec 100644
+--- a/src/utils/commands/email.link.js
++++ b/src/utils/commands/email.link.js
+@@ -99,7 +99,7 @@ define([
+
+     _getNodesLinks: function (nodes, applicationUrl, context) {
+
+-      var iOSEnabled  = config.enableAppleSupport,
++      var iOSEnabled  = config.enableAppleSupport && nodes.length && !(nodes.first() instanceof VersionModel),
+           iOSText     = lang.EmailAppleLinkFormat,
+           androidText = publicLang.EmailLinkDesktop + NEW_LINE,
+           desktopText = nodes.map(function (node) {

@@ -1,0 +1,60 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.breadcrumbs-handle.binf-btn {
+    background: transparent;
+    transition: width 0.2s;
+    height: 42px;
+    line-height: 18px;
+    color: #ffffff;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumbs-handle.csui-breadcrumbs-not-available,
+.breadcrumbs-handle .csui-breadcrumb-btn-innertext {
+    display: none;
+}
+
+.breadcrumbs-handle.binf-btn,
+.breadcrumbs-handle.binf-btn:hover {
+    color: #ffffff;
+}
+
+.binf-widgets .csui-navbar .binf-nav .tile-breadcrumb .breadcrumbs-handle.binf-btn:hover {
+    border-radius: 16px;
+    height: auto;
+    border: 1px solid #ffffff;
+    margin: 0px;
+    width: auto;
+}
+
+
+.breadcrumbs-handle:hover .csui-breadcrumb-btn-innertext {
+    display: inline-block;
+}
+
+.binf-widgets .breadcrumbs-handle:focus {
+    outline: 1px dotted white;
+    outline-offset: -2px;
+}
+
+.binf-widgets .csui-navbar .binf-nav .tile-breadcrumb .breadcrumbs-handle {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.binf-widgets .csui-navbar .binf-nav .tile-breadcrumb .breadcrumbs-handle:focus {
+    outline: none;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+}
+
+.binf-widgets .csui-navbar .binf-nav .tile-breadcrumb .breadcrumbs-handle:hover {
+    border: none;
+}
+
+.binf-widgets .csui-navbar .binf-nav .tile-breadcrumb .breadcrumbs-handle:active {
+    box-shadow: 0 0 0 1px #ffffff;
+}

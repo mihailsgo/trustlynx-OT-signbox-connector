@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sign-In</title>
+
+  
+  <link rel="stylesheet"
+        href="http://murdock.opentext.com/alphasupport/csui/themes/carbonfiber/theme.css">
+  
+  <script src="http://murdock.opentext.com/alpha/llisapi.dll/widgets?crossOrigin=true"></script>
+  
+  <script src="http://murdock.opentext.com/alphasupport/csui/bundles/csui-signin-index.js"></script>
+
+  <script>
+    // If there were a module 'greet' installed on the server,
+    // this would be generated on the application page
+    csui.require.config({
+      config: {
+        // Allow local sign-in page redirects and routing by hashes for
+        // development; deployment on a real server expect a connection
+        // with a ticket and routes by paths with slashes
+        'csui/utils/routing': {
+          developmentPage: true
+        },
+        // Allow using session storage to transfer authentication ticket
+        // from signin page to this page
+        'csui/utils/authenticator': {
+          rememberTicket: true
+        },
+        // Avoid switching to the current browser language, which may
+        // not be supported on the server
+        i18n: {
+          loadableLocales: {root: true}
+        }
+      }
+    });
+
+    // Show the sign-in page
+    csui.require(['csui/pages/signin/signin.page.view', 'csui/lib/domReady!'
+    ], function (SignInPageView) {
+      var signInPageView = new SignInPageView();
+      signInPageView.render();
+    });
+  </script>
+</head>
+
+<body class="binf-widgets"></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

@@ -1,0 +1,26 @@
+<div class="csui-inlineform-group">
+  <div data-csui-attribute="system_name">
+    <select class="xecmpf-eac-inlineform-select icon-caret-down" tabindex="0" >  
+      
+          {{#each eventproperties}}      
+            <option tabindex="0"><a data-id="{{this.id}}" title="{{this.attributes.event_name}}">{{this}}</a></option>      
+        
+          {{/each}}
+    </select>
+  </div>  
+  <div data-csui-attribute="name">
+    <select  id="xecmpf-eac-inlineform-options" class="xecmpf-eac-inlineform-options icon-caret-down" tabindex="0">
+              
+              <option value="Select Event" tabindex="0">{{selectEvent}}</option>
+    </select>
+    <div class="xecmpf-eac xecmpf-inline-action-container ">
+      <button type="button" class="csui-btn-save csui-btn binf-btn">{{add}}</button>
+      <button type="button" class="csui-btn-cancel csui-btn binf-btn">{{cancel}}</button>
+    </div>
+  </div>
+</div>
+<div class="csui-inlineform-group csui-inlineform-group-error binf-hidden">
+  <div class="binf-text-danger"><span class="csui-text-danger"></span></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

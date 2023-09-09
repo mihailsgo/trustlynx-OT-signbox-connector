@@ -1,0 +1,90 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-inline-menu {
+  height: 100%;
+  width: 100%;
+}
+
+.binf-widgets .csui-inline-menu .csui-icon-group .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.binf-widgets .csui-inline-menu .csui-loading-parent-wrapper .csui-loading-dots-wrapper {
+  width: 100%;
+}
+
+
+@media all and (-ms-high-contrast: none) {
+  .binf-widgets .content-tile .tile-content.showing-inline-menu {
+    overflow: hidden;
+  }
+}
+
+
+@supports (-ms-ime-align:auto) {
+  .binf-widgets .content-tile .tile-content.showing-inline-menu {
+    overflow: hidden;
+  }
+}
+
+.binf-widgets .csui-inline-menu > span.csui-icon-group.csui-menu-btn,
+.binf-widgets .csui-inline-menu > span.csui-icon-group.csui-loading-parent-wrapper {
+  height: inherit;
+  width: inherit;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.binf-widgets .csui-inline-menu > span.csui-icon-group.csui-loading-parent-wrapper {
+  padding: 0 0 0 4px;
+  outline-style: none;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region ul.binf-nav {
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-nav .binf-dropdown .binf-dropdown-menu a {
+  display: block;
+  height: auto;
+  padding: 6px 16px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-dropdown > a.binf-dropdown-toggle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-dropdown.binf-open > a.binf-dropdown-toggle {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-dropdown .binf-dropdown-menu {
+  margin-top: 5px;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-dropdown > .binf-dropdown-menu {
+  right: auto;
+  left: auto;
+}
+
+.binf-widgets .csui-inline-menu .csui-menu-btn-region .binf-dropdown .binf-dropdown-menu .binf-dropdown-menu {
+  margin-top: 0px;
+}
+

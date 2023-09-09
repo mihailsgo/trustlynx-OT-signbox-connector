@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Search Result Widget</title>
+
+  <link rel="stylesheet" href="../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body.binf-widgets {
+      /*padding-top: 1em;*/
+      margin: 0;
+      height: 100%;
+      overflow-y: hidden;
+    }
+    body.binf-widgets .grid-rows > .binf-row,
+    body.binf-widgets .grid-rows .container {
+      height: calc(100vh - 50px);
+      width: 100%;
+    }
+    .binf-widgets .csui-search-results-table-view .csui-perspective-toolbar-container {
+    align-items: center;
+    display: flex;
+    background-color: white;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-perspective-toolbar-container .cs-title-inner-container {
+    width: auto;
+    overflow: hidden;
+  }
+
+  .binf-widgets .csui-perspective-toolbar-container .cs-back-button-container {
+    width: 58px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .binf-widgets .csui-search-results-table-view .csui-perspective-toolbar-container .title {
+    width: calc(100% - 26px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 35px;
+  }
+  </style>
+   <script src="../../../../nuc/lib/require.js"></script>
+   <script src="../../../../nuc/config.js"></script>
+   <script src="../../../../smart/config.js"></script>
+  <script>
+    // Help the test page waiting on all "deps" config sections.
+    var csuiCallbacks = [],
+        csuiBlocks    = 0;
+
+    window.blockCsui = function () {
+      ++csuiBlocks;
+    };
+
+    window.unBlockCsui = function () {
+      if (--csuiBlocks === 0) {
+        while (csuiCallbacks.length) {
+          csuiCallbacks.shift()();
+          if (csuiBlocks > 0) {
+            break;
+          }
+        }
+      }
+    };
+
+    window.csuiDemo = function (callback) {
+      if (csuiBlocks === 0) {
+        callback();
+      } else {
+        csuiCallbacks.push(callback);
+      }
+    };
+    window.blockCsui();
+    require.config({
+          paths: {
+            csui: "../../../../csui"
+          },
+          deps: [
+            'nuc/lib/require.config!nuc/nuc-extensions.json',
+            'nuc/lib/require.config!smart/smart-extensions.json',
+            'csui/lib/require.config!csui/csui-extensions.json'
+          ],
+          callback: window.unBlockCsui
+    });
+    window.csuiDemo(function () {
+      require.config({
+      config: {
+        'csui/utils/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: {
+              ticket: 'dummy'
+            }
+          }
+        }
+      }
+    });
+
+    require(['csui/lib/jquery', 'csui/lib/marionette', 'csui/lib/handlebars','csui/utils/contexts/page/page.context',
+    'csui/widgets/search.results.table/search.results.table.view', './search.results.table.mock.data.js',
+    'csui/utils/contexts/factories/application.scope.factory'
+    ], function ($, Marionette, Handlebars, PageContext, SearchResultsTileView, MockData, ApplicationScopeModelFactory) {
+
+      var contentRegion = new Marionette.Region({el: '#content'}),
+      pageContext = new PageContext();
+      pageContext._applicationScope = pageContext.getModel(ApplicationScopeModelFactory);
+      pageContext._applicationScope.set('query_id',48148681); // holds the model
+      var view          = new SearchResultsTileView({context: pageContext,
+                                                     isExpandedView: false,
+                                                     enableSearchSettings: true,
+                                                     data: {showTitleIcon: true,savedSearchQueryId: 16329299}});
+
+      view.onClickItem = function (target) {
+        alert(target.model.attributes.name + ' clicked');
+      };
+
+      MockData.enable();
+      contentRegion.show(view);
+      if (!view.collection.fetched) {
+          view.collection.fetched = false;
+          view.collection.fetch();
+      }
+    });
+    });
+  </script>
+</head>
+
+<body class="binf-widgets">
+<h1>Search Results Table</h1>
+<a class="docRef" href="../doc/search.results.table.md">Documentation</a>
+
+<div class="binf-container-fluid grid-rows">
+  <div class="binf-row">
+    <div class="binf-col-sm-5 binf-col-md-4 binf-col-lg-3 container" id="content"></div>
+  </div>
+</div>
+</body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

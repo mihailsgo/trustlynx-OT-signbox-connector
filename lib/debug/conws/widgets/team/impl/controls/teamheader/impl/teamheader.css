@@ -1,0 +1,13 @@
+.binf-widgets .conws-teamheader .title {
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.binf-widgets .conws-teamheader .primary-title {
+  font-size: 28px;
+}
+.binf-widgets .conws-teamheader .secondary-title {
+  font-size: 16px;
+}

@@ -1,0 +1,35 @@
+.csui-inlineform-group > .greet-inlineform-input-hello {
+  margin-right: 1em;
+}
+
+.csui-inlineform-group > .greet-inlineform-input-hello:first-child {
+  margin-right: 0;
+}
+
+.greet-inlineform-group-hello-wrapped .binf-btn {
+  visibility: hidden;
+}
+.binf-widgets .greet-hello {
+  /* Make more space around the welcome message than the default Bootstrap
+     panel offers */
+  padding: 1em;
+  /* Make the panel look nicer */
+  background-color: #fff;
+  /* Fill up the parent tile extents. */
+  width: 100%;
+  height: 100%;
+}
+.binf-widgets .greet-metadata-hello {
+  padding: 4em 2em 1em 1em;
+}
+.binf-widgets .greet-metadata-property-hello {
+  margin-bottom: 1em;
+}
+
+.greet-metadata-property-hello > h3 {
+  color: #00498f;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

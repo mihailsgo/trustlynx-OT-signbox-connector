@@ -1,0 +1,81 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper {
+  position: relative;
+  padding: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  line-height: 0px;
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .csui-loading-3dots {
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  top: calc(50% - 16px);
+  transform: translateY(-50%);
+  line-height: 50px;
+}
+
+.binf-widgets .load-container {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.binf-widgets .load-container.smart-loading-state-dark-theme {
+  background: rgba(249, 249, 249, 0.1);
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .placeholder {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  padding: 16px 16px 0 16px;
+  text-align: center;
+    
+  
+  opacity: 1;
+  color: #666666;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  word-break: break-word;
+  line-height: 24px;
+}
+
+.binf-widgets .load-container.smart-loading-state-dark-theme .csui-common-loading-parent-wrapper .placeholder {
+  color: #ffffff;
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .csui-loading-dots-wrapper {
+  position: relative;
+  height: 12px;
+  width: 36px;
+  margin: 0 auto;
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .csui-loading-dots-wrapper .csui-loading-dot:first-child {
+  left: 4px;
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .csui-loading-dots-wrapper .csui-loading-dot:nth-child(2) {
+  left: 16px;
+}
+
+.binf-widgets .load-container .csui-common-loading-parent-wrapper .csui-loading-dots-wrapper .csui-loading-dot:nth-child(3) {
+  left: 28px;
+}
+
+@keyframes csui-loading-fade-in-and-out {
+  from {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
+}

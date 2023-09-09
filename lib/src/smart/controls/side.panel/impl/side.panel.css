@@ -1,0 +1,383 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-sidepanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1040;
+  visibility: hidden;
+  -webkit-transition: visibility 0s .6s;
+  transition: visibility 0s .6s;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-header {
+  background-color: #66d4d6;
+  flex: 1 0 64px;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-header .csui-sidepanel-heading {
+  font-size: 18px;
+  line-height: 20px;
+  width: 100%;
+  padding-top: 16px;
+  margin-top: 6px;
+  word-break: break-word;
+
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-header .csui-sidepanel-subheading {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 2px;
+  width: 100%;
+  float: left;
+  word-break: break-word;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-header .csui-sidepanel-heading.csui-no-subheading,
+.binf-widgets .csui-sidepanel .csui-sidepanel-header .csui-sidepanel-subheading:not(.binf-hidden) {
+  padding-bottom: 16px;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-footer {
+  background-color: #f4f4f4;
+  height: 48px;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-body {
+  background-color: #ffffff;
+  
+  height: calc(100% - 108px);
+  padding: 32px 48px 0px 48px;
+  flex: 1 1 auto;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-body:not(.csui-perfect-scrolling) {
+  
+  overflow-x: auto;
+  overflow-y: auto;
+  overflow: overlay;
+  }
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-body.csui-sidepanel-no-header {
+  
+  height: calc(100% - 44px);
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-body.csui-sidepanel-no-footer {
+  
+  height: calc(100% - 64px);
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-body.csui-sidepanel-no-header.csui-sidepanel-no-footer {
+  
+  height: calc(100%);
+}
+
+.binf-widgets .csui-sidepanel-body .csui-custom-view-search {
+  height: 100%;
+}
+
+.binf-widgets .csui-sidepanel.no-footer .csui-sidepanel-body {
+  height: calc(100vh - 50px);
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-title {
+  margin: 0px 0 0px 16px;
+  color: #003939;
+  width: calc(100% - 22px);
+  vertical-align: middle;
+  display: inline-block;
+  padding-right: 48px;
+  height: 100%;
+  overflow-y: auto;
+  max-height: calc(50vh - 80px);
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-close {
+  vertical-align: middle;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.icon.cs-icon-cross:hover {
+  cursor: pointer;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 24px 0px 16px;
+  height: 48px;
+}
+
+
+
+
+.binf-widgets .csui-sidepanel .cs-footer-control .cs-footer-right,
+.binf-widgets .csui-sidepanel .cs-footer-control .cs-footer-right div,
+.binf-widgets .csui-sidepanel .cs-footer-control .cs-footer-left,
+.binf-widgets .csui-sidepanel .cs-footer-control .cs-footer-left div {
+  height: 100%;
+}
+
+.binf-widgets .csui-sidepanel .cs-sidepanel-btngroup {
+  display: flex;
+  align-items: center;
+}
+
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn{
+  height: 32px;
+  padding: 4px 24px;
+  margin-left: 16px;
+  vertical-align: middle;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 12px;
+  border: 1px solid #232e72;
+  color: #232e72;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn:focus{
+  outline: 1px solid #2e3d98;
+  outline-offset: 4px;
+  background-color: #fff;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn:hover {
+  border: 1px solid #171f4c;
+  box-shadow: inset 0 0 0 1px #171f4c;
+  background-color: #fff;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn-primary {
+  background-color: #232e72;
+  color: #fff;
+  box-shadow: none;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn-primary:focus{
+  box-shadow: none;
+  outline: 1px solid #2e3d98;
+  outline-offset: 4px;
+  background-color: #232e72;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn-primary:hover{
+  background-color: #171f4c;
+  color: #fff;
+  box-shadow: none;
+}
+
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn:active {
+  background-color: #98a8b2;
+}
+
+.binf-widgets .csui-sidepanel .cs-footer-control .binf-btn.binf-disabled {
+  color: #999999;
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.csui-sidepanel .cs-header-control {
+  height: 100%;
+  position: relative;
+}
+
+.binf-widgets .csui-sidepanel .cs-go-back {
+  width: 18px;
+  height: 16px;
+  border: 0;
+  background-color: transparent;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.binf-widgets .csui-sidepanel .cs-go-back.csui-has-v2icon {
+  width: auto;
+  height: auto;
+  outline: none;
+  background-image: none;
+}
+
+.binf-widgets .csui-sidepanel .csui-slide-hidden {
+  display: none !important;
+}
+
+.binf-widgets .csui-sidepanel--from-right .csui-sidepanel-container {
+  right: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0)
+}
+
+.binf-widgets .csui-sidepanel--from-left .csui-sidepanel-container {
+  left: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0)
+}
+
+.binf-widgets .csui-sidepanel-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 0 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: background .3s .3s;
+  transition: background .3s .3s;
+}
+
+.binf-widgets .csui-sidepanel .csui-sidepanel-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  -webkit-transition: -webkit-transform .3s, width 0.3s;
+  transition: -webkit-transform .3s, width 0.3s;
+  transition: transform .3s, width 0.3s;
+  transition: transform .3s, -webkit-transform .3s, width 0.3s;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-small .csui-sidepanel-container {
+  width: 30%;
+  max-width: 400px;
+  min-width: 320px;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-medium .csui-sidepanel-container {
+  width: 50%;
+  max-width: 688px;
+  min-width: 400px;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-large .csui-sidepanel-container {
+  width: 75%;
+  max-width: 1440px;
+  min-width: 688px;
+}
+
+@media (min-width: 1200px) {
+  .binf-widgets .csui-sidepanel.csui-sidepanel-large .csui-sidepanel-container {
+    max-width: 100%;
+  }
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible.csui-sidepanel-small .csui-sidepanel-container {
+  width: 30%;
+  max-width: 400px;
+  min-width: 320px;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible.csui-sidepanel-medium .csui-sidepanel-container {
+  width: 50%;
+  max-width: 688px;
+  min-width: 400px;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible.csui-sidepanel-large .csui-sidepanel-container {
+  width: 75%;
+  max-width: 1440px;
+  min-width: 688px;
+}
+
+@media (min-width: 1200px) {
+  .binf-widgets .csui-sidepanel.csui-sidepanel-visible.csui-sidepanel-large .csui-sidepanel-container {
+    max-width: 100%;
+  }
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible.csui-sidepanel-with-no-mask {
+  width: 0;
+  height: 0;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .csui-sidepanel-container {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0s;
+  width: 50vw;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .csui-sidepanel-container.csui-panel-resizable {
+  max-width: calc(100% - 64px);
+ 
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .csui-sidepanel-container:focus,
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .csui-sidepanel-container:active {
+  outline: none;
+}
+
+.binf-widgets .csui-sidepanel.csui-sidepanel-visible .csui-sidepanel-backdrop {
+  background: rgba(0, 0, 0, .5);
+  -webkit-transition: background .3s 0s;
+  transition: background .3s 0s;
+}
+
+.binf-widgets.csui-sidepanel-open {
+  overflow-y: hidden;
+}
+
+.binf-widgets .csui-side-panel-resizer {
+  width: 8px;
+  height: 100%;
+  display: inline-block;
+  z-index: 1;
+  background-clip: padding-box;
+  background-color: transparent;
+  cursor: col-resize;
+  position: absolute;
+  border: 0;
+}
+
+.binf-widgets .csui-side-panel-resizer:hover,
+.binf-widgets .csui-side-panel-resizer:active,
+.binf-widgets .csui-side-panel-resizer:focus {
+  border-left: 3px solid #232E72;
+}
+
+.binf-widgets .csui-side-panel-main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.csui-side-panel-main .step-view > div {
+  width: 100%;
+}
+
+.binf-widgets.csui-sidepanel-open.binf-search-box-open .csui-sidepanel.csui-sidepanel-doc-preview {
+  z-index: 1046;
+}
+
+.binf-widgets .csui-sidepanel.template-in-sidepanel td.csui-table-cell-_select {
+  width: 50px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .binf-widgets .csui-sidepanel .csui-sidepanel-header {
+    flex-basis: auto;
+  }
+  .binf-widgets .csui-sidepanel .csui-sidepanel-footer {
+    height: auto;
+  }
+}

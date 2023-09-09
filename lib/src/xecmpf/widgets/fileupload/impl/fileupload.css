@@ -1,0 +1,205 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.xecmpf-fileupload-title-icon {
+  background-image: url('../../../image/icons/title_fileupload.svg');
+}
+
+.xecmpf-file-upload .tile-controls {  
+    position: relative;
+    left:0px;
+    right:0px;
+    flex-grow: 0 !important;
+}
+
+.xecmpf-fileupload-expanded-view .csui-perspective-toolbar-container .cs-filter-icon-container,
+.xecmpf-fileupload-expanded-view .csui-perspective-toolbar-container .cs-add-icon-container {
+  display: inline-flex;
+  position: absolute;
+  height: 100%;
+  width: 36px;
+  margin-left: 40px;
+}
+
+.xecmpf-fileupload-expanded-view .csui-perspective-toolbar-container .cs-filter-icon-container{
+  margin-left: 80px;
+}
+
+.xecmpf-fileupload-expanded-view  .csui-perspective-toolbar-container .tile-filter-icon,
+.xecmpf-fileupload-expanded-view  .csui-perspective-toolbar-container .tile-add-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  background-position: 0 0;
+  margin-top: .3rem;
+  padding-right: 0;
+  padding-left: 0;
+  cursor: pointer
+}
+
+.xecmpf-fileupload-missing-icon {
+  background-image: url('../../../image/icons/missing_documents_color_32.svg');
+}
+.xecmpf-fileupload-outdated-icon {
+  background-image: url('../../../image/icons/outdated_documents_color_32.svg');
+}
+.xecmpf-fileupload-inprocess-icon {
+  background-image: url('../../../image/icons/inprocess_documents_color_32.svg');
+}
+
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .fileupload-status-filter,
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .fileupload-locations-filter {
+  padding: .5rem;
+  font-family: OpenText Sans App;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  height: 32px;
+}
+
+binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .csui-selected-checkbox>label
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .csui-selected-checkbox>label {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;    
+   width: 80%;  
+}
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .filerupload-panel-heading {
+  padding: 5px 2px 1rem .5rem;
+  height: 32px;
+  font-family: OpenText Sans App;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  text-align: center;
+  color: #333333;
+}
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel {
+  height: 688px;
+  left: 0px;
+  top: 111.92px;
+  background: #FFFFFF;
+}
+
+.csui-side-panel .fileupload-status-header.csui-selected-checkbox.csui-checkbox-primary,
+.fileupload-status-body .csui-selected-checkbox.csui-checkbox-primary,
+.fileupload-location-body .csui-selected-checkbox.csui-checkbox-primary{
+  margin-bottom: 5px;
+  display: block;
+}
+
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .csui-selected-checkbox input[type=checkbox] {
+  margin-right: .5rem;
+  width: 14px;
+  height: 14px;
+  left: calc(50% - 14px/2);
+  top: calc(50% - 14px/2);
+  background: #FFFFFF;
+  border: 1px solid #757575;
+  box-sizing: border-box;
+}
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .status-filter .xecmpf-fileupload-status-missingcount,
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .status-filter .xecmpf-fileupload-status-outdatedcount, 
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .status-filter .xecmpf-fileupload-status-inprocesscount,
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .status-filter .fileupload-allcount,
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .location-filter .fileupload-location-count {
+  border-radius: 8px;
+  width:25px;
+  height: 16px;
+  background-color: #CCEAE8;
+  position: absolute;
+  font-family: OpenText Sans App;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  margin: 5px;
+}
+
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-location-body{
+  padding: .5rem 1.5rem;
+}
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-status-body{
+
+  padding: .1rem 1rem;
+}
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-status-content{
+  padding-left: .5rem;
+ }
+ 
+
+
+.binf-widgets .xecmpf-fileupload-table-view .fileupload-status-column {
+  display: inline-flex;
+}
+
+.binf-widgets .xecmpf-fileupload-table-view .fileuplaod-cell-statusicon {
+  height: 1.69rem;
+  width: 1.37rem;
+  background-repeat: no-repeat;
+  background-position-y: .1rem;
+}
+
+.binf-widgets .xecmpf-fileupload-table-view .fileuplaod-cell-statustext {
+  padding: .25rem 0 0 .3rem;
+} 
+
+.binf-widgets .xecmpf-fileupload-expanded-view .csui-side-panel .fileupload-filter-body .csui-selected-checkbox > label{
+  left: 39px;
+  top: 50px;
+  font-family: OpenText Sans App;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #000000;
+  height: 15px;
+}
+
+.fileupload-header-filter {
+
+  height:32px;
+  left:0%;
+  right:0%;
+  display: flex;
+  align-items: center;
+  width:100%;
+  background: #E7F8F8;  
+
+}
+.fileupload-status-filter, .fileupload-locations-filter {
+  width:42px;
+  height:18px;
+  left: 16.07px;
+  top: 7px;
+  font-family: OpenText Sans App;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color:#333333;
+  text-overflow: ellipsis;
+  min-width: 30px;
+  overflow: hidden;
+  float: left;
+  width:90%; 
+}
+
+.fileupload-status-toggle, .fileupload-locations-toggle {
+  cursor: pointer;
+}
+
+.binf-widgets .xecmpf-fileupload-table-view .csui-sort-arrow,
+.binf-widgets .xecmpf-fileupload-table-view .csui-table-column-search {
+    display: none;
+  }
+

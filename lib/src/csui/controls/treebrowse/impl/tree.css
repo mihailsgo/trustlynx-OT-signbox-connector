@@ -1,0 +1,179 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.csui-tree-browse .fancytree-helper-hidden {
+  display: none;
+}
+
+
+.csui-tree-browse .fancytree-container.fancytree-treefocus {
+  outline: none;
+}
+
+
+.csui-tree-browse .fancytree-empty,
+.csui-tree-browse .fancytree-expander,
+.csui-tree-browse .fancytree-icon,
+.csui-tree-browse .fancytree-custom-icon {
+  width: 20px;
+  min-width: 20px;
+  background-size: 16px 16px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+
+.csui-tree-browse .fancytree-node {
+  display: flex;
+  width: 100%;
+}
+.csui-tree-browse .fancytree-title {
+  color: #333;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 8px 0 4px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.csui-tree-browse .fancytree-disabled > .fancytree-title {
+  cursor: default;
+}
+.csui-tree-browse .fancytree-node.fancytree-error {
+  opacity: 0.35;
+  cursor: default;
+}
+.csui-tree-browse .fancytree-node.fancytree-error .fancytree-title {
+  cursor: default;
+}
+.csui-tree-browse .fancytree-node.fancytree-error .fancytree-expander {
+  cursor: default;
+  background-image: none;
+}
+.csui-tree-browse .fancytree-node.fancytree-node-error .fancytree-title {
+  cursor: default;
+  color: red;
+}
+.csui-tree-browse .fancytree-node.fancytree-active {
+  font-weight: bold;
+  background-color: #CBD3D9;
+}
+.csui-tree-browse .fancytree-node.fancytree-focused {
+  outline: 1px dotted gray;
+  outline-offset: -1px;
+}
+.csui-tree-browse .fancytree-level-2[aria-expanded=true] {
+  background-color: #EDF0F2;
+  border-bottom: 1px solid white;
+}
+.csui-tree-browse .fancytree-statusnode-paging .fancytree-icon {
+  display: none;
+}
+.csui-tree-browse .fancytree-statusnode-paging .fancytree-title {
+  color: #232E72;
+}
+.csui-tree-browse .fancytree-paging-icon {
+  display: inline-block;
+  margin-left: 4px;
+  width: 8px;
+  height: 8px;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+}
+.csui-tree-browse .fancytree-paging-icon.show-more {
+  background-image: url(images/show-more.svg);
+}
+.csui-tree-browse .fancytree-paging-icon.show-less {
+  background-image: url(images/show-less.svg);
+}
+
+
+.csui-tree-browse .fancytree-expander {
+  cursor: pointer;
+}
+.csui-tree-browse .fancytree-exp-n .fancytree-expander,
+.csui-tree-browse .fancytree-exp-nl .fancytree-expander {
+  background-image: none;
+  cursor: default;
+}
+.csui-tree-browse .fancytree-exp-c .fancytree-expander,
+.csui-tree-browse .fancytree-exp-cl .fancytree-expander,
+.csui-tree-browse .fancytree-exp-cd .fancytree-expander,
+.csui-tree-browse .fancytree-exp-cdl .fancytree-expander {
+  background-image: url(images/expander-collapsed.svg);
+}
+.csui-tree-browse .fancytree-exp-e .fancytree-expander,
+.csui-tree-browse .fancytree-exp-el .fancytree-expander,
+.csui-tree-browse .fancytree-exp-ed .fancytree-expander,
+.csui-tree-browse .fancytree-exp-edl .fancytree-expander {
+  background-image: url(images/expander-expanded.svg);
+}
+
+.csui-tree-browse .fancytree-loading .fancytree-expander {
+  background-image: none;
+  vertical-align: middle;
+}
+.csui-tree-browse .fancytree-loader,
+.csui-tree-browse .fancytree-loader:after {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+.csui-tree-browse .fancytree-loader {
+  position: relative;
+  margin: 8px 0;
+  border: 2px solid #2E3D98;
+  border-left: 2px solid #d8f4fd;
+  transform: translateZ(0);
+  animation: load8 1.1s infinite linear;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.csui-tree-browse .fancytree-ico-cf .fancytree-icon,
+.csui-tree-browse .fancytree-ico-ef .fancytree-icon {
+  background-image: url(images/node-folder.svg);
+}
+.csui-tree-browse .fancytree-custom-icon.csui-tree-icon-repository {
+  background-image: url(images/node-repository.svg);
+}
+.csui-tree-browse .fancytree-custom-icon.csui-tree-icon-cabinet {
+  background-image: url(images/node-cabinet.svg);
+}
+.csui-tree-browse .fancytree-custom-icon.csui-tree-icon-home-cabinet {
+  background-image: url(images/node-home-cabinet.svg);
+}
+.csui-tree-browse .fancytree-custom-icon.csui-tree-icon-favorites {
+  background-image: url(images/node-favorites.svg);
+}
+.binf-widgets .fancytree-container .fancytree-node .fancytree-custom-icon > .csui-icon-group {
+  width: 20px;
+  height: 24px;
+}
+.binf-widgets .fancytree-container .csui-tree-error-node-icon {
+  margin-top: 10px;
+  width: 14px;
+  height: 14px;
+}
+.binf-widgets .csui-tree-browse .csui-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+ html[dir="rtl"] .csui-tree-browse .fancytree-exp-c .fancytree-expander,
+ html[dir="rtl"] .csui-tree-browse .fancytree-exp-cl .fancytree-expander,
+ html[dir="rtl"] .csui-tree-browse .fancytree-exp-cd .fancytree-expander,
+ html[dir="rtl"] .csui-tree-browse .fancytree-exp-cdl .fancytree-expander {
+  background-image: url(images/expander-collapsed-rtl.svg);
+}

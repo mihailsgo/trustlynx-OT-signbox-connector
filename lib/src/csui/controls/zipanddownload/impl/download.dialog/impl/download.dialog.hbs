@@ -1,0 +1,62 @@
+<div class="binf-modal-dialog {{binfDialogSizeClassName}}" role="dialog" aria-modal="true"
+     aria-label="{{zipFileName}}">
+  <div class="binf-modal-content">
+    <div class="tile-header binf-modal-header"></div>
+    <div class="binf-modal-body">
+      <div class="csui-zipanddownload">
+        <div class="csui-zipanddownload-filename">
+          <label for="{{inputId}}">{{zipFileName}}</label>
+          <input type="text" id="{{inputId}}" class="csui-archive-name" name="download-name" value="{{fileName}}">
+          <div class="csui-zipanddownload-count-size">
+            <span class="csui-items-count">{{itemsCount}} </span>
+            <span class="csui-item-size">{{fileSize}}</span>
+          </div>
+        </div>
+        <div class="csui-archive-name-error-container">
+          <span class="csui-archive-name-error" id="{{nameErrorId}}"></span>
+        </div>
+      </div>
+      {{#if skippedTypes}}
+        <div class="csui-unprocessed-item-list">
+          <div class="csui-info" role="alert" id="{{alertMsgId}}">
+            <span class="notification_warning_orange"></span>
+            <span class="notification_message">{{skippedItemsLabel}}</span>
+          </div>
+            <div class="csui-skipped-container-wrapper">
+              <table class="csui-skipped-container" aria-labelledby="{{alertMsgId}}" tabindex="0">
+                <thead class="csui-skipped-item-table csui-download-table-header">
+                  <tr class="csui-skipped-item-table csui-download-table-header">
+                    <th class="csui-skipped-item-cell csui-type">{{labelType}}</th>
+                    <th class="csui-skipped-item-cell csui-name">{{labelName}}</th>
+                    <th class="csui-skipped-item-cell csui-location">{{labelLocation}}</th>
+                    <th class="csui-skipped-item-cell csui-message">{{labelMessage}}</th>
+                  </tr>
+                </thead>
+                <tbody class="csui-skipped-item-table csui-download-table-body">
+                  {{#each skippedTypes}}
+                    <tr class="csui-download-table-row">
+                      <td class="csui-skipped-item-cell csui-type">
+                        <span title="{{this.subtype_name}}" class="{{this.mimeIcon}}"></span>
+                      </td>
+                      <td role="rowheader" class="csui-skipped-item-cell csui-name">
+                        <span title="{{this.name}}">{{this.name}}</span>
+                      </td>
+                      <td class="csui-skipped-item-cell csui-location">
+                        <span class="csui-location-name"
+                              title="{{this.path}}">{{this.parentLocation}}</span>
+                      </td>
+                      <td class="csui-skipped-item-cell csui-message">
+                        <span title="{{this.details}}">{{this.details}}</span>
+                      </td>
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="binf-modal-footer binf-hidden"></div>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

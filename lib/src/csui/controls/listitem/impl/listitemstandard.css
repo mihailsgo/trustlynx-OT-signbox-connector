@@ -1,0 +1,109 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.cs-list .binf-list-group-item {
+  padding: 15px 10px 0 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item {
+  padding: 5px 15px;
+  margin: 0px;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item.inactive,
+.cs-list .csui-item-standard.binf-list-group-item.inactive .csui-icon,
+.cs-list .csui-item-standard.binf-list-group-item.inactive .list-item-title {
+  cursor: default;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item.inactive .csui-icon {
+  opacity: 0.5;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item.inactive .list-item-title {
+  color: #717171;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item:hover,
+.cs-list .csui-item-standard.binf-list-group-item:active,
+.binf-widgets:not(.csui-on-ipad) .cs-list .csui-item-standard.csui-tile-with-more-btn {
+  background-color: #d7d7d7;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item:not(.inactive) {
+  cursor: pointer;
+}
+
+.cs-list .binf-list-group-item:first-child {
+  margin-top: 0;
+}
+
+.cs-list.binf-panel .binf-list-group-item {
+  border-top: 1px solid transparent;
+}
+
+.cs-list .csui-item-standard.binf-list-group-item span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin-right: 5px;
+}
+
+.binf-widgets .binf-list-group-item {
+  border: none;
+  background-color: #f7f7f7;
+}
+
+.binf-list-group-item.binf-active {
+  border-radius: 0;
+}
+
+.binf-list-group-item .icon {
+  margin-right: 5px;
+}
+
+.binf-list-group-item .icon.icon-folder {
+  color: #7b9bb0;
+}
+
+.binf-widgets .cs-list .csui-item-standard .list-item-title {
+  width: calc(100% - 57px); 
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 32px;
+  padding-left:10px;
+}
+
+.binf-widgets .cs-list .csui-item-standard.csui-tile-with-more-btn .csui-tileview-contains-more-btn .list-item-title {
+  width: calc(100% - 88px); 
+}
+
+.binf-widgets .cs-list.tile.content-tile .csui-tileview-contains-more-btn {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 4px);
+  color: #555;
+  text-decoration: none;
+  outline-style: none;
+}
+
+.binf-widgets .csui-table-actionbar.binf-list-group-item span {
+  margin-right: 0;
+}
+
+.binf-widgets .csui-item-standard .csui-tileview-more-btn span {
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+
+.binf-widgets .csui-item-standard.csui-tile-with-more-btn .csui-tileview-more-btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}

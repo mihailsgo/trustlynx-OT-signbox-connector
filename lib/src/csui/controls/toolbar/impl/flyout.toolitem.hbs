@@ -1,0 +1,49 @@
+{{#if hasIcon }}
+{{#if renderIconAndText}}
+  <a aria-haspopup="true" title="{{title}}" href="#" {{#if linkRole}}role="{{linkRole}}" {{/if}}
+                     class="csui-toolitem csui-toolitem-icon-text" data-cstabindex="-1">
+    {{#if iconName}}
+      {{{icon-v2 iconName=iconName theme=iconTheme states='true' on=iconStateIsOn}}}{{name}}
+    {{else}}
+      <span class="{{icon}}"></span>{{name}}
+    {{/if}}
+     <span class="csui-caret"></span>
+  </a>
+{{else}}
+  {{#if renderTextOnly}}
+    <a aria-haspopup="true" href="#" {{#if linkRole}}role="{{linkRole}}" {{/if}}
+                      class="csui-toolitem csui-toolitem-textonly"
+                      data-cstabindex="-1" aria-label="{{title}}">{{name}}
+      {{#if menuWithMoreOptions}}
+        <span class="csui-button-icon csui-icon-rightArrow icon-expandArrowUp"></span>
+      {{/if}}
+      <span class="csui-caret"></span>
+    </a>
+  {{else}}
+    <a aria-haspopup="true" href="#" title="{{title}}" {{#if linkRole}}role="{{linkRole}}" {{/if}}
+                       class="csui-toolitem {{disabledClass}} csui-toolitem-icononly"
+                       data-cstabindex="-1" {{#if
+        toolItemAria}}aria-label="{{toolItemAria}}" {{else}}
+                       aria-label="{{title}}" {{/if}}
+      {{#if hasToolItemAriaExpand}}aria-expanded="{{toolItemAriaExpand}}" {{/if}}>
+      {{#if iconName}}
+        {{{icon-v2 iconName=iconName theme=iconTheme states='true' on=iconStateIsOn}}}
+      {{else}}
+        <span class="{{icon}}"></span>
+      {{/if}}
+    </a>
+  {{/if}}
+{{/if}}
+{{else}}
+<a  aria-haspopup="true" href="#" {{#if linkRole}}role="{{linkRole}}" {{/if}}
+                   class="csui-toolitem {{disabledClass}} csui-toolitem-textonly"
+                   data-cstabindex="-1" aria-label="{{title}}">{{name}}
+  {{#if menuWithMoreOptions}}
+    <span class="csui-button-icon csui-icon-rightArrow icon-expandArrowUp"></span>
+  {{/if}}
+   <span class="csui-caret"></span>
+</a>
+{{/if}}
+<ul class="binf-dropdown-menu" role="menu"></ul>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

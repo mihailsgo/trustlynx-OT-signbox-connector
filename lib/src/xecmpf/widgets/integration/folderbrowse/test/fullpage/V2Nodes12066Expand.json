@@ -1,0 +1,96 @@
+{
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/nodes\/12066?actions=opendocumentwebedit&actions=open&actions=download&actions=properties&actions=browseholdcontainer&actions=initiateworkflow&actions=openform&expand=properties{original_id}&fields=properties&fields=versions{owner_id}.element(0)&state=true",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "actions": {
+      "data": {
+        "open": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066\/nodes",
+          "method": "GET",
+          "name": "Open"
+        },
+        "properties": {
+          "body": "",
+          "content_type": "",
+          "form_href": "",
+          "href": "\/api\/v2\/nodes\/12066",
+          "method": "GET",
+          "name": "Properties"
+        }
+      },
+      "map": {
+        "default_action": "",
+        "more": ["properties"]
+      },
+      "order": ["open"]
+    },
+    "data": {
+      "properties": {
+        "advanced_versioning": null,
+        "container": true,
+        "container_size": 3,
+        "create_date": "2021-08-20T11:26:07",
+        "create_user_id": 1000,
+        "description": "",
+        "description_multilingual": {
+          "de": "",
+          "en": ""
+        },
+        "external_create_date": null,
+        "external_identity": "",
+        "external_identity_type": "",
+        "external_modify_date": null,
+        "external_source": "",
+        "favorite": false,
+        "hidden": false,
+        "icon": "\/img\/casebasic\/casetype_01.gif",
+        "icon_large": "\/img\/casebasic\/casetype_01_large.gif",
+        "id": 12066,
+        "mime_type": null,
+        "modify_date": "2021-09-28T11:20:19",
+        "modify_user_id": 1000,
+        "name": "Account 1001",
+        "name_multilingual": {
+          "de": "",
+          "en": "Account 1001"
+        },
+        "owner": "Admin",
+        "owner_group_id": 999,
+        "owner_user_id": 1000,
+        "parent_id": 12282,
+        "permissions_model": "advanced",
+        "reserved": false,
+        "reserved_date": null,
+        "reserved_shared_collaboration": false,
+        "reserved_user_id": 0,
+        "rm_enabled": false,
+        "size": 3,
+        "size_formatted": "3 Items",
+        "status": null,
+        "type": 848,
+        "type_name": "Business Workspace",
+        "versionable": false,
+        "versions_control_advanced": false,
+        "volume_id": -2000,
+        "wksp_type_name": "Account (C4C)"
+      }
+    },
+    "state": {
+      "properties": {
+        "metadata_token": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+.binf-widgets .xecmpf-eac-inlineform-eac {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.binf-widgets .xecmpf-eac.xecmpf-inline-action-container {
+    display: inline-block; 
+}
+.binf-widgets .xecmpf-eac-inlineform-select {
+    height: 28px;
+    border: 1px solid #757575;
+    margin-right: 50px;
+    border-radius: 3px;
+    padding: 0px 8px;
+    width: calc(100% - 50px);
+}
+.binf-widgets .xecmpf-eac-inlineform-options {
+    height: 28px;
+    border: 1px solid #757575;
+    border-radius: 3px;
+    margin-left: 5px;
+    padding: 0px 8px;
+    width: 50%;
+}
+.binf-widgets .xecmpf-eac-inlineform-eac .csui-inlineform-group .csui-btn.binf-btn {
+    margin: 0 0 0 4px;
+    color: #171F4C;
+    border: 1px solid #171F4C;
+    background-color: #ffffff;
+}
+.binf-widgets .xecmpf-eac-inlineform-eac .csui-inlineform-group .csui-btn.binf-btn.csui-btn-save {
+    color: #ffffff;
+    background-color: #171F4C;
+}
+.binf-widgets .xecmpf-eac-inlineform-eac .csui-inlineform-group .csui-btn.binf-btn:disabled {
+    color: #ffffff;
+    background-color: #999999;
+    border: 1px solid #999999;
+}
+.binf-widgets .xecmpf-eac-inlineform-eac.csui-form-error {
+    margin-top: 9px;
+}
+.binf-widgets .csui-inlineform-group.csui-inlineform-group-error {
+    padding-top: 8px;
+}
+.binf-widgets .xecmpf-eac-inlineform-eac .csui-inlineform-group-error .binf-text-danger {
+    color: #333333;
+    border-left: 2px solid #2E3D98;
+}
+
+

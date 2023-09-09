@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Test workspace picker field view</title>
+
+  <link rel="stylesheet" href="../../../../../../../lib/src/csui/themes/carbonfiber/theme.css">
+
+  <script src="../../../../../../../lib/src/nuc/lib/require.js"></script>
+  <script src="../../../../../../../lib/src/nuc/config.js" data-csui-path="../../../../../../../lib/src/nuc"></script>
+
+  <script>
+
+    require.config({
+        paths: {
+            conws: '../../../../../../../src',
+            esoc:'../../../../../../../lib/src/esoc',
+            nuc:'../../../../../../../lib/src/nuc',
+            smart:'../../../../../../../lib/src/smart',
+            csui:'../../../../../../../lib/src/csui'
+        },
+        "i18n": {
+            loadableLocales: {root: true}
+        },
+        deps: [
+            'csui/lib/require.config!csui/csui-extensions.json',
+            'csui/lib/require.config!esoc/esoc-extensions.json',
+            'csui/lib/require.config!nuc/nuc-extensions.json',
+            'csui/lib/require.config!smart/smart-extensions.json',
+            'csui/lib/require.config!conws/conws-extensions.json'
+        ]
+    });
+
+  var connection = {
+        url: "http://murdoch.opentext.com/alpha/cs.exe/api/v1",
+        supportPath: "/alphasupport",
+        credentials: {
+          username: "Admin",
+          password: "october1"
+        }
+      };
+
+    csui.require([
+        'csui/lib/jquery',
+        'csui/lib/underscore',
+        'csui/lib/backbone',
+        'csui/lib/marionette',
+        'csui/utils/contexts/page/page.context',
+        'csui/controls/form/form.view',
+        'csui/utils/connector',
+        'conws/controls/form/fields/workspacefield.view',
+        'conws/utils/workspaces/workspace.model',
+        'csui/controls/form/fields/userfield.view',
+        'csui/models/member'
+    ], function($, _, Backbone, Marionette, PageContext, FormView, Connector,
+      WorkspaceFieldView, WorkspaceModel, UserFieldView, MemberModel) {
+
+            function FormOptions() {
+                $.extend(this,{
+                    model: new Backbone.Model({
+                        data: {},
+                        schema: {
+                            properties: {}
+                        },
+                        options:{
+                            fields: {}
+                        }
+                    })
+                });
+
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdA: 30388683
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdA: {
+                                description: "Workspace displayed in this widget",
+                                title: "Workspace A",
+                                type: "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdA:{
+                                "type": "otconws_workspace_id",
+                                "type_control": {
+                                    "parameters": {
+                                        "workspace_types": [
+                                            26
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdB: 48501311
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdB: {
+                                "readonly": true,
+                                "required": false,
+                                "title": "",
+                                "type": "integer",
+                                "hidden": false
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdB:{
+                                "label": "Workspace B",
+                                "hidden": false,
+                                "readonly": true,
+                                "hideInitValidationError": false,
+                                "type": "otconws_workspace_id"
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        workspaceIdC: 49151910
+                    },
+                    schema: {
+                        properties: {
+                            workspaceIdC: {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            workspaceIdC:{
+                                "label": "Workspace C",
+                                "type": "otconws_workspace_id",
+                                "type_control": {
+                                    "parameters": {
+                                        "search_type": "startsWith" // "contains"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+                $.extend(true,this.model.attributes,{
+                    data: {
+                        userIdX: 1000
+                    },
+                    schema: {
+                        properties: {
+                            userIdX: {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    options: {
+                        fields: {
+                            userIdX:{
+                                "label": "User X",
+                                "type": "otcs_user"
+                            }
+                        }
+                    }
+                });
+            }
+
+            var connector = new Connector({
+                connection: connection
+            });
+
+            var pageContext = new PageContext({
+                factories: {
+                    connector: connector
+                }
+            });
+
+            // parameters in scenario, when displayed in "Edit page" mode:
+            var formOptions1 = $.extend(new FormOptions(),{
+                context: pageContext,
+                mode: "create"
+            });
+
+            // parameters in scenario, when displayed in general tab:
+            var formOptions2 = $.extend(new FormOptions(),{
+                context: pageContext,
+                layoutMode: "singleCol",
+                mode: "update"
+            });
+
+            var classes = {
+                "otconws_workspace_id": { view: WorkspaceFieldView, model: WorkspaceModel },
+                "otcs_user": {view: UserFieldView, model: MemberModel }
+            };
+
+            function showFields(where,formOptions,fieldData) {
+
+                var views = [];
+                var csForm = $('<div class="cs-form cs-form-'+formOptions.mode+'"></div>');
+                var csRow = $('<div class="binf-row alpaca-field"></div>').appendTo(csForm);
+                var csCol = $('<div class="binf-col-md-12 cs-form-doublecolumn"></div>').appendTo(csRow);
+                var form = formOptions.model.attributes;
+                _.each(form.data,function(id,dataId){
+                    var modelAttributes = { id: "alpaca"+(views.length+1), data: {}, options: {}, schema: {} };
+                    _.extend(modelAttributes.data,{id:id},fieldData[dataId]);
+                    _.extend(modelAttributes.options,form.options.fields[dataId]);
+                    _.extend(modelAttributes.schema,form.schema.properties[dataId]);
+                    formOptions.mode==="create" && $.extend(modelAttributes.options,{
+                        // parameters in scenario, when displayed in "Edit page" mode:
+                        allowOptionalEmpty: true,
+                        setRequiredFieldsEditable: true,
+                        mode: "create"
+                    });
+                    formOptions.mode==="update" && $.extend(modelAttributes.options,{
+                        // parameters in scenario, when displayed in general tab:
+                        mode: "update"
+                    });
+                    var options = {
+                      context: formOptions.context,
+                      dataId: dataId,
+                      model: new Backbone.Model(modelAttributes),
+                      data: modelAttributes.data,
+                      id: _.uniqueId(modelAttributes.id),
+                      alpaca: {
+                        data: modelAttributes.data.id,
+                        options: modelAttributes.options,
+                        schema: modelAttributes.schema
+                      }
+                    };
+                    var viewType = form.options.fields[dataId].type;
+                    var view = new (classes[viewType].view)(options);
+                    view.render();
+                    var alpContainer = $('<div class="alpaca-container-item"></div>').appendTo(csCol);
+                    var alpField = $('<div class="binf-form-group alpaca-field alpaca-field-'+viewType+'"></div>').appendTo(alpContainer);
+                    var alpLabel = $('<label class="binf-control-label alpaca-control-label binf-col-sm-3"></label>').appendTo(alpField);
+                    alpLabel.text(form.options.fields[dataId].label||form.schema.properties[dataId].title);
+                    var alpCol = $('<div class="binf-col-sm-9"></div>').appendTo(alpField);
+                    var alpControl = $('<div class="alpaca-control"></div>').appendTo(alpCol);
+                    view.$el.appendTo(alpControl);
+                    views.push(view);
+                });
+                csForm.appendTo(where);
+
+                return views;
+            }
+
+            var fieldData = {};
+            function loadData(){
+                var formOptions = new FormOptions();
+                return $.whenAll.apply($,_.map(formOptions.model.attributes.data,function(id,dataId){
+                    var viewType = formOptions.model.attributes.options.fields[dataId].type;
+                    var Model = classes[viewType].model;
+                    var model = new Model({id:id},{connector: connector,commands:[]});
+                    var fetch = model.fetch();
+                    return fetch.then(function(){
+                        fieldData[dataId] = model.attributes;
+                    },function(){
+                        fieldData[dataId] = { id: id, name: "error getting "+Model.prototype.constructor.name+" for id "+id};
+                    });
+                }));
+            }
+
+            loadData().always(function(){
+
+                var views1 = showFields("#controls1",formOptions1,fieldData);
+                var views2 = showFields("#controls2",formOptions2,fieldData);
+
+                // How to get the changed values:
+                var view = views1[0];
+                var model = view.model;
+                view.on("field:changed", function (event) {
+                var value = view.getValue();
+                console.log("view value changed:",_.pick(value,["id","name"]));
+                });
+                model.on("change:data",function(){
+                    var value = model.get("data");
+                    console.log("data changed:",_.pick(value,["id","name"]));
+                });
+            });
+
+        });
+
+  </script>
+
+<style>
+    #testtable>tbody>tr>td {
+        padding: 15px 30px;
+    }
+    #testtable>tbody>tr>td>div>* {
+        padding-bottom: 8px;
+    }
+</style>
+
+</head>
+
+<body class="binf-widgets">
+<form>
+<div>
+<div>
+    <table id="testtable" style="width: 540px; margin: 15px 30px;">
+    <tbody>
+        <tr>
+          <td>
+              <div id="controls1"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div id="controls2"></div>
+          </td>
+      </tr>
+  </tbody>
+    </table>
+</div>
+</div>
+</form>
+</body>
+</html>

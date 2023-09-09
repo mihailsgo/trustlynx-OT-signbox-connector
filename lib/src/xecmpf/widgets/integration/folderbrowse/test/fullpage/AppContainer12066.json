@@ -1,0 +1,426 @@
+{
+  "collection": {
+    "paging": {
+      "limit": 30,
+      "page": 1,
+      "page_total": 1,
+      "range_max": 3,
+      "range_min": 1,
+      "total_count": 3
+    },
+    "sorting": {
+      "sort": [{
+        "key": "sort",
+        "value": "asc_name"
+      }]
+    }
+  },
+  "links": {
+    "data": {
+      "self": {
+        "body": "",
+        "content_type": "",
+        "href": "\/api\/v2\/app\/container\/12066?fields=bwsinfo{up}&fields=document_external_identity&fields=external_source&fields=followups&fields=properties{wksp_type_name,rm_enabled}&fields=rmiconsdata&fields=signature_info&limit=30&page=1&sort=asc_name",
+        "method": "GET",
+        "name": ""
+      }
+    }
+  },
+  "results": {
+    "addable_node_types": {
+      "data": {
+        "business_workspace": "api\/v1\/forms\/nodes\/create?type=848&parent_id=12066",
+        "Collection": "api\/v1\/forms\/nodes\/create?type=298&parent_id=12066",
+        "compound_document": "api\/v1\/forms\/nodes\/create?type=136&parent_id=12066",
+        "document": "api\/v1\/forms\/nodes\/create?type=144&parent_id=12066",
+        "email_folder": "api\/v1\/forms\/nodes\/create?type=751&parent_id=12066",
+        "folder": "api\/v1\/forms\/nodes\/create?type=0&parent_id=12066",
+        "Forum": "api\/v1\/forms\/nodes\/create?type=123469&parent_id=12066",
+        "shortcut": "api\/v1\/forms\/nodes\/create?type=1&parent_id=12066",
+        "tasklist": "api\/v1\/forms\/nodes\/create?type=204&parent_id=12066",
+        "url": "api\/v1\/forms\/nodes\/create?type=140&parent_id=12066",
+        "Wiki": "api\/v1\/forms\/nodes\/create?type=5573&parent_id=12066"
+      },
+      "definitions": {
+        "business_workspace": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/otsapxecm\/otsapwksp_workspace_b8.png",
+          "method": "GET",
+          "name": "Business Workspace",
+          "parameters": {},
+          "tab_href": "",
+          "type": 848
+        },
+        "Collection": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/collections\/collection.gif",
+          "method": "GET",
+          "name": "Collection",
+          "parameters": {},
+          "tab_href": "",
+          "type": 298
+        },
+        "compound_document": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/webdoc\/cd.gif",
+          "method": "GET",
+          "name": "Compound Document",
+          "parameters": {},
+          "tab_href": "",
+          "type": 136
+        },
+        "document": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/webdoc\/doc.gif",
+          "method": "GET",
+          "name": "Document",
+          "parameters": {},
+          "tab_href": "",
+          "type": 144
+        },
+        "email_folder": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/otemail\/emailfolder.gif",
+          "method": "GET",
+          "name": "Email Folder",
+          "parameters": {},
+          "tab_href": "",
+          "type": 751
+        },
+        "folder": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/webdoc\/folder.gif",
+          "method": "GET",
+          "name": "Folder",
+          "parameters": {},
+          "tab_href": "",
+          "type": 0
+        },
+        "Forum": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/forums\/forum.gif",
+          "method": "GET",
+          "name": "Forums",
+          "parameters": {},
+          "tab_href": "",
+          "type": 123469
+        },
+        "shortcut": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/tinyali.gif",
+          "method": "GET",
+          "name": "Shortcut",
+          "parameters": {},
+          "tab_href": "",
+          "type": 1
+        },
+        "tasklist": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/task\/16tasklist.gif",
+          "method": "GET",
+          "name": "Task List",
+          "parameters": {},
+          "tab_href": "",
+          "type": 204
+        },
+        "url": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/webdoc\/url.gif",
+          "method": "GET",
+          "name": "URL",
+          "parameters": {},
+          "tab_href": "",
+          "type": 140
+        },
+        "Wiki": {
+          "body": "",
+          "content_type": "",
+          "display_hint": "",
+          "display_href": "",
+          "handler": "form",
+          "image": "\/img\/wiki\/wiki.gif",
+          "method": "GET",
+          "name": "Wiki",
+          "parameters": {},
+          "tab_href": "",
+          "type": 5573
+        }
+      },
+      "definitions_map": {},
+      "definitions_order": ["business_workspace", "Collection", "compound_document", "document", "email_folder", "folder", "Forum", "shortcut", "tasklist", "url", "Wiki"]
+    },
+    "ancestors": [{
+      "id": 2000,
+      "name": "Enterprise",
+      "parent_id": -1,
+      "type": 141,
+      "type_name": "Enterprise Workspace"
+    }, {
+      "id": 12500,
+      "name": "C4C (my336500)",
+      "parent_id": 2000,
+      "type": 0,
+      "type_name": "Folder"
+    }, {
+      "id": 12282,
+      "name": "Account (C4C)",
+      "parent_id": 12500,
+      "type": 0,
+      "type_name": "Folder"
+    }, {
+      "id": 12066,
+      "name": "Account 1001",
+      "parent_id": 12282,
+      "type": 848,
+      "type_name": "Business Workspace"
+    }],
+    "contents": [{
+      "actions": {
+        "data": {},
+        "map": {},
+        "order": []
+      },
+      "comments": 0,
+      "container": true,
+      "create_date": "2021-09-28T11:20:00",
+      "create_user_id": 1000,
+      "create_user_id_expand": {
+        "name": "Admin"
+      },
+      "data": {
+        "bwsinfo": {
+          "up": true
+        },
+        "rmiconsdata": {
+          "class_id": 0,
+          "official": 0,
+          "show_classify": false,
+          "show_hold": false,
+          "show_hold_tab": false,
+          "show_label_tab": true,
+          "show_official": false,
+          "show_xref": false,
+          "show_xref_tab": false
+        }
+      },
+      "description": "",
+      "favorite": false,
+      "hidden": false,
+      "id": 75702,
+      "mime_type": null,
+      "modify_date": "2021-09-28T11:20:00",
+      "modify_images": [],
+      "modify_user_id": 1000,
+      "modify_user_id_expand": {
+        "name": "Admin"
+      },
+      "name": "Rel BWS",
+      "openable": true,
+      "original_id": null,
+      "original_id_expand": null,
+      "owner_user_id": 1000,
+      "owner_user_id_expand": {
+        "name": "Admin"
+      },
+      "parent_id": 12066,
+      "parent_id_expand": null,
+      "permissions_model": "advanced",
+      "reserved_date": null,
+      "reserved_shared_collaboration": false,
+      "reserved_user_id": null,
+      "reserved_user_id_expand": null,
+      "size": 1,
+      "size_formatted": "1 Item",
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      },
+      "status": null,
+      "type": 854,
+      "type_name": "Related Business Workspaces"
+    }, {
+      "actions": {
+        "data": {
+          "opendocumentwebedit": {
+            "body": "",
+            "content_type": "",
+            "form_href": "",
+            "href": "func=Edit.Edit&nodeid=12069&ReadOnly=True&uiType=2",
+            "method": "GET",
+            "name": "Open"
+          }
+        },
+        "map": {},
+        "order": ["opendocumentwebedit"]
+      },
+      "comments": 0,
+      "container": false,
+      "create_date": "2021-08-20T11:20:29",
+      "create_user_id": 1000,
+      "create_user_id_expand": {
+        "name": "Admin"
+      },
+      "data": {
+        "bwsinfo": {
+          "up": true
+        },
+        "document_external_identity": "",
+        "external_source": "file_system",
+        "rmiconsdata": {
+          "class_id": 0,
+          "official": 0,
+          "show_classify": false,
+          "show_hold": false,
+          "show_hold_tab": false,
+          "show_label_tab": true,
+          "show_official": false,
+          "show_xref": false,
+          "show_xref_tab": false
+        }
+      },
+      "description": "",
+      "favorite": false,
+      "hidden": false,
+      "id": 12069,
+      "mime_type": "application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "modify_date": "2021-08-20T11:26:09",
+      "modify_images": [],
+      "modify_user_id": 1000,
+      "modify_user_id_expand": {
+        "name": "Admin"
+      },
+      "name": "Test.xlsx",
+      "openable": true,
+      "original_id": null,
+      "original_id_expand": null,
+      "owner_user_id": 1000,
+      "owner_user_id_expand": {
+        "name": "Admin"
+      },
+      "parent_id": 12066,
+      "parent_id_expand": null,
+      "permissions_model": "advanced",
+      "reserved_date": null,
+      "reserved_shared_collaboration": false,
+      "reserved_user_id": null,
+      "reserved_user_id_expand": null,
+      "size": 8295,
+      "size_formatted": "9 KB",
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      },
+      "status": null,
+      "type": 144,
+      "type_name": "Document"
+    }, {
+      "actions": {
+        "data": {},
+        "map": {},
+        "order": []
+      },
+      "comments": 0,
+      "container": true,
+      "create_date": "2021-08-20T11:20:20",
+      "create_user_id": 1000,
+      "create_user_id_expand": {
+        "name": "Admin"
+      },
+      "data": {
+        "bwsinfo": {
+          "up": true
+        },
+        "rmiconsdata": {
+          "class_id": 0,
+          "official": 0,
+          "show_classify": false,
+          "show_hold": false,
+          "show_hold_tab": false,
+          "show_label_tab": true,
+          "show_official": false,
+          "show_xref": false,
+          "show_xref_tab": false
+        }
+      },
+      "description": "",
+      "favorite": false,
+      "hidden": false,
+      "id": 12067,
+      "mime_type": null,
+      "modify_date": "2021-08-20T11:26:08",
+      "modify_images": [],
+      "modify_user_id": 1000,
+      "modify_user_id_expand": {
+        "name": "Admin"
+      },
+      "name": "Test1",
+      "openable": true,
+      "original_id": null,
+      "original_id_expand": null,
+      "owner_user_id": 1000,
+      "owner_user_id_expand": {
+        "name": "Admin"
+      },
+      "parent_id": 12066,
+      "parent_id_expand": null,
+      "permissions_model": "advanced",
+      "reserved_date": null,
+      "reserved_shared_collaboration": false,
+      "reserved_user_id": null,
+      "reserved_user_id_expand": null,
+      "size": 1,
+      "size_formatted": "1 Item",
+      "state": {
+        "properties": {
+          "metadata_token": ""
+        }
+      },
+      "status": null,
+      "type": 0,
+      "type_name": "Folder"
+    }],
+    "drag_and_drop": false
+  }
+}

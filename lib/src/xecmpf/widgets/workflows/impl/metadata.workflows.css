@@ -1,0 +1,47 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+.binf-widgets .csui-metadata-workflows {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 4em;
+  height: calc(100% - 4em);
+  flex: 1 1000 auto;
+  -ms-flex: 1 1000 auto;
+  -webkit-flex: 1 1000 auto;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.binf-widgets .csui-metadata-workflows .binf-table.dataTable > thead > tr > th:first-child {
+  padding-left: 12px;
+}
+
+.binf-widgets .csui-metadata-workflows .binf-table.dataTable > tbody > tr [data-csui-attribute = 'WorkflowTitle'] a {
+  color: blue;
+}
+
+.csui-metadata-workflows #workflow-tableview {
+  flex: 1 1000 auto;
+  -ms-flex: 1 1000 auto;
+  -webkit-flex: 1 1000 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.csui-metadata-workflows #workflow-tableview > div {
+  overflow: hidden;
+}

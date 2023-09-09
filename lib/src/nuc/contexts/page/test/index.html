@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PageContext</title>
+  <link rel="stylesheet" href="../../../../themes/carbonfiber/theme.css">
+
+  <style>
+    body {
+      font-family: "OpenText Sans", "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial",
+      "Segoe UI", "Tahoma", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 100%;
+    }
+  </style>
+
+  <script src="../../../../lib/require.js"></script>
+  <script src="../../../../config.js" data-csui-path="../../../.."></script>
+  <script>
+    require.config({
+      config: {
+        'nuc/contexts/factories/connector': {
+          connection: {
+            url: '//server/otcs/cs/api/v1',
+            supportPath: '/support',
+            session: { ticket: 'dummy' }
+            // url: 'http://murdock.opentext.com/alpha/cs.exe/api/v1',
+            // supportPath: '/alphasupport'
+          }
+        }
+      },
+      deps: [
+        'require',
+        'nuc/lib/require.config!nuc/nuc-extensions.json'
+      ],
+      callback: initialize
+    });
+
+    function initialize(require) {
+      require([
+        'nuc/lib/underscore', 'nuc/lib/jquery', '../page.context',
+        'nuc/contexts/factories/connector', 'nuc/contexts/factories/factory',
+        'nuc/models/authenticated.user', './page.context.mock'
+      ], function (_, $, PageContext, ConnectorFactory, ModelFactory,
+          AuthenticatedUserModel, PageContextMock) {
+
+        var UserModelFactory = ModelFactory.extend({
+          propertyPrefix: 'user',
+
+          constructor: function UserModelFactory(context, options) {
+            ModelFactory.prototype.constructor.apply(this, arguments);
+
+            var user = this.options.user || {};
+            if (!(user instanceof Backbone.Model)) {
+              var connector = context.getObject(ConnectorFactory, options);
+              user = new AuthenticatedUserModel(user.attributes || config.attributes,
+                  _.defaults({ connector: connector }, user.options));
+            }
+            this.property = user;
+          },
+
+          fetch: function (options) {
+            return this.property.fetch(options);
+          }
+        });
+
+        var contentElement = $('body'),
+            context = new PageContext(),
+            connector = context.getObject(ConnectorFactory),
+            currentUser = context.getModel(UserModelFactory);
+
+        $('<p>')
+            .text('Connected to the server ' + connector.connection.url)
+            .appendTo(contentElement);
+
+        PageContextMock.enable();
+
+        context.fetch()
+            .done(function () {
+              $('<p>')
+                  .text('Current user is ' + currentUser.get('name'))
+                  .appendTo(contentElement);
+            });
+
+      });
+  }
+  </script>
+</head>
+
+<body></body>
+
+</html>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

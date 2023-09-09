@@ -1,0 +1,18 @@
+<div class="cs-header">
+  {{formHeading}}
+</div>
+<div class="cs-ml-form-container">
+  {{#each languages}}
+    <div class="binf-row">
+      <label class="binf-control-label alpaca-control-label binf-col-sm-4"
+             for="input-{{this.LanguageCode}}"
+             title="{{this.LanguageNameLocal}}">{{this.LanguageNameLocal}}</label>
+      <div class="binf-col-sm-8 input-container">
+        <label lang="{{this.LanguageCode}}">
+          <input id="input-{{this.LanguageCode}}" value="{{lookup ../data this.LanguageCode}}" lang="{{this.LanguageCode}}">
+        </label>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

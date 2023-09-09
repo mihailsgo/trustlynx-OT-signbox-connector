@@ -1,0 +1,20 @@
+<span class="csui-item-standard csui-list-group-item {{#if inlineForm}} csui-inlineform-row {{/if}}">
+  {{#unless inlineForm}}
+    <span class="icon icon-checkbox {{showOnHover}} {{selected}}">
+      <input type="checkbox" aria-label="{{checkboxAria}}" />
+    </span>
+   {{/unless}}
+  <span class="csui-browsable">
+    <span class="csui-type-icon" aria-hidden="true" title="{{iconTitle}}"></span>
+    {{#if inlineForm}}
+      <div class="csui-inlineform-container">
+      </div>
+    {{else}}
+      <span class="csui-list-item-title">
+        {{name}}
+      </span>
+    {{/if}}
+  </span>
+  <span class="csui-icon csui-end-icon {{browsed}}"></span>
+</span>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

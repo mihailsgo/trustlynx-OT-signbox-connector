@@ -1,0 +1,17 @@
+<div class="binf-dropdown csui-dropdown" role="menuitem">
+    <a href="" class="binf-dropdown-toggle" data-binf-toggle="dropdown" role="button" aria-expanded="false" tabindex="0"
+        aria-label="{{moreButtonsAria}}" title="{{moreButtonsAria}}" aria-expanded="false">
+        {{{icon-v2 iconName="csui_action_more32" size=size states=false}}}
+    </a>
+    <ul class="binf-dropdown-menu  csui-dropdown-list" role="menu">
+        {{#each list}}
+        <li class="{{#if this.attributes.disabled }}binf-disabled{{/if}}">
+            <a role="menuitem" href="#" class="{{#if this.attributes.disabled }}binf-disabled{{/if}}"
+                aria-label= "{{this.attributes.label}}" tabindex="-1">
+                {{this.attributes.label}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

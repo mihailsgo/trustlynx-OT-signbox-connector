@@ -1,0 +1,38 @@
+{{#if header}}
+    <div class="tile-header">
+
+        {{#if wrNode}}
+            <div class="arrow_back cs-go-back"></div>
+        {{/if}}
+
+        {{#if icon}}
+            <div class="tile-type-icon">
+                <span class="icon {{icon}}" aria-hidden="true"></span>
+            </div>
+        {{else}}
+            {{#if imageUrl}}
+                <div class="tile-type-image {{imageClass}}">
+                    <img src="{{imageUrl}}" aria-hidden="true">
+                </div>
+            {{/if}}
+        {{/if}}
+
+        <div class="tile-title">
+            <h2 class="csui-heading">{{title}}</h2>
+        </div>
+
+        <div class="tile-controls">
+            <div class="csui-favorite csui-acc-tab-region webreports-widget-parameters-btn binf-hidden">
+                <span class="csui-icon-edit inline-edit-icon icon-edit wr-icon-edit" role="button" tabindex="0" aria-label="{{settings}}"></span>
+            </div>
+        </div>
+
+    </div>
+{{/if}}
+
+<div class="webreports-nodestable-report-table-container">
+    <div class="csui-table-tableview"></div>
+    <div class="csui-table-paginationview"></div>
+</div>
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

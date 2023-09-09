@@ -1,0 +1,64 @@
+<div role="alertdialog"
+    {{#if dialogSize}}
+      class="binf-modal-dialog binf-modal-{{dialogSize}}"
+    {{else}}
+      class="binf-modal-dialog"
+    {{/if}}
+
+    {{#if showHeader}}
+      aria-labelledby="{{dlgTitleId}}"
+    {{/if}}
+    aria-describedby="{{dlgMsgId}}"      
+>
+  <div class="binf-modal-content">
+    {{#if showHeader}}
+      <div class="binf-modal-header {{headerClass}}">
+        {{#if showTitleCloseButton}}
+          <button type="button" class="binf-close" data-binf-dismiss="modal"
+                  aria-label="{{closeButtonAria}}" title="{{closeButtonTooltip}}" tabindex="0">
+            <span class="icon {{titleCloseIcon}}"></span>
+          </button>
+        {{/if}}
+        <h4 class="binf-modal-title">
+          {{#if showTitleIcon}}
+            <span class="icon {{titleIcon}}"></span>
+          {{/if}}
+          <span class="title-text" id="{{dlgTitleId}}">{{title}}</span>
+        </h4>
+      </div>
+    {{/if}}
+
+    <div class="binf-modal-body" id="{{dlgMsgId}}"></div>
+
+    <div class="binf-modal-footer">
+
+    {{#if buttons.showYes}}
+      <button type="button" class="binf-btn binf-btn-primary csui-yes csui-default" tabindex="0"
+              data-binf-dismiss="modal" 
+          {{#if buttons.disableYes}}
+            disabled="true"
+          {{/if}}
+      >{{buttons.labelYes}}</button>      
+    {{/if}}
+    {{#if buttons.showNo}}
+      <button type="button" class="binf-btn binf-btn-default csui-no" tabindex="0"
+              data-binf-dismiss="modal"
+          {{#if buttons.disableNo}}
+            disabled="true"
+          {{/if}}
+      >{{buttons.labelNo}}</button>
+    {{/if}}
+    {{#if buttons.showCancel}}
+      <button class="binf-btn binf-btn-default csui-cancel" tabindex="0"
+              data-binf-dismiss="modal" 
+          {{#if buttons.disableCancel}}
+            disabled="true"
+          {{/if}}
+      >{{buttons.labelCancel}}</button>      
+    {{/if}}
+  </div>
+  </div>
+  </div>
+
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

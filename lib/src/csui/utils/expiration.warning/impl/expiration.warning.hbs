@@ -1,0 +1,12 @@
+{{#if isExpirationWarningContent}}
+  <div class="div-inline csui-expiration-warning-dialog-text">{{warningText}}</div><BR>
+  <div class="div-inline csui-expiration-warning-dialog-timevalue">
+    <span class="csui-time-value-min"></span>:<span class="csui-time-value-sec"></span>
+  </div>
+
+  <p id="csui-expiration-timer-live" aria-live="assertive" aria-atomic="true"></p>  
+{{else}}
+  <div class="div-inline csui-expiration-warning-dialog-text">{{warningText}}</div>  
+{{/if}}
+
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

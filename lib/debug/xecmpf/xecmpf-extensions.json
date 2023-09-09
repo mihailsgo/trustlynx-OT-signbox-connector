@@ -1,0 +1,239 @@
+{
+  "csui/models/server.module/server.module.collection": {
+    "modules": {
+      "xecmpf": {
+        "version": "22.2.0.2124"
+      }
+    }
+  },
+  "csui/models/widget/widget.collection": {
+    "widgets": {
+      "xecmpf": [
+        "xecmpf/widgets/boattachments",
+        "xecmpf/widgets/dossier",
+        "xecmpf/widgets/header",
+        "xecmpf/widgets/scan",
+        "xecmpf/widgets/eac",
+        "xecmpf/widgets/fileupload"
+      ]
+    }
+  },
+  "csui/controls/icons.v2": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/icons/xecmpf.icons.v2"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/plugins/node/node.extra.data": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/contexts/perspective/plugins/node/impl/node.extra.data"
+      ]
+    }
+  },
+  "csui/controls/node.state/node.state.icons": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/controls/table/cells/node.state/node.state.icons"
+      ]
+    }
+  },
+  "csui/controls/table/cells/cell.factory": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/widgets/boattachments/impl/boattachment.table/tablecell/createdby.view",
+        "xecmpf/widgets/boattachments/impl/boattachment.table/tablecell/modifiedby.view",
+        "xecmpf/controls/table/cells/eac.actionplan.view",
+        "xecmpf/controls/table/cells/statusicon.view",
+        "xecmpf/controls/table/cells/location.cell.view"
+      ]
+    }
+  },
+  "csui/controls/table/inlineforms/inlineform.factory": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/table/inlineforms/eventactioncenter/eventactioncenter.view"
+      ]
+    }
+  },
+  "csui/utils/defaultactionitems": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/eventdefinition.defaultactionitems"
+      ]
+    }
+  },
+  "csui/utils/commands": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/commands/folderbrowse/open.full.page.workspace",
+        "xecmpf/utils/commands/folderbrowse/search.container",
+        "xecmpf/utils/commands/folderbrowse/go.to.workspace.history",
+        "xecmpf/utils/commands/boattachments/boattachments.create",
+        "xecmpf/utils/commands/eac/eac.refresh",
+        "xecmpf/utils/commands/eac/eac.back",
+        "xecmpf/utils/commands/eac/add.to.warehouse",
+        "xecmpf/widgets/boattachments/impl/boattachment.table/commands/snapshot",
+        "xecmpf/utils/commands/eac/add.events",
+        "xecmpf/utils/commands/eac/add.action.plan",
+        "xecmpf/utils/commands/eac/delete",
+        "xecmpf/utils/commands/eac/open.eventdefinition",
+        "xecmpf/utils/commands/createdocument"
+      ]
+    }
+  },
+  "csui/widgets/nodestable/toolbaritems": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/widgets/integration/folderbrowse/toolbaritems",
+        "xecmpf/utils/commands/xecmpf.nodestable.toolitems"
+      ]
+    }
+  },
+  "csui/widgets/search.results/impl/toolbaritems": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/commands/xecmpf.searchresults.toolitems"
+      ]
+    }
+  },
+  "csui/controls/tabletoolbar/tabletoolbar.view": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/commands/toolbar.extension"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.panels": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/widgets/myattachments/metadata.property.panels"
+      ]
+    }
+  },
+  "csui/widgets/metadata/metadata.property.panels": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/controls/property.panels/reference/reference.panel"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/search.perspectives": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/perspective/custom.search.perspective"
+      ]
+    }
+  },
+  "csui/dialogs/node.picker/start.locations/start.location.collection": {
+    "startLocations": {
+      "xecmpf": [
+        "xecmpf/dialogs/node.picker/start.locations/businessobjecttypes.container",
+        "xecmpf/dialogs/node.picker/start.locations/extended.ecm.volume.container"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/node.perspectives": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/perspective/eventactionnode.perspective",
+        "xecmpf/utils/perspective/eventdefinitionnode.perspective"
+      ]
+    }
+  },
+  "csui/utils/nodesprites": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/icons/icons"
+      ]
+    }
+  },
+  "csui/perspectives/tabbed/tabbed.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/perspectives/flow/flow.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/perspectives/grid/grid.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/perspectives/left-center-right/left-center-right.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/perspectives/tabbed-flow/tabbed-flow.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/perspectives/single/single.perspective.view": {
+    "unSupportedWidgets": {
+      "xecmpf": [
+        "xecmpf/widgets/scan"
+      ]
+    }
+  },
+  "csui/utils/commands/delete": {
+    "deleteSelfHandler": "xecmpf/utils/commands/workspaces/delete.workspace.handler"
+  },
+  "conws/utils/commands/navigate/workspace": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/commands/navigate/navigate.workspace"
+      ]
+    }
+  },
+  "csui/controls/form/form.view": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/controls/form/fields/alpaca/alpdocumenttypepickerfield"
+      ]
+    }
+  },
+  "csui/utils/commands/open.plugins/open.plugins": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/commands/xecm.open.plugins/impl/xecm.open.plugins"
+      ]
+    }
+  },
+  "csui/utils/contexts/perspective/perspective.context": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/contexts/fileupload/fileupload.perspective.context.plugin"
+      ]
+    }
+  },
+  "csui/pages/start/perspective.routing": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/utils/router/fileupload/fileupload.perspective.router"
+      ]
+    }
+  },
+  "csui/controls/breadcrumbspanel/breadcrumbspanel.view": {
+    "extensions": {
+      "xecmpf": [
+        "xecmpf/controls/breadcrumbspanel/breadcrumbspanel.extension"
+      ]
+    }
+  } 
+}

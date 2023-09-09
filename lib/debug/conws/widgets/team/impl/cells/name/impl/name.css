@@ -1,0 +1,9 @@
+.binf-widgets .participant-name .esoc-user-display-name {
+  font-size: inherit;
+  font-style: normal;
+  max-width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

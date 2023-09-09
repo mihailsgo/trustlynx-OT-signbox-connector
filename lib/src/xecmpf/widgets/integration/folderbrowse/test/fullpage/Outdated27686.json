@@ -1,0 +1,94 @@
+{
+	"links": {
+		"data": {
+			"self": {
+				"body": "",
+				"content_type": "",
+				"href": "\/api\/v2\/businessworkspaces\/27686\/outdateddocuments",
+				"method": "GET",
+				"name": ""
+			}
+		}
+	},
+	"results": {
+		"data": [],
+		"definitions": {
+			"classification_name": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "classification_name",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"multiline": false,
+				"multilingual": false,
+				"name": "Document Type",
+				"password": false,
+				"persona": "",
+				"read_only": true,
+				"Regex": "",
+				"required": false,
+				"type": -1,
+				"type_name": "String",
+				"valid_values": [],
+				"valid_values_name": []
+			},
+			"location_name": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "location_name",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"multiline": false,
+				"multilingual": false,
+				"name": "Location",
+				"password": false,
+				"persona": "",
+				"read_only": true,
+				"Regex": "",
+				"required": false,
+				"type": -1,
+				"type_name": "String",
+				"valid_values": [],
+				"valid_values_name": []
+			},
+			"name": {
+				"allow_undefined": false,
+				"bulk_shared": false,
+				"default_value": null,
+				"description": null,
+				"hidden": false,
+				"key": "name",
+				"max_length": null,
+				"min_length": null,
+				"multi_value": false,
+				"multiline": false,
+				"multilingual": false,
+				"name": "Document Name",
+				"password": false,
+				"persona": "",
+				"read_only": true,
+				"Regex": "",
+				"required": false,
+				"type": -1,
+				"type_name": "String",
+				"valid_values": [],
+				"valid_values_name": []
+			}
+		},
+		"definitions_map": {},
+		"definitions_order": [
+			"classification_name",
+			"name",
+			"location_name"
+		],
+		"total_count": 0
+	}
+}

@@ -1,0 +1,16 @@
+<div>
+  {{#if typeName}}
+    <span class="conws-preview-header-typename">{{typeName}}</span>
+  {{/if}}
+  {{#if display_url}}
+    <a title="{{quickLinkTooltip}}"
+       href="{{display_url}}" target="_blank">
+      {{{icon-v2 iconName='conws_action_quick_link32' states='true' size='normal'}}}</a>
+  {{/if}}
+</div>
+{{#if display_url}}
+  <a  tabindex="0" href="#" class="conws-preview-header-title narrow" title="{{name}}">{{name}}</a>
+{{else}}
+  <a tabindex="0" href="#" class="conws-preview-header-title" title="{{name}}">{{name}}</a>
+{{/if}}
+

@@ -1,0 +1,51 @@
+<div class="ups-conianter">
+    <div class="binf-col-md-12 ups-title" title="{{activeSessionsTitle}}">
+        <h4>{{activeSessionsTitle}}</h4>
+    </div>
+
+    <table class="ups-info-table">
+        <thead>
+            <tr>
+                <th title="{{createTime}}">{{createTime}}</th>
+                <th title="{{lastActivity}}">{{lastActivity}}</th>
+                <th title="{{duration}}">{{duration}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each activeSessionsRecord}}
+            <tr>
+                <td><span title="{{createTime}}">{{createTime}}</span></td>
+                <td><span title="{{lastActivity}}">{{lastActivity}}</span></td>
+                <td><span title="{{duration}}">{{duration}}</span></td>
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+    </table>
+    <br/>
+    <br/>
+</div>
+<div class="ups-conianter">
+    <div class="binf-col-md-12 ups-title" title="{{previousSessionsTitle}}">
+        <h4>{{previousSessionsTitle}}</h4>
+    </div>
+
+    <table class="ups-info-table">
+        <thead>
+            <tr>
+                <th>{{lastLogin}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each previousSessionsRecord}}
+            <tr>
+                <td><span title="{{this}}">{{this}}</span></td>
+            </tr>
+
+            {{/each}}
+
+        </tbody>
+    </table>
+</div>
+<!-- Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. -->

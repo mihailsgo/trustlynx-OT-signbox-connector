@@ -1,0 +1,20 @@
+/* Copyright (c) 2016-2017  OpenText Corp. All Rights Reserved. */
+
+
+
+
+
+.binf-widgets .csui-expiration-warning .div-inline {
+  display: inline-block;
+}
+
+
+.binf-widgets .binf-modal-body .csui-expiration-warning .csui-expiration-warning-dialog-timevalue {
+  font-size: 1.125em;
+}
+
+
+.binf-widgets .binf-modal-body .csui-expiration-warning {
+  margin-top: 15px;
+  white-space: normal;
+}
