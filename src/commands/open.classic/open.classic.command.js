@@ -80,9 +80,6 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         },
         headers: { 'OTCSTICKET': ticket},
         success: function(data){		
-
-          console.info(data);
-
           try {
             callback(
                       {
@@ -111,21 +108,12 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
   //return created container ID
   var createContainer = function(endpointCreateContainer, ticket, docs, addver, name, callback){
     let containerid;
-
-    console.info({
-      "documentId": addver,
-      "newDocumentName": name,
-      "containerDocuments": docs
-    });
-
-    console.info(docs);
-
       //ajax request to create container
       Backbone.ajax({
         type: "POST",
         cache: false,
         contentType: "application/json",
-        url: settings.COMPOSE_CONTAINER_API,
+        url: endpointCreateContainer,
         dataType: "json",
         data: JSON.stringify(
                               {
@@ -139,11 +127,19 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
           try {
               callback(data);
           } catch(e){
-            alert(e);
+            callback(
+              {
+                 error: settings.ERROR_GENERAL
+              }   
+             );
           }
         },
         error: function(error){
-          alert(error);
+          callback(
+            {
+              error: settings.ERROR_GENERAL
+            }
+          )
         }
     })
 
@@ -245,6 +241,60 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       
             dialog.show();
 
+
+            //share to start external signing process
+            createView.on('share', function (e) {
+              let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
+              let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
+              let ticket = connector.connection.session.ticket;
+              let needConCreation = !isSinglePdfOrAsice;
+              
+              if (needConCreation){
+                createView.ui.status.text("Creating container and redirecting to signing view...");
+                createView.ui.status.show();  
+
+                let containerID = getContainerPlaceholderId(createView.ui.verselection);
+                let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+                let nodeList = getCheckedNodes(createView.ui.conselection);
+                
+                createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
+                  if (!data.error){
+                      getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
+                        if (!result.error) {
+                            window.location = result.location;
+                        } else 
+                        {
+                          createView.ui.status.text(result.error);
+                          refreshView(createView.ui);
+                        }
+                      })
+                  } else {
+                    createView.ui.status.text(data.error);
+                    refreshView(createView.ui);
+                  }
+                });
+              } else {
+                let id = nodes.models[0].attributes.id;
+     
+                //open SignBox alternative view for created container ID  
+                createView.ui.status.text("Redirecting to signing view...");
+                createView.ui.status.show();          
+                
+                getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
+                  if (!result.error) {
+                      window.location = result.location;
+                  } else 
+                  {
+                    createView.ui.status.text(result.error);
+                    refreshView(createView.ui);
+                  }
+                })
+              }
+
+            })             
+
+
+            //sign using alternate view
             createView.on('sign', function (e) {
               let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
               let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
@@ -260,15 +310,19 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                 let nodeList = getCheckedNodes(createView.ui.conselection);
                 
                 createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
-                    getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
-                      if (!result.error) {
-                          window.location = result.location;
-                      } else 
-                      {
-                        createView.ui.status.text(result.error);
-                        refreshView(createView.ui);
-                      }
-                    })
+                  if (!data.error){
+                      getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
+                        if (!result.error) {
+                            window.location = result.location;
+                        } else 
+                        {
+                          createView.ui.status.text(result.error);
+                          refreshView(createView.ui);
+                        }
+                      })
+                  } else {
+                    createView.ui.status.text(data.error);
+                  }
                 });
               } else {
                 let id = nodes.models[0].attributes.id;
