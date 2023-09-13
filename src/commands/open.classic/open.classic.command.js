@@ -1,5 +1,3 @@
-const { create } = require("underscore");
-
 define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/info.config.json'
 ], function (OpenClassicPageCommand, DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
@@ -26,6 +24,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
   var buildInterface = function(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode){
     let docListHTML = '<table class="container_doc_list binf-table dataTable"><thead><th class="csui-table-cell-name">' + Translations.docListHeader + '</th>'+ 
     '</thead>';
+    let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
 
     if (isSinglePdfOrAsice){
       docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, singleMode);
@@ -33,28 +32,15 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, multiMode) + '</table>';
     }
 
-    let createView = new CreateContainerView({model: containerModel, docs:docListHTML}); 
+    let createView = new CreateContainerView({model: containerModel, docs:docListHTML, mode: mode}); 
     let dialog = new DialogView({
       title: Translations.dialogTitle,
       view:  createView
     });    
-
-    switch (mode){
-      case modeSign: 
-           createView.ui.share.hide();
-           break;
-      case modeShare:
-           createView.ui.sign.hide();
-           break;
-      case modeShareAndSign: 
-           break;
-    }
-
+ 
     //BELOW ARE EVENTS FOR BOTH CONT. CREATION INTERFACE
-    //sign using alternate view
     createView.on('sign', function (e) {
       let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
-      let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
       let ticket = connector.connection.session.ticket;
       let needConCreation = !isSinglePdfOrAsice;
       
@@ -102,6 +88,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }) 
     
     //share to start external signing process
+    
     createView.on('share', function (e) {
       let needConCreation = !isSinglePdfOrAsice;
       
@@ -135,6 +122,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       }
 
     })      
+    
 
     return dialog;
   }
@@ -371,10 +359,14 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                       internalPortalRedirect(nodes.models[0].attributes.id);
                   } else {
                     //container interface
+                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare);
+                        dialog.show();                    
                   }             
               break;
               case "Sign or share as ASICE": 
                   //container interface
+                  let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShareAndSign);
+                  dialog.show();                    
               break;
             }
           })

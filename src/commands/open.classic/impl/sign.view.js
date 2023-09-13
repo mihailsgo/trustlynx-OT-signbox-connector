@@ -9,11 +9,23 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
     initialize: function () {
     },
 
+    onRender: function() {
+      switch(this.options.mode){
+        case 'Sign':
+          this.ui.share.hide();
+          break;
+        case 'Share':
+          this.ui.sign.hide();
+          break;
+      }
+    },
+
     fetchCollection: function() {
       if (this.collectionFetched) return;
       this.myCollection.fetch();
       this.collectionFetched = true;
     },
+
     constructor: function CreateContainerView(options) {
       Marionette.ItemView.prototype.constructor.apply(this, arguments);
 
