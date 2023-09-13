@@ -1,12 +1,142 @@
+const { create } = require("underscore");
+
 define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/info.config.json'
 ], function (OpenClassicPageCommand, DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
 
   const singleMode = 'single';
   const multiMode = 'multi';
+
+  const modeSign = 'Sign';
+  const modeShare = 'Share';
+  const modeShareAndSign = 'Share And Sign';
   
+  var isSingleAsiceOrPDF = function(nodes){
+    if ((nodes.models.length == 1) && (settings.ALLOWED_MIMETYPES.includes(nodes.models[0].attributes.mime_type))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   var internalPortalRedirect = function(docId){
-      window.location = settings.INTERNAL_PORTAL_URL + "?docId=" + docId;
+      window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId;
+  }
+
+  var buildInterface = function(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode){
+    let docListHTML = '<table class="container_doc_list binf-table dataTable"><thead><th class="csui-table-cell-name">' + Translations.docListHeader + '</th>'+ 
+    '</thead>';
+
+    if (isSinglePdfOrAsice){
+      docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, singleMode);
+    } else {
+      docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, multiMode) + '</table>';
+    }
+
+    let createView = new CreateContainerView({model: containerModel, docs:docListHTML}); 
+    let dialog = new DialogView({
+      title: Translations.dialogTitle,
+      view:  createView
+    });    
+
+    switch (mode){
+      case modeSign: 
+           createView.ui.share.hide();
+           break;
+      case modeShare:
+           createView.ui.sign.hide();
+           break;
+      case modeShareAndSign: 
+           break;
+    }
+
+    //BELOW ARE EVENTS FOR BOTH CONT. CREATION INTERFACE
+    //sign using alternate view
+    createView.on('sign', function (e) {
+      let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
+      let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
+      let ticket = connector.connection.session.ticket;
+      let needConCreation = !isSinglePdfOrAsice;
+      
+      if (needConCreation){
+        createView.ui.status.text("Creating container and redirecting to signing view...");
+        createView.ui.status.show();  
+
+        let containerID = getContainerPlaceholderId(createView.ui.verselection);
+        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        let nodeList = getCheckedNodes(createView.ui.conselection);
+        
+        createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
+          if (!data.error){
+              getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
+                if (!result.error) {
+                    window.location = result.location;
+                } else 
+                {
+                  createView.ui.status.text(result.error);
+                  refreshView(createView.ui);
+                }
+              })
+          } else {
+            createView.ui.status.text(data.error);
+          }
+        });
+      } else {
+        let id = nodes.models[0].attributes.id;
+
+        //open SignBox alternative view for created container ID  
+        createView.ui.status.text("Redirecting to signing view...");
+        createView.ui.status.show();          
+        
+        getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
+          if (!result.error) {
+              window.location = result.location;
+          } else 
+          {
+            createView.ui.status.text(result.error);
+            refreshView(createView.ui);
+          }
+        })
+      }
+
+    }) 
+    
+    //share to start external signing process
+    createView.on('share', function (e) {
+      let needConCreation = !isSinglePdfOrAsice;
+      
+      if (needConCreation){
+        createView.ui.status.text("Creating container and redirecting to signing view...");
+        createView.ui.status.show();  
+
+        let containerID = getContainerPlaceholderId(createView.ui.verselection);
+        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        let nodeList = getCheckedNodes(createView.ui.conselection);
+        
+        createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
+          if (!data.error){
+              getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
+                if (!result.error) {
+                    window.location = result.location;
+                } else 
+                {
+                  createView.ui.status.text(result.error);
+                  refreshView(createView.ui);
+                }
+              })
+          } else {
+            createView.ui.status.text(data.error);
+            refreshView(createView.ui);
+          }
+        });
+      } else {
+        let id = nodes.models[0].attributes.id;
+        internalPortalRedirect(id);
+      }
+
+    })      
+
+    return dialog;
   }
 
   //remove loading icon and button disabled effect
@@ -206,138 +336,50 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 
     execute: function (nodeList, options){
 
-      console.info(options);
+      let buttonTypePressed = options.addableTypeName,
+          connector = options.context.getObject(ConnectorFactory),
+          ticket = connector.connection.session.ticket,
+          endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;     
 
       require(['csui/controls/dialog/dialog.view', 
       'dmss/commands/open.classic/impl/sign.view' 
       ], function(DialogView, CreateContainerView){  
-        let connector = options.context.getObject(ConnectorFactory),
-            nodes = CommandHelper.getAtLeastOneNode(nodeList),
+       let  nodes = CommandHelper.getAtLeastOneNode(nodeList),
             containerModel = new Backbone.Model(),
-            isSinglePdfOrAsice = true,
-            docListHTML = '<table class="container_doc_list binf-table dataTable"><thead><th class="csui-table-cell-name">' + Translations.docListHeader + '</th>'+ 
-            '</thead>',
-            rootFolderID = nodes.models[0].attributes.parent_id;
+            rootFolderID = nodes.models[0].attributes.parent_id,
+            isSinglePdfOrAsice = isSingleAsiceOrPDF(nodes);
 
-            //if only 1 node is selected and datatype is container
-            if ((nodes.models.length == 1) && (settings.ALLOWED_MIMETYPES.includes(nodes.models[0].attributes.mime_type))){
-              //then UI is not needed, only put information message about redirect  
-              docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, singleMode);
-               } else {
-              //if selected more than 1 document, then container creation is must have
-              isSinglePdfOrAsice = false;
-              docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, multiMode) + '</table>';
+             switch (buttonTypePressed){
+              case "Sign": 
+                if (isSinglePdfOrAsice){
+                  getAlternateViewURL(endpointAlternateView, ticket, nodes.models[0].attributes.id, rootFolderID, function(result){
+                    if (!result.error) {
+                        window.location = result.location;
+                    } else 
+                    {
+                      console.log(result.error);
+                    }
+                  })                   
+                } else {
+                    //container interface
+                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign);
+                        dialog.show();
+                }
+              break;
+              case "Share": 
+                  if (isSinglePdfOrAsice){
+                      internalPortalRedirect(nodes.models[0].attributes.id);
+                  } else {
+                    //container interface
+                  }             
+              break;
+              case "Sign or share as ASICE": 
+                  //container interface
+              break;
             }
-
-            var createView = new CreateContainerView({model: containerModel, docs:docListHTML}); 
-            var dialog = new DialogView({
-              title: Translations.dialogTitle,
-              view:  createView
-            });     
-      
-            dialog.show();
-
-
-
-
-            
-            //share to start external signing process
-            createView.on('share', function (e) {
-              let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
-              let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
-              let ticket = connector.connection.session.ticket;
-              let needConCreation = !isSinglePdfOrAsice;
-              
-              if (needConCreation){
-                createView.ui.status.text("Creating container and redirecting to signing view...");
-                createView.ui.status.show();  
-
-                let containerID = getContainerPlaceholderId(createView.ui.verselection);
-                let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
-                let nodeList = getCheckedNodes(createView.ui.conselection);
-                
-                createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
-                  if (!data.error){
-                      getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
-                        if (!result.error) {
-                            window.location = result.location;
-                        } else 
-                        {
-                          createView.ui.status.text(result.error);
-                          refreshView(createView.ui);
-                        }
-                      })
-                  } else {
-                    createView.ui.status.text(data.error);
-                    refreshView(createView.ui);
-                  }
-                });
-              } else {
-                let id = nodes.models[0].attributes.id;
-                internalPortalRedirect(id);
-              }
-
-            })             
-
-
-
-
-
-
-            //sign using alternate view
-            createView.on('sign', function (e) {
-              let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
-              let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
-              let ticket = connector.connection.session.ticket;
-              let needConCreation = !isSinglePdfOrAsice;
-              
-              if (needConCreation){
-                createView.ui.status.text("Creating container and redirecting to signing view...");
-                createView.ui.status.show();  
-
-                let containerID = getContainerPlaceholderId(createView.ui.verselection);
-                let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
-                let nodeList = getCheckedNodes(createView.ui.conselection);
-                
-                createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
-                  if (!data.error){
-                      getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
-                        if (!result.error) {
-                            window.location = result.location;
-                        } else 
-                        {
-                          createView.ui.status.text(result.error);
-                          refreshView(createView.ui);
-                        }
-                      })
-                  } else {
-                    createView.ui.status.text(data.error);
-                  }
-                });
-              } else {
-                let id = nodes.models[0].attributes.id;
-     
-                //open SignBox alternative view for created container ID  
-                createView.ui.status.text("Redirecting to signing view...");
-                createView.ui.status.show();          
-                
-                getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
-                  if (!result.error) {
-                      window.location = result.location;
-                  } else 
-                  {
-                    createView.ui.status.text(result.error);
-                    refreshView(createView.ui);
-                  }
-                })
-              }
-
-            })           
-    
           })
-    }
-    
-  });
+        }
+ });
 
   return OpenClassicCommand;
 
