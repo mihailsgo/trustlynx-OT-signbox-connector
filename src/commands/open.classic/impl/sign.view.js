@@ -13,28 +13,36 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
       switch(this.options.mode){
         case 'Sign':
           this.ui.share.hide();
+          this.ui.status.text(lang.createContainerInformationModeSign);
           break;
         case 'Share':
           this.ui.sign.hide();
+          this.ui.status.text(lang.createContainerInformationModeShare);
+          break;
+        default: 
+          this.ui.status.text(lang.createContainerInformationModeShareOrSin);
           break;
       }
     },
 
+    /*
     fetchCollection: function() {
       if (this.collectionFetched) return;
       this.myCollection.fetch();
       this.collectionFetched = true;
     },
+    */
 
     constructor: function CreateContainerView(options) {
       Marionette.ItemView.prototype.constructor.apply(this, arguments);
-
+      
       this.model.set({
         uniqueId: this.cid,
         newName: this.model.get('oldName'),
         lang: lang,
         docs: this.options.docs
       });
+      
     },
 
     className: 'container-create',

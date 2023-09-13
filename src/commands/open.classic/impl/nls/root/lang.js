@@ -2,8 +2,8 @@ csui.define({
   toolbarButtonTitle: 'Sign',
   dialogTitle: 'Document signing',
   submitLabel: 'Create',
-  submitSignLabel: 'Sign',
-  submitShareLabel: 'Share to sign',
+  submitSignLabel: 'Create ASICE container and sign',
+  submitShareLabel: 'Create ASICE container and share',
   docListHeader: 'Selected Documents',
   addNewVersion: 'Add version',
   createNew: 'Create new document',
@@ -21,5 +21,9 @@ csui.define({
   msgContainerCreatedDownload: 'Container created. Container link: ',
   download: 'download',
   msgErrorTryAgain: 'Status: error. Please try again.',
-  msgRedirect: 'Redirecting to signing view'
+  msgRedirect: 'Redirecting to signing view',
+  dialogTitleShareOrSign: 'Create container and share or sign',
+  createContainerInformationModeSign: 'This action will create ASICE container from documents below and redirect you to signing view. Select document to which ASICE container will be added as new version.',
+  createContainerInformationModeShare: 'This action will create ASICE container from documents below and redirect you to signing process initiation view. Select document to which ASICE container will be added as new version.',
+  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirect you to signing view OR signing process initiation view depending on button pressed. Select document to which ASICE container will be added as new version.'
 });

@@ -4,10 +4,26 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 
   const singleMode = 'single';
   const multiMode = 'multi';
-
   const modeSign = 'Sign';
   const modeShare = 'Share';
   const modeShareAndSign = 'Share And Sign';
+
+  var getDialogTitle = function(mode){
+    let dialogTitle = "";
+
+    switch (mode){
+      case modeSign:
+           dialogTitle = Translations.submitSignLabel;
+           break;
+      case modeShare:
+           dialogTitle = Translations.submitShareLabel;
+           break;
+      default: 
+           dialogTitle = Translations.dialogTitleShareOrSign;  
+    }
+    
+    return dialogTitle;
+  }
   
   var isSingleAsiceOrPDF = function(nodes){
     if ((nodes.models.length == 1) && (settings.ALLOWED_MIMETYPES.includes(nodes.models[0].attributes.mime_type))) {
@@ -32,27 +48,31 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       docListHTML = docListHTML + drawBrowseViewHTML(nodes, connector, multiMode) + '</table>';
     }
 
+    let dialogTitle = getDialogTitle(mode);
     let createView = new CreateContainerView({model: containerModel, docs:docListHTML, mode: mode}); 
     let dialog = new DialogView({
-      title: Translations.dialogTitle,
+      title: dialogTitle,
       view:  createView
     });    
  
     //BELOW ARE EVENTS FOR BOTH CONT. CREATION INTERFACE
     createView.on('sign', function (e) {
+
+      console.info('sign event detected');
+
       let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
       let ticket = connector.connection.session.ticket;
       let needConCreation = !isSinglePdfOrAsice;
       
       if (needConCreation){
         createView.ui.status.text("Creating container and redirecting to signing view...");
-        createView.ui.status.show();  
 
         let containerID = getContainerPlaceholderId(createView.ui.verselection);
         let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
         let nodeList = getCheckedNodes(createView.ui.conselection);
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
+          console.info(data);
           if (!data.error){
               getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
                 if (!result.error) {
@@ -72,8 +92,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 
         //open SignBox alternative view for created container ID  
         createView.ui.status.text("Redirecting to signing view...");
-        createView.ui.status.show();          
-        
+       
         getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
           if (!result.error) {
               window.location = result.location;
@@ -90,7 +109,11 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     //share to start external signing process
     
     createView.on('share', function (e) {
+
+      console.info('share event detected');
+
       let needConCreation = !isSinglePdfOrAsice;
+      let ticket = connector.connection.session.ticket;
       
       if (needConCreation){
         createView.ui.status.text("Creating container and redirecting to signing view...");
@@ -101,16 +124,11 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         let nodeList = getCheckedNodes(createView.ui.conselection);
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
+          
+          console.info(data);
+
           if (!data.error){
-              getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
-                if (!result.error) {
-                    window.location = result.location;
-                } else 
-                {
-                  createView.ui.status.text(result.error);
-                  refreshView(createView.ui);
-                }
-              })
+             internalPortalRedirect(containerID);
           } else {
             createView.ui.status.text(data.error);
             refreshView(createView.ui);
@@ -120,7 +138,6 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         let id = nodes.models[0].attributes.id;
         internalPortalRedirect(id);
       }
-
     })      
     
 

@@ -21,5 +21,9 @@ csui.define({
   msgContainerCreatedDownload: 'Konteineris izveidots: ',
   download: 'lejuplādēt',
   msgErrorTryAgain: 'Statuss: ir notikusi kļūda. Mēģiniet vēlreiz.',
-  msgRedirect: 'Notiek redirekts parakstīšanas skatā'
+  msgRedirect: 'Notiek redirekts parakstīšanas skatā',
+  dialogTitleShareOrSign: 'Create container and share or sign',
+  createContainerInformationModeSign: 'This action will create ASICE container from documents below and redirects you to signing view',
+  createContainerInformationModeShare: 'This action will create ASICE container from documents below and redirects you to signing process initiation view',
+  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirects you to signing view OR signing process initiation view depending on button pressed'
 });
