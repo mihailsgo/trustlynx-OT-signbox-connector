@@ -5,6 +5,10 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
   const singleMode = 'single';
   const multiMode = 'multi';
   
+  var internalPortalRedirect = function(docId){
+      window.location = settings.INTERNAL_PORTAL_URL + "?docId=" + docId;
+  }
+
   //remove loading icon and button disabled effect
   var refreshView = function(ui){
     ui.loader.addClass('binf-hidden'); 
@@ -146,16 +150,6 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     return containerid;
   }
 
-  var parseNodeList = function(nodelist){
-    let idlist = [];
-
-    for (let i = 0; i < nodelist.models.length; i++){
-      idlist.push(nodelist.models[i].attributes.id);
-    }
-
-    return idlist.toString();
-  }
-
   // draw browse view html. Mode single doc / multi docs.
   var drawBrowseViewHTML = function(nodes, connector, mode){
     let docListHTML = '';
@@ -212,6 +206,8 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 
     execute: function (nodeList, options){
 
+      console.info(options);
+
       require(['csui/controls/dialog/dialog.view', 
       'dmss/commands/open.classic/impl/sign.view' 
       ], function(DialogView, CreateContainerView){  
@@ -242,6 +238,9 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
             dialog.show();
 
 
+
+
+            
             //share to start external signing process
             createView.on('share', function (e) {
               let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
@@ -275,23 +274,14 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                 });
               } else {
                 let id = nodes.models[0].attributes.id;
-     
-                //open SignBox alternative view for created container ID  
-                createView.ui.status.text("Redirecting to signing view...");
-                createView.ui.status.show();          
-                
-                getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
-                  if (!result.error) {
-                      window.location = result.location;
-                  } else 
-                  {
-                    createView.ui.status.text(result.error);
-                    refreshView(createView.ui);
-                  }
-                })
+                internalPortalRedirect(id);
               }
 
             })             
+
+
+
+
 
 
             //sign using alternate view
