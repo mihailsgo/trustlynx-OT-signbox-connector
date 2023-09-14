@@ -79,14 +79,18 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 
         let nodeList = getCheckedNodes(createView.ui.conselection);
         let containerID = '';    
-        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        let newContainerName = '';
         
+        if (nodes.models.length == 1){
+          newContainerName = changeExtensionToAsice(nodes.models[0].attributes.name);
+        } else 
+          newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));        
+
         //if single object but forced container creation
         if (nodes.models.length == 1){
           containerID = nodes.models[0].attributes.id;
         } else 
           containerID = getContainerPlaceholderId(createView.ui.verselection); 
-
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
           if (!data.error){
@@ -130,19 +134,24 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       let needConCreation = !isSinglePdfOrAsice;
       let ticket = connector.connection.session.ticket;
       
-      if (needConCreation){
+      if ((needConCreation) || (mode == modeShareAndSign)){
         createView.ui.status.text("Creating container and redirecting to signing view...");
         createView.ui.status.show();  
 
         let nodeList = getCheckedNodes(createView.ui.conselection);
         let containerID = '';    
-        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        let newContainerName = ''; 
         
         //if single object but forced container creation
         if (nodes.models.length == 1){
           containerID = nodes.models[0].attributes.id;
         } else 
           containerID = getContainerPlaceholderId(createView.ui.verselection); 
+
+          if (nodes.models.length == 1){
+            newContainerName = changeExtensionToAsice(nodes.models[0].attributes.name);
+          } else 
+            newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
            if (!data.error){
@@ -319,7 +328,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       radioCheckFirst = '';
     
     //let radio_cell = (mode == multiMode) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
-    let radio_cell = (nodes.models[i].length > 1) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
+    let radio_cell = (nodes.models.length > 1) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
     let checkbox_cell = '<td><input class="otdoc_container" type="checkbox" data-name="' + nodes.models[i].attributes.name + '" id="chk_' + nodes.models[i].attributes.id + '" data-id="' + nodes.models[i].attributes.id + '" checked /></td>';
 
     let icon_cell = '<td class="csui-table-cell-type" data-csui-attribute="type">' +
@@ -344,12 +353,16 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     },
 
     enabled: function (nodes) {
-      //if multiple docs then show only Sign and Share ASICE toolbar button
-      if ((nodes.toolItem.attributes.name !=  btnShareAndSignName) && (nodes.nodes.length > 1)) {
+      if ((nodes.toolItem.attributes.name !=  btnShareAndSignName) && (nodes.nodes.length == 1) && (!settings.ALLOWED_MIMETYPES.includes(nodes.nodes.models[0].attributes.mime_type)))
+      {
         return false;
       } 
         else 
-          return true;
+          if ((nodes.toolItem.attributes.name !=  btnShareAndSignName) && (nodes.nodes.length > 1)) {
+            return false;
+          } 
+          else 
+            return true;
     },    
 
     getUrlQueryParameters: function (node, options) {
