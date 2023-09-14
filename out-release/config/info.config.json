@@ -1,5 +1,0 @@
-{
-    "GATEWAY_TICKET_API": "http://localhost:92/api/auth/session",
-    "EXT_PORTAL_HOST_URL": "http://localhost:9080",
-    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"]
-}

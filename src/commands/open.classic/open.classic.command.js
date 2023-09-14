@@ -17,7 +17,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         ui.loader.addClass('binf-hidden');
         ui.form.removeClass('alpha');     
     }
-  }
+  };
 
   var getDialogTitle = function(mode){
     let dialogTitle = "";
@@ -34,7 +34,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }
     
     return dialogTitle;
-  }
+  };
   
   var isSingleAsiceOrPDF = function(nodes){
     if ((nodes.models.length == 1) && (settings.ALLOWED_MIMETYPES.includes(nodes.models[0].attributes.mime_type))) {
@@ -42,11 +42,11 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     } else {
       return false;
     }
-  }
+  };
 
   var internalPortalRedirect = function(docId){
       window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId;
-  }
+  };
 
   var buildInterface = function(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID){
     let docListHTML = '<table class="container_doc_list binf-table dataTable"><thead><th class="csui-table-cell-name">' + Translations.docListHeader + '</th>'+ 
@@ -83,15 +83,16 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         
         if (nodes.models.length == 1){
           newContainerName = changeExtensionToAsice(nodes.models[0].attributes.name);
-        } else 
+        } else {
           newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));        
-
+        }
         //if single object but forced container creation
         if (nodes.models.length == 1){
           containerID = nodes.models[0].attributes.id;
         } else 
+        {
           containerID = getContainerPlaceholderId(createView.ui.verselection); 
-        
+        }
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
           if (!data.error){
               getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
@@ -103,7 +104,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                   refreshView(createView.ui);
                   toggleLoading(createView.ui);
                 }
-              })
+              });
           } else {
             createView.ui.status.text(data.error);
             toggleLoading(createView.ui);
@@ -122,10 +123,10 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
             refreshView(createView.ui);
             alert(result.error);
           }
-        })
+        });
       }
 
-    }) 
+    }); 
     
     //share to start external signing process
     createView.on('share', function (e) {
@@ -145,14 +146,14 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         //if single object but forced container creation
         if (nodes.models.length == 1){
           containerID = nodes.models[0].attributes.id;
-        } else 
+        } else {
           containerID = getContainerPlaceholderId(createView.ui.verselection); 
-
+        }
           if (nodes.models.length == 1){
             newContainerName = changeExtensionToAsice(nodes.models[0].attributes.name);
-          } else 
+          } else {
             newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
-        
+          }
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
            if (!data.error){
              internalPortalRedirect(containerID);
@@ -166,28 +167,28 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         let id = nodes.models[0].attributes.id;
         internalPortalRedirect(id);
       }
-    })      
+    });   
     
     return dialog;
-  }
+  };
 
   //remove loading icon and button disabled effect
   var refreshView = function(ui){
     ui.loader.addClass('binf-hidden'); 
     ui.sign.removeClass('binf-disabled').removeAttr('disabled');
     ui.share.removeClass('binf-disabled').removeAttr('disabled');
-  }
+  };
 
   var changeExtensionToAsice = function(name){
-    return name.replace(/\.[^/.]+$/, "") + ".asice"
-  }
+    return name.replace(/\.[^/.]+$/, "") + ".asice";
+  };
 
   var getCheckedNodes = function(checkbtns){
     let nodes = [];
 
     for (let i = 0; i < checkbtns.length; i++){
       if (checkbtns[i].checked) {
-        let currentNode = {}
+        let currentNode = {};
         try{
           currentNode.documentId = checkbtns[i].id.split('chk_')[1];
           currentNode.fileName = checkbtns[i].dataset.name;
@@ -199,7 +200,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }    
 
     return nodes;
-  }
+  };
 
   var getContainerPlaceholderName = function(radiobtns){
     let containerName = "";
@@ -216,7 +217,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }
 
     return containerName;
-  }
+  };
 
   var getContainerPlaceholderId = function(radiobtns){
     let containerID = 0;
@@ -233,7 +234,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }
 
     return containerID;
-  }
+  };
   
   var getAlternateViewURL = function(endpoint, ticket, id, rootFolderID, callback){
       Backbone.ajax({
@@ -266,10 +267,10 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
             {
               error: Translations.msgErrorTryAgain
             }  
-          )
+          );
         }
-      })    
-  }
+      });    
+  };
 
   //return created container ID
   var createContainer = function(endpointCreateContainer, ticket, docs, addver, name, callback){
@@ -297,12 +298,12 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
             {
               error: Translations.msgErrorTryAgain
             }
-          )
+          );
         }
-    })
+    });
 
     return containerid;
-  }
+  };
 
   // draw browse view html. Mode single doc / multi docs.
   var drawBrowseViewHTML = function(nodes, connector, mode){
@@ -322,10 +323,12 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       nameTitleAria = title;
     }
     
-    if (i == 0)
+    if (i == 0) {
       radioCheckFirst = 'checked';
-    else 
+    }
+    else {
       radioCheckFirst = '';
+    }
     
     //let radio_cell = (mode == multiMode) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
     let radio_cell = (nodes.models.length > 1) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
@@ -343,7 +346,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }
 
     return docListHTML;
-  }
+  };
 
   var OpenClassicCommand = OpenClassicPageCommand.extend({
     
@@ -361,8 +364,9 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
           if ((nodes.toolItem.attributes.name !=  btnShareAndSignName) && (nodes.nodes.length > 1)) {
             return false;
           } 
-          else 
+          else {
             return true;
+          }
     },    
 
     getUrlQueryParameters: function (node, options) {
@@ -393,7 +397,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                     {
                       console.log(result.error);
                     }
-                  })                   
+                  });                   
                 } else {
                     //container interface
                     let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign, rootFolderID);
@@ -415,7 +419,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                       dialog.show();                    
               break;
             }
-          })
+          });
         }
  });
 
