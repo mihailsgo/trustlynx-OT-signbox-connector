@@ -25,5 +25,13 @@ csui.define({
   dialogTitleShareOrSign: 'Create container and share or sign',
   createContainerInformationModeSign: 'This action will create ASICE container from documents below and redirects you to signing view',
   createContainerInformationModeShare: 'This action will create ASICE container from documents below and redirects you to signing process initiation view',
-  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirects you to signing view OR signing process initiation view depending on button pressed'
+  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirects you to signing view OR signing process initiation view depending on button pressed',
+  createContainerAndRedirectSign: 'Creating container and redirecting to signing view...',
+  /* BELOW ARE TECHNICAL FIELDS, DO NOT CHANGE WITHOUT CONSULTING */
+  singleMode: 'single',
+  multiMode: 'multi',
+  modeSign: 'Sign',
+  modeShare: 'Share',
+  modeShareAndSign: 'Share And Sign',
+  btnShareAndSignName: 'Sign or share as ASICE'  
 });
