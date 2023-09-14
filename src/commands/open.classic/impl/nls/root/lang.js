@@ -15,15 +15,23 @@ csui.define({
   mobileNumbner: 'Mobile',
   conCreated: 'Container created. Signing in progress...',
   signFinish: 'Container signed successfully.',
-  conError: 'Error. Please try again.',
+  conError: 'Error occured. Please try again.',
   msgPIN2Question: 'Status: signing started. Enter PIN2. Verification code: ',
   msgContainerSignedDownload: 'Container signed. Container link: ',
   msgContainerCreatedDownload: 'Container created. Container link: ',
   download: 'download',
-  msgErrorTryAgain: 'Status: error. Please try again.',
+  msgErrorTryAgain: 'Error occured. Please try again.',
   msgRedirect: 'Redirecting to signing view',
   dialogTitleShareOrSign: 'Create container and share or sign',
   createContainerInformationModeSign: 'This action will create ASICE container from documents below and redirect you to signing view. Select document to which ASICE container will be added as new version.',
   createContainerInformationModeShare: 'This action will create ASICE container from documents below and redirect you to signing process initiation view. Select document to which ASICE container will be added as new version.',
-  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirect you to signing view OR signing process initiation view depending on button pressed. Select document to which ASICE container will be added as new version.'
+  createContainerInformationModeShareOrSin: 'This action will create ASICE container from documents below and redirect you to signing view OR signing process initiation view depending on button pressed. Select document to which ASICE container will be added as new version.',
+  createContainerAndRedirectSign: 'Creating container and redirecting to signing view...',
+  /* BELOW ARE TECHNICAL FIELDS, DO NOT CHANGE WITHOUT CONSULTING */
+  singleMode: 'single',
+  multiMode: 'multi',
+  modeSign: 'Sign',
+  modeShare: 'Share',
+  modeShareAndSign: 'Share And Sign',
+  btnShareAndSignName: 'Sign or share as ASICE'  
 });

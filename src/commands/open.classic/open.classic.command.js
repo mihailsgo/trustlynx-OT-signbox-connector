@@ -2,11 +2,22 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
 ], function (OpenClassicPageCommand, DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
 
-  const singleMode = 'single';
-  const multiMode = 'multi';
-  const modeSign = 'Sign';
-  const modeShare = 'Share';
-  const modeShareAndSign = 'Share And Sign';
+  const singleMode = Translations.singleMode;
+  const multiMode = Translations.multiMode;
+  const modeSign = Translations.modeSign;
+  const modeShare = Translations.modeShare;
+  const modeShareAndSign = Translations.modeShareAndSign;
+  const btnShareAndSignName = Translations.btnShareAndSignName;
+
+  var toggleLoading = function(ui){
+    if (ui.loader.hasClass('binf-hidden')){
+        ui.loader.removeClass('binf-hidden');
+        ui.form.addClass('alpha');
+    } else {
+        ui.loader.addClass('binf-hidden');
+        ui.form.removeClass('alpha');     
+    }
+  }
 
   var getDialogTitle = function(mode){
     let dialogTitle = "";
@@ -37,7 +48,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId;
   }
 
-  var buildInterface = function(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode){
+  var buildInterface = function(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID){
     let docListHTML = '<table class="container_doc_list binf-table dataTable"><thead><th class="csui-table-cell-name">' + Translations.docListHeader + '</th>'+ 
     '</thead>';
     let endpointCreateContainer = settings.COMPOSE_CONTAINER_API;
@@ -57,22 +68,27 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
  
     //BELOW ARE EVENTS FOR BOTH CONT. CREATION INTERFACE
     createView.on('sign', function (e) {
-
-      console.info('sign event detected');
+      toggleLoading(createView.ui);
 
       let endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
       let ticket = connector.connection.session.ticket;
       let needConCreation = !isSinglePdfOrAsice;
       
-      if (needConCreation){
-        createView.ui.status.text("Creating container and redirecting to signing view...");
+      if ((needConCreation) || (mode == modeShareAndSign)){
+        createView.ui.status.text(Translations.createContainerAndRedirectSign);
 
-        let containerID = getContainerPlaceholderId(createView.ui.verselection);
-        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
         let nodeList = getCheckedNodes(createView.ui.conselection);
+        let containerID = '';    
+        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        
+        //if single object but forced container creation
+        if (nodes.models.length == 1){
+          containerID = nodes.models[0].attributes.id;
+        } else 
+          containerID = getContainerPlaceholderId(createView.ui.verselection); 
+
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
-          console.info(data);
           if (!data.error){
               getAlternateViewURL(endpointAlternateView, ticket, containerID, rootFolderID, function(result){
                 if (!result.error) {
@@ -81,18 +97,18 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                 {
                   createView.ui.status.text(result.error);
                   refreshView(createView.ui);
+                  toggleLoading(createView.ui);
                 }
               })
           } else {
             createView.ui.status.text(data.error);
+            toggleLoading(createView.ui);
           }
         });
       } else {
         let id = nodes.models[0].attributes.id;
 
-        //open SignBox alternative view for created container ID  
-        createView.ui.status.text("Redirecting to signing view...");
-       
+        //IF ERROR ON INSTA REDIRECT SHOW IT IN ALERT AS SOON AS THERE IS NO OTHER INTERFACE
         getAlternateViewURL(endpointAlternateView, ticket, id, rootFolderID, function(result){
           if (!result.error) {
               window.location = result.location;
@@ -100,6 +116,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
           {
             createView.ui.status.text(result.error);
             refreshView(createView.ui);
+            alert(result.error);
           }
         })
       }
@@ -107,10 +124,8 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }) 
     
     //share to start external signing process
-    
     createView.on('share', function (e) {
-
-      console.info('share event detected');
+      toggleLoading(createView.ui);
 
       let needConCreation = !isSinglePdfOrAsice;
       let ticket = connector.connection.session.ticket;
@@ -119,19 +134,23 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         createView.ui.status.text("Creating container and redirecting to signing view...");
         createView.ui.status.show();  
 
-        let containerID = getContainerPlaceholderId(createView.ui.verselection);
-        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
         let nodeList = getCheckedNodes(createView.ui.conselection);
+        let containerID = '';    
+        let newContainerName = changeExtensionToAsice(getContainerPlaceholderName(createView.ui.verselection));
+        
+        //if single object but forced container creation
+        if (nodes.models.length == 1){
+          containerID = nodes.models[0].attributes.id;
+        } else 
+          containerID = getContainerPlaceholderId(createView.ui.verselection); 
         
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function(data){
-          
-          console.info(data);
-
-          if (!data.error){
+           if (!data.error){
              internalPortalRedirect(containerID);
           } else {
             createView.ui.status.text(data.error);
             refreshView(createView.ui);
+            toggleLoading(createView.ui);
           }
         });
       } else {
@@ -140,7 +159,6 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
       }
     })      
     
-
     return dialog;
   }
 
@@ -228,7 +246,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
           } catch(e){
             callback(
               {
-                 error: settings.ERROR_GENERAL
+                 error: Translations.msgErrorTryAgain
               }   
           );
           }
@@ -237,7 +255,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
           console.info(error);
           callback(
             {
-              error: settings.ERROR_GENERAL
+              error: Translations.msgErrorTryAgain
             }  
           )
         }
@@ -263,20 +281,12 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         ,
         headers: { 'OTCSTICKET': ticket},
         success: function(data){		
-          try {
-              callback(data);
-          } catch(e){
-            callback(
-              {
-                 error: settings.ERROR_GENERAL
-              }   
-             );
-          }
+          callback(data);
         },
         error: function(error){
           callback(
             {
-              error: settings.ERROR_GENERAL
+              error: Translations.msgErrorTryAgain
             }
           )
         }
@@ -308,8 +318,9 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     else 
       radioCheckFirst = '';
     
-    let radio_cell = (mode == multiMode) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
-    let checkbox_cell = (mode == multiMode) ? '<td><input class="otdoc_container" type="checkbox" data-name="' + nodes.models[i].attributes.name + '" id="chk_' + nodes.models[i].attributes.id + '" data-id="' + nodes.models[i].attributes.id + '" checked /></td>' : '<td></td>';
+    //let radio_cell = (mode == multiMode) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
+    let radio_cell = (nodes.models[i].length > 1) ? '<td><input ' + radioCheckFirst + ' data-name="' + nodes.models[i].attributes.name + '" class="otdoc_version" type="radio" id="radio_' + nodes.models[i].attributes.id + '" name="addversion" /></td>' : '<td></td>';
+    let checkbox_cell = '<td><input class="otdoc_container" type="checkbox" data-name="' + nodes.models[i].attributes.name + '" id="chk_' + nodes.models[i].attributes.id + '" data-id="' + nodes.models[i].attributes.id + '" checked /></td>';
 
     let icon_cell = '<td class="csui-table-cell-type" data-csui-attribute="type">' +
       '<div class="csui-table-cell-name-div">' +
@@ -329,11 +340,16 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     
     defaults: {
       signature: 'dmssSign',
-      scope: 'single'
+      scope: 'multi'
     },
 
     enabled: function (nodes) {
-      return true;
+      //if multiple docs then show only Sign and Share ASICE toolbar button
+      if ((nodes.toolItem.attributes.name !=  btnShareAndSignName) && (nodes.nodes.length > 1)) {
+        return false;
+      } 
+        else 
+          return true;
     },    
 
     getUrlQueryParameters: function (node, options) {
@@ -367,7 +383,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                   })                   
                 } else {
                     //container interface
-                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign);
+                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign, rootFolderID);
                         dialog.show();
                 }
               break;
@@ -376,14 +392,14 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
                       internalPortalRedirect(nodes.models[0].attributes.id);
                   } else {
                     //container interface
-                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare);
+                    let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare, rootFolderID);
                         dialog.show();                    
                   }             
               break;
               case "Sign or share as ASICE": 
                   //container interface
-                  let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShareAndSign);
-                  dialog.show();                    
+                  let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShareAndSign, rootFolderID);
+                      dialog.show();                    
               break;
             }
           })

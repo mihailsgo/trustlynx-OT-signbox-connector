@@ -25,14 +25,6 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
       }
     },
 
-    /*
-    fetchCollection: function() {
-      if (this.collectionFetched) return;
-      this.myCollection.fetch();
-      this.collectionFetched = true;
-    },
-    */
-
     constructor: function CreateContainerView(options) {
       Marionette.ItemView.prototype.constructor.apply(this, arguments);
       
@@ -54,6 +46,7 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
       share: '.container-share',
 	    sign: '.container-sign',
       status: '.status-placeholder',
+      form: '.main-form',
       loader: '.load-container',
       verselection: '.otdoc_version',
       conselection: '.otdoc_container'
@@ -62,14 +55,10 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
     events: {
       'click @ui.share': function (event) {
         event.preventDefault();
-        this._enableSign(false);
-        this._showLoader(true);
         this.triggerMethod('share', this);
       },
       'click @ui.sign': function (event) {
         event.preventDefault();
-        this._enableSign(true);
-        this._showLoader(true);
         this.triggerMethod('sign', this);
       }
     },
@@ -91,35 +80,6 @@ csui.define(['csui/lib/jquery', 'csui/lib/marionette',
     _shareFormFilled: function(){
        return true;
     },
-
-    _showLoader: function(show){
-        if (show) {
-          this.ui.loader
-                    .removeClass('binf-hidden');
-        } else {
-          this.ui.loader
-                    .addClass('binf-hidden');          
-        }
-    },
-
-    _enableSign: function (enable) {
-      if (enable) {
-        this.ui.sign
-            .removeClass('binf-disabled')
-            .removeAttr('disabled');
-    		this.ui.share
-            .addClass('binf-disabled')
-            .attr('disabled', 'disabled');
-      } else {
-        this.ui.sign
-            .addClass('binf-disabled')
-            .attr('disabled', 'disabled');
-        this.ui.share
-            .removeClass('binf-disabled')
-            .removeAttr('disabled');
-      }
-    }
-
   });
   return CreateContainerView;
 });
