@@ -22,9 +22,9 @@ define([
       var version = this.module.version;
       if (releaseMode()) {
         expect(typeof version).toEqual('string');
-        expect(version).not.toEqual('1.0');
+        expect(version).not.toEqual('1.0.5');
       } else {
-        expect(version).toEqual('1.0');
+        expect(version).toEqual('1.0.1');
       }
     });
 

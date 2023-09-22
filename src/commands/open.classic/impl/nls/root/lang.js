@@ -1,4 +1,4 @@
-csui.define({
+define({
   toolbarButtonTitle: 'Sign',
   dialogTitle: 'Document signing',
   submitLabel: 'Create',

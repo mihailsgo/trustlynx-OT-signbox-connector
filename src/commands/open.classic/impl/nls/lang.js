@@ -1,4 +1,4 @@
-csui.define({
+define({
   "root": true,
   "lv": true,
   // Do not load English locale bundle provided by the root bundle

@@ -1,4 +1,4 @@
-csui.define({
+define({
   toolbarButtonTitle: 'Izveidot / parakstīt konteineri',
   dialogTitle: 'Izveidot / parakstīt konteineri',
   submitLabel: 'Izveidot',

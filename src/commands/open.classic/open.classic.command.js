@@ -44,8 +44,8 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
     }
   };
 
-  var internalPortalRedirect = function (docId) {
-    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId;
+  var internalPortalRedirect = function (docId, rootFolderID) {
+    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
   };
 
   var buildInterface = function (containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID) {
@@ -153,7 +153,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         }
         createContainer(endpointCreateContainer, ticket, nodeList, containerID, newContainerName, function (data) {
           if (!data.error) {
-            internalPortalRedirect(containerID);
+            internalPortalRedirect(containerID, rootFolderID);
           } else {
             createView.ui.status.text(data.error);
             refreshView(createView.ui);
@@ -162,7 +162,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         });
       } else {
         let id = nodes.models[0].attributes.id;
-        internalPortalRedirect(id);
+        internalPortalRedirect(id, rootFolderID);
       }
     });
 
@@ -401,7 +401,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
             break;
           case "Share":
             if (isSinglePdfOrAsice) {
-              internalPortalRedirect(nodes.models[0].attributes.id);
+              internalPortalRedirect(nodes.models[0].attributes.id, rootFolderID);
             } else {
               //container interface
               let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare, rootFolderID);

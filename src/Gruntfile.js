@@ -155,7 +155,7 @@ module.exports = function (grunt) {
           siteRoot: '.',
 
           dir: '../out-release',
-          optimize: 'uglify2',
+          optimize: 'none', /* 15.09 MGo changes */
           fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(?:^component\.js$)/,
           uglify2: {
             output: {
@@ -325,9 +325,16 @@ module.exports = function (grunt) {
 
   // Define the order of tasks to build debug and release targets; make sure
   // that static code checks are performed too
+
+  /* 15.09. MGo Changes */
+  /*
   grunt.registerTask('check', [
     'jshint', 'jsonlint:source', 'csslint'
   ]);
+  */
+  grunt.registerTask('check', ['jsonlint:source', 'csslint'
+  ]);
+
   grunt.registerTask('debug', [
     'requirejsBundleIndex', 'requirejs:debug', 'requirejsCleanOutput:debug',
     'clean:generated', 'requirejsIndexCheck', 'requirejsBundleCheck',
