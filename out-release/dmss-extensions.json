@@ -2,7 +2,7 @@
   "csui/models/server.module/server.module.collection": {
     "modules": {
       "dmss": {
-        "version": "1.0.1.230922561"
+        "version": "1.0.1.230925610"
       }
     }
   },
@@ -19,6 +19,5 @@
         "dmss/commands/open.classic/open.classic.nodestable.toolitems"
       ]
     }
-  }
+  }  
 }
-

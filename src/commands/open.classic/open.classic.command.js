@@ -1,5 +1,5 @@
-define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/info.config.json'
-], function (OpenClassicPageCommand, DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
+define(['csui/utils/commands/open.classic.page', 'dmss/commands/open.classic/impl/sign.view', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/dmss.config.json'
+], function (OpenClassicPageCommand, CreateContainerViewModel ,DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
 
   const singleMode = Translations.singleMode;
@@ -375,9 +375,8 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
         ticket = connector.connection.session.ticket,
         endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
 
-      require(['csui/controls/dialog/dialog.view',
-        'dmss/commands/open.classic/impl/sign.view'
-      ], function (DialogView, CreateContainerView) {
+      //require(['dmss/commands/open.classic/impl/sign.view'
+      //], function (CreateContainerView) {
         let nodes = CommandHelper.getAtLeastOneNode(nodeList),
           containerModel = new Backbone.Model(),
           rootFolderID = nodes.models[0].attributes.parent_id,
@@ -395,7 +394,7 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
               });
             } else {
               //container interface
-              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign, rootFolderID);
+              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeSign, rootFolderID);
               dialog.show();
             }
             break;
@@ -404,17 +403,17 @@ define(['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.vi
               internalPortalRedirect(nodes.models[0].attributes.id, rootFolderID);
             } else {
               //container interface
-              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare, rootFolderID);
+              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeShare, rootFolderID);
               dialog.show();
             }
             break;
           case "Sign or share as ASICE":
             //container interface
-            let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShareAndSign, rootFolderID);
+            let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeShareAndSign, rootFolderID);
             dialog.show();
             break;
         }
-      });
+      //});
     }
   });
 

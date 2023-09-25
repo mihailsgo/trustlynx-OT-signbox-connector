@@ -1,30 +1,6 @@
-
-/* START_TEMPLATE */
-csui.define('hbs!dmss/commands/open.classic/impl/sign',['module','hbs','nuc/lib/handlebars'], function( module, hbs, Handlebars ){ 
-var t = Handlebars.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
-        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-          return parent[propertyName];
-        }
-        return undefined
-    };
-
-  return "<style>\r\n/* global overrides */\r\n.cs-dialog .binf-modal-body {\r\n	margin: 0;\r\n}\r\n.container-creation .e-sign-clear{\r\nclear:both;\r\n}\r\n.container-creation{\r\n	background:none !important;\r\n}\r\n.container-creation .create-new-container-label input,\r\n.container-creation .create-new-container-label select {\r\n	font-weight: normal;\r\n	border-radius: 3px;\r\n	border: 1px solid lightgray;\r\n	float: left;\r\n	line-height: 20px;\r\n	padding: 3px;\r\n}\r\n.container-creation .container-content-wrapper{\r\n	  padding: 0px 0px 20px 0px;\r\n    margin-left: 0px !important;\r\n    margin-right: 0px !important;\r\n}\r\n.container-creation .container_doc_list thead > tr:first-child > th.csui-table-cell-name {\r\n	padding-left: 10px;\r\n	color: rgb(117, 117, 117);\r\n	border-top: 1px solid #ddd;\r\n}\r\n.container-creation .create-new-container-label{\r\nfont-weight:bold !important;\r\n}\r\n.container-creation .csui-table-cell-name{\r\nvertical-align:middle !important;\r\n}\r\n.container-creation .csui-table-cell-type {\r\npadding-top: 3px !important;\r\npadding-bottom: 0xp;\r\nwidth:100%;\r\n}\r\n.container-creation .csui-table-cell-name{\r\n  width:100%;\r\n}\r\n.container-creation .container-name {\r\n  width: 450px;\r\n}\r\n.container-creation .add-version-text{\r\n  position:absolute;\r\n  right:1em;\r\n}\r\n.container-creation .version-selector{\r\n    margin-right:3em !important;\r\n}\r\n.container-creation .ui-autocomplete-input{\r\n  font-weight:normal !important;\r\n}\r\n.createcon-separator{\r\n	height:1em !important;\r\n}\r\n.container-creation .workitem-footer {\r\n	border-top: 1px solid #ddd;\r\n	width: 100%;\r\n  position: absolute;\r\n  bottom: 0px;\r\n}\r\n.container-creation .workitem-footer .binf-btn.binf-btn-primary {\r\n    border-radius: 40px;\r\n    height: 26px;\r\n    padding: 0px 15px;\r\n    margin: 3px;\r\n}\r\n.container-creation .dataTable tbody tr{\r\n  /* padding:5px; */\r\n}\r\n.container-creation .dataTable thead{\r\n  display:none;\r\n}\r\n.container-creation .redirect_message{\r\n  text-align:center;\r\n  margin:20px;\r\n}\r\n.container-creation .csui-table-cell-name-div{\r\n  float:left;\r\n}\r\n\r\n.container-creation .container_doc_list{\r\n  padding:10px;\r\n}\r\n\r\n.container-creation .workitem-footer{\r\n  margin:10px;\r\n}\r\n\r\n.container-creation .status-placeholder{\r\n  margin-top:8px;\r\n  background: antiquewhite;\r\n  border-top: 1px solid black;\r\n  border-bottom: 1px solid black;\r\n  padding: 15px;\r\n  font-size: 0.8em;\r\n  box-shadow:5px 5px 10px;\r\n}\r\n\r\n.container-creation .otdoc_container{\r\n  display:none;\r\n}\r\n\r\n.container-creation #info-icon{\r\n  display: block;\r\n  float: left;\r\n  padding: 10px;\r\n  font-size: 2em;\r\n}\r\n\r\n.container-creation .alpha{\r\n  opacity:0.5;\r\n}\r\n\r\n</style>\r\n\r\n<div class=\"binf-row container-creation binf-widgets\">\r\n  <span id=\"info-icon\">&#9432;</span>\r\n  <div class=\"status-placeholder\">\r\n  </div>\r\n  <div class=\"binf-col-md-12 main-form\">\r\n    <form class=\"binf-form-horizontal\">\r\n      <div class=\"binf-form-group container-content-wrapper\">\r\n          "
-    + ((stack1 = ((helper = (helper = lookupProperty(helpers,"docs") || (depth0 != null ? lookupProperty(depth0,"docs") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"docs","hash":{},"loc":{"start":{"line":129,"column":10},"end":{"line":129,"column":22}}}) : helper))) != null ? stack1 : "")
-    + "\r\n          <div class=\"e-sign-clear\"></div>\r\n          <div class=\"binf-col-md-8 workitem-footer\">\r\n			      <button type=\"submit\" class=\"container-sign binf-btn binf-btn-primary\">"
-    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"lang") : depth0)) != null ? lookupProperty(stack1,"submitSignLabel") : stack1), depth0))
-    + "</button>\r\n            <button type=\"submit\" class=\"container-share binf-btn binf-btn-primary\">"
-    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? lookupProperty(depth0,"lang") : depth0)) != null ? lookupProperty(stack1,"submitShareLabel") : stack1), depth0))
-    + "</button>\r\n          </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n  <div class=\"load-container binf-hidden\">  \r\n    <div class=\"outer-border\">\r\n    <div class=\"loader\"></div>\r\n    <div class=\"binf-sr-only\" aria-live=\"polite\" aria-busy=\"true\">\r\n      Loading \r\n    </div>\r\n  </div>\r\n  <div class=\"csui-common-loading-parent-wrapper binf-hidden\">\r\n    <div class=\"csui-loading-3dots\">\r\n    <div class=\"csui-loading-dots-wrapper\">\r\n      <span class=\"csui-loading-dot\"></span>\r\n      <span class=\"csui-loading-dot\"></span>\r\n      <span class=\"csui-loading-dot\"></span>\r\n    </div>\r\n     <div class=\"placeholder\" aria-live=\"polite\" aria-busy=\"true\">\r\n      Loading \r\n    </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n";
-}});
-Handlebars.registerPartial('dmss_commands_open.classic_impl_sign', t);
-return t;
-});
-/* END_TEMPLATE */
-;
 csui.define('dmss/commands/open.classic/impl/sign.view',['csui/lib/jquery', 'csui/lib/marionette',
   'i18n!dmss/commands/open.classic/impl/nls/lang',
-  'hbs!dmss/commands/open.classic/impl/sign', 'csui/lib/backbone', 'csui/utils/contexts/factories/connector', 'json!dmss/config/info.config.json'
+  'hbs!dmss/commands/open.classic/impl/sign', 'csui/lib/backbone', 'csui/utils/contexts/factories/connector', 'json!dmss/config/dmss.config.json'
 ], function ($, Marionette, lang, template, Backbone, ConnectorFactory, config) {
   'use strict';
 
@@ -194,7 +170,7 @@ csui.define('dmss/commands/open.classic/impl/nls/lv/lang',{
 
 
 
-csui.define('json!dmss/config/info.config.json',{
+csui.define('json!dmss/config/dmss.config.json',{
     "INTERNAL_PORTAL_URL": "https://signbox.mihails-test/sendFiles",
     "GATEWAY_ALTERNATE_VIEW_API": "http://localhost:92/api/auth/session/redirecturl",
     "COMPOSE_CONTAINER_API": "http://localhost:84/api/container/compose/existing",
@@ -203,8 +179,8 @@ csui.define('json!dmss/config/info.config.json',{
 }
 );
 
-csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/commands/open.classic.page', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/info.config.json'
-], function (OpenClassicPageCommand, DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
+csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/commands/open.classic.page', 'dmss/commands/open.classic/impl/sign.view', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/dmss.config.json'
+], function (OpenClassicPageCommand, CreateContainerViewModel ,DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
 
   const singleMode = Translations.singleMode;
@@ -580,9 +556,8 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
         ticket = connector.connection.session.ticket,
         endpointAlternateView = settings.GATEWAY_ALTERNATE_VIEW_API;
 
-      csui.require(['csui/controls/dialog/dialog.view',
-        'dmss/commands/open.classic/impl/sign.view'
-      ], function (DialogView, CreateContainerView) {
+      //require(['dmss/commands/open.classic/impl/sign.view'
+      //], function (CreateContainerView) {
         let nodes = CommandHelper.getAtLeastOneNode(nodeList),
           containerModel = new Backbone.Model(),
           rootFolderID = nodes.models[0].attributes.parent_id,
@@ -600,7 +575,7 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
               });
             } else {
               //container interface
-              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeSign, rootFolderID);
+              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeSign, rootFolderID);
               dialog.show();
             }
             break;
@@ -609,17 +584,17 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
               internalPortalRedirect(nodes.models[0].attributes.id, rootFolderID);
             } else {
               //container interface
-              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShare, rootFolderID);
+              let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeShare, rootFolderID);
               dialog.show();
             }
             break;
           case "Sign or share as ASICE":
             //container interface
-            let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, modeShareAndSign, rootFolderID);
+            let dialog = buildInterface(containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerViewModel, modeShareAndSign, rootFolderID);
             dialog.show();
             break;
         }
-      });
+      //});
     }
   });
 
@@ -653,9 +628,6 @@ csui.define('dmss/commands/open.classic/open.classic.nodestable.toolitems',[],fu
 // include public modules from this component
 
 csui.define('bundles/dmss-all',[
-  // add public files for this module here
-    'hbs!dmss/commands/open.classic/impl/sign',
-    'dmss/commands/open.classic/impl/sign.view',
     'dmss/commands/open.classic/open.classic.command',
     'dmss/commands/open.classic/open.classic.nodestable.toolitems'
 ], {});
@@ -665,7 +637,7 @@ csui.require([
   'css'
 ], function (require, css) {
   // Load the bundle-specific stylesheet
-  css.styleLoad(require, 'dmss/bundles/dmss-all');
+  //css.styleLoad(require, 'dmss/bundles/dmss-all');
 });
 
 //# sourceMappingURL=dmss-all.js.map

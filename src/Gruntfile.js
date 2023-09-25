@@ -139,7 +139,7 @@ module.exports = function (grunt) {
           dir: '../out-debug',
           optimizeCss: 'none',
           optimize: 'none',
-          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(?:^component\.js$)/,
+          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(?:^dmss.config.json\.js$)|(?:^component\.js$)/,
 
           modules: requirejsModules
         }

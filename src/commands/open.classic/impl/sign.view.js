@@ -1,6 +1,6 @@
 csui.define(['csui/lib/jquery', 'csui/lib/marionette',
   'i18n!dmss/commands/open.classic/impl/nls/lang',
-  'hbs!dmss/commands/open.classic/impl/sign', 'csui/lib/backbone', 'csui/utils/contexts/factories/connector', 'json!dmss/config/info.config.json'
+  'hbs!dmss/commands/open.classic/impl/sign', 'csui/lib/backbone', 'csui/utils/contexts/factories/connector', 'json!dmss/config/dmss.config.json'
 ], function ($, Marionette, lang, template, Backbone, ConnectorFactory, config) {
   'use strict';
 
