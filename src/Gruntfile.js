@@ -23,6 +23,13 @@ module.exports = function (grunt) {
   // prefix to "empty:" in the build configuration
   const moduleAliasesToExclude = nucComponent.getAllRequireJsPlugins().concat(
     smartComponent.getAllRequireJsPlugins());
+
+    console.info('-------------------------');
+
+    console.info(moduleAliasesToExclude);
+
+    console.info('-------------------------');
+
   // RequireJS modules of the components, which we depend on
   const modulesWeDependOn = [
     ...nucComponent.getAllModules(), ...smartComponent.getAllModules(), ...csuiComponent.getAllModules()
@@ -43,6 +50,10 @@ module.exports = function (grunt) {
       'bundles/dmss-all'
     ]
   };
+
+  console.info('-------------------------');
+  console.info(requirejsBundleIndexes);
+  console.info('-------------------------');
 
   // Create build configuration including the nuc-csui module compatibility map
   require('../lib/src/nuc/grunt-tasks/utils/create.build.config')({
@@ -139,9 +150,11 @@ module.exports = function (grunt) {
           dir: '../out-debug',
           optimizeCss: 'none',
           optimize: 'none',
-          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(?:^dmss.config.json\.js$)|(?:^component\.js$)/,
-
-          modules: requirejsModules
+          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(^config\/dmss\.config\.json$)|config|(?:^component\.js$)/,
+          // Exclude dmss/config/dmss.config.json from bundling
+          // Exclude dmss/config/dmss.config.json from bundling
+          exclude: ['json!dmss/config/dmss.config.json'], // Add this line          
+          modules: requirejsModules,
         }
       },
 
@@ -156,7 +169,7 @@ module.exports = function (grunt) {
 
           dir: '../out-release',
           optimize: 'none', /* 15.09 MGo changes */
-          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(?:^component\.js$)/,
+          fileExclusionRegExp: /(?:\.spec\.js$)|(?:\bGruntfile\.js$)|(^config\/dmss\.config\.json$)|config|(?:^component\.js$)/,
           uglify2: {
             output: {
               // Workaround for IE, which fails parsing JavaScript with Unicode.  The
@@ -168,7 +181,8 @@ module.exports = function (grunt) {
           },
           generateSourceMaps: true,
           preserveLicenseComments: false,
-
+          // Exclude dmss/config/dmss.config.json from bundling
+          exclude: ['json!dmss/config/dmss.config.json'], // Add this line           
           modules: requirejsModules
         }
       }
@@ -271,6 +285,13 @@ module.exports = function (grunt) {
             src: ['dmss-extensions.json'],
             dest: '../out-release/dmss-extensions.json'
           }
+          , //copy dmss.config.json to config folder in out-release
+          {
+            expand: true, 
+            cwd: 'config/', 
+            src: ['**'], 
+            dest: '../out-release/config/'
+          },
         ]
       }
     },
@@ -285,6 +306,22 @@ module.exports = function (grunt) {
         }
       }
     },
+
+     /*
+      // Configure the copy task to copy dmss.config.json
+      copy: {
+        release: {
+          files: [
+            {
+              expand: true,
+              src: ['config/dmss.config.json'], // Update the path accordingly
+              dest: '../out-release/config/' // Update the path accordingly
+            }
+          ]
+        }
+      },
+      */
+        
 
     // Generate RTL versions of stylesheet bundles
     rtlcss: {
@@ -309,6 +346,8 @@ module.exports = function (grunt) {
       }
     },
   });
+
+
 
   // Load grunt plugins used in this Gruntfile
   grunt.loadTasks('../node_modules/grunt-contrib-clean/tasks');
