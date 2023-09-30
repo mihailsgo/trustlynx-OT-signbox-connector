@@ -1,0 +1,159 @@
+<style>
+/* global overrides */
+.cs-dialog .binf-modal-body {
+	margin: 0;
+}
+.container-creation .e-sign-clear{
+clear:both;
+}
+.container-creation{
+	background:none !important;
+}
+.container-creation .create-new-container-label input,
+.container-creation .create-new-container-label select {
+	font-weight: normal;
+	border-radius: 3px;
+	border: 1px solid lightgray;
+	float: left;
+	line-height: 20px;
+	padding: 3px;
+}
+.container-creation .container-content-wrapper{
+	  padding: 0px 0px 20px 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.container-creation .container_doc_list thead > tr:first-child > th.csui-table-cell-name {
+	padding-left: 10px;
+	color: rgb(117, 117, 117);
+	border-top: 1px solid #ddd;
+}
+.container-creation .create-new-container-label{
+font-weight:bold !important;
+}
+.container-creation .csui-table-cell-name{
+vertical-align:middle !important;
+}
+.container-creation .csui-table-cell-type {
+padding-top: 3px !important;
+padding-bottom: 0xp;
+width:100%;
+}
+.container-creation .csui-table-cell-name{
+  width:100%;
+}
+.container-creation .container-name {
+  width: 450px;
+}
+.container-creation .add-version-text{
+  position:absolute;
+  right:1em;
+}
+.container-creation .version-selector{
+    margin-right:3em !important;
+}
+.container-creation .ui-autocomplete-input{
+  font-weight:normal !important;
+}
+.createcon-separator{
+	height:1em !important;
+}
+.container-creation .workitem-footer {
+	border-top: 1px solid #ddd;
+	width: -webkit-fill-available;
+  position: fixed;
+  bottom: 0px;
+  text-align: left;
+}
+.container-creation .workitem-footer .binf-btn.binf-btn-primary {
+    border-radius: 40px;
+    height: 26px;
+    padding: 0px 15px;
+    margin: 3px;
+}
+.container-creation .dataTable tbody tr{
+  /* padding:5px; */
+}
+.container-creation .dataTable thead{
+  display:none;
+}
+.container-creation .redirect_message{
+  text-align:center;
+  margin:20px;
+}
+.container-creation .csui-table-cell-name-div{
+  float:left;
+}
+
+.container-creation .container_doc_list{
+  padding:10px;
+}
+
+.container-creation .workitem-footer{
+  margin:10px;
+}
+
+.container-creation .status-placeholder{
+  margin-top:8px;
+  background: antiquewhite;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px;
+  font-size: 0.8em;
+  box-shadow:5px 5px 10px;
+}
+
+.container-creation .otdoc_container{
+  display:none;
+}
+
+.container-creation #info-icon{
+  display: block;
+  float: left;
+  padding: 10px;
+  font-size: 2em;
+}
+
+.container-creation .alpha{
+  opacity:0.5;
+}
+
+</style>
+
+<div class="binf-row container-creation binf-widgets">
+  <span id="info-icon">&#9432;</span>
+  <div class="status-placeholder">
+  </div>
+  <div class="binf-col-md-12 main-form">
+    <form class="binf-form-horizontal">
+      <div class="binf-form-group container-content-wrapper">
+          {{{ docs }}}
+          <div class="e-sign-clear"></div>
+          <div class="binf-col-md-8 workitem-footer">
+			      <button type="submit" class="container-sign binf-btn binf-btn-primary">{{lang.submitSignLabel}}</button>
+            <button type="submit" class="container-share binf-btn binf-btn-primary">{{lang.submitShareLabel}}</button>
+          </div>
+      </div>
+    </form>
+  </div>
+  <div class="load-container binf-hidden">  
+    <div class="outer-border">
+    <div class="loader"></div>
+    <div class="binf-sr-only" aria-live="polite" aria-busy="true">
+      Loading 
+    </div>
+  </div>
+  <div class="csui-common-loading-parent-wrapper binf-hidden">
+    <div class="csui-loading-3dots">
+    <div class="csui-loading-dots-wrapper">
+      <span class="csui-loading-dot"></span>
+      <span class="csui-loading-dot"></span>
+      <span class="csui-loading-dot"></span>
+    </div>
+     <div class="placeholder" aria-live="polite" aria-busy="true">
+      Loading 
+    </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,1 @@
+{"modules":["dmss/commands/open.classic/impl/sign.view","dmss/commands/open.classic/impl/nls/lang","dmss/commands/open.classic/impl/nls/root/lang","dmss/commands/open.classic/impl/nls/lv/lang","json!dmss/config/dmss.config.json","dmss/commands/open.classic/open.classic.command","dmss/commands/open.classic/open.classic.nodestable.toolitems","bundles/dmss-all"]}
