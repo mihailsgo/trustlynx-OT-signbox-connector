@@ -1,6 +1,6 @@
-# What is OT connector?
+# What is OT connector (dmsscommand_1_0_1) module?
 TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing and document sharing features into OTCS SMARTUI environment.
-# Actual version: v 1.0.1
+# Actual version: dmsscommand_1_0_1
 # Pre-requisites
 - OTCS version supporting 16.2 kernel
 - Delivered and enabled TrustLynx SignBox instance (or specific services)
@@ -20,5 +20,13 @@ TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing an
 ```
 
 >- **[SIGNBOX_INTERNAL_PORTAL_HOST]** -TrustLynx SignBox internal portal host 
->- **[EXT_PORTAL_GATEWAY_SERVICE_HOST]** -TrustLynx SignBox external portal gateway service host  (ext-portal-gateway container name)
->- **[CONT_SERVICE_HOST]** -TrustLynx SignBox external portal gateway
+>- **[EXT_PORTAL_GATEWAY_SERVICE_HOST]** -TrustLynx SignBox ext-portal-gateway service host
+>- **[CONT_SERVICE_HOST]** -TrustLynx dmss-container-and-signature-services service host
+>- **[OTCS_HOST]** - OpenText content server host
+
+- Copy module into [OTCS_ROOT]/staging/ folder
+- Install module via administration panel **Install Modules** menu
+- Navigate to SmartUI Browse view, select any document (for a perfect test .asice container) and check that extra buttons are available:
+  
+  ![image](https://github.com/mihailsgo/trustlynx-OT-signbox-connector/assets/3802544/eb743856-8855-45d8-b997-61b88c7fa203)
+ 
