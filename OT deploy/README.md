@@ -7,8 +7,7 @@ TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing an
 - TrustLynx Archive service should be configured and connected to OTCS
 # Installation
 - Download module folder from this repository: https://github.com/mihailsgo/trustlynx-OT-signbox-connector/tree/main/OT%20deploy/dmsscommand_1_0_1
-- Configure module configuration file `/dmsscommand_1_0_1/support/config
-/dmss.config.json`:
+- Configure module configuration file `/dmsscommand_1_0_1/support/config/dmss.config.json`:
 ```
 {
     "INTERNAL_PORTAL_URL": "https://[SIGNBOX_INTERNAL_PORTAL_HOST]/sendFiles/test",
