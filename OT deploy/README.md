@@ -27,6 +27,6 @@ TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing an
 - Copy module into OTCS /staging/ folder
 - Install module via administration panel **Install Modules** menu
 - Navigate to SmartUI Browse view, select any document (for a perfect test .asice container) and check that extra buttons are available:
-  
-  ![image](https://github.com/mihailsgo/trustlynx-OT-signbox-connector/assets/3802544/eb743856-8855-45d8-b997-61b88c7fa203)
+
+![image](https://github.com/mihailsgo/trustlynx-OT-signbox-connector/assets/3802544/dc0b0b05-b288-4285-8cc0-3bb72c1b99e4)
  
