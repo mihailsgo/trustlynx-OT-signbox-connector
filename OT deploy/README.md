@@ -18,13 +18,14 @@ TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing an
     "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"]
 }
 ```
+> It is important, that URLs available in the configuration should be available to be accessed from USERs browser.  In terms of "GATEWAY_ALTERNATE_VIEW_API" and "COMPOSE_CONTAINER_API" URLs it is recommended to limit it`s accessibility on company VPN level if it is possible. If it is not possible, then it is recommended to allow only in dmss.config.json configuration provided API to be accessed from external network. Each requests internally is verified to have correct OTCS ticket header available, if OTCS ticket is not valid for connected CS instance, request is not going to be processed.
 
 >- **[SIGNBOX_INTERNAL_PORTAL_HOST]** -TrustLynx SignBox internal portal host 
 >- **[EXT_PORTAL_GATEWAY_SERVICE_HOST]** -TrustLynx SignBox ext-portal-gateway service host
 >- **[CONT_SERVICE_HOST]** -TrustLynx dmss-container-and-signature-services service host
 >- **[OTCS_HOST]** - OpenText content server host
 
-- Copy module into [OTCS_ROOT]/staging/ folder
+- Copy module into OTCS /staging/ folder
 - Install module via administration panel **Install Modules** menu
 - Navigate to SmartUI Browse view, select any document (for a perfect test .asice container) and check that extra buttons are available:
   
