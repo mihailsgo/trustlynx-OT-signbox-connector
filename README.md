@@ -5,6 +5,14 @@ TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing an
 - OTCS version supporting 16.2 kernel
 - Delivered and enabled TrustLynx SignBox instance (or specific services)
 - TrustLynx Archive service should be configured and connected to OTCS
+- Remove IP address from OTCS authentication (OTCS admin panel -> Configure Security Parameters)
+- 
+  <img width="514" alt="image" src="https://github.com/mihailsgo/trustlynx-OT-signbox-connector/assets/3802544/0d34973e-2e46-4fcb-8e85-94467763e513">
+- User operating with connector should have Firstname and Lastname set in OTCS user profile:
+- 
+  <img width="356" alt="image" src="https://github.com/mihailsgo/trustlynx-OT-signbox-connector/assets/3802544/c4dc5107-1203-4e72-b4af-d931d8d2d25f">
+
+
 # Installation
 - Download module folder from this repository: https://github.com/mihailsgo/trustlynx-OT-signbox-connector/tree/main/OT%20deploy/dmsscommand_1_0_1
 - Configure module configuration file `/dmsscommand_1_0_1/support/config/dmss.config.json`:
