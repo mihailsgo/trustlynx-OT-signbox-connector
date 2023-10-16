@@ -1,6 +1,7 @@
 # What is OT connector (dmsscommand_1_0_1) module?
 TrustLynx OpenText connector is OTCS module that integrates TrustLynx signing and document sharing features into OTCS SMARTUI environment.
 # Actual version: dmsscommand_1_0_1
+Currently container creation is supported only using "add version" to existing documents. New container creation is not supported due to issues with OTCS parent object metadata inheritance.
 # Pre-requisites
 - OTCS version supporting 16.2 kernel
 - Delivered and enabled TrustLynx SignBox instance (or specific services)
