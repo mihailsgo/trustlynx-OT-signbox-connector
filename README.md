@@ -23,7 +23,8 @@ Currently container creation is supported only using "add version" to existing d
     "GATEWAY_ALTERNATE_VIEW_API": "http://[EXT_PORTAL_GATEWAY_SERVICE_HOST]/api/auth/session/redirecturl",
     "COMPOSE_CONTAINER_API": "http://[CONT_SERVICE_HOST]/api/container/compose/existing",
     "OTCS_REDIRECT_URL": "http://[OTCS_HOST]/otcs/cs.exe/app/nodes/",
-    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"]
+    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"],
+    "ARCHIVE_PREFIX": "OTCS-"
 }
 ```
 > It is important, that URLs available in the configuration should be available to be accessed from USERs browser.  In terms of "GATEWAY_ALTERNATE_VIEW_API" and "COMPOSE_CONTAINER_API" URLs it is recommended to limit it`s accessibility on company VPN level if it is possible. If it is not possible, then it is recommended to allow only in dmss.config.json configuration provided API to be accessed from external network. Each requests internally is verified to have correct OTCS ticket header available, if OTCS ticket is not valid for connected CS instance, request is not going to be processed.
@@ -32,6 +33,7 @@ Currently container creation is supported only using "add version" to existing d
 >- **[EXT_PORTAL_GATEWAY_SERVICE_HOST]** -TrustLynx SignBox ext-portal-gateway service host
 >- **[CONT_SERVICE_HOST]** -TrustLynx dmss-container-and-signature-services service host
 >- **[OTCS_HOST]** - OpenText content server host
+>- **[OTCS_HOST]** - OpenText content server archive prefix (if needed, consult with TrustLynx colleagues)
 
 - Copy module into OTCS /staging/ folder
 - Install module via administration panel **Install Modules** menu
