@@ -45,7 +45,7 @@ define(['csui/utils/commands/open.classic.page', 'dmss/commands/open.classic/imp
   };
 
   var internalPortalRedirect = function (docId, rootFolderID) {
-    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
+    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + settings.ARCHIVE_PREFIX + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
   };
 
   var buildInterface = function (containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID) {
@@ -240,7 +240,7 @@ define(['csui/utils/commands/open.classic.page', 'dmss/commands/open.classic/imp
       url: endpoint,
       data: {
         redirecturl: settings.OTCS_REDIRECT_URL + rootFolderID,
-        documentid: id
+        documentid: settings.ARCHIVE_PREFIX + id
       },
       headers: { 'OTCSTICKET': ticket },
       success: function (data) {

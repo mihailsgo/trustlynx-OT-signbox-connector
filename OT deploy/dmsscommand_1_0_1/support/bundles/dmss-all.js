@@ -168,7 +168,6 @@ csui.define('dmss/commands/open.classic/impl/nls/lv/lang',{
   btnShareAndSignName: 'Sign or share as ASICE'  
 });
 
-
 csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/commands/open.classic.page', 'dmss/commands/open.classic/impl/sign.view', 'csui/controls/dialog/dialog.view', 'csui/lib/backbone', 'i18n!dmss/commands/open.classic/impl/nls/lang', 'csui/utils/commandhelper', 'csui/utils/contexts/factories/connector', 'csui/utils/nodesprites', 'json!dmss/config/dmss.config.json'
 ], function (OpenClassicPageCommand, CreateContainerViewModel ,DialogView, Backbone, Translations, CommandHelper, ConnectorFactory, nodeSpriteCollection, settings) {
   'use strict';
@@ -216,7 +215,7 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
   };
 
   var internalPortalRedirect = function (docId, rootFolderID) {
-    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
+    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + settings.ARCHIVE_PREFIX + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
   };
 
   var buildInterface = function (containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID) {
@@ -411,7 +410,7 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
       url: endpoint,
       data: {
         redirecturl: settings.OTCS_REDIRECT_URL + rootFolderID,
-        documentid: id
+        documentid: settings.ARCHIVE_PREFIX + id
       },
       headers: { 'OTCSTICKET': ticket },
       success: function (data) {

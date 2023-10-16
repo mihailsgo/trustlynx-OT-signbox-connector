@@ -175,7 +175,8 @@ csui.define('json!dmss/config/dmss.config.json',{
     "GATEWAY_ALTERNATE_VIEW_API": "http://localhost:92/api/auth/session/redirecturl",
     "COMPOSE_CONTAINER_API": "http://localhost:84/api/container/compose/existing",
     "OTCS_REDIRECT_URL": "http://localhost/otcs/cs.exe/app/nodes/",
-    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"]
+    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"],
+    "ARCHIVE_PREFIX": "OTCS-"
 }
 );
 
@@ -226,7 +227,7 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
   };
 
   var internalPortalRedirect = function (docId, rootFolderID) {
-    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
+    window.location = settings.INTERNAL_PORTAL_URL + "?id=" + settings.ARCHIVE_PREFIX + docId + '&redirectUrl=' + settings.OTCS_REDIRECT_URL + rootFolderID;
   };
 
   var buildInterface = function (containerModel, nodes, connector, isSinglePdfOrAsice, CreateContainerView, mode, rootFolderID) {
@@ -421,7 +422,7 @@ csui.define('dmss/commands/open.classic/open.classic.command',['csui/utils/comma
       url: endpoint,
       data: {
         redirecturl: settings.OTCS_REDIRECT_URL + rootFolderID,
-        documentid: id
+        documentid: settings.ARCHIVE_PREFIX + id
       },
       headers: { 'OTCSTICKET': ticket },
       success: function (data) {

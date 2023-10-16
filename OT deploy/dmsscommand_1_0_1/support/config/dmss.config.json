@@ -1,7 +1,8 @@
 {
-    "INTERNAL_PORTAL_URL": "https://signbox.mihails-test/sendFiles/test",
+    "INTERNAL_PORTAL_URL": "https://signbox.mihails-test/sendFiles",
     "GATEWAY_ALTERNATE_VIEW_API": "http://localhost:92/api/auth/session/redirecturl",
     "COMPOSE_CONTAINER_API": "http://localhost:84/api/container/compose/existing",
     "OTCS_REDIRECT_URL": "http://localhost/otcs/cs.exe/app/nodes/",
-    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"]
+    "ALLOWED_MIMETYPES": ["application/vnd.etsi.asic-e+zip", "application/pdf"],
+    "ARCHIVE_PREFIX": "OTCS-"
 }
